@@ -47,7 +47,7 @@ useEffect(()=>{
         slideRef.current.classList.add('fade-anim');
     }
   return (
-    <div className='flex' style={{height:"95vh",top:0}}>
+    <div className='flex' style={{height:"95%",top:0,backgroundColor:"red"}}>
         <div ref={slideRef} className="select-none absolute" style={{}}>
     <img src={sliderImage[currentIndex]} alt='slide' style={{height:'87vh',width:'100vw',objectFit:'none',opacity:1}} />  
     </div>
