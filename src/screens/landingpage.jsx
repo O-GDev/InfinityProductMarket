@@ -14,7 +14,7 @@ export class Landingpage extends Component {
       <Navbars />
       </div>
       <div>
-      <div className='relative flex-col h-full px-12'>
+      <div className='relative flex-col h-full px-12 pt-12'>
       <h3 className='text-black font-primary font-bold'>THE MARKETS </h3>
       <Uline color='#702EB2' />
       </div>
