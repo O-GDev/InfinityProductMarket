@@ -20,7 +20,7 @@ const Navmenu = () => {
 
           </ul>
         </div>
-        {/* <hr></hr> */}
+        <hr style={{height:0.0001}} ></hr>
       </nav>
     </div>
     <Outlet />
