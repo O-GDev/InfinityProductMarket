@@ -5,10 +5,10 @@ const Navmenu = () => {
   return (
     <><div>
       <nav>
-        <div className='flex py-2 pt-2' style={{ justifyContent: 'space-between' }}>
+        <div className='flex px-10 my-5' style={{ justifyContent: 'space-between' }}>
           <div className='flex flex-row'>
-            <img src='/assets/logo.png' style={{ width: '40px', height: '40px' }} />
-            <h3 className="font-primary font-semibold flex flex-row self-center justify-center mx-3 ">INFINITY MARKET PLACE</h3>
+            <img src='/assets/logo.png' style={{ width: '30px', height: '30px' }} />
+            <h3 className="font-primary font-semibold flex flex-row self-center justify-center">INFINITY MARKET PLACE</h3>
           </div>
           <ul className="inline">
             <li className="inline px-2 font-primary font-semibold"><Link to='/'>Home</Link> </li>
