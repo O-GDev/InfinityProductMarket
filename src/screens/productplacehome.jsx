@@ -78,7 +78,7 @@ useEffect(()=>{
     </div>
     <div className='absolute w-full text-white'>
     {/* <Navmenu />   */}
-    <div className='flex flex-row justify-center opacity-65 p-3' style={{backgroundColor:'#F2F2F2'}}>
+    <div className='flex flex-row justify-center opacity-65 p-3 mx-36 shadow-outline' style={{backgroundColor:'#F2F2F2'}}>
       <h3 className='text-black font-semibold px-2'>Top Tags:</h3>
       <h3 className='text-black font-semibold px-2'>Gadgets</h3>
       <h3 className='text-black font-semibold px-2'>Clothing/Wears</h3>
@@ -95,6 +95,54 @@ useEffect(()=>{
     
     </div>  
      
+    </div>
+
+    <div className='columns-4 p-4'>
+      <div className='flex flex-row'>
+      <img src='/assets/store 1.png' />
+        <div>
+          <h5 className="font-bold text-sm px-2">FREE STORE</h5>
+          <p className='px-2'>Create your business with us
+using our free template  </p>
+        </div>
+      </div>
+      <div className='flex flex-row'>
+      <img src='/assets/partners 1.png' />
+      <div>
+          <h5 className="font-bold text-sm px-2 ">COMMUNITY</h5>
+          <p className='px-2'>Connect with other business
+through affiliation and partnership</p>
+        </div>
+      </div>
+      <div className='flex flex-row'>
+      <img src='/assets/key 1.png' />
+      <div>
+          <h5 className="font-bold text-sm px-2">OWNERSHIP</h5>
+          <p className='px-2'>Take charge of your business
+and grow at your pace </p>
+        </div>
+      </div>
+      <div className='flex flex-row'>
+      <img src='/assets/money-bag 1.png' />
+      <div>
+          <h5 className="font-bold text-sm px-2">GROWTH</h5>
+          <p className='px-2'>Grow your income, make
+the right decision </p>
+        </div>
+      </div>
+    </div>
+
+    <div className='pl-10'>
+      <h3 className='font-bold'>SHOP BY CATEGORY</h3>
+    </div>
+
+    <div className='column-6'>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
 
   </div>
