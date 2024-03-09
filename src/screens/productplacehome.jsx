@@ -194,7 +194,7 @@ the right decision </p>
           <h5>Hurry up!</h5>
           <p className='' style={{fontSize:'10px'}}>Limited edition going out of stock soon</p>
         </div>
-        <div className='rounded-full flex justify-center self-center p-2 text-sm text-white' style={{backgroundColor:'#702EB2'}}>
+        <div className='rounded-full flex justify-center self-center p-2 text-white' style={{backgroundColor:'#702EB2',fontSize:'10px'}}>
           Add to Cart
         </div>
        </div>
@@ -225,7 +225,57 @@ the right decision </p>
         </div>
       </div>
 
+
     </div>
+    </div>
+
+    
+    <div></div>
+
+
+<div className='pl-10'>
+  <h3 className='font-bold'>FEATURED ITEMS</h3>
+  <h5 className='text-center' style={{color:'#42255F'}}>Top Rated</h5>
+  <div className='columns-4 px-4 pt-3' >        
+      <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
+      <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
+      <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
+      <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
+
+        </div>
+
+        <div className='columns-4 px-4 pt-3' >        
+      <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
+      <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
+      <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
+      <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
+
+        </div>
+        
+        <div className='columns-2'>
+          <div>            
+  <h3 className='font-bold'  style={{color:'#42255F'}}>New Arrivals</h3>
+          </div>
+          <div>
+  <h3 className='font-bold'  style={{color:'#42255F'}}>People's choice</h3>
+  </div>
+        </div>
+</div>
+
+<div className='flex flex-row h-20 justify-between m-2 mx-10 bg-white'>
+      <div className='flex rounded-br-3xl' style={{backgroundColor:'#ab5ae0'}}>
+      <div className='flex justify-center self-center' >
+        <span className='text-white text-center p-2'>connect with <br /> foreign manufacturers</span>
+      </div>
+      </div>
+      <div className='flex flex-col justify-center self-center'>
+        <h3 className='font-extrabold text-center' style={{color:'#33363F'}}>THIS FEATURE IS COMING SOON</h3>
+        <h6 className='font-bold text-center text-sm'>Africa is the continent with highest demand on commodity</h6>
+        <h5 className='font-bold' style={{color:'#33363F'}}>Contend, cooperate or partner with the world giant here on IPP </h5>
+      </div>
+      <div className='flex justify-center self-end p-2'>
+        <h5 className='font-semibold' style={{color:'#ab5ae0'}}>Become a supplier</h5>
+      </div>
     </div>
     <Footers />
 
