@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Button, Uline } from '../lilcomponents/style.styles'
 import { Outlet, Link } from 'react-router-dom'
+import Footers from '../lilcomponents/footers';
+import Cards from '../lilcomponents/cards';
+import Cards1 from '../lilcomponents/card';
 
 
 const sliderImage = [
@@ -49,8 +52,9 @@ useEffect(()=>{
       slideRef.current.classList.add('fade-anim');
   }
   return (
-    <><div style={{backgroundColor:'#F2F2F2',height:'100vh'}}>
-    <nav>
+    <>
+    <div style={{backgroundColor:'#F2F2F2', paddingBottom:20}}>
+    <nav style={{}}>
       <div className='flex px-10 py-3' style={{ justifyContent: 'space-between' }}>
         <div className='flex flex-row'>
           <img src='/assets/2 2 (1).png' style={{ width: '60px', height: '60px' }} />
@@ -97,7 +101,7 @@ useEffect(()=>{
      
     </div>
 
-    <div className='columns-4 p-4 bg-white'>
+    <div className='columns-4 p-4 px-10 bg-white'>
       <div className='flex flex-row'>
       <img src='/assets/store 1.png' />
         <div>
@@ -133,11 +137,11 @@ the right decision </p>
     </div>
 
       {/* shop by category */}
-    <div className='pl-10'>
+    <div className='pl-10' style={{}}>
       <h3 className='font-bold'>SHOP BY CATEGORY</h3>
     </div>
 
-    <div className='column-6'>
+    <div className='column-6' style={{}}>
       <div></div>
       <div></div>
       <div></div>
@@ -147,19 +151,69 @@ the right decision </p>
     </div>
 
 
-    <div className='flex flex-row h-20 justify-between m-2 px-5 bg-white'>
-      <div className='flex p-5 rounded-br-3xl' style={{backgroundColor:'#ab5ae0'}}>
+    <div className='flex flex-row h-20 justify-between m-2 mx-10 bg-white'>
+      <div className='flex rounded-br-3xl' style={{backgroundColor:'#ab5ae0'}}>
       <div className='flex justify-center self-center' >
-        <span className='text-white text-center'>connect with <br /> foreign manufacturers</span>
+        <span className='text-white text-center p-2'>connect with <br /> foreign manufacturers</span>
       </div>
       </div>
       <div className='flex justify-center self-center'>
         <h5 className='font-bold'>Africa is the continent with highest demand on commodity</h5>
       </div>
-      <div className='flex justify-center self-end'>
+      <div className='flex justify-center self-end p-2'>
         <h5 className='font-semibold' style={{color:'#ab5ae0'}}>Become a supplier</h5>
       </div>
     </div>
+
+    <div className='pl-10 pt-5 '>
+    <div className='flex flex-row '>
+    <div className=''>
+      <div className='flex flex-row justify-between w-full'>
+      <h3 className='font-bold'>DEALS OF THE WEEK</h3>
+      <div className='mx-1 bg-white'>
+        <span className='font-black w-0.5 pr-2'> {'<'} </span>
+        <span className='font-black w-0.5 pl-2'> {'>'} </span>
+      </div>
+      </div>
+      <div className='pt-3'>
+        <img src='/assets/bag.png'/> 
+        <h3 className='text-center text-lg font-bold font-primary'>Green Italian-made Bag</h3>
+        <h2 className='text-center text-lg font-bold' style={{color:'red'}}># 60,000</h2>
+       <div className='flex justify-center w-full'>
+       <div className='flex flex-col justify-center self-center mx-24 ' style={{width:'100%'}}>
+        <p className='text-sm w-full '>still in stock</p>
+        
+        <div class=" bg-gray-200 rounded-full w-full h-3 dark:bg-gray-700 border-black" style={{borderWidth:1}}>
+          {/* <div class="" style="width: 45%"></div> */}
+          <div className=' h-2.5 rounded-full' style={{width:'25%',backgroundColor:'#702EB2'}}></div>
+        </div>
+        </div>        
+       </div>
+       <div className='flex flex-row justify-between p-3'>
+       <div>
+          <h5>Hurry up!</h5>
+          <p className='' style={{fontSize:'10px'}}>Limited edition going out of stock soon</p>
+        </div>
+        <div className='rounded-full flex justify-center self-center p-2 text-sm text-white' style={{backgroundColor:'#702EB2'}}>
+          Add to Cart
+        </div>
+       </div>
+      </div>
+      </div>
+      <div className='w-full'>
+        <h3 className='font-bold pl-20 '>BEST SELLERS</h3>
+        <div className='columns-4 px-4 pt-3' >        
+      <Cards1 image="/assets/Rectangle 61.png" pname='Cleaning Products' pprice="8000" rate='4.6'/>
+      <Cards1 image="/assets/Rectangle 61.png" pname='Cleaning Products' pprice="8000" rate='4.6'/>
+      <Cards1 image="/assets/Rectangle 61.png" pname='Cleaning Products' pprice="8000" rate='4.6'/>
+      <Cards1 image="/assets/Rectangle 61.png" pname='Cleaning Products' pprice="8000" rate='4.6'/>
+
+        </div>
+      </div>
+
+    </div>
+    </div>
+    <Footers />
 
   </div>
   <Outlet />
