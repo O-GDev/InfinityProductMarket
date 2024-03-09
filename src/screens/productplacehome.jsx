@@ -97,7 +97,7 @@ useEffect(()=>{
      
     </div>
 
-    <div className='columns-4 p-4'>
+    <div className='columns-4 p-4 bg-white'>
       <div className='flex flex-row'>
       <img src='/assets/store 1.png' />
         <div>
@@ -132,6 +132,7 @@ the right decision </p>
       </div>
     </div>
 
+      {/* shop by category */}
     <div className='pl-10'>
       <h3 className='font-bold'>SHOP BY CATEGORY</h3>
     </div>
@@ -143,6 +144,21 @@ the right decision </p>
       <div></div>
       <div></div>
       <div></div>
+    </div>
+
+
+    <div className='flex flex-row h-20 justify-between m-2 px-5 bg-white'>
+      <div className='flex p-5 rounded-br-3xl' style={{backgroundColor:'#ab5ae0'}}>
+      <div className='flex justify-center self-center' >
+        <span className='text-white text-center'>connect with <br /> foreign manufacturers</span>
+      </div>
+      </div>
+      <div className='flex justify-center self-center'>
+        <h5 className='font-bold'>Africa is the continent with highest demand on commodity</h5>
+      </div>
+      <div className='flex justify-center self-end'>
+        <h5 className='font-semibold' style={{color:'#ab5ae0'}}>Become a supplier</h5>
+      </div>
     </div>
 
   </div>
