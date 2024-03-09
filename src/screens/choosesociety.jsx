@@ -21,7 +21,7 @@ export default function Choosesociety() {
           <img src='/assets/IMG_9517.JPG' className='rounded-xl' style={{height:'400px'}}  />
           <div className='flex flex-col justify-center self-center pt-16'>
             <p className='pt-16 px-3 text-center text-xl'>Check out our product showcase, where we bring you the latest and greatest products in a laid-back and informative way!</p>
-            <Link to='producthome' className='flex self-center justify-center'>
+            <Link to='/producthome' className='flex self-center justify-center'>
             <Button><span className='font-bold' style={{backgroundColor:'transparent',padding:'10px',borderColor:'#702EB2',borderWidth:1,color:'#702EB2'}}>Buy/Sell</span></Button>
             </Link>
           </div>
@@ -33,7 +33,7 @@ export default function Choosesociety() {
         </div>
           <div className='flex flex-col justify-self-center self-center pt-20'>
             <p className='pt-16 px-3 text-center text-xl'>Check out our top notch professionals in different fields  of creativity all across the world. </p>
-            <Link to='servicehome' className='flex justify-center self-center'>
+            <Link to='/servicehome' className='flex justify-center self-center'>
             <Button><span className='font-bold ' style={{backgroundColor:'transparent',padding:'10px',borderColor:'#702EB2',borderWidth:1,color:'#702EB2'}}>Let's Deal</span></Button>
             </Link>
             </div>
