@@ -1,9 +1,53 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Button, Uline } from '../lilcomponents/style.styles'
 import { Outlet, Link } from 'react-router-dom'
 
+
+const sliderImage = [
+    "/assets/firstslide.png",
+    "/assets/secondslide.png",
+    "/assets/thirdslide.png",
+];
+
+let count = 0;
+
 export default function Productplacehome() {
-  const[isFocused, setIsFocused] = useState('none')
+  const[currentIndex, setCurrentIndex] = useState(0);
+  const[contentOpacity, setContentOpacity] = useState(1);
+  const[content1Opacity, setContent1Opacity] = useState(1);
+  const[content2Opacity, setContent2Opacity] = useState(1);
+
+
+ 
+const slideRef = useRef()    
+
+const removeAnimation = () =>{
+  slideRef.current.classList.remove('fade-anim');
+}
+  
+useEffect(()=>{
+  slideRef.current.addEventListener('animationend', removeAnimation)
+  startSlider();
+  // textSlider();
+  // con();
+},[])
+
+
+  const startSlider = () =>{
+    const interval =  setInterval(() => {
+          nextSlide();
+      }, [7000]);
+      return () => {
+          clearInterval(interval);
+      }
+  }    
+  
+
+  const nextSlide = () =>{
+      count = (count + 1) % sliderImage.length;
+      setCurrentIndex(count);
+      slideRef.current.classList.add('fade-anim');
+  }
   return (
     <><div style={{backgroundColor:'#F2F2F2',height:'100vh'}}>
     <nav>
@@ -27,6 +71,32 @@ export default function Productplacehome() {
       </div>
       {/* <hr style={{height:0.0001}} ></hr> */}
     </nav>
+
+    <div className='flex' style={{height:"",top:0,}}>
+        <div ref={slideRef} className="select-none " style={{}}>
+    <img src={sliderImage[currentIndex]} alt='slide' loading='lazy' style={{height:'70vh',width:'100vw',objectFit:'none',opacity:1}} />  
+    </div>
+    <div className='absolute w-full text-white'>
+    {/* <Navmenu />   */}
+    <div className='flex flex-row justify-center opacity-65 p-3' style={{backgroundColor:'#F2F2F2'}}>
+      <h3 className='text-black font-semibold px-2'>Top Tags:</h3>
+      <h3 className='text-black font-semibold px-2'>Gadgets</h3>
+      <h3 className='text-black font-semibold px-2'>Clothing/Wears</h3>
+      <h3 className='text-black font-semibold px-2'>Appliances</h3>
+      <h3 className='text-black font-semibold px-2'>Cars</h3>
+      <h3 className='text-black font-semibold px-2'>Electronics</h3>
+      <h3 className='text-black font-semibold px-2'>Face Products</h3>
+      <h3 className='text-black font-semibold px-2'>Funiture</h3>
+      <h3 className='text-black font-semibold px-2'>Automobile</h3>
+      <h3 className='text-black font-semibold px-2'>Cosmetics</h3>
+      <h3 className='text-black font-semibold px-2'>Others:</h3>
+
+    </div>
+    
+    </div>  
+     
+    </div>
+
   </div>
   <Outlet />
   </>
