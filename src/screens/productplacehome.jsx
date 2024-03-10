@@ -7,18 +7,15 @@ import Cards1 from '../lilcomponents/card';
 
 
 const sliderImage = [
-    "/assets/firstslide.png",
-    "/assets/secondslide.png",
-    "/assets/thirdslide.png",
+    "/assets/indoor-hotel-view.jpg",
+    "/assets/horizontal-shot-delighted-young-african-american-woman-points-stylish-clothes-sale-hanging-rails-carries-bag-beautiful-bouquet-has-toothy-smile-isolated-yellow-background.jpg",
+    "/assets/children-s-bright-clothes-hang-display-baby-clothing-store.jpg",
 ];
 
 let count = 0;
 
 export default function Productplacehome() {
   const[currentIndex, setCurrentIndex] = useState(0);
-  const[contentOpacity, setContentOpacity] = useState(1);
-  const[content1Opacity, setContent1Opacity] = useState(1);
-  const[content2Opacity, setContent2Opacity] = useState(1);
 
 
  
@@ -75,7 +72,8 @@ useEffect(()=>{
       </div>
       <div className='absolute w-full text-white'>
     {/* <Navmenu />   */}
-    <div className='flex flex-row justify-center opacity-65 p-3 mx-36 shadow-outline' style={{backgroundColor:'#F2F2F2'}}>
+      <div className='' style={{fillOpacity:1,opacity:1}}>
+      <div className='flex flex-row justify-center opacity-65 p-3 mx-36 shadow-outline' style={{backgroundColor:'#F2F2F2'}}>
       <h3 className='text-black font-semibold px-2'>Top Tags:</h3>
       <h3 className='text-black font-semibold px-2'>Gadgets</h3>
       <h3 className='text-black font-semibold px-2'>Clothing/Wears</h3>
@@ -89,14 +87,15 @@ useEffect(()=>{
       <h3 className='text-black font-semibold px-2'>Others:</h3>
 
     </div>
+      </div>
     
     </div>  
       {/* <hr style={{height:0.0001}} ></hr> */}
     </nav>
 
     <div className='flex pt-20' style={{height:"",top:15,}}>
-        <div ref={slideRef} className="select-none " style={{}}>
-    <img src={sliderImage[currentIndex]} alt='slide' loading='lazy' style={{height:'70vh',width:'100vw',objectFit:'none',opacity:1}} />  
+        <div ref={slideRef} className="select-none" style={{}}>
+    <img src={sliderImage[currentIndex]} alt='slide' loading='lazy' style={{height:'70vh',width:'100vw',opacity:1}} />  
     </div>
     
      
@@ -253,7 +252,7 @@ the right decision </p>
 
         </div>
         
-        <div className='columns-2'>
+        <div className='columns-2 pl-10'>
           <div>            
   <h3 className='font-bold'  style={{color:'#42255F'}}>New Arrivals</h3>
           </div>
