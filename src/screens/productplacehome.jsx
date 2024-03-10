@@ -54,7 +54,7 @@ useEffect(()=>{
   return (
     <>
     <div style={{backgroundColor:'#F2F2F2', paddingBottom:20}}>
-    <nav style={{}}>
+    <nav style={{position:'fixed'}}>
       <div className='flex px-10 py-3' style={{ justifyContent: 'space-between' }}>
         <div className='flex flex-row'>
           <img src='/assets/2 2 (1).png' style={{ width: '60px', height: '60px' }} />
