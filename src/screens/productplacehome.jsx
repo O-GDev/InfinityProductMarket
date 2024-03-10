@@ -53,8 +53,8 @@ useEffect(()=>{
   }
   return (
     <>
-    <div style={{backgroundColor:'#F2F2F2', paddingBottom:20}}>
-    <nav style={{position:'fixed'}}>
+    <div style={{paddingBottom:20}}>
+    <nav className='' style={{position:'fixed',backgroundColor:'#F2F2F2',width:'100%'}}>
       <div className='flex px-10 py-3' style={{ justifyContent: 'space-between' }}>
         <div className='flex flex-row'>
           <img src='/assets/2 2 (1).png' style={{ width: '60px', height: '60px' }} />
@@ -73,14 +73,7 @@ useEffect(()=>{
 
         </ul>
       </div>
-      {/* <hr style={{height:0.0001}} ></hr> */}
-    </nav>
-
-    <div className='flex' style={{height:"",top:0,}}>
-        <div ref={slideRef} className="select-none " style={{}}>
-    <img src={sliderImage[currentIndex]} alt='slide' loading='lazy' style={{height:'70vh',width:'100vw',objectFit:'none',opacity:1}} />  
-    </div>
-    <div className='absolute w-full text-white'>
+      <div className='absolute w-full text-white'>
     {/* <Navmenu />   */}
     <div className='flex flex-row justify-center opacity-65 p-3 mx-36 shadow-outline' style={{backgroundColor:'#F2F2F2'}}>
       <h3 className='text-black font-semibold px-2'>Top Tags:</h3>
@@ -98,6 +91,14 @@ useEffect(()=>{
     </div>
     
     </div>  
+      {/* <hr style={{height:0.0001}} ></hr> */}
+    </nav>
+
+    <div className='flex pt-20' style={{height:"",top:15,}}>
+        <div ref={slideRef} className="select-none " style={{}}>
+    <img src={sliderImage[currentIndex]} alt='slide' loading='lazy' style={{height:'70vh',width:'100vw',objectFit:'none',opacity:1}} />  
+    </div>
+    
      
     </div>
 
