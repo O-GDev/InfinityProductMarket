@@ -234,8 +234,8 @@ the right decision </p>
     <div></div>
 
 
-<div className='pl-10'>
-  <h3 className='font-bold'>FEATURED ITEMS</h3>
+<div className=''>
+  <h3 className='font-bold pl-10'>FEATURED ITEMS</h3>
   <h5 className='text-center' style={{color:'#42255F'}}>Top Rated</h5>
   <div className='columns-4 px-4 pt-3' >        
       <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
