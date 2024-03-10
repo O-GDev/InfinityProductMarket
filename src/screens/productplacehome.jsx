@@ -93,7 +93,7 @@ useEffect(()=>{
       {/* <hr style={{height:0.0001}} ></hr> */}
     </nav>
 
-    <div className='flex pt-20' style={{height:"",top:15,}}>
+    <div className='flex pt-20' style={{height:"",}}>
         <div ref={slideRef} className="select-none" style={{}}>
     <img src={sliderImage[currentIndex]} alt='slide' loading='lazy' style={{height:'70vh',width:'100vw',opacity:1}} />  
     </div>
