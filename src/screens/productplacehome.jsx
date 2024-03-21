@@ -4,6 +4,7 @@ import { Outlet, Link } from 'react-router-dom'
 import Footers from '../lilcomponents/footers';
 import Cards from '../lilcomponents/cards';
 import Cards1 from '../lilcomponents/card';
+import Signuppage from './signuppage';
 
 
 const sliderImage = [
@@ -50,7 +51,7 @@ useEffect(()=>{
   }
   return (
     <>
-    <div style={{paddingBottom:20}}>
+    <div style={{paddingBottom:20,}}>
     <nav className='' style={{position:'fixed',backgroundColor:'#F2F2F2',width:'100%'}}>
       <div className='flex px-10 py-3' style={{ justifyContent: 'space-between' }}>
         <div className='flex flex-row'>
@@ -103,34 +104,34 @@ useEffect(()=>{
 
     <div className='columns-4 p-4 px-10 bg-white'>
       <div className='flex flex-row'>
-      <img src='/assets/store 1.png' />
+      <img src='/assets/store 1.png' style={{height:50,width:50}} />
         <div>
           <h5 className="font-bold text-sm px-2">FREE STORE</h5>
-          <p className='px-2'>Create your business with us
+          <p className='px-2 text-sm'>Create your business with us
 using our free template  </p>
         </div>
       </div>
       <div className='flex flex-row'>
-      <img src='/assets/partners 1.png' />
+      <img src='/assets/partners 1.png' style={{height:50,width:50}} />
       <div>
           <h5 className="font-bold text-sm px-2 ">COMMUNITY</h5>
-          <p className='px-2'>Connect with other business
+          <p className='px-2 text-sm'>Connect with other business
 through affiliation and partnership</p>
         </div>
       </div>
       <div className='flex flex-row'>
-      <img src='/assets/key 1.png' />
+      <img src='/assets/key 1.png' style={{height:50,width:50}} />
       <div>
           <h5 className="font-bold text-sm px-2">OWNERSHIP</h5>
-          <p className='px-2'>Take charge of your business
+          <p className='px-2 text-sm'>Take charge of your business
 and grow at your pace </p>
         </div>
       </div>
       <div className='flex flex-row'>
-      <img src='/assets/money-bag 1.png' />
+      <img src='/assets/money-bag 1.png' style={{height:50,width:50}} />
       <div>
           <h5 className="font-bold text-sm px-2">GROWTH</h5>
-          <p className='px-2'>Grow your income, make
+          <p className='px-2 text-sm'>Grow your income, make
 the right decision </p>
         </div>
       </div>
@@ -138,7 +139,7 @@ the right decision </p>
 
       {/* shop by category */}
     <div className='pl-10' style={{}}>
-      <h3 className='font-bold'>SHOP BY CATEGORY</h3>
+      <h3 className='font-bold'>SHOP BY CATEGORIES</h3>
     </div>
 
     <div className='column-6' style={{}}>
@@ -276,8 +277,30 @@ the right decision </p>
       <div className='flex justify-center self-end p-2'>
         <h5 className='font-semibold' style={{color:'#ab5ae0'}}>Become a supplier</h5>
       </div>
+
+     
     </div>
+    <div>            
+  <h3 className='font-semibold pl-10 pt-5'  style={{color:'#42255F'}}>Top Merchants </h3>
+  <div className='columns-4 m-10 relative'>
+      <Cards image="/assets/premium_photo-1692873058899-624c0f96c5de.webp" pname='Cleaning Products' pprice="8000" opa='0' padin={15} />
+      <Cards image="/assets/stock-photo-portrait-of-young-black-man-working-on-farm-standing-in-hothouse-holding-wooden-box-full-of-fresh-2183178705 2.png" pname='Nike Sneakers' pprice='28,000' opa='0' padin={15} />
+      <Cards image="/assets/istockphoto-1475370822-612x612.jpg" pname='Camera' pprice='328,000' opa='0' padin={15} />
+      <Cards image="/assets/young-smiling-cheerful-satisfied-positive-600nw-2127045413.jpg.webp" pname='Hermes Birkin Bag' pprice='28,000' opa='0' padin={15} />          
+        </div>
+          </div>
+
+          <div className='p-5'>
+            <h5 className='text-center'>INFINITY PRODUCT PLACE is a recognised as a product marketing community alongside infinity service place(ISP) a service centric community<br />The two individual communities comes together
+            to form a marketing system called Infinity Market Place. Created by WAJISINFINITY LTD. all right reserved</h5>
+            <div className='flex flex-row self-center justify-center pt-10'>
+            <h4 className='text-center font-bold'>Put your skills services to good use and earn an income. <br />Create your portfolio today on infinity service place </h4>
+            <span className='p-2 rounded-xl absolute right-7 text-white font-bold' style={{backgroundColor:'#702EB2',position:'  '}}>Join ISP</span>
+         
+            </div>
+             </div>
     <Footers />
+    <Signuppage />
 
   </div>
   <Outlet />
