@@ -1,6 +1,7 @@
 import React from 'react'
 import { Icon } from '@iconify/react';
 import { Checkbox } from 'flowbite-react';
+import Sidecarousel from '../lilcomponents/sidecarousel';
 
 function Signuppage() {
   return (
@@ -82,14 +83,9 @@ function Signuppage() {
                 </div>
                 </div>
             </div>
-            <div className='flex flex-col text-white font-semibold' style={{flex:1,backgroundImage:"url('/assets/businessman-working-tablet 1.png')", width:'40vw', height:'42vw'}}>
-                <div className='flex justify-center h-full text-white font-semibold'>
-               <h4 className='self-center text-center text-lg'>Join Adekunle and other sellers <br />at <span className='font-bold' style={{color:'#702EB2'}}> INFINITY PRODUCT PLACE </span>'IPP'</h4>
-               </div>
-               <div className='flex justify-end mr-1'>
-                <h4 className='flex  '>Clothing Brand Owner</h4>
-               </div>
-            </div>
+           <div>
+            <Sidecarousel />
+           </div>
         </div>
       </div>
     </div>
