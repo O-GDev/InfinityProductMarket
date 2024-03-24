@@ -44,9 +44,10 @@ useEffect(()=>{
         slideRef.current.classList.add('fade-anim');
     }
   return (
-    <div>
-        <div ref={slideRef} className="select-none " >
-       <div className='flex flex-col text-white font-semibold' style={{flex:1,backgroundImage:`url("${sliderImage[currentIndex]}")`, width:'40vw', height:'42vw'}}>
+    <div className='h-full w-full bg-blue-500'>
+        <div ref={slideRef} className="flex select-none h-full w-full bg-red-500 " >
+       <div className='flex flex-col text-white font-semibold bg-white' style={{
+       backgroundImage:`url("${sliderImage[currentIndex]}")`,backgroundSize:'cover',backgroundRepeat:'no-repeat',width:'100%',height:'100%'}}>
             {currentIndex == 0 && 
             <>
             <div className='flex justify-center h-full text-white font-semibold'>

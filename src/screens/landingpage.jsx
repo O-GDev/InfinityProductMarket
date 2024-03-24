@@ -18,17 +18,17 @@ export class Landingpage extends Component {
       <h3 className='text-black font-primary font-bold'>THE MARKETS </h3>
       <Uline color='#702EB2' />
       </div>
-      <div className='md:columns-2 md:mx-16 '>
-        <div className='md:columns-2 rounded-xl my-10' style={{backgroundColor:'#D3D3D3'}}>
-          <img src='/assets/IMG_9517.JPG' className='rounded-xl' style={{height:'400px'}}  />
+      <div className='md:columns-2 md:mx-16 p-5'>
+        <div className='md:columns-2 rounded-xl my-10 p-5' style={{backgroundColor:'#D3D3D3'}}>
+          <img src='/assets/IMG_9517.JPG' className='rounded-xl' style={{height:'400px',width:'100%'}}  />
           <div className='flex flex-col justify-self-center self-center'>
             <p className='pt-16 px-16 text-center'>Check out our product showcase, where we bring you the latest and greatest products in a laid-back and informative way!</p>
             <Button><span className='font-bold' style={{backgroundColor:'transparent',padding:'10px',borderColor:'#702EB2',borderWidth:1,color:'#702EB2'}}>Let's Deal</span></Button>
           </div>
         </div>
-        <div className='md:columns-2 rounded-xl my-10 mt-10 bg-green-900' style={{backgroundColor:'#D3D3D3'}}>
+        <div className='md:columns-2 rounded-xl my-10 mt-10 bg-green-900 p-5' style={{backgroundColor:'#D3D3D3'}}>
        
-       <img src='/assets/medium-shot-woman-posing-studio.jpg' className='rounded-xl' style={{height:'400px'}} />          
+       <img src='/assets/medium-shot-woman-posing-studio.jpg' className='rounded-xl' style={{height:'400px',width:'100%'}} />          
        
          <div className='flex flex-col justify-self-center self-center'>
            <p className='pt-16 px-16 text-center'>Check out our top notch professionals in different fields  of creativity all across the world. </p>
@@ -37,8 +37,8 @@ export class Landingpage extends Component {
          
        </div>
         </div>
-      <div className='relative flex-col h-full md:px-12 '>
-      <h3 className='text-black font-primary font-bold md:text-start text-center'>OUR SERVICES</h3>
+      <div className='relative flex-col h-full px-12 '>
+      <h3 className='text-black font-primary font-bold md:text-start '>OUR SERVICES</h3>
       <Uline color='#702EB2' />
       </div>
       <div>
@@ -97,7 +97,7 @@ export class Landingpage extends Component {
       </div>
       </div>
       <div>
-        <div className='md:columns-4 sm:columns-1 gap-14 md:m-10 p-5 md:p-0 lg:p-0'>
+        <div className='md:columns-4 gap-14 md:m-10 p-5 md:p-0 lg:p-0'>
         <Cards image="/assets/Rectangle 61.png" pname='Cleaning Products' pprice="8000" rate='4.6'/>
       <Cards image="/assets/Rectangle 61-2.png" pname='Nike Sneakers' pprice='28,000' rate='4.6'/>
       <Cards image="/assets/photo-camera-balancing-with-yellow-background.jpg" pname='Camera' pprice='328,000' rate='4.6'/>
