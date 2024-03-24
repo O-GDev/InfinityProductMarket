@@ -9,7 +9,7 @@ function Signuppage() {
       <div className='h-full md:p-20 md:my-0 md:mx-0 p-5' style={{}}>
         <div className='md:columns-2 bg-white h-full '>
             <div className='flex justify-center self-center h-full '>
-            <div className='w-full h-full md:py-5'>
+            <div className='w-full h-full py-10 '>
                 <h3 className='font-md font-bold flex justify-center self-center '>Be A Seller!</h3>
                 <div className='flex justify-center self-center'>
                 <div className='' style={{height:0.5,width:80,backgroundColor:'#702EB2'}}></div>
@@ -38,7 +38,7 @@ function Signuppage() {
                 </div>
                 </div>
 
-                <div className=''>
+                <div className='md:px-0 px-12'>
                     <div className='md:flex justify-between my-2 w-full'>
                         <div className='w-full px-3'>
                             <h5 className='font-semibold'>First Name<span style={{color:'#D69999'}}>*</span></h5>
@@ -71,13 +71,13 @@ function Signuppage() {
                         <h5>I agree to the Terms, Condition and Privacy Policy</h5> 
                     </div>
 
-                    <div className='py-6 px-10'>
+                    <div className='py-4 px-10'>
                         <div className='flex justify-center self-center rounded-2xl bg-transparent border' style={{borderColor:'#702EB2'}}>
                         <h4 className='m-1 font-semibold' style={{color:'#702EB2'}}>Sign Up</h4>
                         </div>
                     </div>
                     <div className='flex justify-center'>
-                        <h4 className='mb-2'>Already have an account? <span style={{color:'#702EB2'}}>Log In</span></h4>
+                        <h4 className='pb-2'>Already have an account? <span style={{color:'#702EB2'}}>Log In</span></h4>
                     </div>
 
                 </div>
