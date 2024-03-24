@@ -9,7 +9,7 @@ import Footers from '../lilcomponents/footers'
 export class Landingpage extends Component {
    render() {
     return (
-      <div style={{backgroundColor:'#F2F2F2'}}>
+      <div className='relative' style={{backgroundColor:'#F2F2F2'}}>
       <div className=''>        
       <Navbars />
       </div>
@@ -18,7 +18,7 @@ export class Landingpage extends Component {
       <h3 className='text-black font-primary font-bold'>THE MARKETS </h3>
       <Uline color='#702EB2' />
       </div>
-      <div className='md:columns-2 sm:columns-1 md:mx-16 my-12'>
+      <div className='md:columns-2 md:mx-16 '>
         <div className='md:columns-2 rounded-xl my-10' style={{backgroundColor:'#D3D3D3'}}>
           <img src='/assets/IMG_9517.JPG' className='rounded-xl' style={{height:'400px'}}  />
           <div className='flex flex-col justify-self-center self-center'>
@@ -26,24 +26,24 @@ export class Landingpage extends Component {
             <Button><span className='font-bold' style={{backgroundColor:'transparent',padding:'10px',borderColor:'#702EB2',borderWidth:1,color:'#702EB2'}}>Let's Deal</span></Button>
           </div>
         </div>
-        <div className='md:columns-2 rounded-xl my-10' style={{backgroundColor:'#D3D3D3'}}>
-        <div style={{}}>
-        <img src='/assets/medium-shot-woman-posing-studio.jpg' className='rounded-xl' style={{height:'400px'}} />          
+        <div className='md:columns-2 rounded-xl my-10 mt-10 bg-green-900' style={{backgroundColor:'#D3D3D3'}}>
+       
+       <img src='/assets/medium-shot-woman-posing-studio.jpg' className='rounded-xl' style={{height:'400px'}} />          
+       
+         <div className='flex flex-col justify-self-center self-center'>
+           <p className='pt-16 px-16 text-center'>Check out our top notch professionals in different fields  of creativity all across the world. </p>
+           <Button><span className='font-bold' style={{backgroundColor:'transparent',padding:'10px',borderColor:'#702EB2',borderWidth:1,color:'#702EB2'}}>Let's Deal</span></Button>
+         </div>
+         
+       </div>
         </div>
-          <div className='flex flex-col justify-self-center self-center'>
-            <p className='pt-16 px-16 text-center'>Check out our top notch professionals in different fields  of creativity all across the world. </p>
-            <Button><span className='font-bold' style={{backgroundColor:'transparent',padding:'10px',borderColor:'#702EB2',borderWidth:1,color:'#702EB2'}}>Let's Deal</span></Button>
-          </div>
-          
-        </div>
-      </div>
       <div className='relative flex-col h-full md:px-12 '>
-      <h3 className='text-black font-primary font-bold sm:text-center'>OUR SERVICES</h3>
+      <h3 className='text-black font-primary font-bold md:text-start text-center'>OUR SERVICES</h3>
       <Uline color='#702EB2' />
       </div>
       <div>
-        <div className='md:columns-2 md:mx-36 my-12'>
-          <div>
+        <div className='md:columns-2 justify-center md:mx-36 my-12 '>
+          <div className='p-3'>
            <img src='/assets/corporate-management-strategy-solution-branding-concept.jpg' className='' style={{height:'400px'}} />          
        </div>
           <div>
@@ -65,7 +65,7 @@ export class Landingpage extends Component {
             <Button><span className='font-bold' style={{backgroundColor:'transparent',padding:'10px',borderColor:'#702EB2',borderWidth:1,color:'#702EB2'}}>Learn More</span></Button>
           </div>
           </div>
-          <div>
+          <div className='p-3'>
            <img src='/assets/drew-colins-LIEQsu5JuoM-unsplash 2.png' className='' style={{height:'400px'}} />          
        </div>
         </div>
@@ -74,7 +74,7 @@ export class Landingpage extends Component {
 
       <div>
         <div className='md:columns-2 md:mx-36 my-12'>
-          <div>
+          <div className='p-3'>
            <img src='/assets/image6 2.png' className='' style={{height:'400px'}} />          
        </div>
           <div>
@@ -97,7 +97,7 @@ export class Landingpage extends Component {
       </div>
       </div>
       <div>
-        <div className='md:columns-4 sm:columns-1 gap-14 md:m-10 sm:m-5'>
+        <div className='md:columns-4 sm:columns-1 gap-14 md:m-10 p-5 md:p-0 lg:p-0'>
         <Cards image="/assets/Rectangle 61.png" pname='Cleaning Products' pprice="8000" rate='4.6'/>
       <Cards image="/assets/Rectangle 61-2.png" pname='Nike Sneakers' pprice='28,000' rate='4.6'/>
       <Cards image="/assets/photo-camera-balancing-with-yellow-background.jpg" pname='Camera' pprice='328,000' rate='4.6'/>
@@ -108,7 +108,7 @@ export class Landingpage extends Component {
         <h4 className='font-semibold p-1.5' style={{color:'#2E0853'}}>PROFESSIONALS</h4>
         <span style={{color:'#2E0853',borderWidth:0.5,borderColor:'#2E0853',borderRadius:20}}><h4 className='font-semibold rounded-md p-1.5'>VIEW ALL</h4></span>
       </div>
-      <div className='md:columns-4 sm:columns-1 gap-14 md:m-10 sm:m-5'>
+      <div className='md:columns-4 sm:columns-1 gap-14 md:m-10 p-5 md:p-0 lg:p-0'>
       <Cards image="/assets/premium_photo-1692873058899-624c0f96c5de.webp" pname='Cleaning Products' pprice="8000" opa='0' padin={15} />
       <Cards image="/assets/stock-photo-portrait-of-young-black-man-working-on-farm-standing-in-hothouse-holding-wooden-box-full-of-fresh-2183178705 2.png" pname='Nike Sneakers' pprice='28,000' opa='0' padin={15} />
       <Cards image="/assets/istockphoto-1475370822-612x612.jpg" pname='Camera' pprice='328,000' opa='0' padin={15} />

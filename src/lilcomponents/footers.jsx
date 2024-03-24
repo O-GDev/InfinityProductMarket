@@ -3,34 +3,34 @@ import React, {useState, useEffect} from 'react'
 const Footers = () => {
  
   return (
-    <div  className="select-none relative py-4" style={{backgroundColor:'white'}}>
-    <div className='md:columns-4'>
+    <div  className="select-none relative py-4 sm:justify-center" style={{backgroundColor:'white'}}>
+    <div className='md:columns-4 md:p-0 sm:p-40'>
       <div className='md:p-16'>
-      <h3 className='font-semibold text-lg mb-5' style={{color:'#2E0853'}}>Get In Touch</h3>
-      <p>Contact Us Anytime, we are always available for you.</p>
+      <h3 className='font-semibold text-lg mb-5 md:text-start text-center' style={{color:'#2E0853'}}>Get In Touch</h3>
+      <p  className='md:text-start text-center'>Contact Us Anytime, we are always available for you.</p>
       </div>
       <div className='md:p-16 sm:p-10'>
-      <h3 className='font-semibold text-lg mb-5' style={{color:'#2E0853'}}>Company Info</h3>
+      <h3 className='font-semibold text-lg mb-5 md:text-start text-center' style={{color:'#2E0853'}}>Company Info</h3>
       <ul>
-      <li>Blog</li>
-      <li>About Us</li>
-      <li>Services</li>
+      <li className='md:text-start text-center'>Blog</li>
+      <li className='md:text-start text-center'>About Us</li>
+      <li className='md:text-start text-center'>Services</li>
       </ul>
       </div>
       <div className='md:p-16 sm:p-10'>
-      <h3 className='font-semibold text-lg mb-5 text-start sm:text-center' style={{color:'#2E0853'}}>Features</h3>
+      <h3 className='font-semibold text-lg mb-5 md:text-start text-center' style={{color:'#2E0853'}}>Features</h3>
       <ul>
-      <li>Unlimited Support</li>
-      <li>Chats and Calls</li>
-      <li>Business Marketing</li>
+      <li className='md:text-start text-center'>Unlimited Support</li>
+      <li className='md:text-start text-center'>Chats and Calls</li>
+      <li className='md:text-start text-center'>Business Marketing</li>
       </ul>
       </div>
       <div className='md:p-16 sm:p-10'>
-      <h3 className='font-semibold text-lg mb-5' style={{color:'#2E0853'}}>Legal</h3>
+      <h3 className='font-semibold text-lg mb-5 md:text-start text-center' style={{color:'#2E0853'}}>Legal</h3>
       <ul>
-      <li>Terms and Condition</li>
-      <li>Privacy Policy</li>
-      <li className='font-bold text-xl' style={{color:'#2E0853'}}>SIGN UP/LOG IN</li>
+      <li className='md:text-start text-center'>Terms and Condition</li>
+      <li className='md:text-start text-center'>Privacy Policy</li>
+      <li className='font-bold text-xl md:text-start text-center' style={{color:'#2E0853'}}>SIGN UP/LOG IN</li>
       </ul>
       </div>
     </div>

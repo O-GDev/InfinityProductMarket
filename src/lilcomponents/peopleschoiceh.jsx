@@ -34,7 +34,7 @@ const PeoplesChoice = () => {
         // slideRef.current.classList.add('fade-anim');
     }
   return (
-    <div  className="select-none relative py-4" style={{backgroundColor:'#F2F2F2'}}>
+    <div  className="select-none relative py-4 p-3 md:p-0" style={{backgroundColor:'#F2F2F2'}}>
     <img src={sliderImage[currentIndex]} alt='slide' style={{height:'87vh',width:'100vw',objectFit:'none',opacity:0.8}} />  
     </div>
   )

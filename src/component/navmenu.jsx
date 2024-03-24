@@ -5,7 +5,7 @@ const Navmenu = () => {
   return (
     <><div>
       <nav>
-        <div className='flex px-10 py-3' style={{ justifyContent: 'space-between' }}>
+        <div className='flex px-10 py-3 ' style={{ justifyContent: 'space-between' }}>
           <div className='flex flex-row'>
             <img src='/assets/logo.png' style={{ width: '30px', height: '30px' }} />
             <h3 className="font-primary font-semibold flex flex-row self-center justify-center">INFINITY MARKET PLACE</h3>

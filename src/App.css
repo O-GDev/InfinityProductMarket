@@ -5,6 +5,13 @@
   text-align: center;
 }
 
+@media screen and (max-width: 600px) {
+  .navimg{
+      height: 1000px;
+      width:200px
+  } 
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
