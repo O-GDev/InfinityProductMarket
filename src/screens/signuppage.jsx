@@ -6,7 +6,7 @@ import Sidecarousel from '../lilcomponents/sidecarousel';
 function Signuppage() {
   return (
     <div className='fixed inset-0 h-full bg-black bg-opacity-30 backdrop-blur-sm ' style={{height:'100%'}}>
-      <div className='h-full p-10' style={{height:'100%'}}>
+      <div className='h-full md:p-10 py-80 px-10' style={{}}>
         <div className='md:columns-2 bg-white h-full'>
             <div className='flex justify-center self-center h-full'>
             <div className='w-full h-full py-5'>
@@ -28,8 +28,8 @@ function Signuppage() {
                 </div>
                 </div>
 
-                <div className=''>
-                    <div className='flex'>
+                <div className='flex justify-center'>
+                <div className='flex w-full px-2'>
                 <div className='mt-3' style={{height:0.5,width:200,backgroundColor:'#807979'}}></div>
                 <div>
                 <h6 className='mx-3'>or</h6>
