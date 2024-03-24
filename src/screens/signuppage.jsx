@@ -6,7 +6,7 @@ import Sidecarousel from '../lilcomponents/sidecarousel';
 function Signuppage() {
   return (
     <div className='fixed inset-0 h-full bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl' style={{}}>
-      <div className='h-full p-10 md:p-20 md:my-0 md:mx-0' style={{}}>
+      <div className='h-full p-5 py-10 md:p-20 md:py-0 md:mx-0' style={{}}>
         <div className='md:columns-2 bg-white h-full '>
             <div className='flex justify-center self-center h-full '>
             <div className='w-full h-full py-2 m-2 '>
@@ -44,13 +44,13 @@ function Signuppage() {
                             <h5 className='font-semibold'>First Name<span style={{color:'#D69999'}}>*</span></h5>
                             <input name='fName' className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full ' style={{}}  />
                         </div>
-                        <div className='w-full md:px-3'>
+                        <div className='w-full md:px-3 my-2 md:my-0'>
                         <h5 className='font-semibold'>Surname<span style={{color:'#D69999'}}>*</span></h5>
                         <input name='fName' className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full ' style={{}}  />
                         </div>
                     </div>
 
-                        <div className='my-2 md:px-3'>
+                        <div className='my-2 md:px-3 my-2 md:my-0'>
                             <h5 className='font-semibold'>Email Address<span style={{color:'#D69999'}}>*</span></h5>
                             <input name='fName' className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full' style={{}}  />
                         </div>
@@ -60,7 +60,7 @@ function Signuppage() {
                             <h5 className='font-semibold'>Password<span style={{color:'#D69999'}}>*</span></h5>
                             <input name='fName' className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full' style={{}}  />
                         </div>
-                        <div className='w-full md:px-3'>
+                        <div className='w-full md:px-3 my-2 md:my-0'>
                         <h5 className='font-semibold'>Confirm Password<span style={{color:'#D69999'}}>*</span></h5>
                         <input name='fName' className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full' style={{}}  />
                         </div>
