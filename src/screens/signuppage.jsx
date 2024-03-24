@@ -6,10 +6,10 @@ import Sidecarousel from '../lilcomponents/sidecarousel';
 function Signuppage() {
   return (
     <div className='fixed inset-0 h-full bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl' style={{}}>
-      <div className='h-full p-5 py-10 md:p-20 md:py-0 md:mx-0' style={{}}>
+      <div className='h-full sm:py-10 p-5 md:p-20 ' style={{}}>
         <div className='md:columns-2 bg-white h-full '>
             <div className='flex justify-center self-center h-full '>
-            <div className='w-full h-full py-2 m-2 '>
+            <div className='w-full h-full py-2 md:py-5'>
                 <h3 className='font-md font-bold flex justify-center self-center '>Be A Seller!</h3>
                 <div className='flex justify-center self-center'>
                 <div className='' style={{height:0.5,width:80,backgroundColor:'#702EB2'}}></div>
@@ -38,8 +38,8 @@ function Signuppage() {
                 </div>
                 </div>
 
-                <div className='md:px-0 px-12'>
-                    <div className='md:flex justify-between my-2 w-full'>
+                <div className='md:px-0 px-5'>
+                    <div className='md:flex justify-between md:my-2 w-full'>
                         <div className='w-full md:px-3'>
                             <h5 className='font-semibold'>First Name<span style={{color:'#D69999'}}>*</span></h5>
                             <input name='fName' className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full ' style={{}}  />
@@ -68,7 +68,7 @@ function Signuppage() {
 
                     <div className='flex self-center md:px-3'>
                         <input type='checkbox' className='self-center mr-2 bg-white drop-shadow-lg border-gray-300 border-2'/>
-                        <h5>I agree to the Terms, Condition and Privacy Policy</h5> 
+                        <h5 className='text-sm'>I agree to the Terms, Condition and Privacy Policy</h5> 
                     </div>
 
                     <div className='py-4 px-10'>
@@ -77,7 +77,7 @@ function Signuppage() {
                         </div>
                     </div>
                     <div className='flex justify-center'>
-                        <h4 className='pb-2'>Already have an account? <span style={{color:'#702EB2'}}>Log In</span></h4>
+                        <h4 className='pb-2 text-sm'>Already have an account? <span style={{color:'#702EB2'}}>Log In</span></h4>
                     </div>
 
                 </div>
