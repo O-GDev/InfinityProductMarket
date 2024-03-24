@@ -102,7 +102,7 @@ useEffect(()=>{
      
     </div>
 
-    <div className='columns-4 p-4 px-10 bg-white'>
+    <div className='md:columns-4 p-4 px-10 bg-white'>
       <div className='flex flex-row'>
       <img src='/assets/store 1.png' style={{height:50,width:50}} />
         <div>
@@ -167,7 +167,7 @@ the right decision </p>
     </div>
 
     <div className='pl-10 pt-5 '>
-    <div className='flex flex-row '>
+    <div className='md:flex md:flex-row '>
     <div className=''>
       <div className='flex flex-row justify-between w-full'>
       <h3 className='font-bold'>DEALS OF THE WEEK</h3>
@@ -203,21 +203,21 @@ the right decision </p>
       </div>
       <div className='w-full'>
         <h3 className='font-bold pl-20 '>BEST SELLERS</h3>
-        <div className='columns-4 px-4 pt-3' >        
+        <div className='md:columns-4 px-4 pt-3' >        
       <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
       <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
       <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
       <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
 
         </div>
-        <div className='columns-4 px-4 pt-3' >        
+        <div className='md:columns-4 px-4 pt-3' >        
       <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
       <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
       <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
       <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
 
         </div>
-        <div className='columns-4 px-4 pt-3' >        
+        <div className='md:columns-4 px-4 pt-3' >        
       <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
       <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
       <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
@@ -237,7 +237,7 @@ the right decision </p>
 <div className=''>
   <h3 className='font-bold pl-10'>FEATURED ITEMS</h3>
   <h5 className='text-center' style={{color:'#42255F'}}>Top Rated</h5>
-  <div className='columns-4 px-4 pt-3' >        
+  <div className='md:columns-4 px-4 pt-3' >        
       <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
       <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
       <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
@@ -245,7 +245,7 @@ the right decision </p>
 
         </div>
 
-        <div className='columns-4 px-4 pt-3' >        
+        <div className='md:columns-4 px-4 pt-3' >        
       <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
       <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
       <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
@@ -282,7 +282,7 @@ the right decision </p>
     </div>
     <div>            
   <h3 className='font-semibold pl-10 pt-5'  style={{color:'#42255F'}}>Top Merchants </h3>
-  <div className='columns-4 m-10 relative'>
+  <div className='md:columns-4 m-10 relative'>
       <Cards image="/assets/premium_photo-1692873058899-624c0f96c5de.webp" pname='Cleaning Products' pprice="8000" opa='0' padin={15} />
       <Cards image="/assets/stock-photo-portrait-of-young-black-man-working-on-farm-standing-in-hothouse-holding-wooden-box-full-of-fresh-2183178705 2.png" pname='Nike Sneakers' pprice='28,000' opa='0' padin={15} />
       <Cards image="/assets/istockphoto-1475370822-612x612.jpg" pname='Camera' pprice='328,000' opa='0' padin={15} />
