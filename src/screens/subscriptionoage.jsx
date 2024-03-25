@@ -17,7 +17,7 @@ business on the right part</p>
           <h3 className='text-center font-bold pt-5'>SUBSCRIPTIONS</h3>
           </div>
           <div className='md:columns-3 gap-1 ' style={{height:'100%'}}>
-          <div className='py-2 ml-2 rounded-3xl shadow-2xl' style={{backgroundColor:'#B4B4B4',}}>
+          <div className='py-2 ml-2 rounded-3xl shadow-2xl ' style={{backgroundColor:'#B4B4B4',}}>
           <h5 className='text-center p-2'>No Plan</h5>
           <h4 className='text-center pt-1 opacity-50' ><s>PAY</s></h4>
           <h6 className='text-center pt-2' style={{fontSize:'50%'}}>FOR START UPS AND SMALL SCALE BUSINESSES </h6>
