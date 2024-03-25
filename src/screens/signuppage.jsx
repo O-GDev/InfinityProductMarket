@@ -2,6 +2,7 @@ import React from 'react'
 import { Icon } from '@iconify/react';
 import { Checkbox } from 'flowbite-react';
 import Sidecarousel from '../lilcomponents/sidecarousel';
+import { Link } from 'react-router-dom';
 
 function Signuppage() {
   return (
@@ -72,9 +73,11 @@ function Signuppage() {
                     </div>
 
                     <div className='py-4 px-10'>
+                    <Link to='/subscribe'>
                         <div className='flex justify-center self-center rounded-2xl bg-transparent border' style={{borderColor:'#702EB2'}}>
                         <h4 className='m-1 font-semibold' style={{color:'#702EB2'}}>Sign Up</h4>
                         </div>
+                        </Link>
                     </div>
                     <div className='flex justify-center'>
                         <h4 className='pb-2 text-sm'>Already have an account? <span style={{color:'#702EB2'}}>Log In</span></h4>

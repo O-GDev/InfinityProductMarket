@@ -7,6 +7,8 @@ import Navmenu from './component/navmenu';
 import Choosesociety from './screens/choosesociety';
 import Productplacehome from './screens/productplacehome';
 import Serviceplacehome from './screens/serviceplacehome';
+import Buyerorsellerpage from './screens/buyerorsellerpage'
+import Subscriptionoage from './screens/subscriptionoage';
 
 
 const App = () => {
@@ -18,6 +20,8 @@ const App = () => {
         <Route path='choosesociety' element={<Choosesociety />} />
         <Route path='producthome' element={<Productplacehome />} />
         <Route path='servicehome' element={<Serviceplacehome />} />
+        <Route path='buyerorseller' element={<Buyerorsellerpage />} />
+        <Route path='subscribe' element={<Subscriptionoage />} />
       </Routes>
       </BrowserRouter>
     
