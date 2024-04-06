@@ -26,7 +26,7 @@ export class Landingpage extends Component {
             <Button><span className='font-bold' style={{backgroundColor:'transparent',padding:'10px',borderColor:'#702EB2',borderWidth:1,color:'#702EB2'}}>Let's Deal</span></Button>
           </div>
         </div>
-        <div className='md:columns-2 rounded-xl my-10 mt-10 bg-green-900 p-5' style={{backgroundColor:'#D3D3D3'}}>
+        <div className='md:columns-2 rounded-xl my-10 p-5' style={{backgroundColor:'#D3D3D3'}}>
        
        <img src='/assets/medium-shot-woman-posing-studio.jpg' className='rounded-xl' style={{height:'400px',width:'100%'}} />          
        

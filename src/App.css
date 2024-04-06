@@ -5,6 +5,40 @@
   text-align: center;
 }
 
+.container{
+  background-color: red;
+  height: 100vh;
+  width: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.triangle1{  
+  /* background-color: white; */
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-bottom: 535px solid red;
+  border-left: 735px solid blue;
+  border-image: url("/assets/buyer.png");
+  margin: 10px;
+}
+.triangle2{
+  background-color: none;
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-bottom: 550px solid red;
+  border-left: 750px solid blue;
+  border-image: url("/assets/seller.png");
+  margin-top: 20px;
+  margin-left: 10px;
+
+   /* 27 / 36px 28px 18px 8px / 18px 14px 9px 4px */
+  /* round; */
+}
+
 @media screen and (max-width: 600px) {
   .navimg{
       height: 1000px;

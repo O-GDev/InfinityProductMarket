@@ -9,7 +9,7 @@ export default function Choosesociety() {
     <h2 className='py-2 font-bold text-lg'>IMP is a Societal Platform with two communities.</h2>   
     <h4 className='text-lg'>Select the community you which to thrive in.</h4>   
     </div>
-    <div className='relative flex-col h-full px-12'>
+    <div className='relative flex-col justify-center h-full px-12'>
       <h3 className='text-black font-primary font-bold'>THE MARKETS</h3>
       <Uline color='#702EB2' />
       </div>
