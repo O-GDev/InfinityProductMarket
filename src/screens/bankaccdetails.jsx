@@ -51,7 +51,7 @@ export default function Subscriptionoage() {
                       </div>
                   </div>
 
-                      <div className='my-2 md:px-3 my-2 md:my-0'>
+                      <div className='my-2 md:px-3 md:my-0'>
                           <h5 className='font-semibold'>Email Address<span style={{color:'#D69999'}}>*</span></h5>
                           <input name='fName' className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full' style={{}}  />
                       </div>

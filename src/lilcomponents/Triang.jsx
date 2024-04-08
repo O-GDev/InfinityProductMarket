@@ -7,11 +7,11 @@ const Triangle = ({ }) => {
   return (
     <div className=''>
     
-    <Link to=''>
+    <Link to='/signup'>
     <div class="triangle1" id="zooms" >        
     </div>
     </Link>
-    <Link to=''>
+    <Link to='/signup'>
     <div class="triangle2" id="zooms" >        
     </div>
     </Link>
