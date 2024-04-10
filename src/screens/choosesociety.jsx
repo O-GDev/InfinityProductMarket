@@ -3,6 +3,7 @@ import { Button, Uline } from '../lilcomponents/style.styles'
 import { Link } from 'react-router-dom'
 
 export default function Choosesociety() {
+  const rand = Math.floor(Math.random()*200000000000 - 100)
   return (
     <div className='absolute'>
     <div className='flex flex-col justify-center text-center px-4 '>
@@ -21,7 +22,7 @@ export default function Choosesociety() {
           <img src='/assets/IMG_9517.JPG' className='rounded-xl w-full' style={{}}  />
           <div className='flex flex-col justify-center self-center md:pt-16 pt-5'>
             <p className='md:pt-16 sm:pt-1 px-3 text-center text-xl'>Check out our product showcase, where we bring you the latest and greatest products in a laid-back and informative way!</p>
-            <Link to='/buyerorseller' className='flex self-center justify-center'>
+            <Link to={`/reg/${rand}`} className='flex self-center justify-center'>
             <Button><span className='font-bold' style={{backgroundColor:'transparent',padding:'10px',borderColor:'#702EB2',borderWidth:1,color:'#702EB2'}}>Buy/Sell</span></Button>
             </Link>
           </div>
@@ -33,7 +34,7 @@ export default function Choosesociety() {
         </div>
           <div className='flex flex-col justify-self-center self-center md:pt-20 pt-5'>
             <p className='md:pt-16 sm:pt-3 px-3 text-center text-xl'>Check out our top notch professionals in different fields  of creativity all across the world. </p>
-            <Link to='/buyerorseller' className='flex justify-center self-center'>
+            <Link to={`/reg/${rand}`} className='flex justify-center self-center'>
             <Button><span className='font-bold ' style={{backgroundColor:'transparent',padding:'10px',borderColor:'#702EB2',borderWidth:1,color:'#702EB2'}}>Let's Deal</span></Button>
             </Link>
             </div>

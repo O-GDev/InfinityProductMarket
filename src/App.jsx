@@ -20,18 +20,13 @@ const App = () => {
   return (
       <BrowserRouter>
         <Routes>
-        <Route path='/' element={<Landingpage />} />
+          <Route path='/' element={<Landingpage />} />
         <Route path='nav' element={<Navmenu />} />
         <Route path='choosesociety' element={<Choosesociety />} />
-        <Route path='buyerorseller' element={<Productplacehome />} />
-        <Route path='servicehome' element={<Serviceplacehome />} />
-        {/* <Route path='buyerorseller' element={<Buyerorsellerpage />} /> */}
-        <Route path='subscribe' element={<Subscriptionoage />} />
-        <Route path='signup' element={<Signuppage />} />
-        <Route path='payment' element={<Payment />} />
-        <Route path='paymentdetails' element={<Paymentdetails />} />
-        <Route path='sellerdashboard' element={<SellerDashboard />} />
+        <Route path='reg/:id' element={<Productplacehome />} />        
+        <Route path='sellerdashboard/' element={<SellerDashboard />} />
         <Route path='todaydeal' element={<Todaydeal />} />
+
       </Routes>
       </BrowserRouter>
     

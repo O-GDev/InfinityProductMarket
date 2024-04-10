@@ -8,9 +8,9 @@ import '../App.css'; // Import CSS for styling
 export default function Buyerorsellerpage(props) {
   return (
     <div className='fixed inset-0 h-full bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl'>
-    <div className='flex justify-center self-center pt-5 h-full' style={{paddingRight:'60%'}}>
+    <div className='flex justify-center self-center pt-5 h-full ' style={{marginRight:'60%'}}>
 
-    <div class='bg-red-900' className=''>
+    <div class='bg-white' className=''>
     
     <Link to='' onClick={() => props.handleClick('signup')}>
     <div class="triangle1" id="zooms" >        

@@ -15,7 +15,7 @@
 }
 
 .triangle1{  
-  /* background-color: white; */
+  background-color: white;
   position: absolute;
   height: 0;
   width: 0;
@@ -25,7 +25,7 @@
   margin: 10px;
 }
 .triangle2{
-  background-color: none;
+  /* background-color: white; */
   position: absolute;
   height: 0;
   width: 0;
