@@ -5,6 +5,10 @@ import Footers from '../lilcomponents/footers';
 import Cards from '../lilcomponents/cards';
 import Cards1 from '../lilcomponents/card';
 import Signuppage from './signuppage';
+import Buyerorsellerpage from './buyerorsellerpage';
+import Subscriptionoage from './subscriptionoage';
+import { Payment } from './payment';
+import Paymentdetails from './paymentDetails';
 
 
 const sliderImage = [
@@ -17,6 +21,7 @@ let count = 0;
 
 export default function Productplacehome() {
   const[currentIndex, setCurrentIndex] = useState(0);
+  const[currentUrl, setCurrentUrl]= useState('currenturl') 
 
 
  
@@ -48,6 +53,10 @@ useEffect(()=>{
       count = (count + 1) % sliderImage.length;
       setCurrentIndex(count);
       slideRef.current.classList.add('fade-anim');
+  }
+
+  const handleClick = (urlState) => {
+    setCurrentUrl(urlState)
   }
   return (
     <>
@@ -300,8 +309,22 @@ the right decision </p>
             </div>
              </div>
     <Footers />
-    <Signuppage />
-
+    {(() => {
+      switch (currentUrl) {
+        case 'buyerorseller':
+        return <Buyerorsellerpage handleClick={handleClick} />
+        case 'signup':
+        return <Signuppage handleClick={handleClick}/>
+        case 'subscribe':
+        return <Subscriptionoage handleClick={handleClick}/>
+        case 'payment':
+        return <Payment handleClick={handleClick}/>
+        case 'paymentdetails':
+        return <Paymentdetails handleClick={handleClick}/>
+        default:
+        return <Buyerorsellerpage handleClick={handleClick}/>
+      }
+    })()}
   </div>
   <Outlet />
   </>

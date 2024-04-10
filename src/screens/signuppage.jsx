@@ -4,7 +4,7 @@ import { Checkbox } from 'flowbite-react';
 import Sidecarousel from '../lilcomponents/sidecarousel';
 import { Link } from 'react-router-dom';
 
-function Signuppage() {
+function Signuppage(props) {
   return (
     <div className='fixed inset-0 h-full bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl' style={{}}>
       <div className='h-full sm:py-10 p-5  md:p-20 ' style={{}}>
@@ -73,7 +73,7 @@ function Signuppage() {
                     </div>
 
                     <div className='py-4 px-10'>
-                    <Link to='/subscribe'>
+                    <Link to='' onClick={() => props.handleClick('subscribe')}>
                         <div className='flex justify-center self-center rounded-2xl bg-transparent border' style={{borderColor:'#702EB2'}}>
                         <h4 className='m-1 font-semibold' style={{color:'#702EB2'}}>Sign Up</h4>
                         </div>

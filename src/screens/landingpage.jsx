@@ -18,8 +18,8 @@ export class Landingpage extends Component {
       <h3 className='text-black font-primary font-bold'>THE MARKETS </h3>
       <Uline color='#702EB2' />
       </div>
-      <div className='md:columns-2 md:mx-16 p-5'>
-        <div className='md:columns-2 rounded-xl my-10 p-5' style={{backgroundColor:'#D3D3D3'}}>
+      <div className='md:columns-2 p-5'>
+        <div className='md:columns-2 rounded-xl my-10 md:my-0 p-5' style={{backgroundColor:'#D3D3D3'}}>
           <img src='/assets/IMG_9517.JPG' className='rounded-xl' style={{height:'400px',width:'100%'}}  />
           <div className='flex flex-col justify-self-center self-center'>
             <p className='pt-16 px-16 text-center'>Check out our product showcase, where we bring you the latest and greatest products in a laid-back and informative way!</p>

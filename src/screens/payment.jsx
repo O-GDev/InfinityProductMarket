@@ -2,7 +2,7 @@ import React from 'react'
 import Sidecarousel from '../lilcomponents/sidecarousel'
 import { Link } from 'react-router-dom'
 
-export const Payment = () => {
+export const Payment = (props) => {
   return (
     <div className='fixed inset-0 h-full bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl ' style={{}}>
     <div className='h-full sm:py-10 p-5  md:p-10 ' style={{}}>
@@ -25,7 +25,7 @@ export const Payment = () => {
         </div>
       </div>
 
-      <Link to='/paymentdetails'>
+      <Link to='' onClick={() => props.handleClick('paymentdetails')}>
       <div className='flex justify-end self-end p-10 pt-12'>
       <div className='p-3'style={{marginTop:0.5, color:'#702EB2',borderWidth:0.5,borderColor:'#702EB2'}}>CONTINUE</div>
       </div>
