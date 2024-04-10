@@ -1,22 +1,22 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
+} */
 
-/* .container{
+.container{
   background-color: red;
   height: 100vh;
   width: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-} */
+}
 
-/* .triangle1{   */
+.triangle1{  
   /* background-color: white; */
-  /* position: absolute;
+  position: absolute;
   height: 0;
   width: 0;
   border-bottom: 535px solid red;
@@ -33,11 +33,10 @@
   border-left: 750px solid blue;
   border-image: url("/assets/seller.png");
   margin-top: 20px;
-  margin-left: 10px; */
-
-   /* 27 / 36px 28px 18px 8px / 18px 14px 9px 4px */
-  /* round; */
-/* } */
+  margin-left: 10px;
+  /* 27 / 36px 28px 18px 8px / 18px 14px 9px 4px
+  round; */
+}
 
 @media screen and (max-width: 600px) {
   .navimg{
