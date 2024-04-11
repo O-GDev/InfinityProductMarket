@@ -5,6 +5,10 @@
     text-align: center;
   } */
 
+  body{
+    background-color: #F2F2F2;
+  }
+
 .container{
   background-color: red;
   height: 100vh;

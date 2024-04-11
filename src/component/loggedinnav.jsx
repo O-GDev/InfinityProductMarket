@@ -15,7 +15,8 @@ const LoggedinNav = () => {
         <ul className="inline justify-center self-center">
           <li className="inline px-5 font-primary font-semibold"><Link to='/'>Home</Link> </li>
           <li className="inline px-5 font-primary font-semibold"> <Link to='/todaydeal'>Today's Deal</Link> </li>
-          <li className="inline px-5 font-primary font-semibold"><Link to=''>Marketing</Link></li>
+          <li className="inline px-5 font-primary font-semibold"><Link to='/discovery'>Discovery</Link></li>
+          <li className="inline px-5 font-primary font-semibold"><Link to='/marketing'>Marketing</Link></li>
           <li className="inline px-5 font-primary font-semibold"><Link to=''>Store</Link></li>
           <li className="inline px-5 font-primary font-semibold"><Link to=''>Cart</Link></li>
          <li className='inline pl-5 pr-2 font-primary font-semibold'>            
