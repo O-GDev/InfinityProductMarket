@@ -16,6 +16,7 @@ import SellerDashboard from './screens/sellersdashboard';
 import { Todaydeal } from './screens/todaydeal';
 import Discovery from './screens/discovery';
 import Marketing from './screens/marketing';
+import Selleersprofile from './screens/selleersprofile';
 
 
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
         <Route path='todaydeal' element={<Todaydeal />} />
         <Route path='discovery' element={<Discovery />} />
         <Route path='marketing' element={<Marketing />} />
+        <Route path='sellersprofile' element={<Selleersprofile />} />
 
       </Routes>
       </BrowserRouter>
