@@ -58,7 +58,7 @@ useEffect(()=>{
   return (
     <div className='flex' style={{height:"",top:0,}}>
 {isDesktopOrLaptop && <><div ref={slideRef} className="select-none " style={{}}>
-              <img src={sliderImage[currentIndex]} alt='slide' class="navimg" loading='lazy' style={{ height: '87vh', width: '100vw', objectFit: 'none', opacity: 1 }} />
+              <img src={sliderImage[currentIndex]} alt='slide' class="navimg" className='object-cover' loading='lazy' style={{ height: '87vh', width: '100vw', objectFit: 'none', opacity: 1 }} />
           </div><div className='absolute w-full text-white'>
                   <Navmenu />
                   <div className='flex self-center justify-end pb-10' style={{ height: '100vh' }}>

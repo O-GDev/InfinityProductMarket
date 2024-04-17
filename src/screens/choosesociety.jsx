@@ -16,24 +16,24 @@ export default function Choosesociety() {
       </div>
 
       <div className='md:columns-2 md:mx-16 mx-5 my-12'>
-      <h3 className='flex justify-center self-center font-bold py-1'>INFINITY PRODUCT PLACE</h3>
+      <h3 className='flex justify-center self-center font-bold py-1 pb-5'>INFINITY PRODUCT PLACE</h3>
         <div className='md:columns-2 rounded-xl' style={{backgroundColor:'#D3D3D3'}}>
         
           <img src='/assets/IMG_9517.JPG' className='rounded-xl w-full' style={{}}  />
           <div className='flex flex-col justify-center self-center md:pt-16 pt-5'>
-            <p className='md:pt-16 sm:pt-1 px-3 text-center text-xl'>Check out our product showcase, where we bring you the latest and greatest products in a laid-back and informative way!</p>
+            <p className='md:pt-16 sm:pt-1 px-3 text-center text-xl italic font-medium'>Check out our product showcase, where we bring you the latest and greatest products in a laid-back and informative way!</p>
             <Link to={`/reg/${rand}`} className='flex self-center justify-center'>
             <Button><span className='font-bold' style={{backgroundColor:'transparent',padding:'10px',borderColor:'#702EB2',borderWidth:1,color:'#702EB2'}}>Buy/Sell</span></Button>
             </Link>
           </div>
         </div>
-        <h3 className='flex justify-center text-center font-bold py-1 md:pt-0 pt-10'>INFINITY SERVICE PLACE</h3>
+        <h3 className='flex justify-center text-center font-bold py-1 md:pt-0 pt-10 pb-5'>INFINITY SERVICE PLACE</h3>
         <div className='md:columns-2 rounded-xl' style={{backgroundColor:'#D3D3D3'}}>
         <div style={{}}>
         <img src='/assets/medium-shot-woman-posing-studio.jpg' className='rounded-xl w-full' style={{}} />          
         </div>
           <div className='flex flex-col justify-self-center self-center md:pt-20 pt-5'>
-            <p className='md:pt-16 sm:pt-3 px-3 text-center text-xl'>Check out our top notch professionals in different fields  of creativity all across the world. </p>
+            <p className='md:pt-16 sm:pt-3 px-3 text-center text-xl italic font-medium'>Check out our top notch professionals in different fields  of creativity all across the world. </p>
             <Link to={`/reg/${rand}`} className='flex justify-center self-center'>
             <Button><span className='font-bold ' style={{backgroundColor:'transparent',padding:'10px',borderColor:'#702EB2',borderWidth:1,color:'#702EB2'}}>Let's Deal</span></Button>
             </Link>

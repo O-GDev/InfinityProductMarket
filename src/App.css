@@ -4,11 +4,7 @@
     padding: 2rem;
     text-align: center;
   } */
-
-  body{
-    background-color: #F2F2F2;
-  }
-
+ 
 .container{
   background-color: red;
   height: 100vh;
@@ -41,7 +37,28 @@
   /* 27 / 36px 28px 18px 8px / 18px 14px 9px 4px
   round; */
 }
-
+.zoomImage{
+  transition: 0.5s ease-in;
+}
+.zoomImage:hover{
+  transform: scale(0.7);
+  border-radius: 20px;
+  border-width: 4px;
+  border-color: white;
+  margin-left: 150px;
+ 
+  }
+  /* .back:hover > .zoomImage:not(:hover) {
+    filter: blur(8px);
+  } */
+  #zoomImages:hover > .back:not(:hover){
+    transform: scale(0.7);
+    border-radius: 20px;
+    border-width: 4px;
+    border-color: white;
+    margin-right: 450px;
+    width: 100%;
+    }
 @media screen and (max-width: 600px) {
   .navimg{
       height: 1000px;
