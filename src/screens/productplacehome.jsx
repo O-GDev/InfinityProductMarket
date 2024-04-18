@@ -9,6 +9,7 @@ import Buyerorsellerpage from './buyerorsellerpage';
 import Subscriptionoage from './subscriptionoage';
 import { Payment } from './payment';
 import Paymentdetails from './paymentDetails';
+import Choosesociety from './choosesociety';
 
 
 const sliderImage = [
@@ -21,9 +22,10 @@ let count = 0;
 
 export default function Productplacehome() {
   const[currentIndex, setCurrentIndex] = useState(0);
-  const[currentUrl, setCurrentUrl]= useState('currenturl') 
+  const [currentUrl, setCurrentUrl] = useState('currenturl') 
+  const [sufix, setSufix] = useState('buyerorseller')
 
-
+ 
  
 const slideRef = useRef()    
 
@@ -38,6 +40,9 @@ useEffect(()=>{
   // con();
 },[])
 
+  // interface Props {
+  //   items: String;
+  // }
 
   const startSlider = () =>{
     const interval =  setInterval(() => {
@@ -312,17 +317,17 @@ the right decision </p>
     {(() => {
       switch (currentUrl) {
         case 'buyerorseller':
-        return <Buyerorsellerpage handleClick={handleClick} />
+          return <Buyerorsellerpage handleClick={handleClick} />
         case 'signup':
-        return <Signuppage handleClick={handleClick}/>
+        return <Signuppage handleClick={handleClick}  />
         case 'subscribe':
-        return <Subscriptionoage handleClick={handleClick}/>
+        return <Subscriptionoage handleClick={handleClick}  />
         case 'payment':
-        return <Payment handleClick={handleClick}/>
+        return <Payment handleClick={handleClick}  />
         case 'paymentdetails':
-        return <Paymentdetails handleClick={handleClick}/>
+          return <Paymentdetails handleClick={handleClick}  />
         default:
-        return <Buyerorsellerpage handleClick={handleClick}/>
+          return <Buyerorsellerpage handleClick={handleClick}  />
       }
     })()}
   </div>

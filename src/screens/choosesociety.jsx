@@ -2,6 +2,8 @@ import React from 'react'
 import { Button, Uline } from '../lilcomponents/style.styles'
 import { Link } from 'react-router-dom'
 
+
+
 export default function Choosesociety() {
   const rand = Math.floor(Math.random()*200000000000 - 100)
   return (

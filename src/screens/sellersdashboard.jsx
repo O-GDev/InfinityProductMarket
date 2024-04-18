@@ -156,7 +156,7 @@ the right decision </p>
           <h5>Hurry up!</h5>
           <p className='' style={{fontSize:'10px'}}>Limited edition going out of stock soon</p>
         </div>
-        <div className='rounded-full flex justify-center self-center p-2 text-white' style={{backgroundColor:'#702EB2',fontSize:'10px'}}>
+        <div className='rounded-full flex justify-center self-center p-2 text-white' style={{backgroundColor:'#702EB2',fontSize:'55%'}}>
           Add to Cart
         </div>
        </div>

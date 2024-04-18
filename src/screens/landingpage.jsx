@@ -67,7 +67,6 @@ export class Landingpage extends Component {
           </div>
         </div>
       </div>
-
       <div>
         <div className='md:columns-2 md:mx-36 my-12'>          
           <div>
@@ -89,8 +88,12 @@ export class Landingpage extends Component {
       <div>
         <div className='md:columns-2 md:mx-36 my-12'>
           <div className='w-full flex justify-center'>
-          <div className='p-3 w-2/3 '>
-           <img src='/assets/image6 2.png' id='zoomImage' className='' style={{height:'400px'}} />          
+                <div className='back w-2/3' 
+          style={{backgroundImage:"url('/assets/image6 2.png')",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat"}}
+          >
+           <img src='/assets/image6 2.png' id='zoomImage' className='zoomImage' style={{height:'400px'}} />          
        </div>
           </div>
           <div>

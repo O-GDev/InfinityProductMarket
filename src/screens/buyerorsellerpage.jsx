@@ -12,7 +12,7 @@ export default function Buyerorsellerpage(props) {
 
     <div class='bg-white' className=''>
     
-    <Link to='' onClick={() => props.handleClick('signup')}>
+    <Link to='' onClick={() => props.handleClick('signup')}  >
     <div class="triangle1" id="zooms" >        
     </div>
     </Link>
