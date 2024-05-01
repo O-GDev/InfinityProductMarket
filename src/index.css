@@ -4,8 +4,9 @@
 
 @layer base{
   body{
-    background-color: #F2F2F2;
-    @apply font-[Montserrat]
+    background-color: hsl(0, 0%, 95%);
+    @apply font-[Montserrat];
+    overflow: hidden;
   }
   
 }

@@ -128,7 +128,7 @@ const landingpage = () => {
           <h3 className='text-black font-primary font-bold'>OUR SERVICES </h3>
           <motion.div
             initial={{ scale: 0 }}
-            whileInView={{ rotate: 360, scale: 1, x: [0, 100, 0] }}
+            whileInView={{ rotate: 360, scale: 1,  }}
             transition={{
               type: "spring",
               stiffness: 260,
