@@ -35,7 +35,7 @@ const landingpage = () => {
           <motion.div
             initial={{ scale: 0 }}
             whileInView={{ rotate: 360, scale: 1 }}
-            viewport={{ once: false, amount: 1 }}
+            // viewport={{ once: false, amount: 1 }}
             transition={{
               type: "spring",
               stiffness: 260,
@@ -116,7 +116,7 @@ const landingpage = () => {
               type: "spring",
               stiffness: 260,
               damping: 20,
-              duration: 10,
+              duration: 1,
               delay: 1,
             }}
             className="absolute"
