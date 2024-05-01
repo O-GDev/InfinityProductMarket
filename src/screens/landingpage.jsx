@@ -35,7 +35,7 @@ const landingpage = () => {
           <motion.div
             initial={{ scale: 0 }}
             whileInView={{ rotate: 360, scale: 1 }}
-            viewport={{once:false, amount:1}}
+            viewport={{ once: false, amount: 1 }}
             transition={{
               type: "spring",
               stiffness: 260,
@@ -55,7 +55,8 @@ const landingpage = () => {
               visible: { opacity: 1, x: 0 },
             }}
             initial="hidden"
-            whileInView="visible"
+            whileInView={mainControl}
+
             viewport={{ once: false, amount: 1 }}
             transition={{ duration: 2, delay: 0.25 }}
             className='md:columns-2 rounded-xl my-10 md:mx-0 mx-12 md:my-0 p-5' style={{ backgroundColor: '#D3D3D3' }}>
@@ -75,8 +76,8 @@ const landingpage = () => {
               visible: { opacity: 1, x: 0 }
             }}
             initial="hidden"
-            whileInView={mainControl}
-            viewport={{ once: false, amount: 1 }}
+            // whileInView={mainControl}
+            whileInView="visible"
             transition={{ duration: 2, delay: 0.25 }}
             className='md:columns-2 rounded-xl my-10 md:mx-0 mx-12 p-5' style={{ backgroundColor: '#D3D3D3' }}>
 
