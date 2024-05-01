@@ -28,7 +28,7 @@ const landingpage = () => {
             visible: { opacity: 1, }
           }}
           initial="hidden"
-          whileInView={mainControl}
+          whileInView="visible"
           transition={{ duration: 2,  }}
           className='relative flex-col h-full px-12 pt-12'>
           <h3 className='text-black font-primary font-bold'>THE MARKETS </h3>
@@ -69,8 +69,8 @@ const landingpage = () => {
                 className='pt-16 px-16 text-center italic font-medium' style={{}}>
                 Check out our product showcase, where we bring you the latest and greatest products in a laid-back and informative way!</motion.p>
             <motion.div
-              initial={{ opacity: 0, x: 150 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 150 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
               className='flex flex-col justify-self-center self-center'>
               <Button><span className='font-bold' style={{ backgroundColor: 'transparent', padding: '10px', borderColor: '#702EB2', borderWidth: 1, color: '#702EB2' }}>Let's Deal</span></Button>
