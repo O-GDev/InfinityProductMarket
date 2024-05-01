@@ -83,13 +83,18 @@ const landingpage = () => {
 
             <img src='/assets/medium-shot-woman-posing-studio.jpg' className='rounded-xl' style={{ height: '400px', width: '100%' }} />
 
+            
+              <motion.p
+                initial={{ opacity: 0, x: 150 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1 }}
+                className='pt-16 px-16 text-center italic font-medium '>Check out our top notch professionals in different fields  of creativity all across the world. </motion.p>
             <motion.div
               className='flex flex-col justify-self-center self-center'
-              initial={{ opacity: 0, y: 70 }}
+              initial={{ opacity: 0, y: 170 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              <p className='pt-16 px-16 text-center italic font-medium '>Check out our top notch professionals in different fields  of creativity all across the world. </p>
               <Button><span className='font-bold' style={{ backgroundColor: 'transparent', padding: '10px', borderColor: '#702EB2', borderWidth: 1, color: '#702EB2' }}>Let's Deal</span></Button>
             </motion.div>
 
