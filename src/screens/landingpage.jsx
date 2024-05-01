@@ -65,7 +65,7 @@ const landingpage = () => {
               }}
               initial="hidden"
               whileInView="visible"
-              transition={{ duration: 2, }}
+              transition={{ duration: 1, }}
             >
 
               <img src='/assets/IMG_9517.JPG' className='rounded-xl' style={{ height: '400px', width: '100%' }} />
@@ -92,9 +92,9 @@ const landingpage = () => {
               visible: { opacity: 1, x: 0 }
             }}
             initial="hidden"
-            // whileInView={mainControl}
+            // whileInView="visible"
             whileInView="visible"
-            transition={{ duration: 2,  }}
+            transition={{ duration: 1,  }}
             className='md:columns-2 rounded-xl my-10 md:mx-0 mx-12 p-5' style={{ backgroundColor: '#D3D3D3' }}>
 
             <img src='/assets/medium-shot-woman-posing-studio.jpg' className='rounded-xl' style={{ height: '400px', width: '100%' }} />
@@ -109,7 +109,7 @@ const landingpage = () => {
               className='flex flex-col justify-self-center self-center'
               initial={{ opacity: 0, y: 150 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 3 }}
+              transition={{duration: 1 }}
             >
               <Button><span className='font-bold' style={{ backgroundColor: 'transparent', padding: '10px', borderColor: '#702EB2', borderWidth: 1, color: '#702EB2' }}>Let's Deal</span></Button>
             </motion.div>
@@ -123,7 +123,7 @@ const landingpage = () => {
           }}
           initial="hidden"
           whileInView="visible"
-          transition={{ duration: 2,  }}
+          transition={{ duration: 1,  }}
           className='relative flex-col h-full px-12 pt-12'>
           <h3 className='text-black font-primary font-bold'>OUR SERVICES </h3>
           <motion.div
@@ -150,9 +150,8 @@ const landingpage = () => {
                   visible: { opacity: 1, x: 0 }
                 }}
                 initial="hidden"
-                whileInView={mainControl}
-                transition={{ duration: 2,  }}
-
+                whileInView="visible"
+                transition={{ duration: 1,  }}
                 className='back w-2/3'
                 style={{
                   backgroundImage: "url('/assets/corporate-management-strategy-solution-branding-concept.jpg')",
@@ -177,9 +176,8 @@ const landingpage = () => {
                     visible: { opacity: 1, y: 0 }
                   }}
                   initial="hidden"
-                  whileInView={mainControl}
-                  transition={{ duration: 2,  }}
-
+                  whileInView="visible"
+                  transition={{ duration: 1,  }}
                   className='pt-16 text-center text-lg font-bold font-primary'>Curated Exellence</motion.h2>
                 <motion.p
                   variants={{
@@ -187,8 +185,8 @@ const landingpage = () => {
                     visible: { opacity: 1, y: 0 }
                   }}
                   initial="hidden"
-                  whileInView={mainControl}
-                  transition={{ duration: 3, delay: 0.5 }}
+                  whileInView="visible"
+                  transition={{duration: 1,  }}
                   className='md:px-16 text-center'>Check out our top notch professionals in different fields  of creativity all across the world. </motion.p>
                 <motion.div
                   variants={{
@@ -196,8 +194,8 @@ const landingpage = () => {
                     visible: { opacity: 1, y: 0 }
                   }}
                   initial="hidden"
-                  whileInView={mainControl}
-                  transition={{ duration: 2,  }}
+                  whileInView="visible"
+                  transition={{ duration: 1,  }}
                   className="flex justify-center"
                 >
                   <Button><span className='font-bold' style={{ backgroundColor: 'transparent', padding: '10px', borderColor: '#702EB2', borderWidth: 1, color: '#702EB2' }}>Learn More</span>
@@ -217,8 +215,8 @@ const landingpage = () => {
                     visible: { opacity: 1, y: 0 }
                   }}
                   initial="hidden"
-                  whileInView={mainControl}
-                  transition={{ duration: 2,  }}
+                  whileInView="visible"
+                  transition={{ duration: 1,  }}
                   className='md:pt-16 text-center text-lg font-bold font-primary'>Community and Connection</motion.h2>
                 <motion.p
                   variants={{
@@ -226,8 +224,8 @@ const landingpage = () => {
                     visible: { opacity: 1, y: 0 }
                   }}
                   initial="hidden"
-                  whileInView={mainControl}
-                  transition={{ duration: 3, delay: 0.5 }}
+                  whileInView="visible"
+                  transition={{duration: 1,  }}
                   className='md:px-16 text-center'>More than an e-commerce platform, we are a thriving community. INFINITY MARKET PLACE serves as a meeting ground for creators, connoisseurs, and those who appreciate the finer things in life.</motion.p>
                 <motion.div
                   variants={{
@@ -235,8 +233,8 @@ const landingpage = () => {
                     visible: { opacity: 1, y: 0 }
                   }}
                   initial="hidden"
-                  whileInView={mainControl}
-                  transition={{ duration: 2,  }}
+                  whileInView="visible"
+                  transition={{ duration: 1,  }}
                   className="flex justify-center"
                 >
                   <Button><span className='font-bold' style={{ backgroundColor: 'transparent', padding: '10px', borderColor: '#702EB2', borderWidth: 1, color: '#702EB2' }}>Learn More</span></Button>
@@ -251,8 +249,8 @@ const landingpage = () => {
                   visible: { opacity: 1, x: 0 }
                 }}
                 initial="hidden"
-                whileInView={mainControl}
-                transition={{ duration: 2,  }}
+                whileInView="visible"
+                transition={{ duration: 1,  }}
                 className='w-2/3 '>
                 <img src='/assets/drew-colins-LIEQsu5JuoM-unsplash 2.png' id='zoomImages' className='mr-12' style={{ height: '400px' }} />
               </motion.div>
@@ -269,8 +267,8 @@ const landingpage = () => {
                   visible: { opacity: 1, x: 0 }
                 }}
                 initial="hidden"
-                whileInView={mainControl}
-                transition={{ duration: 2,  }}
+                whileInView="visible"
+                transition={{ duration: 1,  }}
                 className='back w-2/3'
                 style={{
                   backgroundImage: "url('/assets/image6 2.png')",
@@ -289,8 +287,8 @@ const landingpage = () => {
                     visible: { opacity: 1, y: 0 }
                   }}
                   initial="hidden"
-                  whileInView={mainControl}
-                  transition={{ duration: 2,  }}
+                  whileInView="visible"
+                  transition={{ duration: 1,  }}
                   className='md:pt-16 text-center text-lg font-bold font-primary'>Trust and Transparency
                 </motion.h2>
                 <motion.p
@@ -299,8 +297,8 @@ const landingpage = () => {
                     visible: { opacity: 1, y: 0 }
                   }}
                   initial="hidden"
-                  whileInView={mainControl}
-                  transition={{ duration: 3, delay: 0.5 }}
+                  whileInView="visible"
+                  transition={{duration: 1,  }}
                   className='md:px-16 text-center'>
                   Trust is the cornerstone of INFINITY MARKET PLACE. Rigorous verification protocols ensure the authenticity of creators and the security of every transaction.
                 </motion.p>
@@ -310,8 +308,8 @@ const landingpage = () => {
                     visible: { opacity: 1, y: 0 }
                   }}
                   initial="hidden"
-                  whileInView={mainControl}
-                  transition={{ duration: 2,  }}
+                  whileInView="visible"
+                  transition={{ duration: 1,  }}
                   className="flex justify-center"
                 >
                   <Button><span className='font-bold' style={{ backgroundColor: 'transparent', padding: '10px', borderColor: '#702EB2', borderWidth: 1, color: '#702EB2' }}>Learn More</span></Button>
@@ -328,8 +326,8 @@ const landingpage = () => {
                 visible: { opacity: 1, y: 0 }
               }}
               initial="hidden"
-              whileInView={mainControl}
-              transition={{ duration: 2,  }}
+              whileInView="visible"
+              transition={{ duration: 1,  }}
               className='font-primary font-bold text-center ' style={{ color: '#2E0853' }}>TOP-RATED
             </motion.h3>
           </div>
@@ -340,8 +338,8 @@ const landingpage = () => {
                 visible: { opacity: 1, x: 0 }
               }}
               initial="hidden"
-              whileInView={mainControl}
-              transition={{ duration: 2,  }}
+              whileInView="visible"
+              transition={{ duration: 1,  }}
               className='font-semibold ' style={{ color: '#2E0853' }}>PRODUCTS
             </motion.h4>
             <motion.span
@@ -350,8 +348,8 @@ const landingpage = () => {
                 visible: { opacity: 1, x: 0 }
               }}
               initial="hidden"
-              whileInView={mainControl}
-              transition={{ duration: 2,  }}
+              whileInView="visible"
+              transition={{ duration: 1,  }}
               style={{ color: '#2E0853', borderWidth: 0.5, borderColor: '#2E0853', borderRadius: 20 }}>
               <h4 className='font-semibold rounded-md p-1.5'>VIEW ALL
               </h4>
