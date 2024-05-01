@@ -52,10 +52,11 @@ const landingpage = () => {
           <motion.div
             variants={{
               hidden: { opacity: 0, x: -150 },
-              visible: { opacity: 1, x: 0 }
+              visible: { opacity: 1, x: 0 },
             }}
             initial="hidden"
             whileInView={mainControl}
+            viewport={{ once: false, amount: 1 }}
             transition={{ duration: 2, delay: 0.25 }}
             className='md:columns-2 rounded-xl my-10 md:mx-0 mx-12 md:my-0 p-5' style={{ backgroundColor: '#D3D3D3' }}>
             <img src='/assets/IMG_9517.JPG' className='rounded-xl' style={{ height: '400px', width: '100%' }} />
@@ -74,8 +75,8 @@ const landingpage = () => {
               visible: { opacity: 1, x: 0 }
             }}
             initial="hidden"
-            // whileInView={mainControl}
-            whileInView="visible"
+            whileInView={mainControl}
+            viewport={{ once: false, amount: 1 }}
             transition={{ duration: 2, delay: 0.25 }}
             className='md:columns-2 rounded-xl my-10 md:mx-0 mx-12 p-5' style={{ backgroundColor: '#D3D3D3' }}>
 
