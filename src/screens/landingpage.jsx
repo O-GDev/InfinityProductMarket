@@ -55,7 +55,7 @@ const landingpage = () => {
               visible: { opacity: 1, x: 0 },
             }}
             initial="hidden"
-            whileInView={mainControl}
+            whileInView="visible"
             viewport={{ once: false, amount: 1 }}
             transition={{ duration: 2, delay: 0.25 }}
             className='md:columns-2 rounded-xl my-10 md:mx-0 mx-12 md:my-0 p-5' style={{ backgroundColor: '#D3D3D3' }}>
