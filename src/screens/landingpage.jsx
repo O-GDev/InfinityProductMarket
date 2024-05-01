@@ -29,7 +29,7 @@ const landingpage = () => {
           }}
           initial="hidden"
           whileInView={mainControl}
-          transition={{ duration: 2, delay: 0.25 }}
+          transition={{ duration: 2,  }}
           className='relative flex-col h-full px-12 pt-12'>
           <h3 className='text-black font-primary font-bold'>THE MARKETS </h3>
           <motion.div
@@ -58,7 +58,7 @@ const landingpage = () => {
             whileInView={mainControl}
 
             viewport={{ once: false, amount: 1 }}
-            transition={{ duration: 2, delay: 0.25 }}
+            transition={{ duration: 2,  }}
             className='md:columns-2 rounded-xl my-10 md:mx-0 mx-12 md:my-0 p-5' style={{ backgroundColor: '#D3D3D3' }}>
             <img src='/assets/IMG_9517.JPG' className='rounded-xl' style={{ height: '400px', width: '100%' }} />
             <motion.div
@@ -78,15 +78,15 @@ const landingpage = () => {
             initial="hidden"
             // whileInView={mainControl}
             whileInView="visible"
-            transition={{ duration: 2, delay: 0.25 }}
+            transition={{ duration: 2,  }}
             className='md:columns-2 rounded-xl my-10 md:mx-0 mx-12 p-5' style={{ backgroundColor: '#D3D3D3' }}>
 
             <img src='/assets/medium-shot-woman-posing-studio.jpg' className='rounded-xl' style={{ height: '400px', width: '100%' }} />
 
             <motion.div
               className='flex flex-col justify-self-center self-center'
-              initial={{ opacity: 0, scale: 0.5 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 70 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
               <p className='pt-16 px-16 text-center italic font-medium '>Check out our top notch professionals in different fields  of creativity all across the world. </p>
@@ -102,7 +102,7 @@ const landingpage = () => {
           }}
           initial="hidden"
           whileInView={mainControl}
-          transition={{ duration: 2, delay: 0.25 }}
+          transition={{ duration: 2,  }}
           className='relative flex-col h-full px-12 pt-12'>
           <h3 className='text-black font-primary font-bold'>OUR SERVICES </h3>
           <motion.div
@@ -130,7 +130,7 @@ const landingpage = () => {
                 }}
                 initial="hidden"
                 whileInView={mainControl}
-                transition={{ duration: 2, delay: 0.25 }}
+                transition={{ duration: 2,  }}
 
                 className='back w-2/3'
                 style={{
@@ -157,7 +157,7 @@ const landingpage = () => {
                   }}
                   initial="hidden"
                   whileInView={mainControl}
-                  transition={{ duration: 2, delay: 0.25 }}
+                  transition={{ duration: 2,  }}
 
                   className='pt-16 text-center text-lg font-bold font-primary'>Curated Exellence</motion.h2>
                 <motion.p
@@ -176,7 +176,7 @@ const landingpage = () => {
                   }}
                   initial="hidden"
                   whileInView={mainControl}
-                  transition={{ duration: 2, delay: 0.25 }}
+                  transition={{ duration: 2,  }}
                   className="flex justify-center"
                 >
                   <Button><span className='font-bold' style={{ backgroundColor: 'transparent', padding: '10px', borderColor: '#702EB2', borderWidth: 1, color: '#702EB2' }}>Learn More</span>
@@ -197,7 +197,7 @@ const landingpage = () => {
                   }}
                   initial="hidden"
                   whileInView={mainControl}
-                  transition={{ duration: 2, delay: 0.25 }}
+                  transition={{ duration: 2,  }}
                   className='md:pt-16 text-center text-lg font-bold font-primary'>Community and Connection</motion.h2>
                 <motion.p
                   variants={{
@@ -215,7 +215,7 @@ const landingpage = () => {
                   }}
                   initial="hidden"
                   whileInView={mainControl}
-                  transition={{ duration: 2, delay: 0.25 }}
+                  transition={{ duration: 2,  }}
                   className="flex justify-center"
                 >
                   <Button><span className='font-bold' style={{ backgroundColor: 'transparent', padding: '10px', borderColor: '#702EB2', borderWidth: 1, color: '#702EB2' }}>Learn More</span></Button>
@@ -231,7 +231,7 @@ const landingpage = () => {
                 }}
                 initial="hidden"
                 whileInView={mainControl}
-                transition={{ duration: 2, delay: 0.25 }}
+                transition={{ duration: 2,  }}
                 className='w-2/3 '>
                 <img src='/assets/drew-colins-LIEQsu5JuoM-unsplash 2.png' id='zoomImages' className='mr-12' style={{ height: '400px' }} />
               </motion.div>
@@ -249,7 +249,7 @@ const landingpage = () => {
                 }}
                 initial="hidden"
                 whileInView={mainControl}
-                transition={{ duration: 2, delay: 0.25 }}
+                transition={{ duration: 2,  }}
                 className='back w-2/3'
                 style={{
                   backgroundImage: "url('/assets/image6 2.png')",
@@ -269,7 +269,7 @@ const landingpage = () => {
                   }}
                   initial="hidden"
                   whileInView={mainControl}
-                  transition={{ duration: 2, delay: 0.25 }}
+                  transition={{ duration: 2,  }}
                   className='md:pt-16 text-center text-lg font-bold font-primary'>Trust and Transparency
                 </motion.h2>
                 <motion.p
@@ -290,7 +290,7 @@ const landingpage = () => {
                   }}
                   initial="hidden"
                   whileInView={mainControl}
-                  transition={{ duration: 2, delay: 0.25 }}
+                  transition={{ duration: 2,  }}
                   className="flex justify-center"
                 >
                   <Button><span className='font-bold' style={{ backgroundColor: 'transparent', padding: '10px', borderColor: '#702EB2', borderWidth: 1, color: '#702EB2' }}>Learn More</span></Button>
@@ -308,7 +308,7 @@ const landingpage = () => {
               }}
               initial="hidden"
               whileInView={mainControl}
-              transition={{ duration: 2, delay: 0.25 }}
+              transition={{ duration: 2,  }}
               className='font-primary font-bold text-center ' style={{ color: '#2E0853' }}>TOP-RATED
             </motion.h3>
           </div>
@@ -320,7 +320,7 @@ const landingpage = () => {
               }}
               initial="hidden"
               whileInView={mainControl}
-              transition={{ duration: 2, delay: 0.25 }}
+              transition={{ duration: 2,  }}
               className='font-semibold ' style={{ color: '#2E0853' }}>PRODUCTS
             </motion.h4>
             <motion.span
@@ -330,7 +330,7 @@ const landingpage = () => {
               }}
               initial="hidden"
               whileInView={mainControl}
-              transition={{ duration: 2, delay: 0.25 }}
+              transition={{ duration: 2,  }}
               style={{ color: '#2E0853', borderWidth: 0.5, borderColor: '#2E0853', borderRadius: 20 }}>
               <h4 className='font-semibold rounded-md p-1.5'>VIEW ALL
               </h4>
