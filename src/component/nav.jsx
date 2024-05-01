@@ -56,12 +56,14 @@ useEffect(()=>{
         slideRef.current.classList.add('fade-anim');
     }
   return (
-    <div className='flex' style={{height:"",top:0,}}>
-{isDesktopOrLaptop && <><div ref={slideRef} className="select-none " style={{}}>
-              <img src={sliderImage[currentIndex]} alt='slide' class="navimg" className='object-cover' loading='lazy' style={{ height: '87vh', width: '100vw', objectFit: 'none', opacity: 1 }} />
-          </div><div className='absolute w-full text-white'>
+    <div className='flex w-full h-full' style={{height:"",top:0,}}>
+{isDesktopOrLaptop && <>
+<div ref={slideRef} className="select-none w-full" style={{}}>
+              <img src={sliderImage[currentIndex]} alt='slide' class="navimg" className='object-cover w-full' loading='lazy' style={{ height: '87vh', width: '100vw', opacity: 1 }} />
+          </div>
+          <div className='absolute w-full text-white'>
                   <Navmenu />
-                  <div className='flex self-center justify-end pb-10' style={{ height: '100vh' }}>
+                  <div className='flex self-center justify-end pb-10' style={{ height: '100vh', width: '100vh' }}>
                       {/* First Slide Text */}
                       {currentIndex == 1 &&
                           <div style={{ opacity: contentOpacity }} className='relative flex-col justify-center h md:p-32 pt-20 '>
@@ -123,8 +125,10 @@ useEffect(()=>{
                   </div>
 
 
-              </div></>  }
-              {isonTabletOrMobile &&  <><div ref={slideRef} className="select-none " style={{}}>
+              </div>
+              </>  }
+              {isonTabletOrMobile &&  <>
+              <div ref={slideRef} className="select-none " style={{}}>
               <img src={sliderImage[currentIndex]} alt='slide' class="navimg" loading='lazy' style={{ height: '57vh', width: '100vw', objectFit: 'none', opacity: 1 }} />
           </div><div className='absolute w-full text-white'>
                   {/* <Navmenu /> */}
