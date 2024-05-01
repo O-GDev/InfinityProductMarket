@@ -29,7 +29,7 @@ const landingpage = () => {
           }}
           initial="hidden"
           whileInView="visible"
-          transition={{ duration: 2,  }}
+          transition={{ duration: 1,  }}
           className='relative flex-col h-full px-12 pt-12'>
           <h3 className='text-black font-primary font-bold'>THE MARKETS </h3>
           <motion.div
@@ -122,7 +122,7 @@ const landingpage = () => {
             visible: { opacity: 1, }
           }}
           initial="hidden"
-          whileInView={mainControl}
+          whileInView="visible"
           transition={{ duration: 2,  }}
           className='relative flex-col h-full px-12 pt-12'>
           <h3 className='text-black font-primary font-bold'>OUR SERVICES </h3>
