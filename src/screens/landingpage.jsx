@@ -56,8 +56,7 @@ const landingpage = () => {
             }}
             initial="hidden"
             whileInView="visible"
-
-            viewport={{ once: false, amount: 1 }}
+            // viewport={{ once: false, amount: 1 }}
             transition={{ duration: 1,  }}
             className='md:columns-2 rounded-xl my-10 md:mx-0 mx-12 md:my-0 p-5' style={{ backgroundColor: '#D3D3D3' }}>
             <img src='/assets/IMG_9517.JPG' className='rounded-xl' style={{ height: '400px', width: '100%' }} />
