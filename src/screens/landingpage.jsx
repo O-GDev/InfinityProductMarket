@@ -60,12 +60,19 @@ const landingpage = () => {
             transition={{ duration: 1,  }}
             className='md:columns-2 rounded-xl my-10 md:mx-0 mx-12 md:my-0 p-5' style={{ backgroundColor: '#D3D3D3' }}>
             <img src='/assets/IMG_9517.JPG' className='rounded-xl' style={{ height: '400px', width: '100%' }} />
+            
+              <motion.p
+
+                initial={{ opacity: 0, x: -150 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 3 }}
+                className='pt-16 px-16 text-center italic font-medium' style={{}}>
+                Check out our product showcase, where we bring you the latest and greatest products in a laid-back and informative way!</motion.p>
             <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, x: 150 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
               className='flex flex-col justify-self-center self-center'>
-              <p className='pt-16 px-16 text-center italic font-medium' style={{}}>Check out our product showcase, where we bring you the latest and greatest products in a laid-back and informative way!</p>
               <Button><span className='font-bold' style={{ backgroundColor: 'transparent', padding: '10px', borderColor: '#702EB2', borderWidth: 1, color: '#702EB2' }}>Let's Deal</span></Button>
             </motion.div>
           </motion.div>
@@ -86,13 +93,13 @@ const landingpage = () => {
               <motion.p
                 initial={{ opacity: 0, x: 150 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1 }}
+                transition={{ duration: 3 }}
                 className='pt-16 px-16 text-center italic font-medium '>Check out our top notch professionals in different fields  of creativity all across the world. </motion.p>
             <motion.div
               className='flex flex-col justify-self-center self-center'
-              initial={{ opacity: 0, y: 170 }}
+              initial={{ opacity: 0, y: 150 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
+              transition={{ duration: 3 }}
             >
               <Button><span className='font-bold' style={{ backgroundColor: 'transparent', padding: '10px', borderColor: '#702EB2', borderWidth: 1, color: '#702EB2' }}>Let's Deal</span></Button>
             </motion.div>
