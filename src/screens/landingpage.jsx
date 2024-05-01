@@ -8,9 +8,10 @@ import { motion, useAnimation, useInView } from 'framer-motion'
 
 const landingpage = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref);
+  const isInView = useInView(ref, {once: true});
   const mainControl = useAnimation();
   useEffect(() => {
+    console.log(isInView)
     if (isInView) {
       mainControl.start("visible");
     }
@@ -38,8 +39,8 @@ const landingpage = () => {
               type: "spring",
               stiffness: 260,
               damping: 20,
-              duration: 5,
-              delay: 0.24,
+              duration: 10,
+              delay: 1,
             }}
             className="absolute"
           >
@@ -107,8 +108,8 @@ const landingpage = () => {
               type: "spring",
               stiffness: 260,
               damping: 20,
-              duration: 5,
-              delay: 0.24,
+              duration: 10,
+              delay: 1,
             }}
             className="absolute"
           >
