@@ -10,6 +10,54 @@ const landingpage = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
   const mainControl = useAnimation();
+  let topRatedData = [
+    {
+      "image": "/assets/Rectangle 61.png",
+      "pname": 'Cleaning Products',
+      "pprice": "8000",
+      "rate": '4.6'
+    },
+     {
+       "image": "/assets/Rectangle 61-2.png",
+       "pname": 'Nike Sneakers',
+       "pprice": "28,000",
+      "rate": '4.6'
+    },
+    {
+      "image": "/assets/young-smiling-cheerful-satisfied-positive-600nw-2127045413.jpg.webp",
+      "pname": 'Hermes Birkin Bag',
+      "pprice": "28,000",
+      "rate": '4.6'
+    },
+    {
+      "image": "/assets/photo-camera-balancing-with-yellow-background.jpg",
+      "pname": 'Camera',
+      "pprice": "328,000",
+      "rate": '4.6'
+    },
+  ]
+  let professionalsData = [
+    {
+      "image": "/assets/premium_photo-1692873058899-624c0f96c5de.webp",
+      "pname": 'Cleaning Products',
+      "pprice": "8000"
+    },
+    {
+      "image": "/assets/stock-photo-portrait-of-young-black-man-working-on-farm-standing-in-hothouse-holding-wooden-box-full-of-fresh-2183178705 2.png",
+      "pname": 'Nike Sneakers',
+      "pprice": "28,000"
+    },
+    {
+      "image": "/assets/istockphoto-1475370822-612x612.jpg",
+      "pname": 'Camera',
+      "pprice": "328,000"
+    },
+    {
+      "image": "/assets/young-smiling-cheerful-satisfied-positive-600nw-2127045413.jpg.webp",
+      "pname": 'Hermes Birkin Bag',
+      "pprice": "28,000"
+    }
+  ]
   useEffect(() => {
     console.log(isInView)
     if (isInView) {
@@ -359,10 +407,17 @@ const landingpage = () => {
       </div>
       <div>
         <div className='md:columns-4 gap-14 md:m-10 p-5 md:p-0 lg:p-0 mx-12'>
-          <Cards image="/assets/Rectangle 61.png" pname='Cleaning Products' pprice="8000" rate='4.6' />
-          <Cards image="/assets/Rectangle 61-2.png" pname='Nike Sneakers' pprice='28,000' rate='4.6' />
-          <Cards image="/assets/photo-camera-balancing-with-yellow-background.jpg" pname='Camera' pprice='328,000' rate='4.6' />
-          <Cards image="/assets/young-smiling-cheerful-satisfied-positive-600nw-2127045413.jpg.webp" pname='Hermes Birkin Bag' pprice='28,000' rate='4.6' />
+          {topRatedData.map((topRated, index) => (
+            <motion.div
+              // variants={}
+              initial={{ opacity : 0, y : 70 }}
+              whileInView={{opacity : 1, y : 0}}
+              transition={{ delay: 0.05 * index, duration : 0.5 * index }}
+              key={index} 
+              >
+              <Cards image={topRated.image} pname={topRated.pname} pprice={topRated.pprice} rate={topRated.rate} />
+            </motion.div>
+          ))}
         </div>
         <div>
           <div className='flex w-full px-12' style={{ justifyContent: 'space-between' }}>
@@ -370,11 +425,18 @@ const landingpage = () => {
             <span style={{ color: '#2E0853', borderWidth: 0.5, borderColor: '#2E0853', borderRadius: 20 }}><h4 className='font-semibold rounded-md p-1.5'>VIEW ALL</h4></span>
           </div>
           <div className='md:columns-4 sm:columns-1 gap-14 md:m-10 p-5 md:p-0 lg:p-0 mx-12'>
-            <Cards image="/assets/premium_photo-1692873058899-624c0f96c5de.webp" pname='Cleaning Products' pprice="8000" opa='0' padin={15} />
-            <Cards image="/assets/stock-photo-portrait-of-young-black-man-working-on-farm-standing-in-hothouse-holding-wooden-box-full-of-fresh-2183178705 2.png" pname='Nike Sneakers' pprice='28,000' opa='0' padin={15} />
-            <Cards image="/assets/istockphoto-1475370822-612x612.jpg" pname='Camera' pprice='328,000' opa='0' padin={15} />
-            <Cards image="/assets/young-smiling-cheerful-satisfied-positive-600nw-2127045413.jpg.webp" pname='Hermes Birkin Bag' pprice='28,000' opa='0' padin={15} />
-          </div>
+            {professionalsData.map((professionals, index) => (
+              <motion.div
+                // variants={}
+                initial={{ opacity: 0, y: 70 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.05 * index, duration: 0.5 * index }}
+                key={index}
+              >
+                <Cards image={professionals.image} pname={professionals.pname} pprice={professionals.pprice} opa='0' padin={15} />
+              </motion.div>
+            ))}
+            </div>
         </div>
         <div>
           <div className='flex w-full px-12 pb-5' style={{ justifyContent: 'space-between' }}>
