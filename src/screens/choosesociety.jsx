@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Button, Uline } from '../lilcomponents/style.styles'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
@@ -6,7 +6,8 @@ import { motion } from 'framer-motion'
 
 
 export default function Choosesociety() {
-  const rand = Math.floor(Math.random()*200000000000 - 100)
+  const rand = Math.floor(Math.random() * 200000000000 - 100)
+  const [openModal, setOpenModal] = useState(true)
   return (
     <div className='absolute'>
     <div className='flex flex-col justify-center text-center px-4 '>
@@ -67,9 +68,9 @@ export default function Choosesociety() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             className='flex flex-col justify-self-center self-center'>
-            <Link to={`/reg/${rand}`} className='flex self-center justify-center'>
+              <div onClick={() => setOpenModal(true)} className='flex self-center justify-center'>
               <Button><span className='font-bold' style={{ backgroundColor: 'transparent', padding: '10px', borderColor: '#702EB2', borderWidth: 1, color: '#702EB2' }}>Buy/Sell</span></Button>
-            </Link>
+            </div>
           </motion.div>
           </div>
           {/* <div className='flex flex-col justify-center self-center md:pt-16 pt-5'>
@@ -105,9 +106,9 @@ export default function Choosesociety() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              <Link to={`/reg/${rand}`} className='flex justify-center self-center'>
+              <div onClick={() => setOpenModal(true)} className='flex justify-center self-center'>
                 <Button><span className='font-bold ' style={{ backgroundColor: 'transparent', padding: '10px', borderColor: '#702EB2', borderWidth: 1, color: '#702EB2' }}>Let's Deal</span></Button>
-              </Link>
+              </div>
             </motion.div>
             {/* <p className='md:pt-16 sm:pt-3 px-3 text-center text-xl italic font-medium'>Check out our top notch professionals in different fields  of creativity all across the world. </p>
             <Link to={`/reg/${rand}`} className='flex justify-center self-center'>
@@ -119,8 +120,34 @@ export default function Choosesociety() {
         </div>
         <div className='flex justify-center self-center mx-5 mb-10'>
             <h3 className='font-bold px-1'>NOTE: </h3>
-            <h4> Switch between account at user settings.</h4>
-        </div>
+            <h4> Switch between account at user settings.....</h4>
+      </div>
+      {openModal &&
+        <div className='inset-0 fixed h-full flex p-24 px-56  bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl' >
+          <div className="bg-white h-full flex flex-col justify-center rounded-3xl" >
+            <div className='pl-7 pb-5 font-medium text-3xl cursor-pointer' onClick={()=>setOpenModal(false)}>
+              x
+            </div>
+            <div className=" pl-36">
+              <div className="md:columns-2 h-full ">
+                <div className='flex flex-col self-center justify-center '>
+                  <h4 className='font-bold text-lg'>Buyer</h4>
+                  <p className='w-2/3 py-1 pr-5' style={{ fontSize: '12px' }} >Purchase quality products from INFINITY PRODUCT PLACE, prioritising commercial integrity and product quality</p>
+                  <img src="/assets/Frame 427319608.png" alt="" className='h-2/3 w-3/5' />
+                </div>
+                <div className='w-full'>
+                  <img src="/assets/Frame 427319608.png" alt="" className='h-2/3 w-3/5 ' style={{}} />
+                  <div className='w-2/3 pr-3'>
+                    <p className='w-full py-1 pr-5 text-end' style={{ fontSize: '12px' }} >Create your business on INFINITY PRODUCT PLACE, optimising branding and business personality to facilitate business growth </p>
+                    <h4 className='font-bold text-lg text-end pr-6'>Seller</h4>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div> }
     </div>
   )
 }

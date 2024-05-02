@@ -117,7 +117,7 @@ const landingpage = () => {
               >
 
                 <img src='/assets/IMG_9517.JPG' className='rounded-xl' style={{ height: '400px', width: '100%' }} />
-
+                
               </motion.div>
               <motion.p
 
