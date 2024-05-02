@@ -190,7 +190,7 @@ const landingpage = () => {
           </motion.div>
         </motion.div>
         <div>
-          <div className='md:columns-2 justify-center md:mx-36 my-12 '>
+          <div className='md:columns-2 justify-center my-12 '>
             <div className='w-full flex justify-center'>
               <motion.div
                 variants={{
@@ -216,7 +216,7 @@ const landingpage = () => {
                 <img src='/assets/corporate-management-strategy-solution-branding-concept.jpg' id='' className='zoomImage' style={{ height: '400px', }} />
               </motion.div>
             </div>
-            <div>
+            <div className=''>
               <div className='flex flex-col justify-self-center self-center md:mx-0 mx-16'>
                 <motion.h2
                   variants={{
@@ -421,8 +421,24 @@ const landingpage = () => {
         </div>
         <div>
           <div className='flex w-full px-12' style={{ justifyContent: 'space-between' }}>
-            <h4 className='font-semibold p-1.5' style={{ color: '#2E0853' }}>PROFESSIONALS</h4>
-            <span style={{ color: '#2E0853', borderWidth: 0.5, borderColor: '#2E0853', borderRadius: 20 }}><h4 className='font-semibold rounded-md p-1.5'>VIEW ALL</h4></span>
+            <motion.h4
+              variants={{
+                hidden: { opacity: 0, x: -70 },
+                visible: { opacity: 1, x: 0 }
+              }}
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 1, }}
+              className='font-semibold p-1.5' style={{ color: '#2E0853' }}>PROFESSIONALS</motion.h4>
+            <motion.span
+              variants={{
+                hidden: { opacity: 0, x: 70 },
+                visible: { opacity: 1, x: 0 }
+              }}
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 1, }}
+              style={{ color: '#2E0853', borderWidth: 0.5, borderColor: '#2E0853', borderRadius: 20 }}><h4 className='font-semibold rounded-md p-1.5'>VIEW ALL</h4></motion.span>
           </div>
           <div className='md:columns-4 sm:columns-1 gap-14 md:m-10 p-5 md:p-0 lg:p-0 mx-12'>
             {professionalsData.map((professionals, index) => (
@@ -440,8 +456,25 @@ const landingpage = () => {
         </div>
         <div>
           <div className='flex w-full px-12 pb-5' style={{ justifyContent: 'space-between' }}>
-            <h4 className='font-semibold p-1.5' style={{ color: '#2E0853' }}>PEOPLE'S CHOICE</h4>
-            <span style={{ color: '#2E0853', borderWidth: 0.5, borderColor: '#2E0853', borderRadius: 20 }}><h4 className='font-semibold rounded-md p-1.5'>VIEW ALL</h4></span>
+            <motion.h4
+              variants={{
+                hidden: { opacity: 0, y: 70 },
+                visible: { opacity: 1, y: 0 }
+              }}
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 1, }}
+              className='font-semibold p-1.5' style={{ color: '#2E0853' }}>PEOPLE'S CHOICE</motion.h4>
+            <motion.span
+              variants={{
+                hidden: { opacity: 0, y: 70 },
+                visible: { opacity: 1, y: 0 }
+              }}
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 1, }}
+              style={{ color: '#2E0853', borderWidth: 0.5, borderColor: '#2E0853', borderRadius: 20 }}>
+              <h4 className='font-semibold rounded-md p-1.5'>VIEW ALL</h4></motion.span>
           </div>
           <PeoplesChoice />
           <Footers />

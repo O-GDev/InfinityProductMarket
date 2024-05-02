@@ -37,10 +37,10 @@
   /* 27 / 36px 28px 18px 8px / 18px 14px 9px 4px
   round; */
 }
-.zoomImage{
+/* .zoomImage{
   transition: 0.5s ease-in;
-}
-.zoomImage:hover{
+} */
+.zoomImage{
   transform: scale(0.7);
   border-radius: 20px;
   border-width: 4px;

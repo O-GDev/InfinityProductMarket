@@ -19,9 +19,11 @@
 }
 @keyframes fadeAnim{
     from{
-        opacity: 0;
+      transform: translate(-40%);
+      opacity: 0;
     }
     to{
+      transform: translateX(0%);
         opacity: 0.8;
     }
 }
@@ -88,7 +90,7 @@
 .initial{
     transform: scale(1.1)
 }
-#zoom:hover{
+#zoom{
     transform: scale(1.1)
 }
 .triangle1{
@@ -100,7 +102,7 @@
 #zooms{
   transition: ease-in 0.2s;
 }
-#zooms:hover{
+#zooms{
   transform: scale(1.0)
 }
 
