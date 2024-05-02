@@ -13,7 +13,7 @@ const PeoplesChoice = () => {
 
 
   const slideRef = useRef()
-  
+
   const removeAnimation = () => {
     slideRef.current.classList.remove('fade-anim');
   }
@@ -41,7 +41,7 @@ const PeoplesChoice = () => {
   }
   return (
     <div ref={slideRef} className="select-none relative md:p-0" style={{backgroundColor:'#F2F2F2'}}>
-    <img src={sliderImage[currentIndex]} alt='slide' style={{height:'87vh',width:'100vw',objectFit:'none',opacity:0.8}} />  
+      <img src={sliderImage[currentIndex]} alt='slide' style={{ height: '87vh', width: '100vw', objectFit: 'none', }} />  
     </div>
   )
 }
