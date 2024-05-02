@@ -14,7 +14,7 @@
     opacity: 1;
 } */
 .fade-anim img{
-    animation: fadeAnim 2s
+    animation: fadeAnim 3s
     ease-out;
 }
 @keyframes fadeAnim{
@@ -85,13 +85,17 @@
   /* Change -40% to -50% if you want the two triangle to stick */
 /* } */
 #zoom{
-    transition: ease-in 0.5s;    
+    transition: ease-in 0.5s; 
+      
 }
 .initial{
-    transform: scale(1.1)
+    transform: scale(1.09)
 }
-#zoom{
-    transform: scale(1.1)
+#zoom:hover{
+    transform: scale(1.1) translateY(-10px);
+    /* translate: -10px; */
+
+    /* translateY: (-10px); */
 }
 .triangle1{
   transform: scale(0.9);

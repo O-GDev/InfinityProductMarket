@@ -8,7 +8,7 @@ export default function Subscriptionoage() {
   return (
     <div className='fixed inset-0 h-full bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl' style={{}}>
     <div className='h-full sm:py-10 p-5  md:p-20 ' style={{}}>
-      <div className='md:columns-2 bg-white h-full '>
+              <div className='md:columns-2 h-full ' style={{ backgroundColor: '#F2F2F2' }}>
           <div className='flex justify-center self-center h-full '>
           <div className='w-full h-full py-3  md:py-5'>
               <h3 className='font-md font-bold flex justify-center self-center '>Be A Seller!</h3>

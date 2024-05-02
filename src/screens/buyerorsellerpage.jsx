@@ -4,11 +4,18 @@ import { Link } from 'react-router-dom'
 // import App from '../lilcomponents/Triang'
 // import Triangle from '../lilcomponents/Triang'
 import '../App.css'; // Import CSS for styling
+import { motion } from 'framer-motion';
 
 export default function Buyerorsellerpage(props) {
   return (
-    <div className='fixed inset-0 h-full bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl'>
-    <div className='flex justify-center self-center pt-5 h-full ' style={{marginRight:'60%'}}>
+    <div
+      
+      className='fixed inset-0 h-full bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl'>
+      <motion.div
+        // initial={{ opacity: 0.3, y: 150 }}
+        // whileInView={{ opacity: 1, y: 0 }}
+        // transition={{ duration: 1 }}
+        className='flex justify-center self-center pt-5 h-full ' style={{ marginRight: '60%' }}>
 
     <div class='bg-white' className=''>
     
@@ -48,7 +55,7 @@ export default function Buyerorsellerpage(props) {
       {/* <Link to='/producthome'>
       <h2>Seller</h2>
       </Link> */}
-    </div>
+    </motion.div>
     
     </div>
     

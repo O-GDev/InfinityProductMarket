@@ -18,7 +18,7 @@ export default function Subscriptionoage(props) {
 business on the right part</p>
           <h3 className='text-center font-bold pt-5'>SUBSCRIPTIONS</h3>
           </div>
-          <div className='md:columns-3 gap-1' style={{}}>
+          <div className='md:columns-3 gap-1 px-5 pt-2' style={{}}>
           <Link to='' onClick={() => props.handleClick('payment')}>
           <div id="zoom" className='py-2 ml-2 rounded-3xl shadow-2xl' style={{backgroundColor:'#B4B4B4',}}>
           <h5 className='text-center p-2'>No Plan</h5>
@@ -42,7 +42,7 @@ business on the right part</p>
           </Link>
 
           <Link to='' onClick={() => props.handleClick('payment')}>
-          <div id='zoom' class="initial" className='py-2 ml-2 rounded-3xl shadow-2xl' style={{backgroundColor:'#DEDEDE',}}>
+          <div id='zoom' className='py-2 ml-2 rounded-3xl shadow-2xl' style={{backgroundColor:'#DEDEDE',}}>
           <h5 className='text-center p-2'>A Plan</h5>
           <h4 className='text-center ' style={{lineHeight:1}} ><s className='opacity-50'>12 000</s><br /><h4 className='flex justify-center self-center '> 6500<h6 className='flex self-center ' style={{fontSize:'60%',paddingLeft:0.5}}>Monthly</h6></h4></h4>
           <h6 className='text-center pt-2' style={{fontSize:'50%'}}>MEDIUM SCALE BUSINESSES </h6>
@@ -92,11 +92,13 @@ business on the right part</p>
 
           </div>
 
-          <div className='p-2 pt-5'>
+          <div className='p-2 px-5 pt-10'>
             <h5 className='text-sm text-start'>Infinity Product Place is the tool for you to be in charge of your business by creating a direct relationship with your customers.</h5>
           </div>
 
-          <div className='flex flex-col pb-10 pr-5' style={{backgroundColor:'#CBCBCB'}}>
+              <div className='flex flex-col pb-10 pr-5'
+                // style={{ backgroundColor: '#CBCBCB' }}
+              >
             <div className='flex self-center justify-center pt-2'>
             <h5 className='text-center text-sm w-3/4 p-4'>INFINITY PRODUCT PLACE is a recognised as a product marketing community alongside infinity service place(ISP) created by WAJISINFINITY LTD. all right reserved</h5>
            </div>
@@ -115,7 +117,7 @@ on <span style={{color:'#34A853'}}>ISP</span>  </h5>
 
           </div>
          </CustomScroll>
-         <div className='bg-red-900 h-full opacity-0 md:opacity-100'>
+         <div className='h-full opacity-0 md:opacity-100'>
           <Sidecarousel />
          </div>
       </div>

@@ -16,7 +16,7 @@ const sliderImage = [
 
 let count = 0;
 
-export default function SellerDashboard() {
+export default function BuyerDashboard() {
   const[currentIndex, setCurrentIndex] = useState(0);
 
 
