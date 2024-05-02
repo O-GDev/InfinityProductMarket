@@ -316,8 +316,6 @@ the right decision </p>
     <Footers />
     {(() => {
       switch (currentUrl) {
-        case 'buyerorseller':
-          return <Buyerorsellerpage handleClick={handleClick} />
         case 'signup':
         return <Signuppage handleClick={handleClick}  />
         case 'subscribe':
@@ -327,7 +325,7 @@ the right decision </p>
         case 'paymentdetails':
           return <Paymentdetails handleClick={handleClick}  />
         default:
-          return <Buyerorsellerpage handleClick={handleClick}  />
+          return <Signuppage handleClick={handleClick}  />
       }
     })()}
   </div>
