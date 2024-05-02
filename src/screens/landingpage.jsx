@@ -254,7 +254,7 @@ const landingpage = () => {
           </div>
         </div>
         <div>
-          <div className='md:columns-2 md:mx-36 my-12'>
+          <div className='md:columns-2 my-12'>
             <div>
               <div className='flex flex-col justify-self-center self-center md:mx-0 mx-16'>
                 <motion.h2
@@ -299,15 +299,20 @@ const landingpage = () => {
                 initial="hidden"
                 whileInView="visible"
                 transition={{ duration: 1,  }}
-                className='w-2/3 '>
-                <img src='/assets/drew-colins-LIEQsu5JuoM-unsplash 2.png' id='zoomImages' className='mr-12' style={{ height: '400px' }} />
+                className='w-2/3 '
+                style={{
+                  backgroundImage: "url('/assets/drew-colins-LIEQsu5JuoM-unsplash 2.png')",
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat"
+                }}>
+                <img src='/assets/drew-colins-LIEQsu5JuoM-unsplash 2.png' className='zoomImages' style={{ height: '400px' }} />
               </motion.div>
             </div>
           </div>
         </div>
 
         <div>
-          <div className='md:columns-2 md:mx-36 my-12'>
+          <div className='md:columns-2 my-12'>
             <div className='w-full flex justify-center'>
               <motion.div
                 variants={{
@@ -324,7 +329,7 @@ const landingpage = () => {
                   backgroundRepeat: "no-repeat"
                 }}
               >
-                <img src='/assets/image6 2.png' id='zoomImage' className='zoomImage' style={{ height: '400px' }} />
+                <img src='/assets/image6 2.png' className='zoomImage' style={{ height: '400px' }} />
               </motion.div>
             </div>
             <div>
@@ -415,7 +420,7 @@ const landingpage = () => {
               transition={{ delay: 0.05 * index, duration : 0.5 * index }}
               key={index} 
               >
-              <Cards image={topRated.image} pname={topRated.pname} pprice={topRated.pprice} rate={topRated.rate} />
+              <Cards image={topRated.image} pname={topRated.pname} pprice={topRated.pprice} rate={topRated.rate} radius='xl' width='100%' height='250px' />
             </motion.div>
           ))}
         </div>
@@ -440,7 +445,7 @@ const landingpage = () => {
               transition={{ duration: 1, }}
               style={{ color: '#2E0853', borderWidth: 0.5, borderColor: '#2E0853', borderRadius: 20 }}><h4 className='font-semibold rounded-md p-1.5'>VIEW ALL</h4></motion.span>
           </div>
-          <div className='md:columns-4 sm:columns-1 gap-14 md:m-10 p-5 md:p-0 lg:p-0 mx-12'>
+          <div className='md:columns-4 sm:columns-1 gap-5 md:m-10 p-5 md:p-0 lg:p-0 mx-12'>
             {professionalsData.map((professionals, index) => (
               <motion.div
                 // variants={}
@@ -449,7 +454,9 @@ const landingpage = () => {
                 transition={{ delay: 0.05 * index, duration: 0.5 * index }}
                 key={index}
               >
-                <Cards image={professionals.image} pname={professionals.pname} pprice={professionals.pprice} opa='0' padin={15} />
+                <Cards image={professionals.image} pname={professionals.pname} pprice={professionals.pprice} opa='0' padin={15} radius='full' width='250px' height='250px' />
+                
+                
               </motion.div>
             ))}
             </div>

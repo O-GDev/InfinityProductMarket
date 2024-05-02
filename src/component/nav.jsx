@@ -67,7 +67,7 @@ export default function Navbars() {
                 </div>
 
                 <div className='absolute w-full text-white ' style={{height:'87vh'}}>
-                    {/* <Navmenu /> */}
+                    <Navmenu />
                     <div className='flex self-end pb-10 w-full ' style={{height:'87vh'}}>
                         {/* First Slide Text */}
                         {currentIndex == 1 &&
@@ -128,7 +128,7 @@ export default function Navbars() {
                                         whileInView={{ opacity: 1, y: 0,scale: 1 }}
                                         transition={{duration:1}} className='flex flex-col self-center h-full justify-center'>
                                         <motion.h1
-                                            className='text-4xl font-black text-center self-center' style={{ paddingTop: "12%" }}>
+                                            className='text-4xl font-black text-center self-center' style={{ paddingTop: "10%" }}>
                                             SHOP LIKE A PRO, ALL IN ONE PLACE</motion.h1>
                                         <p className='font-primary self-center text-center mb-20 w-2/5'>Welcome to INFINITY MARKET PLACE, where you can
                                             effortlessly explore a wide range of services and products all in
@@ -139,7 +139,7 @@ export default function Navbars() {
                                         initial={{opacity:0, y: -70, scale: 0.5 }}
                                         whileInView={{ opacity: 1, y: 0, scale: 1 }}
                                         transition={{ duration: 1 }}
-                                        className='flex flex-col justify-end h-full pl-4'>
+                                        className='flex flex-col justify-end h-full pl-4 mb-10'>
                                         <h1 className='text-2xl font-bold'>BECOME A SELLER</h1>
                                         <h6 className=' w-2/6'>You can now sell your products at INFINITY PRODUCT PLACE,(IPP)
                                             also get paid for your Skills and Talents at INFINITY SERVICE PLACE, (ISP) </h6>

@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Cards({image, opa, pname, pprice, rate, padin}) {
+export default function Cards({ image, opa, pname, pprice, rate, padin, radius,width, height }) {
   return (
     <div className='relative flex bg-transparent mb-5' >
-<img src={image} style={{height:'250px',width:'100%',padding: padin}} className='rounded-2xl' />
+      <img src={image} style={{ height: height, width: width, padding: padin }} className={`rounded-${radius}`} />
 <div className='absolute flex-col bg-white h-24 self-end rounded-md px-2' style={{width:'97%',margin:5,opacity:opa}} >
 <div> {pname}</div>
 <div className='text-red-600'># {pprice} </div>

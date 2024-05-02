@@ -18,7 +18,7 @@ const Navmenu = () => {
             <h3 className="font-primary font-semibold flex flex-row self-center justify-center">INFINITY MARKET PLACE</h3>
           </div>
           <ul className="inline justify-center self-center">
-            <li className={selectedIndex === 1 ? "inline mx-2 font-primary font-semibold border-b" : "inline px-2 font-primary font-semibold "} style={{borderColor:'#976FBE'}} onClick={()=>handleActiveMenu(1)}><Link to='/'>Home</Link> </li>
+            <li className={selectedIndex === 1 ? "inline mx-2 font-primary font-semibold border-b-4 rounded-sm" : "inline px-2 font-primary font-semibold "} style={{borderColor:'#976FBE'}} onClick={()=>handleActiveMenu(1)}><Link to='/'>Home</Link> </li>
             <li className={selectedIndex === 2 ? "inline mx-2 font-primary font-semibold border-b" : "inline px-2 font-primary font-semibold "} style={{borderColor:'#976FBE'}} onClick={()=>handleActiveMenu(2)}> <Link to='/services'>Services</Link> </li>
             <li className={selectedIndex === 3 ? "inline mx-2 font-primary font-semibold border-b" : "inline px-2 font-primary font-semibold "} style={{borderColor:'#976FBE'}} onClick={()=>handleActiveMenu(3)}>About</li>
             <li className={selectedIndex === 4 ? "inline mx-2 font-primary font-semibold border-b" : "inline px-2 font-primary font-semibold "} style={{borderColor:'#976FBE'}} onClick={()=>handleActiveMenu(4)}>Login</li>
