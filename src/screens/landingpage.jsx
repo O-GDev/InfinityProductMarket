@@ -39,23 +39,19 @@ const landingpage = () => {
   let professionalsData = [
     {
       "image": "/assets/premium_photo-1692873058899-624c0f96c5de.webp",
-      "pname": 'Cleaning Products',
-      "pprice": "8000"
+      
     },
     {
       "image": "/assets/stock-photo-portrait-of-young-black-man-working-on-farm-standing-in-hothouse-holding-wooden-box-full-of-fresh-2183178705 2.png",
-      "pname": 'Nike Sneakers',
-      "pprice": "28,000"
+      
     },
     {
       "image": "/assets/istockphoto-1475370822-612x612.jpg",
-      "pname": 'Camera',
-      "pprice": "328,000"
+     
     },
     {
       "image": "/assets/young-smiling-cheerful-satisfied-positive-600nw-2127045413.jpg.webp",
-      "pname": 'Hermes Birkin Bag',
-      "pprice": "28,000"
+      
     }
   ]
   useEffect(() => {
@@ -454,9 +450,9 @@ const landingpage = () => {
                 transition={{ delay: 0.05 * index, duration: 0.5 * index }}
                 key={index}
               >
-                <Cards image={professionals.image} pname={professionals.pname} pprice={professionals.pprice} opa='0' padin={15} radius='full' width='250px' height='250px' />
-                
-                
+                <Cards image={professionals.image} opa='0' padin={15} radius='full' width='250px' height='250px' />
+                     
+
               </motion.div>
             ))}
             </div>
