@@ -64,7 +64,7 @@ export default function Navbars() {
 
 
     return (
-        <div className='flex w-full h-full' style={{ height: "", top: 0, }}>
+        <div className='flex w-full h-full bg-zinc-400' style={{ height: "", top: 0, }}>
             {isDesktopOrLaptop && <>
                 <div ref={slideRef} className="select-none w-full" style={{}}>
                     <img src={sliderImage[currentIndex]} alt='slide' className='object-cover w-full' loading='lazy' style={{ height: '87vh', width: '100vw', opacity: 1 }} />
