@@ -9,6 +9,7 @@ import LoggedinNav from '../component/loggedinnav';
 import { Icon } from '@iconify/react/dist/iconify.js';
 import PostsCards from '../lilcomponents/postsCards';
 import Reels from '../lilcomponents/reels';
+import { motion } from 'framer-motion';
 
 const sliderImage = [
     "assets/arrangement-different-traveling-elements 1.png"
@@ -23,6 +24,8 @@ export default function SellerDashboard() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isOpen, setIsOpen] = useState(false);
     const [cIsOpen, setCIsOpen] = useState(false);
+
+    let index = [0,1,2,3]
 
 
     const slideRef = useRef()
@@ -175,7 +178,11 @@ export default function SellerDashboard() {
                         <h5 className=' px-10 pt-12 text-lg font-semibold'>Sets & Editions</h5>
                         <div className="columns-4 gap-0 relative justify-center place-content-center px-6 pb-5" style={{ height: '600px' }}>
 
-                            <div className='h-full flex pl-20'>
+                            <motion.div
+                                initial={{ opacity: 0, y: 250 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration:1,delay:0.45*1 }}
+                                className='h-full flex pl-20'>
                                 <div class="relative flex flex-col self-center text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-56" style={{
                                     backgroundImage: "url('/assets/corporate-management-strategy-solution-branding-concept.jpg')",
                                     backgroundSize: "cover",
@@ -185,8 +192,12 @@ export default function SellerDashboard() {
 
                                 </div>
 
-                            </div>
-                            <div className='h-full flex pl-14'>
+                            </motion.div>
+                            <motion.div
+                                initial={{ opacity: 0, y: 250 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration:1, delay: 0.45 * 2 }}
+                                className='h-full flex pl-14' >
                                 <div class="relative flex flex-col self-center text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-56" style={{
                                     backgroundImage: "url('/assets/corporate-management-strategy-solution-branding-concept.jpg')",
                                     backgroundSize: "cover",
@@ -195,8 +206,12 @@ export default function SellerDashboard() {
                                 }}>
 
                                 </div>
-                            </div>
-                            <div className='h-full flex pl-10'>
+                            </motion.div>
+                            <motion.div
+                                initial={{ opacity: 0, y: 250 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration:1, delay: 0.15 * 3 }}
+                                className='h-full flex pl-10'>
                                 <div class="relative flex flex-col self-center text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-56" style={{
                                     backgroundImage: "url('/assets/corporate-management-strategy-solution-branding-concept.jpg')",
                                     backgroundSize: "cover",
@@ -205,8 +220,12 @@ export default function SellerDashboard() {
                                 }}>
 
                                 </div>
-                            </div>
-                            <div className='h-full flex'>
+                            </motion.div>
+                            <motion.div
+                                initial={{ opacity: 0, y: 250 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration:1, delay: 0.45 * 4 }}
+                                className='h-full flex'>
                                 <div class="relative flex flex-col self-center text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-56" style={{
                                     backgroundImage: "url('/assets/corporate-management-strategy-solution-branding-concept.jpg')",
                                     backgroundSize: "cover",
@@ -215,7 +234,7 @@ export default function SellerDashboard() {
                                 }}>
 
                                 </div>
-                            </div>
+                            </motion.div>
 
 
                         </div>
@@ -225,26 +244,36 @@ export default function SellerDashboard() {
                 <div className='p-4'>
                     <div className="bg-white flex flex-col rounded-2xl pt-5 px-5 pb-2">
                         <h5>Posts</h5>
-                        <div className='md:columns-4 pt-2'>
+                        <motion.div
+                        initial={{opacity: 0}}
+                        whileInView={{opacity:1}}
+                            transition={{ duration: 1, delay: 0.23 }}
+                            className='md:columns-4 pt-2'>
                             <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
                             <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
                             <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
                             <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                        </div>
+                        </motion.div>
 
-                        <div className='md:columns-4 pt-2'>
+                        <motion.div
+                        initial={{opacity: 0}}
+                        whileInView={{opacity:1}}
+                        transition={{duration:1,delay:0.23}} className='md:columns-4 pt-2'>
                             <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
                             <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
                             <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
                             <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                        </div>
+                        </motion.div>
 
-                        <div className='md:columns-4 pt-2'>
+                        <motion.div
+                        initial={{opacity: 0}}
+                        whileInView={{opacity:1}}
+                        transition={{duration:1,delay:0.23}} className='md:columns-4 pt-2'>
                             <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
                             <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
                             <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
                             <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                        </div>
+                        </motion.div>
 
                         <div className='pl-10 pt-5 '>
                             <div className='md:flex md:flex-row '>
@@ -252,7 +281,11 @@ export default function SellerDashboard() {
                                     <div className='flex flex-row justify-between w-full'>
                                         <h3 className='font-md'>Products being Promoted</h3>
                                     </div>
-                                    <div className='pt-3'>
+                                    <motion.div
+                                        initial={{ opacity: 0, x: -150 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        transition={{ duration: 1, delay: 0.34 }}
+                                        className='pt-3'>
                                         <img src='/assets/bag.png' />
                                         <h3 className='text-center text-lg font-bold font-primary'>Green Italian-made Bag</h3>
                                         <h2 className='text-center text-lg font-bold' style={{ color: 'red' }}># 60,000</h2>
@@ -275,7 +308,7 @@ export default function SellerDashboard() {
                                                 Add to Cart
                                             </div>
                                         </div>
-                                    </div>
+                                    </motion.div>
                                 </div>
                                 <div className='w-full'>
                                     <h3 className='font-md pl-20 '>Best Sellers</h3>
