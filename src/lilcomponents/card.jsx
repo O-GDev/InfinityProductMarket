@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Cards1({image, opa, pname, pprice, jobtype, padin, name,ppic}) {
   return (
-    <div className='flex flex-col bg-transparent pb-3' >
+    <div className='flex flex-col bg-transparent pb-3 shadow-md' >
 <img src={image} style={{width:'100%',padding: padin}} className='' />
 <div className='flex-col bg-white  self-end px-2 py-2 w-full' style={{opacity:opa}} >
 <div className='font-bold text-md'> {pname}</div>

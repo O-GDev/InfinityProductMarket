@@ -54,7 +54,7 @@ export default function Paymentdetails() {
                     </div>
 
 <Link to='/sellerdashboard' >
-<div className='flex justify-center md:justify-end self-end mt-8'>
+<div className='flex justify-center self-center mt-8'>
 <div className='p-3'style={{marginTop:0.5, color:'#702EB2',borderWidth:0.5,borderColor:'#702EB2'}}>CONTINUE</div>
 </div>
 </Link>

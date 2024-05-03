@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Button, Uline } from '../lilcomponents/style.styles'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-
+import { Icon } from '@iconify/react/dist/iconify.js'
 
 
 export default function Choosesociety() {
@@ -126,7 +126,7 @@ export default function Choosesociety() {
         <div className='inset-0 fixed h-full flex p-24 px-56  bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl' >
           <div className=" h-full flex flex-col justify-center rounded-3xl" style={{ backgroundColor: '#F2F2F2' }} >
             <div className='pl-7 pb-5 font-medium text-3xl cursor-pointer' onClick={() => setOpenModal(false)}>
-              x
+              <Icon icon="iconoir:cancel" />
             </div>
             <div className=" pl-36">
               <div className="md:columns-2 h-full ">

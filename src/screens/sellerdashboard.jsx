@@ -6,19 +6,23 @@ import Cards from '../lilcomponents/cards';
 import Cards1 from '../lilcomponents/card';
 import Signuppage from './signuppage';
 import LoggedinNav from '../component/loggedinnav';
-
+import { Icon } from '@iconify/react/dist/iconify.js';
+import PostsCards from '../lilcomponents/postsCards';
+import Reels from '../lilcomponents/reels';
 
 const sliderImage = [
-    "/assets/indoor-hotel-view.jpg",
-    "/assets/horizontal-shot-delighted-young-african-american-woman-points-stylish-clothes-sale-hanging-rails-carries-bag-beautiful-bouquet-has-toothy-smile-isolated-yellow-background.jpg",
-    "/assets/children-s-bright-clothes-hang-display-baby-clothing-store.jpg",
+    "assets/arrangement-different-traveling-elements 1.png"
+    // "/assets/indoor-hotel-view.jpg",
+    // "/assets/horizontal-shot-delighted-young-african-american-woman-points-stylish-clothes-sale-hanging-rails-carries-bag-beautiful-bouquet-has-toothy-smile-isolated-yellow-background.jpg",
+    // "/assets/children-s-bright-clothes-hang-display-baby-clothing-store.jpg",
 ];
 
 let count = 0;
 
 export default function SellerDashboard() {
     const [currentIndex, setCurrentIndex] = useState(0);
-
+    const [isOpen, setIsOpen] = useState(false);
+    const [cIsOpen, setCIsOpen] = useState(false);
 
 
     const slideRef = useRef()
@@ -29,7 +33,14 @@ export default function SellerDashboard() {
 
     useEffect(() => {
         slideRef.current.addEventListener('animationend', removeAnimation)
-        startSlider();
+        let handler = (e) => {
+            if (e.target) {
+                setIsOpen(false)
+                setCIsOpen(false)
+            }
+        };
+        document.addEventListener("mousedown", handler);
+        // startSlider();
         // textSlider();
         // con();
     }, [])
@@ -63,201 +74,250 @@ export default function SellerDashboard() {
 
                 </div>
 
-                <div className='md:columns-4 p-4 px-10 bg-white'>
-                    <div className='flex flex-row'>
-                        <img src='/assets/store 1.png' style={{ height: 50, width: 50 }} />
-                        <div>
-                            <h5 className="font-bold text-sm px-2">FREE STORE</h5>
-                            <p className='px-2 text-sm'>Create your business with us
-                                using our free template  </p>
+                <div className="flex flex-row justify-between px-5 mb-5 h-full bg-white">
+                    <div className='h-full'>
+                        <div className='md:columns-2 h-full' style={{ width: '70%' }}>
+                            <div className='h-full w-3/4 py-2'>
+                                <div className='rounded-full bg-black' style={{
+                                    width: '70px', height: '70px', backgroundImage: "url('/assets/Union.png')",
+                                    backgroundSize: "cover",
+                                    backgroundRepeat: "no-repeat",
+                                }}></div>
+                            </div>
+                            <div className='h-full w-full py-4'>
+                                <h5>Shopping.thrifts</h5>
+                                <p>Lagos&nbsp;Island</p>
+                            </div>
                         </div>
+
                     </div>
-                    <div className='flex flex-row'>
-                        <img src='/assets/partners 1.png' style={{ height: 50, width: 50 }} />
-                        <div>
-                            <h5 className="font-bold text-sm px-2 ">COMMUNITY</h5>
-                            <p className='px-2 text-sm'>Connect with other business
-                                through affiliation and partnership</p>
+                    <div className='flex flex-row justify-center '>
+                        <div className='place-content-center px-12'>
+                            <div onClick={() => { setCIsOpen(!cIsOpen) }}>
+                                <Icon className='cursor-pointer' icon="ph:camera" style={{ width: '30px', height: '30px' }} />
+                            </div>
+
+                            <div>
+                                {cIsOpen && <div id="dropdownAvatar" className="absolute right-16 z-10 pb-2 px-2 rounded-3xl bg-white divide-y divide-gray-100 shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                                    <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                                        <div className='font-sm' style={{ fontSize: '11px' }}>Upload your product or content</div>
+                                        <div className="" style={{ fontSize: '7px' }}>select where your product will be shown</div>
+                                    </div>
+                                    {/* <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUserAvatarButton"> */}
+                                    <div>
+                                        <div className='flex flex-row justify-center py-2'>
+                                            <div className="w-2 h-2 rounded-full self-center" style={{ backgroundColor: '#8248BB' }}></div>
+                                            <div>
+                                                <h5 className='px-2' style={{fontSize:'15px'}}>Post</h5>
+                                                <p className='px-2' style={{fontSize:'8px'}}>Upload high Quality pixels of Products only</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div className='flex flex-row justify-center py-2'>
+                                            <div className="w-2 h-2 rounded-full self-center" style={{ backgroundColor: '#8248BB' }}></div>
+                                            <div>
+                                                <h5 className='px-2' style={{ fontSize: '15px' }}>Reel</h5>
+                                                <p className='px-2' style={{ fontSize: '7.3px' }}>Upload high Quality pixels of Products and contents only</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div className='flex flex-row justify-center py-2'>
+                                            <div className="w-2 h-2 rounded-full self-center" style={{ backgroundColor: '#8248BB' }}></div>
+                                            <div>
+                                                <h5 className='px-2' style={{ fontSize: '15px' }}>Live</h5>
+                                                <p className='px-2' style={{ fontSize: '8px' }}>Connect with your customers in real-time</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    {/* </ul> */}
+
+                                </div>
+                                }
+                            </div>
                         </div>
-                    </div>
-                    <div className='flex flex-row'>
-                        <img src='/assets/key 1.png' style={{ height: 50, width: 50 }} />
-                        <div>3
-                            <h5 className="font-bold text-sm px-2">OWNERSHIP</h5>
-                            <p className='px-2 text-sm'>Take charge of your business
-                                and grow at your pace </p>
-                        </div>
-                    </div>
-                    <div className='flex flex-row'>
-                        <img src='/assets/money-bag 1.png' style={{ height: 50, width: 50 }} />
-                        <div>
-                            <h5 className="font-bold text-sm px-2">GROWTH</h5>
-                            <p className='px-2 text-sm'>Grow your income, make
-                                the right decision </p>
+
+                        <div className='place-content-center pr-4'>
+                            <div onClick={() => { setIsOpen(!isOpen) }}>
+                                <Icon className='cursor-pointer' icon="bx:menu-alt-right" style={{ width: '30px', height: '30px' }} />
+                            </div>
+                            {isOpen && <div id="dropdownAvatar" className="absolute right-5 z-10 rounded-3xl bg-white divide-y divide-gray-100 shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                                {/* <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                                    <div>Bonnie Green</div>
+                                    <div className="font-medium truncate">name@flowbite.com</div>
+                                </div> */}
+                                <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUserAvatarButton">
+                                    <li>
+                                        <a href="#" className="block px-4 py-5 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Analysis</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="block px-4 py-5 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Template</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="block px-4 py-5 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Help</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="block px-4 py-5 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Go to Promotion</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            }
                         </div>
                     </div>
                 </div>
 
-                {/* shop by category */}
-                <div className='pl-10' style={{}}>
-                    <h3 className='font-bold'>SHOP BY CATEGORIES</h3>
-                </div>
+                <div className='px-36 py-10'>
+                    <div className='shadow-outline shadow-xl' style={{ backgroundColor: "#F2F2F2" }}>
+                        <h5 className=' px-10 pt-12 text-lg font-semibold'>Sets & Editions</h5>
+                        <div className="columns-4 gap-0 relative justify-center place-content-center px-6 pb-5" style={{ height: '600px' }}>
 
-                <div className='column-6' style={{}}>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
+                            <div className='h-full flex pl-20'>
+                                <div class="relative flex flex-col self-center text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-56" style={{
+                                    backgroundImage: "url('/assets/corporate-management-strategy-solution-branding-concept.jpg')",
+                                    backgroundSize: "cover",
+                                    backgroundRepeat: "no-repeat",
+                                    height: '300px'
+                                }}>
 
+                                </div>
 
-                <div className='flex flex-row h-20 justify-between m-2 mx-10 bg-white'>
-                    <div className='flex rounded-br-3xl' style={{ backgroundColor: '#ab5ae0' }}>
-                        <div className='flex justify-center self-center' >
-                            <span className='text-white text-center p-2'>connect with <br /> foreign manufacturers</span>
-                        </div>
-                    </div>
-                    <div className='flex justify-center self-center'>
-                        <h5 className='font-bold'>Africa is the continent with highest demand on commodity</h5>
-                    </div>
-                    <div className='flex justify-center self-end p-2'>
-                        <h5 className='font-semibold' style={{ color: '#ab5ae0' }}>Become a supplier</h5>
-                    </div>
-                </div>
+                            </div>
+                            <div className='h-full flex pl-14'>
+                                <div class="relative flex flex-col self-center text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-56" style={{
+                                    backgroundImage: "url('/assets/corporate-management-strategy-solution-branding-concept.jpg')",
+                                    backgroundSize: "cover",
+                                    backgroundRepeat: "no-repeat",
+                                    height: '400px'
+                                }}>
 
-                <div className='pl-10 pt-5 '>
-                    <div className='md:flex md:flex-row '>
-                        <div className=''>
-                            <div className='flex flex-row justify-between w-full'>
-                                <h3 className='font-bold'>DEALS OF THE WEEK</h3>
-                                <div className='mx-1 bg-white'>
-                                    <span className='font-black w-0.5 pr-2'> {'<'} </span>
-                                    <span className='font-black w-0.5 pl-2'> {'>'} </span>
                                 </div>
                             </div>
-                            <div className='pt-3'>
-                                <img src='/assets/bag.png' />
-                                <h3 className='text-center text-lg font-bold font-primary'>Green Italian-made Bag</h3>
-                                <h2 className='text-center text-lg font-bold' style={{ color: 'red' }}># 60,000</h2>
-                                <div className='flex justify-center w-full'>
-                                    <div className='flex flex-col justify-center self-center mx-24 ' style={{ width: '100%' }}>
-                                        <p className='text-sm w-full '>still in stock</p>
+                            <div className='h-full flex pl-10'>
+                                <div class="relative flex flex-col self-center text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-56" style={{
+                                    backgroundImage: "url('/assets/corporate-management-strategy-solution-branding-concept.jpg')",
+                                    backgroundSize: "cover",
+                                    backgroundRepeat: "no-repeat",
+                                    height: '350px'
+                                }}>
 
-                                        <div class=" bg-gray-200 rounded-full w-full h-3 dark:bg-gray-700 border-black" style={{ borderWidth: 1 }}>
-                                            {/* <div class="" style="width: 45%"></div> */}
-                                            <div className=' h-2.5 rounded-full' style={{ width: '25%', backgroundColor: '#702EB2' }}></div>
+                                </div>
+                            </div>
+                            <div className='h-full flex'>
+                                <div class="relative flex flex-col self-center text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-56" style={{
+                                    backgroundImage: "url('/assets/corporate-management-strategy-solution-branding-concept.jpg')",
+                                    backgroundSize: "cover",
+                                    backgroundRepeat: "no-repeat",
+                                    height: '500px'
+                                }}>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div className='p-4'>
+                    <div className="bg-white flex flex-col rounded-2xl pt-5 px-5 pb-2">
+                        <h5>Posts</h5>
+                        <div className='md:columns-4 pt-2'>
+                            <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                            <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                            <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                            <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                        </div>
+
+                        <div className='md:columns-4 pt-2'>
+                            <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                            <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                            <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                            <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                        </div>
+
+                        <div className='md:columns-4 pt-2'>
+                            <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                            <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                            <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                            <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                        </div>
+
+                        <div className='pl-10 pt-5 '>
+                            <div className='md:flex md:flex-row '>
+                                <div className=''>
+                                    <div className='flex flex-row justify-between w-full'>
+                                        <h3 className='font-md'>Products being Promoted</h3>
+                                    </div>
+                                    <div className='pt-3'>
+                                        <img src='/assets/bag.png' />
+                                        <h3 className='text-center text-lg font-bold font-primary'>Green Italian-made Bag</h3>
+                                        <h2 className='text-center text-lg font-bold' style={{ color: 'red' }}># 60,000</h2>
+                                        <div className='flex justify-center w-full'>
+                                            <div className='flex flex-col justify-center self-center mx-24 ' style={{ width: '100%' }}>
+                                                <p className='text-sm w-full '>still in stock</p>
+
+                                                <div class=" bg-gray-200 rounded-full w-full h-3 dark:bg-gray-700 border-black" style={{ borderWidth: 1 }}>
+                                                    {/* <div class="" style="width: 45%"></div> */}
+                                                    <div className=' h-2.5 rounded-full' style={{ width: '25%', backgroundColor: '#702EB2' }}></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className='flex flex-row justify-between p-3'>
+                                            <div>
+                                                <h5>Hurry up!</h5>
+                                                <p className='' style={{ fontSize: '10px' }}>Limited edition going out of stock soon</p>
+                                            </div>
+                                            <div className='rounded-full flex justify-center self-center p-2 text-white' style={{ backgroundColor: '#702EB2', fontSize: '55%' }}>
+                                                Add to Cart
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className='flex flex-row justify-between p-3'>
-                                    <div>
-                                        <h5>Hurry up!</h5>
-                                        <p className='' style={{ fontSize: '10px' }}>Limited edition going out of stock soon</p>
+                                <div className='w-full'>
+                                    <h3 className='font-md pl-20 '>Best Sellers</h3>
+                                    <div className='md:columns-4 px-4 pt-3' >
+                                        <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                                        <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                                        <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                                        <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+
                                     </div>
-                                    <div className='rounded-full flex justify-center self-center p-2 text-white' style={{ backgroundColor: '#702EB2', fontSize: '55%' }}>
-                                        Add to Cart
+                                    <div className='flex justify-center place-content-center bg-white mx-4 my-2 shadow h-2/5'>
+                                        <h1 className='text-3xl text-center self-center'>Ads</h1>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div className='w-full'>
-                            <h3 className='font-bold pl-20 '>BEST SELLERS</h3>
-                            <div className='md:columns-4 px-4 pt-3' >
-                                <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                                <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                                <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                                <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
 
-                            </div>
-                            <div className='md:columns-4 px-4 pt-3' >
-                                <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                                <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                                <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                                <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-
-                            </div>
-                            <div className='md:columns-4 px-4 pt-3' >
-                                <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                                <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                                <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                                <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
 
                             </div>
                         </div>
-
-
-                    </div>
-                </div>
-
-
-                <div></div>
-
-
-                <div className=''>
-                    <h3 className='font-bold pl-10'>FEATURED ITEMS</h3>
-                    <h5 className='text-center' style={{ color: '#42255F' }}>Top Rated</h5>
-                    <div className='md:columns-4 px-4 pt-3' >
-                        <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                        <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                        <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                        <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-
-                    </div>
-
-                    <div className='md:columns-4 px-4 pt-3' >
-                        <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                        <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                        <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                        <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-
-                    </div>
-
-                    <div className='columns-2 pl-10'>
-                        <div>
-                            <h3 className='font-bold' style={{ color: '#42255F' }}>New Arrivals</h3>
-                        </div>
-                        <div>
-                            <h3 className='font-bold' style={{ color: '#42255F' }}>People's choice</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div className='flex flex-row h-20 justify-between m-2 mx-10 bg-white'>
-                    <div className='flex rounded-br-3xl' style={{ backgroundColor: '#ab5ae0' }}>
-                        <div className='flex justify-center self-center' >
-                            <span className='text-white text-center p-2'>connect with <br /> foreign manufacturers</span>
-                        </div>
-                    </div>
-                    <div className='flex flex-col justify-center self-center'>
-                        <h3 className='font-extrabold text-center' style={{ color: '#33363F' }}>THIS FEATURE IS COMING SOON</h3>
-                        <h6 className='font-bold text-center text-sm'>Africa is the continent with highest demand on commodity</h6>
-                        <h5 className='font-bold' style={{ color: '#33363F' }}>Contend, cooperate or partner with the world giant here on IPP </h5>
-                    </div>
-                    <div className='flex justify-center self-end p-2'>
-                        <h5 className='font-semibold' style={{ color: '#ab5ae0' }}>Become a supplier</h5>
-                    </div>
-
-
-                </div>
-                <div>
-                    <h3 className='font-semibold pl-10 pt-5' style={{ color: '#42255F' }}>Top Merchants </h3>
-                    <div className='md:columns-4 m-10 relative'>
-                        <Cards image="/assets/premium_photo-1692873058899-624c0f96c5de.webp" pname='Cleaning Products' pprice="8000" opa='0' padin={15} />
-                        <Cards image="/assets/stock-photo-portrait-of-young-black-man-working-on-farm-standing-in-hothouse-holding-wooden-box-full-of-fresh-2183178705 2.png" pname='Nike Sneakers' pprice='28,000' opa='0' padin={15} />
-                        <Cards image="/assets/istockphoto-1475370822-612x612.jpg" pname='Camera' pprice='328,000' opa='0' padin={15} />
-                        <Cards image="/assets/young-smiling-cheerful-satisfied-positive-600nw-2127045413.jpg.webp" pname='Hermes Birkin Bag' pprice='28,000' opa='0' padin={15} />
                     </div>
                 </div>
 
                 <div className='p-5'>
-                    <h5 className='text-center'>INFINITY PRODUCT PLACE is a recognised as a product marketing community alongside infinity service place(ISP) a service centric community<br />The two individual communities comes together
-                        to form a marketing system called Infinity Market Place. Created by WAJISINFINITY LTD. all right reserved</h5>
-                    <div className='flex flex-row self-center justify-center pt-10'>
-                        <h4 className='text-center font-bold'>Put your skills services to good use and earn an income. <br />Create your portfolio today on infinity service place </h4>
-                        <span className='p-2 rounded-xl absolute right-7 text-white font-bold' style={{ backgroundColor: '#702EB2', position: '  ' }}>Join ISP</span>
+                    <h4 className='font-semibold pb-3'>Reels</h4>
+                    <div className="md:columns-4">
+                        <Reels image="/assets/istockphoto-1475370822-612x612.jpg" ppic='/assets/Union.png' name='James Akinmowa' jobtype='leather work' opa='1' pname='BEACH FLIP FLOP' pprice='38,000' hashtags='Red stripe beach flip flop #flipflop #beachflipflop #wears' padin={2} radius='2xl' width='100%' height='550px' />
+                        <Reels image="/assets/istockphoto-1475370822-612x612.jpg" ppic='/assets/Union.png' name='James Akinmowa' jobtype='leather work' opa='1' pname='BEACH FLIP FLOP' pprice='38,000' hashtags='Red stripe beach flip flop #flipflop #beachflipflop #wears' padin={2} radius='2xl' width='100%' height='550px' />
+                        <Reels image="/assets/istockphoto-1475370822-612x612.jpg" ppic='/assets/Union.png' name='James Akinmowa' jobtype='leather work' opa='1' pname='BEACH FLIP FLOP' pprice='38,000' hashtags='Red stripe beach flip flop #flipflop #beachflipflop #wears' padin={2} radius='2xl' width='100%' height='550px' />
+                        <Reels image="/assets/istockphoto-1475370822-612x612.jpg" ppic='/assets/Union.png' name='James Akinmowa' jobtype='leather work' opa='1' pname='BEACH FLIP FLOP' pprice='38,000' hashtags='Red stripe beach flip flop #flipflop #beachflipflop #wears' padin={2} radius='2xl' width='100%' height='550px' />
+                    </div>
+                </div>
 
+                <div className='p-5' style={{ backgroundColor: '#DFDEDE' }}>
+                    <div className='justify-center self-center mb-3'>
+                        <li>The primary goal of the INFINITY MARKET PLACE  to a sellers transacting business in Infinity Product Place (ISP) is to ensure Business Longevity, Profitability Business Personality and branding optimization, Consumer is King understanding, quality Product deliverable, employment creation and customer relationship.
+                            To facilitate Profitable sales certain Benefits has been put in place </li>
+                        <li>Product Promotions : You can easily reach millions of customers all around the world through our promotional services which you can set to your Budget</li>
+                        <li>Business Courses : Knowledge is power, Learn how to leverage on Infinity Market Place to showcase your Products all around the world</li>
+                        <li>Business Tools : You get access to Business tools that helps you see the performances of your Product, this will help in strategising your business approach   </li>
+
+                    </div>
+                    <div className='flex justify-center' >
+                        <span className='p-3 font-semibold' style={{ backgroundColor: '#DBC9E9' }}>Access Marketing</span>
                     </div>
                 </div>
                 <Footers />
