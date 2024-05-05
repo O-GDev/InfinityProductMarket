@@ -18,6 +18,7 @@ import Discovery from './screens/discovery';
 import Marketing from './screens/marketing';
 import Selleersprofile from './screens/selleersprofile';
 import SellerDashboard from './screens/sellerdashboard';
+import ProfilePage from './screens/profilepage';
 
 
 const App = () => {
@@ -35,6 +36,7 @@ const App = () => {
         <Route path='marketing' element={<Marketing />} />
         <Route path='sellersprofile' element={<Selleersprofile />} />
         <Route path='signup' element={<Signuppage />} />
+        <Route path='myprofile' element={<ProfilePage />} />
 
       </Routes>
       </BrowserRouter>

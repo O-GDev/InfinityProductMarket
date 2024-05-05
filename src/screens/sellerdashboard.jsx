@@ -108,39 +108,47 @@ export default function SellerDashboard() {
                                     </div>
                                     {/* <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUserAvatarButton"> */}
                                     <div>
+                                        <a href="" className="block py-5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                                         <div className='flex flex-row justify-center py-2'>
                                             <div className="w-2 h-2 rounded-full self-center" style={{ backgroundColor: '#8248BB' }}></div>
                                             <div>
                                                 <h5 className='px-2' style={{fontSize:'15px'}}>Post</h5>
                                                 <p className='px-2' style={{fontSize:'8px'}}>Upload high Quality pixels of Products only</p>
                                             </div>
-                                        </div>
+                                            </div>
+                                            </a>
                                     </div>
 
                                     <div>
+                                        <a href="#" className="block py-5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                                         <div className='flex flex-row justify-center py-2'>
                                             <div className="w-2 h-2 rounded-full self-center" style={{ backgroundColor: '#8248BB' }}></div>
                                             <div>
                                                 <h5 className='px-2' style={{ fontSize: '15px' }}>Reel</h5>
                                                 <p className='px-2' style={{ fontSize: '7.3px' }}>Upload high Quality pixels of Products and contents only</p>
                                             </div>
-                                        </div>
+                                            </div>
+                                            </a>
                                     </div>
 
                                     <div>
+                                        <a href="#" className="block py-5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                                         <div className='flex flex-row justify-center py-2'>
                                             <div className="w-2 h-2 rounded-full self-center" style={{ backgroundColor: '#8248BB' }}></div>
                                             <div>
                                                 <h5 className='px-2' style={{ fontSize: '15px' }}>Live</h5>
                                                 <p className='px-2' style={{ fontSize: '8px' }}>Connect with your customers in real-time</p>
-                                            </div>
+                                                </div>
+                                                
                                         </div>
+                                    </a>
                                     </div>
                                     
                                     {/* </ul> */}
 
                                 </div>
                                 }
+
                             </div>
                         </div>
 
@@ -179,7 +187,7 @@ export default function SellerDashboard() {
                         <div className="columns-4 gap-0 relative justify-center place-content-center px-6 pb-5" style={{ height: '600px' }}>
 
                             <motion.div
-                                initial={{ opacity: 0, y: 250 }}
+                                initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration:1,delay:0.45*1 }}
                                 className='h-full flex pl-20'>
@@ -194,7 +202,7 @@ export default function SellerDashboard() {
 
                             </motion.div>
                             <motion.div
-                                initial={{ opacity: 0, y: 250 }}
+                                initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration:1, delay: 0.45 * 2 }}
                                 className='h-full flex pl-14' >
@@ -208,7 +216,7 @@ export default function SellerDashboard() {
                                 </div>
                             </motion.div>
                             <motion.div
-                                initial={{ opacity: 0, y: 250 }}
+                                initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration:1, delay: 0.15 * 3 }}
                                 className='h-full flex pl-10'>
@@ -222,7 +230,7 @@ export default function SellerDashboard() {
                                 </div>
                             </motion.div>
                             <motion.div
-                                initial={{ opacity: 0, y: 250 }}
+                                initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration:1, delay: 0.45 * 4 }}
                                 className='h-full flex'>
