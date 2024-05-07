@@ -40,7 +40,6 @@ export default function SellerDashboard() {
     const removeAnimation = () => {
         slideRef.current.classList.remove('fade-anim');
     }
-
     useEffect(() => {
         slideRef.current.addEventListener('animationend', removeAnimation)
         let handler = (e) => {
@@ -115,7 +114,7 @@ export default function SellerDashboard() {
                                             <div className="" style={{ fontSize: '7px' }}>select where your product will be shown</div>
                                         </div>
                                         {/* <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUserAvatarButton"> */}
-                                        <div className='cursor-pointer' onClick={() => setPostIsOpen(true)}>
+                                        <div onClick={() =>setPostIsOpen(!postIsOpen)} className='cursor-pointer' >
                                             <a className="block py-5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                                                 <div className='flex flex-row justify-center py-2'>
                                                     <div className="w-2 h-2 rounded-full self-center" style={{ backgroundColor: '#8248BB' }}></div>
@@ -377,35 +376,64 @@ export default function SellerDashboard() {
                                 <div className='pl-3 pb-5 font-medium text-3xl cursor-pointer' onClick={() => setPostIsOpen(false)}>
                                     <Icon icon="iconoir:cancel" />
                                 </div>
-                                <div className='md:columns-2 px-7'>
-                                    <div className='h-full flex flex-col justify-center pb-20' style={{ height: '100%' }}>
+                                <div className='md:columns-2 flex justify-center px-7'>
+                                    <div className='h-full w-full relative flex flex-col justify-center '>
                                         <div>Preview</div>
-                                        <div className='relative flex bg-transparent mb-5 pt-4' >
-                                            <img src='/assets/istockphoto-1475370822-612x612.jpg' className='' />
-                                            <div className='absolute flex-col bg-white h-24 self-end rounded-md px-2' style={{ width: '97%', margin: 5, opacity: 1 }} >
-                                                <div className='font-semibold'>{productName}</div>
-                                                <div className='text-red-600'>#3000 </div>
-                                                <div className='flex text-white justify-end self-end pt-5'>
-                                                    <span style={{ backgroundColor: '#6E4C8B', paddingTop: -50 }} className='flex px-1 rounded-2xl'>
-                                                        <img src='/assets/rate.png' className='flex self-center justify-center' style={{ width: '15px', height: '15px', }} />
-                                                        <p className='text-sm px-1 font-primary'></p>
-                                                    </span>
-                                                </div>
+                                        <div className='relative flex flex-col bg-transparent mb-5 w-full' >
+                                            <div className='w-3/4 h-3/6 ml-10 p-4'>
+                                                <div className='w-full h-full shadow-lg rounded-md'>
+                                                    <div className='' style={{
+                                                        backgroundImage: "url('/assets/shoe.png')",
+                                                        backgroundSize: "cover  ",
+                                                        backgroundRepeat: "no-repeat",
+                                                        height: '18vw',
+                                                        // width:'400px'
+}}>
+                                                    {/* <img src='/assets/shoe.png' className='w-full' style={{}} /> */}
+                                                    </div>
+                                                    <div className='relative flex flex-col self-end w-full'>
+                                                        <div className='flex bg-white h-32 rounded-b-md px-2 py-2' style={{ width: '100%' }} >
+                                                            <div className='w-full'>
+                                                                <div className="flex flex-row justify-between">
+                                                                    <div className='font-semibold uppercase'>{productName}</div>
+                                                                    <div className='text-red-600 font-medium'>{productPrice}</div>
+                                                                </div>
+                                                                <div>{pCaption}</div>
+                                                                <div>{tags}</div>
+                                                            </div>
+                                                            <div className='flex absolute self-end'>
+                                                                <div>
+                                                                    <div className='flex flex-row self-center'>
+                                                                        <div>
+                                                                            <img src="" style={{ width: '20px', height: '20px' }} className='flex justify-center self-center rounded-full' />
+                                                                        </div>
+                                                                        <p style={{ fontSize: '10px', padding: 2 }}>xdhtcg</p>
+                                                                    </div>
+                                                                    <div className='flex flex-row'>
+                                                                        <img src='/assets/Shop.png' style={{ width: '20px', height: '20px', }} className='flex justify-center self-center' />
+                                                                        <div style={{ fontSize: '12px' }}>Shop.</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
 
-                                            </div>
-
+                                              </div>
+                                         </div>
                                         </div>
                                     </div>
-                                    <div className='h-full flex flex-col'>
-                                        <h4 className='text-center'>Upload Product Picture or Video</h4>
-                                        <form>
-                                            <input type='text' title='pName' name='productName' onChange={(e) => setProductName(e.target.value)} placeholder='Product Name' className='w-full rounded-xl border my-2 ' style={{ backgroundColor: "white" }} />
-                                            <input type='text' title='pCaption' placeholder='Product Caption' onChange={(e) => setPCaption(e)} className='w-full rounded-xl border my-2 ' style={{ backgroundColor: "white" }} />
-                                            <input type='text' title='pPrice' placeholder='Price' onChange={(e) => setProductPrice(e)} className='w-full rounded-xl border my-2 ' style={{ backgroundColor: "white" }} />
-                                            <input type='text' title='location' placeholder='Location' onChange={(e) => setLocation(e)} className='w-full rounded-xl border my-2 ' style={{ backgroundColor: "white" }} />
-                                            <input type='text' title='tags' placeholder='#tags' onChange={(e) => setTags(e)} className='w-full rounded-xl border my-2 ' style={{ backgroundColor: "white" }} />
-                                            <input type='text' title='names' placeholder='Name' onChange={(e) => setNames(e)} className='w-full rounded-xl border my-2 ' style={{ backgroundColor: "white" }} />
-                                        </form>
+                                    <div className='h-full relative flex flex-col ' >
+                                        <div className='place-content-center p-10'>
+                                            <h4 className='text-center font-semibold py-2'>Upload Product Picture or Video</h4>
+                                            <form>
+                                                <input type='text' title='pName' name='productName' onChange={(e) => setProductName(e.target.value)} placeholder='Product Name' className='w-full rounded-xl border my-2 ' style={{ backgroundColor: "white" }} />
+                                                <input type='text' title='pCaption' placeholder='Product Caption' onChange={(e) => setPCaption(e.target.value)} className='w-full rounded-xl border my-2 ' style={{ backgroundColor: "white" }} />
+                                                <input type='text' title='pPrice' placeholder='Price' onChange={(e) => setProductPrice(e.target.value)} className='w-full rounded-xl border my-2 ' style={{ backgroundColor: "white" }} />
+                                                <input type='text' title='location' placeholder='Location' onChange={(e) => setLocation(e.target.value)} className='w-full rounded-xl border my-2 ' style={{ backgroundColor: "white" }} />
+                                                <input type='text' title='tags' placeholder='#tags' onChange={(e) => setTags(e.target.value)} className='w-full rounded-xl border my-2 ' style={{ backgroundColor: "white" }} />
+                                                <input type='text' title='names' placeholder='Name' onChange={(e) => setNames(e.target.value)} className='w-full rounded-xl border my-2 ' style={{ backgroundColor: "white" }} />
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
