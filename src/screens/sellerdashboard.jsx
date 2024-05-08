@@ -114,7 +114,7 @@ export default function SellerDashboard() {
                                             <div className="" style={{ fontSize: '7px' }}>select where your product will be shown</div>
                                         </div>
                                         {/* <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUserAvatarButton"> */}
-                                        <div onClick={() =>setPostIsOpen(!postIsOpen)} className='cursor-pointer' >
+                                        <div onClick={() =>setPostIsOpen(true)} className='cursor-pointer' >
                                             <a className="block py-5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                                                 <div className='flex flex-row justify-center py-2'>
                                                     <div className="w-2 h-2 rounded-full self-center" style={{ backgroundColor: '#8248BB' }}></div>
@@ -181,8 +181,7 @@ export default function SellerDashboard() {
                                         <li>
                                             <a href="#" className="block px-4 py-5 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Go to Promotion</a>
                                         </li>
-                                    </ul>
-                                </div>
+                                    </ul>                                </div>
                                 }
                             </div>
                         </div>
@@ -191,67 +190,69 @@ export default function SellerDashboard() {
                     <div className='px-36 py-10'>
                         <div className='shadow-outline shadow-xl' style={{ backgroundColor: "#F2F2F2" }}>
                             <h5 className=' px-10 pt-12 text-lg font-semibold'>Sets & Editions</h5>
-                            <div className="columns-4 gap-0 relative justify-center place-content-center px-6 pb-5" style={{ height: '600px' }}>
+                            <div className='flex justify-center'>
+                                <div className="md:columns-4 gap-7 relative justify-center place-content-center px-6 pb-5 w-10/12" style={{ height: '600px' }}>
 
-                                <motion.div
-                                    initial={{ opacity: 0, y: 30 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 1, delay: 0.45 * 1 }}
-                                    className='h-full flex pl-20'>
-                                    <div class="relative flex flex-col self-center text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-56" style={{
-                                        backgroundImage: "url('/assets/corporate-management-strategy-solution-branding-concept.jpg')",
-                                        backgroundSize: "cover",
-                                        backgroundRepeat: "no-repeat",
-                                        height: '300px'
-                                    }}>
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 30 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 1, delay: 0.45 * 1 }}
+                                        className='h-full flex '>
+                                        <div class="relative flex flex-col self-center text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-56" style={{
+                                            backgroundImage: "url('/assets/corporate-management-strategy-solution-branding-concept.jpg')",
+                                            backgroundSize: "cover",
+                                            backgroundRepeat: "no-repeat",
+                                            height: '300px'
+                                        }}>
 
-                                    </div>
+                                        </div>
 
-                                </motion.div>
-                                <motion.div
-                                    initial={{ opacity: 0, y: 30 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 1, delay: 0.45 * 2 }}
-                                    className='h-full flex pl-14' >
-                                    <div class="relative flex flex-col self-center text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-56" style={{
-                                        backgroundImage: "url('/assets/corporate-management-strategy-solution-branding-concept.jpg')",
-                                        backgroundSize: "cover",
-                                        backgroundRepeat: "no-repeat",
-                                        height: '400px'
-                                    }}>
+                                    </motion.div>
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 30 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 1, delay: 0.45 * 2 }}
+                                        className='h-full flex' >
+                                        <div class="relative flex flex-col self-center text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-56" style={{
+                                            backgroundImage: "url('/assets/corporate-management-strategy-solution-branding-concept.jpg')",
+                                            backgroundSize: "cover",
+                                            backgroundRepeat: "no-repeat",
+                                            height: '400px'
+                                        }}>
 
-                                    </div>
-                                </motion.div>
-                                <motion.div
-                                    initial={{ opacity: 0, y: 30 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 1, delay: 0.15 * 3 }}
-                                    className='h-full flex pl-10'>
-                                    <div class="relative flex flex-col self-center text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-56" style={{
-                                        backgroundImage: "url('/assets/corporate-management-strategy-solution-branding-concept.jpg')",
-                                        backgroundSize: "cover",
-                                        backgroundRepeat: "no-repeat",
-                                        height: '350px'
-                                    }}>
+                                        </div>
+                                    </motion.div>
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 30 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 1, delay: 0.15 * 3 }}
+                                        className='h-full flex'>
+                                        <div class="relative flex flex-col self-center text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-56" style={{
+                                            backgroundImage: "url('/assets/corporate-management-strategy-solution-branding-concept.jpg')",
+                                            backgroundSize: "cover",
+                                            backgroundRepeat: "no-repeat",
+                                            height: '350px'
+                                        }}>
 
-                                    </div>
-                                </motion.div>
-                                <motion.div
-                                    initial={{ opacity: 0, y: 30 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 1, delay: 0.45 * 4 }}
-                                    className='h-full flex'>
-                                    <div class="relative flex flex-col self-center text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-56" style={{
-                                        backgroundImage: "url('/assets/corporate-management-strategy-solution-branding-concept.jpg')",
-                                        backgroundSize: "cover",
-                                        backgroundRepeat: "no-repeat",
-                                        height: '500px'
-                                    }}>
+                                        </div>
+                                    </motion.div>
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 30 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 1, delay: 0.45 * 4 }}
+                                        className='h-full flex'>
+                                        <div class="relative flex flex-col self-center text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-56" style={{
+                                            backgroundImage: "url('/assets/corporate-management-strategy-solution-branding-concept.jpg')",
+                                            backgroundSize: "cover",
+                                            backgroundRepeat: "no-repeat",
+                                            height: '500px'
+                                        }}>
 
-                                    </div>
-                                </motion.div>
+                                        </div>
+                                    </motion.div>
 
 
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -392,14 +393,18 @@ export default function SellerDashboard() {
                                                     {/* <img src='/assets/shoe.png' className='w-full' style={{}} /> */}
                                                     </div>
                                                     <div className='relative flex flex-col self-end w-full'>
-                                                        <div className='flex bg-white h-32 rounded-b-md px-2 py-2' style={{ width: '100%' }} >
+                                                        <div className='flex absolute bg-white h-32 w-full rounded-b-md px-2 py-2 overflow-clip' style={{whiteSpace:'pre-wrap'}}   >
                                                             <div className='w-full'>
-                                                                <div className="flex flex-row justify-between">
-                                                                    <div className='font-semibold uppercase'>{productName}</div>
-                                                                    <div className='text-red-600 font-medium'>{productPrice}</div>
+                                                                <div className="w-full flex flex-row justify-between">
+                                                                    <div className=''>
+                                                                        <div className='font-semibold uppercase w-40 truncate whitespace-pre-wrap'>{productName}</div>
+                                                                    </div>
+                                                                    <div className='text-red-600 font-medium w-20 truncate overflow-clip pr-2' >{productPrice}</div>
                                                                 </div>
-                                                                <div>{pCaption}</div>
-                                                                <div>{tags}</div>
+                                                                <div className='pt-1'>
+                                                                    <div style={{fontSize:'12px'}}>{pCaption}</div>
+                                                                    <div style={{fontSize:'10px'}}>{tags}</div>
+                                                                </div>
                                                             </div>
                                                             <div className='flex absolute self-end'>
                                                                 <div>
