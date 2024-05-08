@@ -24,13 +24,15 @@ export default function SellerDashboard() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isOpen, setIsOpen] = useState(false);
     const [cIsOpen, setCIsOpen] = useState(false);
-    const [postIsOpen, setPostIsOpen] = useState(true)
+    const [postIsOpen, setPostIsOpen] = useState(false)
     const [productName, setProductName] = useState('')
     const [pCaption, setPCaption] = useState('')
     const [productPrice, setProductPrice] = useState('')
     const [location, setLocation] = useState('')
     const [tags, setTags] = useState('')
     const [names, setNames] = useState('')
+    const [reelsIsOpen, setReelsIsOpen] = useState(false)
+    const [liveIsOpen, setLiveIsOpen] = useState(true)
 
     let index = [0, 1, 2, 3]
 
@@ -103,19 +105,20 @@ export default function SellerDashboard() {
                         </div>
                         <div className='flex flex-row justify-center '>
                             <div className='place-content-center px-12'>
-                                <div onClick={() => { setCIsOpen(!cIsOpen) }}>
+                                <div onClick={() =>  setCIsOpen((prev) => !prev) }>
                                     <Icon className='cursor-pointer' icon="ph:camera" style={{ width: '30px', height: '30px' }} />
                                 </div>
 
                                 <div>
-                                    {cIsOpen && <div id="dropdownAvatar" className="absolute right-16 z-10 pb-2 px-2 rounded-3xl bg-white divide-y divide-gray-100 shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                                    {cIsOpen &&
+                                        <div id=" " className="absolute right-16 z-10 pb-2 px-2 rounded-3xl bg-white divide-y divide-gray-100 shadow w-52 dark:bg-gray-700 dark:divide-gray-600">
                                         <div className="px-4 py-3 text-sm text-gray-900 dark:text-white">
                                             <div className='font-sm' style={{ fontSize: '11px' }}>Upload your product or content</div>
                                             <div className="" style={{ fontSize: '7px' }}>select where your product will be shown</div>
                                         </div>
                                         {/* <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUserAvatarButton"> */}
-                                        <div onClick={() =>setPostIsOpen(true)} className='cursor-pointer' >
-                                            <a className="block py-5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                        <div className='relative cursor-pointer' >
+                                            <a onClick={() => setPostIsOpen(true)} className="block py-5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                                                 <div className='flex flex-row justify-center py-2'>
                                                     <div className="w-2 h-2 rounded-full self-center" style={{ backgroundColor: '#8248BB' }}></div>
                                                     <div>
@@ -126,7 +129,7 @@ export default function SellerDashboard() {
                                             </a>
                                         </div>
 
-                                        <div>
+                                        <div onClick={() => setPostIsOpen(true)} className='relative cursor-none' >
                                             <a href="#" className="block py-5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                                                 <div className='flex flex-row justify-center py-2'>
                                                     <div className="w-2 h-2 rounded-full self-center" style={{ backgroundColor: '#8248BB' }}></div>
@@ -138,7 +141,7 @@ export default function SellerDashboard() {
                                             </a>
                                         </div>
 
-                                        <div>
+                                        <div onClick={() => setPostIsOpen(true)} className='relative cursor-pointer' >
                                             <a href="#" className="block py-5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                                                 <div className='flex flex-row justify-center py-2'>
                                                     <div className="w-2 h-2 rounded-full self-center" style={{ backgroundColor: '#8248BB' }}></div>
@@ -444,6 +447,68 @@ export default function SellerDashboard() {
                             </div>
                         </div>
                     </div>
+                }
+
+                {reelsIsOpen &&
+                    <div className='fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl p-28 '>
+                        <div className='rounded-3xl flex flex-col h-full' style={{ backgroundColor: '#DBC9E9' }}>
+                            <div className='p-5'>
+                                <div className='pl-3 pb-5 font-medium text-3xl cursor-pointer' onClick={() => setReelsIsOpen(false)}>
+                                    <Icon icon="iconoir:cancel" />
+                                </div>
+                                <div className='md:columns-2 flex justify-center px-7'>
+                                    <div className='h-full w-full relative flex flex-col justify-center '>
+                                        <div>Preview</div>
+                                        <Reels image="/assets/istockphoto-1475370822-612x612.jpg" ppic='/assets/Union.png' name='James Akinmowa' jobtype='leather work' opa='1' pname='BEACH FLIP FLOP' pprice='38,000' hashtags='Red stripe beach flip flop #flipflop #beachflipflop #wears' padin={2} radius='2xl' width='100%' height='400px' />
+
+                                    </div>
+                                    <div className='h-full relative flex flex-col ' >
+                                        <div className='place-content-center p-10'>
+                                            <h4 className='text-center font-semibold py-2'>Upload Product Picture or Video</h4>
+                                            <form>
+                                                <input type='text' title='pName' name='productName' onChange={(e) => setProductName(e.target.value)} placeholder='Product Name' className='w-full rounded-xl border my-2 ' style={{ backgroundColor: "white" }} />
+                                                <input type='text' title='pCaption' placeholder='Product Caption' onChange={(e) => setPCaption(e.target.value)} className='w-full rounded-xl border my-2 ' style={{ backgroundColor: "white" }} />
+                                                <input type='text' title='pPrice' placeholder='Price' onChange={(e) => setProductPrice(e.target.value)} className='w-full rounded-xl border my-2 ' style={{ backgroundColor: "white" }} />
+                                                <input type='text' title='location' placeholder='Location' onChange={(e) => setLocation(e.target.value)} className='w-full rounded-xl border my-2 ' style={{ backgroundColor: "white" }} />
+                                                <input type='text' title='tags' placeholder='#tags' onChange={(e) => setTags(e.target.value)} className='w-full rounded-xl border my-2 ' style={{ backgroundColor: "white" }} />
+                                                <input type='text' title='names' placeholder='Name' onChange={(e) => setNames(e.target.value)} className='w-full rounded-xl border my-2 ' style={{ backgroundColor: "white" }} />
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                {liveIsOpen &&
+                    <div className='fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl p-28 '>
+                    <div className='bg-white p-5 rounded-3xl'>
+                        <div className="flex justify-between">
+                            <div>Live</div>
+                            <div>
+                                <div className='pl-3 pb-5 font-medium text-3xl cursor-pointer' onClick={() => setLiveIsOpen(false)}>
+                                <Icon icon="iconoir:cancel" />
+                                </div>
+                            </div>
+                            </div>
+                            <div className='flex justify-between '>
+                                <div className='w-36 self-center' >
+                                    <div className="rounded-2xl flex flex-row justify-between px-2" style={{ backgroundColor: "#A8A7A8" }}>
+                                        <Icon icon="mynaui:refresh" width="2.7rem" height="2.7rem" className="p-2" style={{ color: "black" }} />
+                                        <Icon icon="la:microphone" width="2.7rem" height="2.7rem" className="p-2" style={{ color: "black" }} />
+                                    </div>
+                                    {/* <Icon icon="mynaui:refresh" width="1.2rem" height="1.2rem" style={{ color: black }} /> */}
+                                </div>
+                                <div>
+                                    <div className="rounded-full flex justify-center" style={{ height: '100px', width: '100px', backgroundColor: 'red' }}>
+                                        <Icon icon="ri:camera-fill" className="self-center" width="2rem" height="2rem" style={{ color: "white" }} />
+                                    </div>
+                                </div>
+                                <div></div>
+                            </div>
+                        </div>
+                </div>
                 }
                 <Footers />
             </div>
