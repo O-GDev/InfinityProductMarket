@@ -485,7 +485,7 @@ export default function SellerDashboard() {
                     <div className='fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl p-28 '>
                     <div className='bg-white p-5 rounded-3xl'>
                         <div className="flex justify-between">
-                            <div>Live</div>
+                                <div className='font-semibold pl-5' style={{ color:'#702EB2'}}>Live</div>
                             <div>
                                 <div className='pl-3 pb-5 font-medium text-3xl cursor-pointer' onClick={() => setLiveIsOpen(false)}>
                                 <Icon icon="iconoir:cancel" />
