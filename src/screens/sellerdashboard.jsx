@@ -32,7 +32,7 @@ export default function SellerDashboard() {
     const [tags, setTags] = useState('')
     const [names, setNames] = useState('')
     const [reelsIsOpen, setReelsIsOpen] = useState(false)
-    const [liveIsOpen, setLiveIsOpen] = useState(true)
+    const [liveIsOpen, setLiveIsOpen] = useState(false)
 
     let index = [0, 1, 2, 3]
 
@@ -117,8 +117,8 @@ export default function SellerDashboard() {
                                             <div className="" style={{ fontSize: '7px' }}>select where your product will be shown</div>
                                         </div>
                                         {/* <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUserAvatarButton"> */}
-                                        <div className='relative cursor-pointer' >
-                                            <a onClick={() => setPostIsOpen(true)} className="block py-5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                        <div onMouseDown={() => setPostIsOpen(true)} className='relative cursor-pointer' >
+                                            <a className="block py-5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                                                 <div className='flex flex-row justify-center py-2'>
                                                     <div className="w-2 h-2 rounded-full self-center" style={{ backgroundColor: '#8248BB' }}></div>
                                                     <div>
@@ -129,7 +129,7 @@ export default function SellerDashboard() {
                                             </a>
                                         </div>
 
-                                        <div onClick={() => setPostIsOpen(true)} className='relative cursor-none' >
+                                        <div onMouseDown={() => setReelsIsOpen(true)} className='relative cursor-none' >
                                             <a href="#" className="block py-5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                                                 <div className='flex flex-row justify-center py-2'>
                                                     <div className="w-2 h-2 rounded-full self-center" style={{ backgroundColor: '#8248BB' }}></div>
@@ -141,7 +141,7 @@ export default function SellerDashboard() {
                                             </a>
                                         </div>
 
-                                        <div onClick={() => setPostIsOpen(true)} className='relative cursor-pointer' >
+                                        <div onMouseDown={() => setLiveIsOpen(true)} className='relative cursor-pointer' >
                                             <a href="#" className="block py-5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                                                 <div className='flex flex-row justify-center py-2'>
                                                     <div className="w-2 h-2 rounded-full self-center" style={{ backgroundColor: '#8248BB' }}></div>
@@ -375,7 +375,7 @@ export default function SellerDashboard() {
                 </div>
                 {postIsOpen &&
                     <div className='fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl p-28 '>
-                        <div className='rounded-3xl flex flex-col h-full' style={{ backgroundColor: '#DBC9E9' }}>
+                        <div className='rounded-3xl flex flex-col h-full' style={{ backgroundColor: '#F2F2F2' }}>
                             <div className='p-5'>
                                 <div className='pl-3 pb-5 font-medium text-3xl cursor-pointer' onClick={() => setPostIsOpen(false)}>
                                     <Icon icon="iconoir:cancel" />
@@ -451,7 +451,7 @@ export default function SellerDashboard() {
 
                 {reelsIsOpen &&
                     <div className='fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl p-28 '>
-                        <div className='rounded-3xl flex flex-col h-full' style={{ backgroundColor: '#DBC9E9' }}>
+                        <div className='rounded-3xl flex flex-col h-full' style={{ backgroundColor: '#F2F2F2' }}>
                             <div className='p-5'>
                                 <div className='pl-3 pb-5 font-medium text-3xl cursor-pointer' onClick={() => setReelsIsOpen(false)}>
                                     <Icon icon="iconoir:cancel" />
@@ -483,7 +483,7 @@ export default function SellerDashboard() {
 
                 {liveIsOpen &&
                     <div className='fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl p-28 '>
-                    <div className='bg-white p-5 rounded-3xl'>
+                        <div className='bg-white p-5 rounded-3xl' style={{ backgroundColor:'#F2F2F2'}}>
                         <div className="flex justify-between">
                                 <div className='font-semibold pl-5' style={{ color:'#702EB2'}}>Live</div>
                             <div>

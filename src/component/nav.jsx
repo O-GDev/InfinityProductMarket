@@ -191,8 +191,8 @@ export default function Navbars() {
             {isonTabletOrMobile && <>
                 <div ref={slideRef} className="select-none " style={{}}>
                     <img src={sliderImage[currentIndex]} alt='slide' loading='lazy' style={{ height: '57vh', width: '100vw', objectFit: 'none', opacity: 1 }} />
-                </div><div className='absolute w-full text-white'>
-                    {/* <Navmenu /> */}
+                </div><div className='absolute w-full text-white' style={{ height: '87vh' }}>
+                    <Navmenu />
                     <div className='self-center justify-start pb-15 pt-5' style={{ height: '100vh' }}>
                         {/* First Slide Text */}
                         {currentIndex == 1 &&

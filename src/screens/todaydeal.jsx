@@ -16,7 +16,8 @@ export const Todaydeal = () => {
   return (
     <div className=''>
     <LoggedinNav />
-    <div className='pt-20'>
+      <div className='pt-20'>
+        <img src='/assets/nav.png' className='flex w-full' />
       {/* <Swiper>
         <SwiperSlide>
           <img src='' alt='' />

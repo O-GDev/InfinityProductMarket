@@ -109,6 +109,21 @@
 #zooms{
   transform: scale(1.0)
 }
+#navbar li:hover,
+#navbar li.active{
+  color: #976FBE;
+}
+#navbar li:hover::after,
+#navbar li.active::after {
+  content: "";
+  background: #976FBE;
+  height: 3px;
+  width: 75%;
+  position: absolute;
+  bottom: -4px;
+  left: 0px;
+ 
+}
 
 
 @tailwind base;

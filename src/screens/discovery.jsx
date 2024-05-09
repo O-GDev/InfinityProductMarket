@@ -6,7 +6,9 @@ export default function Discovery() {
   return (
     <div>
       <LoggedinNav />
-      <div className='pt-20 '>...</div>
+      <div className='pt-20 '>
+        <img src='/assets/nav.png' className='flex w-full' />
+      </div>
       <div className='p-5'>
             <h5 className='text-center'>INFINITY PRODUCT PLACE is a recognised as a product marketing community alongside infinity service place(ISP) a service centric community<br />The two individual communities comes together
             to form a marketing system called Infinity Market Place. Created by WAJISINFINITY LTD. all right reserved</h5>

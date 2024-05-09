@@ -23,7 +23,16 @@ const LoggedinNav = () => {
     setIsOpen((isOpen) => !isOpen);
   }
 
+  const handleClick = (e) => {
+    const activeNav = document.querySelectorAll("li");
 
+    activeNav.forEach(activenav => {
+      activenav.addEventListener("click", () => {
+        document.querySelector('.active')?.classList.remove('active');
+        activenav.classList.add('active')
+      })
+    })
+  }
 
 // const open = event.target.classList.add('hidden');
    
@@ -37,13 +46,13 @@ const LoggedinNav = () => {
           <img src='/assets/Search.png' className='w-4 h-4 my-3 ml-5 font-bold'  />
           <input placeholder='Search for brands or categories' className='text-sm outline-none pl-1 w-52 font-sembold' /></div>
           </div> 
-        <ul className="inline justify-center self-center">
-          <li className={active === 1 ? "inline mx-2 font-primary font-semibold border-b" : "inline px-2 font-primary font-semibold "} style={{borderColor:'#976FBE'}} ><Link to='/' onClick={()=>setActive(1)}>Home</Link> </li>
-          <li className={active === 2 ? "inline mx-2 font-primary font-semibold border-b" : "inline px-2 font-primary font-semibold "} style={{borderColor:'#976FBE'}} > <Link to='/todaydeal' onClick={()=>setActive(2)}>Today's Deal</Link> </li>
-          <li className={active === 3 ? "inline mx-2 font-primary font-semibold border-b" : "inline px-2 font-primary font-semibold "} style={{borderColor:'#976FBE'}} onClick={()=>setActive(3)}><Link to='/discovery'>Discovery</Link></li>
-          <li className={active === 4 ? "inline mx-2 font-primary font-semibold border-b" : "inline px-2 font-primary font-semibold "} style={{borderColor:'#976FBE'}} onClick={()=>setActive(4)}><Link to='/marketing'>Marketing</Link></li>
-          <li className={active === 5 ? "inline mx-2 font-primary font-semibold border-b" : "inline px-2 font-primary font-semibold "} style={{borderColor:'#976FBE'}} onClick={()=>setActive(5)}><Link to=''>Store</Link></li>
-          <li className={active === 6 ? "inline mx-2 font-primary font-semibold border-b" : "inline px-2 font-primary font-semibold "} style={{borderColor:'#976FBE'}} onClick={()=>setActive(6)}><Link to=''>Cart</Link></li>
+          <ul id='navbar' className="flex items-center justify-between">
+          <li className="relative pr-5 font-primary font-semibold " ><Link to='/' onClick={handleClick}>Home</Link> </li>
+          <li className="relative pr-5 font-primary font-semibold " > <Link to='/todaydeal' onClick={handleClick}>Today's Deal</Link> </li>
+          <li className="relative pr-5 font-primary font-semibold " onClick={handleClick}><Link to='/discovery'>Discovery</Link></li>
+          <li className="relative pr-5 font-primary font-semibold " onClick={handleClick}><Link to='/marketing'>Marketing</Link></li>
+          <li className="relative pr-5 font-primary font-semibold " onClick={handleClick}><Link to=''>Store</Link></li>
+          <li className="relative font-primary font-semibold " onClick={handleClick}><Link to=''>Cart</Link></li>
           {/* <li className='inline px-5 font-primary font-semibold'><Link to=''>
           <button id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar" className="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" type="button">
 <span className="sr-only">Open user menu</span>
