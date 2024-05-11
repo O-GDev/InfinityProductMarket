@@ -4,6 +4,14 @@
     padding: 2rem;
     text-align: center;
   } */
+  #gradient{
+    background-image: linear-gradient(rgba(254,
+      252,
+      255, 0.4),rgba(9,
+      5,
+      13, 0.4));
+    /* opacity: 0.3; */
+  }
  
 .container{
   background-color: red;

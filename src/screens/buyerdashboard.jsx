@@ -217,10 +217,56 @@ useEffect(()=>{
         </div>
 
     
-        <div style={{ backgroundColor: `rgba(112, 46, 178, 0.1)` }} className='m-5 p-8 py-8 rounded-2xl'></div>
+        <div id='gradient' className='m-5 p-8 py-8 rounded-2xl'>
+          <div className='font-bold py-2'>CATEGORIES</div>
+          <div className="flex flex-row justify-between">
+            <div>
+              <img src="/assets/Frame 427319739.png" style={{}} alt="" />
+              <h5 className='text-center pt-2'>Phones and Tablets</h5>
+            </div>
+            <div>
+              <img src="/assets/Frame 427319741.png" style={{}} alt="" />
+              <h5 className='text-center pt-2'>Phones and Tablets</h5>
+            </div>
+            <div>
+              <img src="/assets/Frame 427319743.png" style={{}} alt="" />
+              <h5 className='text-center pt-2'>Phones and Tablets</h5>
+            </div>
+            <div>
+              <img src="/assets/Frame 427319745.png" style={{}} alt="" />
+              <h5 className='text-center pt-2'>Phones and Tablets</h5>
+            </div>
+            <div>
+              <img src="/assets/Frame 427319747.png" style={{}} alt="" />
+              <h5 className='text-center pt-2'>Phones and Tablets</h5>
+            </div>
+          </div>
+          <div className="flex flex-row justify-between pt-5">
+            <div>
+              <img src="/assets/Frame 427319749.png" style={{}} alt="" />
+              <h5 className='text-center pt-2'>Phones and Tablets</h5>
+            </div>
+            <div>
+              <img src="/assets/Frame 427319742.png" style={{}} alt="" />
+              <h5 className='text-center pt-2'>Phones and Tablets</h5>
+            </div>
+            <div>
+              <img src="/assets/Frame 427319744.png" style={{}} alt="" />
+              <h5 className='text-center pt-2'>Phones and Tablets</h5>
+            </div>
+            <div>
+              <img src="/assets/Frame 427319746.png" style={{}} alt="" />
+              <h5 className='text-center pt-2'>Phones and Tablets</h5>
+            </div>
+            <div>
+              <img src="/assets/Frame 427319748.png" style={{}} alt="" />
+              <h5 className='text-center pt-2'>Phones and Tablets</h5>
+            </div>
+          </div>
+        </div>
 
 
-<div className=''>
+{/* <div className=''>
   <h3 className='font-bold pl-10'>FEATURED ITEMS</h3>
   <h5 className='text-center' style={{color:'#42255F'}}>Top Rated</h5>
   <div className='md:columns-4 px-4 pt-3' >        
@@ -247,9 +293,9 @@ useEffect(()=>{
   <h3 className='font-bold'  style={{color:'#42255F'}}>People's choice</h3>
   </div>
         </div>
-</div>
+</div> */}
 
-<div className='flex flex-row h-20 justify-between m-2 mx-10 bg-white'>
+<div className='flex flex-row h-20 justify-between bg-white'>
       <div className='flex rounded-br-3xl' style={{backgroundColor:'#ab5ae0'}}>
       <div className='flex justify-center self-center' >
         <span className='text-white text-center p-2'>connect with <br /> foreign manufacturers</span>
@@ -260,7 +306,7 @@ useEffect(()=>{
         <h6 className='font-bold text-center text-sm'>Africa is the continent with highest demand on commodity</h6>
         <h5 className='font-bold' style={{color:'#33363F'}}>Contend, cooperate or partner with the world giant here on IPP </h5>
       </div>
-      <div className='flex justify-center self-end p-2'>
+      <div className='flex justify-center self-center pr-20'>
         <h5 className='font-semibold' style={{color:'#ab5ae0'}}>Become a supplier</h5>
       </div>
 
