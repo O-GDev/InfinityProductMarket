@@ -313,15 +313,64 @@ useEffect(()=>{
      
     </div>
     <div>            
-  <h3 className='font-semibold pl-10 pt-5'  style={{color:'#42255F'}}>Top Merchants </h3>
-  <div className='md:columns-4 m-10 relative'>
+  {/* <h3 className='font-semibold pl-10 pt-5'  style={{color:'#42255F'}}>Top Merchants </h3> */}
+  {/* <div className='md:columns-4 m-10 relative'>
       <Cards image="/assets/premium_photo-1692873058899-624c0f96c5de.webp" pname='Cleaning Products' pprice="8000" opa='0' padin={15} />
       <Cards image="/assets/stock-photo-portrait-of-young-black-man-working-on-farm-standing-in-hothouse-holding-wooden-box-full-of-fresh-2183178705 2.png" pname='Nike Sneakers' pprice='28,000' opa='0' padin={15} />
       <Cards image="/assets/istockphoto-1475370822-612x612.jpg" pname='Camera' pprice='328,000' opa='0' padin={15} />
       <Cards image="/assets/young-smiling-cheerful-satisfied-positive-600nw-2127045413.jpg.webp" pname='Hermes Birkin Bag' pprice='28,000' opa='0' padin={15} />          
+        </div> */}
         </div>
+        
+        <div className='m-10 rounded-2xl pb-5 drop-shadow-2xl' style={{ backgroundColor: `rgba(155, 109, 201, 0.6)` }}>
+          <div className='flex flex-row justify-between p-5'>
+            <div>
+              <h3 className='font-semibold text-white uppercase' style={{}}>People's Choice </h3>
+            </div>
+            <div className='font-semibold text-white '>View All</div>
           </div>
+          <div className='flex flex-row justify-evenly'>
+            <div className="bg-white rounded-3xl" style={{ height: '300px', width: '200px' }}></div>
+            <div className="bg-white rounded-3xl mt-12" style={{ height: '300px', width: '200px' }}></div>
+            <div className="bg-white rounded-3xl" style={{ height: '300px', width: '200px' }}></div>
+            <div className="bg-white rounded-3xl mt-12" style={{ height: '300px', width: '200px' }}></div>
+            <div className="bg-white rounded-3xl" style={{ height: '300px', width: '200px' }}></div>
+          </div>
+  </div>
+        <div>
+          <div className='flex flex-row justify-between px-10'>
+            <div>
+              <h3 className='font-semibold uppercase' style={{}}>New Arrivals </h3>
+            </div>
+            <div className='font-semibold '>View All</div>
+          </div>
+        </div>
+        
 
+        <div>
+          <div className='bg-white p-5 mx-10 drop-shadow-xl rounded-2xl'>
+            <div className='flex flex-row justify-between px-10'>
+              <div>
+                <h3 className='font-semibold uppercase' style={{}}>Top Brands and Merchants</h3>
+                <motion.div
+                  initial={{ scale: 0 }}
+                  whileInView={{ rotate: 360, scale: 1 }}
+                  // viewport={{ once: false, amount: 1 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 260,
+                    damping: 20,
+                    duration: 10,
+                  }}
+                  className="flex justify-evenly"
+                >
+                  <Uline color='#702EB2' />
+                </motion.div>
+              </div>
+              <div className='font-semibold '>View All</div>
+            </div>
+          </div>
+        </div>
           <div className='p-5'>
             <h5 className='text-center'>INFINITY PRODUCT PLACE is a recognised as a product marketing community alongside infinity service place(ISP) a service centric community<br />The two individual communities comes together
             to form a marketing system called Infinity Market Place. Created by WAJISINFINITY LTD. all right reserved</h5>
