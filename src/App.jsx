@@ -19,6 +19,7 @@ import Marketing from './screens/marketing';
 import Selleersprofile from './screens/selleersprofile';
 import SellerDashboard from './screens/sellerdashboard';
 import ProfilePage from './screens/profilepage';
+import BuyerBackground from './screens/buyerbackground';
 
 
 const App = () => {
@@ -28,8 +29,9 @@ const App = () => {
           <Route path='/' element={<Landingpage />} />
         <Route path='nav' element={<Navmenu />} />
         <Route path='choosesociety' element={<Choosesociety />} />
-        <Route path='reg/:id' element={<Productplacehome />} />        
-        <Route path='buyerdashboard/' element={<BuyerDashboard />} />
+        <Route path='reg/:id' element={<BuyerBackground />} />        
+        <Route path='sreg/:id' element={<Productplacehome/>} />
+        <Route path='buyerdashboard' element={<BuyerDashboard />} />
         <Route path='sellerdashboard' element={<SellerDashboard/> }/>
         <Route path='todaydeal' element={<Todaydeal />} />
         <Route path='discovery' element={<Discovery />} />

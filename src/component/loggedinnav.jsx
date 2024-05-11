@@ -38,7 +38,7 @@ const LoggedinNav = () => {
    
   return (
     <><div>
-      <nav className='w-full z-10' style={{position:'fixed',backgroundColor:'#F2F2F2'}}>
+      <nav className='w-full z-50' style={{position:'fixed',backgroundColor:'#F2F2F2'}}>
       <div className='flex px-10 py-3' style={{ justifyContent: 'space-between' }}>
         <div className='flex flex-row'>
           <img src='/assets/2 2 (1).png' style={{ width: '60px', height: '60px' }} />

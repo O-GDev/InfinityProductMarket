@@ -7,6 +7,7 @@ import { Icon } from '@iconify/react/dist/iconify.js'
 
 export default function Choosesociety() {
   const rand = Math.floor(Math.random() * 200000000000 - 100)
+  const randb = Math.floor(Math.random() * 200000000000 - 100)
   const [openModal, setOpenModal] = useState(false)
   return (
     <div className='absolute'>
@@ -130,14 +131,14 @@ export default function Choosesociety() {
             </div>
             <div className=" pl-36">
               <div className="md:columns-2 h-full ">
-                <Link to={`/reg/${rand}`}>
+                <Link to={`/reg/${randb}`}>
                   <div className='flex flex-col self-center justify-center '>
                     <h4 className='font-bold text-lg'>Buyer</h4>
                     <p className='w-2/3 py-1 pr-5' style={{ fontSize: '12px' }} >Purchase quality products from INFINITY PRODUCT PLACE, prioritising commercial integrity and product quality</p>
                     <img src="/assets/Frame 427319608.png" alt="" className='h-2/3 w-3/5' />
                   </div>
                 </Link>
-                <Link to={`/reg/${rand}`}>
+                <Link to={`/sreg/${rand}`}>
                   <div className='w-full'>
                     <img src="/assets/Frame 427319609.png" alt="" className='h-2/3 w-3/5 ' style={{}} />
                     <div className='w-2/3 pr-3'>

@@ -6,6 +6,8 @@ import Cards from '../lilcomponents/cards';
 import Cards1 from '../lilcomponents/card';
 import Signuppage from './signuppage';
 import LoggedinNav from '../component/loggedinnav';
+import PostsCards from '../lilcomponents/postsCards';
+import { motion } from 'framer-motion';
 
 
 const sliderImage = [
@@ -62,41 +64,42 @@ useEffect(()=>{
     
      
     </div>
-
-    <div className='md:columns-4 p-4 px-10 bg-white'>
-      <div className='flex flex-row'>
-      <img src='/assets/store 1.png' style={{height:50,width:50}} />
-        <div>
-          <h5 className="font-bold text-sm px-2">FREE STORE</h5>
-          <p className='px-2 text-sm'>Create your business with us
-using our free template  </p>
+        <div className='p-10'>
+          <div className='flex p-4 px-10 rounded-3xl bg-white shadow-lg'>
+            <div className='flex flex-row'>
+              {/* <img src='/assets/store 1.png' style={{height:50,width:50}} /> */}
+              <div>
+                <h5 className="font-bold text-sm px-2">FREE STORE</h5>
+                <p className='px-2 text-sm'>Create your business with us
+                  using our free template  </p>
+              </div>
+            </div>
+            <div className='flex flex-row'>
+              {/* <img src='/assets/partners 1.png' style={{height:50,width:50}} /> */}
+              <div>
+                <h5 className="font-bold text-sm px-2 ">COMMUNITY</h5>
+                <p className='px-2 text-sm'>Connect with other business
+                  through affiliation and partnership</p>
+              </div>
+            </div>
+            <div className='flex flex-row'>
+              {/* <img src='/assets/key 1.png' style={{height:50,width:50}} /> */}
+              <div className=''>
+                <h5 className="font-bold text-sm px-2">OWNERSHIP</h5>
+                <p className='px-2 text-sm'>Take charge of your business
+                  and grow at your pace </p>
+              </div>
+            </div>
+            <div className='flex flex-row'>
+              {/* <img src='/assets/money-bag 1.png' style={{height:50,width:50}} /> */}
+              <div>
+                <h5 className="font-bold text-sm px-2">GROWTH</h5>
+                <p className='px-2 text-sm'>Grow your income, make
+                  the right decision </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div className='flex flex-row'>
-      <img src='/assets/partners 1.png' style={{height:50,width:50}} />
-      <div>
-          <h5 className="font-bold text-sm px-2 ">COMMUNITY</h5>
-          <p className='px-2 text-sm'>Connect with other business
-through affiliation and partnership</p>
-        </div>
-      </div>
-      <div className='flex flex-row'>
-      <img src='/assets/key 1.png' style={{height:50,width:50}} />
-      <div>3
-          <h5 className="font-bold text-sm px-2">OWNERSHIP</h5>
-          <p className='px-2 text-sm'>Take charge of your business
-and grow at your pace </p>
-        </div>
-      </div>
-      <div className='flex flex-row'>
-      <img src='/assets/money-bag 1.png' style={{height:50,width:50}} />
-      <div>
-          <h5 className="font-bold text-sm px-2">GROWTH</h5>
-          <p className='px-2 text-sm'>Grow your income, make
-the right decision </p>
-        </div>
-      </div>
-    </div>
 
       {/* shop by category */}
     <div className='pl-10' style={{}}>
@@ -113,7 +116,7 @@ the right decision </p>
     </div>
 
 
-    <div className='flex flex-row h-20 justify-between m-2 mx-10 bg-white'>
+    {/* <div className='flex flex-row h-20 justify-between m-2 mx-10 bg-white'>
       <div className='flex rounded-br-3xl' style={{backgroundColor:'#ab5ae0'}}>
       <div className='flex justify-center self-center' >
         <span className='text-white text-center p-2'>connect with <br /> foreign manufacturers</span>
@@ -125,74 +128,96 @@ the right decision </p>
       <div className='flex justify-center self-end p-2'>
         <h5 className='font-semibold' style={{color:'#ab5ae0'}}>Become a supplier</h5>
       </div>
-    </div>
+    </div> */}
 
-    <div className='pl-10 pt-5 '>
-    <div className='md:flex md:flex-row '>
-    <div className=''>
-      <div className='flex flex-row justify-between w-full'>
+        <div style={{ backgroundColor:`rgba(112, 46, 178, 0.1)`}} className='m-5 p-8 py-8 rounded-2xl'>
+
+          <div className=''>
+            <div className='md:flex md:flex-row justify-between'>
+              <div className='w-full pr-1'>
+                <div className='flex flex-row justify-between px-0'>
+                  <h3 className='font-semibold'>TOP RATED</h3>
+                  <h3 >View All</h3>
+                </div>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 1, delay: 0.23 }}
+                  className='md:columns-4 pt-2'>
+                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 1, delay: 0.23 }}
+                  className='md:columns-4 pt-2'>
+                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 1, delay: 0.23 }}
+                  className='md:columns-4 pt-2'>
+                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                </motion.div>
+              </div>
+              <div className='flex pl-1'>
+                {/* <div className='flex flex-row justify-between w-full'>
       <h3 className='font-bold'>DEALS OF THE WEEK</h3>
       <div className='mx-1 bg-white'>
         <span className='font-black w-0.5 pr-2'> {'<'} </span>
         <span className='font-black w-0.5 pl-2'> {'>'} </span>
       </div>
-      </div>
-      <div className='pt-3'>
-        <img src='/assets/bag.png'/> 
-        <h3 className='text-center text-lg font-bold font-primary'>Green Italian-made Bag</h3>
-        <h2 className='text-center text-lg font-bold' style={{color:'red'}}># 60,000</h2>
-       <div className='flex justify-center w-full'>
-       <div className='flex flex-col justify-center self-center mx-24 ' style={{width:'100%'}}>
-        <p className='text-sm w-full '>still in stock</p>
-        
-        <div class=" bg-gray-200 rounded-full w-full h-3 dark:bg-gray-700 border-black" style={{borderWidth:1}}>
-          {/* <div class="" style="width: 45%"></div> */}
-          <div className=' h-2.5 rounded-full' style={{width:'25%',backgroundColor:'#702EB2'}}></div>
-        </div>
-        </div>        
-       </div>
-       <div className='flex flex-row justify-between p-3'>
-       <div>
-          <h5>Hurry up!</h5>
-          <p className='' style={{fontSize:'10px'}}>Limited edition going out of stock soon</p>
-        </div>
-        <div className='rounded-full flex justify-center self-center p-2 text-white' style={{backgroundColor:'#702EB2',fontSize:'55%'}}>
+      </div> */}
+                <div className="relative flex self-end flex-col">
+                  <div className="absolute">
+                    <img src='/assets/flashsales.png' style={{ width: '60%' }} className='relative -top-24 z-10 -right-44' />
+                  </div>
+                  <img src='/assets/bag.png' className='relative rounded-2xl shadow-xl' />
+                  <div className=' pt-3 flex flex-col self-end w-full'>
+                    <div className='flex justify-between py-2 relative w-full'>
+                      <h3 className='font-bold font-primary self-center' style={{fontSize:'90%'}}>Green Italian-made Bag</h3>
+                      <div style={{ color: 'red', backgroundColor: `rgba(169, 130, 209, 0.8)` }}>
+                        <h2 className='text-center text-md font-bold px-2 py-2' style={{ color: 'red', opacity: 1 }}># 60,000</h2>
+                      </div>
+                    </div>
+                    <div className='flex justify-center w-full'>
+                      <div className='flex justify-between self-center' style={{ width: '100%' }}>
+                        <p className='text-sm w-full' style={{ fontSize: '10px' }}>{4} still in stock</p>
+
+                        <div class=" rounded-full w-full h-3 dark:bg-gray-700 border-black flex self-center" style={{ borderWidth: '0.1px' }}>
+                          {/* <div class="" style="width: 45%"></div> */}
+                          <div className=' h-2.8 rounded-full' style={{ width: '25%', backgroundColor: '#702EB2' }}></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className='flex flex-row justify-between pt-3 '>
+                      <div className='flex flex-row justify-between w-full'>
+                        <h5 className='text-sm self-center'>Hurry up!, Get yours today</h5>
+                        <p className='self-center' style={{ fontSize: '10px' }}>Limited edition </p>
+                      </div>
+                      {/* <div className='rounded-full flex justify-center self-center p-2 text-white' style={{backgroundColor:'#702EB2',fontSize:'55%'}}>
           Add to Cart
+        </div> */}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-       </div>
-      </div>
-      </div>
-      <div className='w-full'>
-        <h3 className='font-bold pl-20 '>BEST SELLERS</h3>
-        <div className='md:columns-4 px-4 pt-3' >        
-      <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
-      <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
-      <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
-      <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
-
-        </div>
-        <div className='md:columns-4 px-4 pt-3' >        
-      <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
-      <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
-      <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
-      <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
-
-        </div>
-        <div className='md:columns-4 px-4 pt-3' >        
-      <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
-      <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
-      <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
-      <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
-
-        </div>
-      </div>
-
-
-    </div>
-    </div>
 
     
-    <div></div>
+        <div style={{ backgroundColor: `rgba(112, 46, 178, 0.1)` }} className='m-5 p-8 py-8 rounded-2xl'></div>
 
 
 <div className=''>
