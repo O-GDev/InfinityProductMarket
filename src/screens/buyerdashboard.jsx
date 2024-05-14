@@ -130,11 +130,10 @@ useEffect(()=>{
       </div>
     </div> */}
 
-        <div style={{ backgroundColor:`rgba(112, 46, 178, 0.1)`}} className='m-5 p-8 py-8 rounded-2xl'>
-
+        <div >
           <div className=''>
-            <div className='md:flex md:flex-row justify-between'>
-              <div className='w-full pr-1'>
+            <div className='md:columns-2 md:flex gap-8 w-full h-full p-5'>
+              <div className='w-full bg-white rounded-2xl shadow-md p-5'>
                 <div className='flex flex-row justify-between px-0'>
                   <h3 className='font-semibold'>TOP RATED</h3>
                   <h3 >View All</h3>
@@ -143,18 +142,7 @@ useEffect(()=>{
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 1, delay: 0.23 }}
-                  className='md:columns-4 pt-2'>
-                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 1, delay: 0.23 }}
-                  className='md:columns-4 pt-2'>
-                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                  className='md:columns-3 pt-2'>
                   <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
                   <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
                   <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
@@ -163,21 +151,39 @@ useEffect(()=>{
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 1, delay: 0.23 }}
-                  className='md:columns-4 pt-2'>
+                  className='md:columns-3 pt-2'>
                   <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 1, delay: 0.23 }}
+                  className='md:columns-3 pt-2'>
                   <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
                   <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
                   <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
                 </motion.div>
               </div>
-              <div className='flex pl-1'>
-                {/* <div className='flex flex-row justify-between w-full'>
-      <h3 className='font-bold'>DEALS OF THE WEEK</h3>
-      <div className='mx-1 bg-white'>
-        <span className='font-black w-0.5 pr-2'> {'<'} </span>
-        <span className='font-black w-0.5 pl-2'> {'>'} </span>
-      </div>
-      </div> */}
+              <div className='w-full bg-white rounded-2xl shadow-md p-5 md:mt-0 mt-5 '>
+                <div className='flex justify-center mx-6' style={{ backgroundColor: `rgba(130, 72, 187,0.8)` }}>
+                  <h5 className='text-white p-3' style={{}}>Top Brands and Merchants</h5>
+                </div>
+                <div className='flex justify-end mx-6' style={{}}>
+                  <h5 className='p-3' style={{}}>View All</h5>
+                </div>
+                <div>
+                  <h6>Manufacturers</h6>
+                  <div className="columns-4 flex justify-between gap-2 align-middle p-2">
+                    <div className="rounded-full bg-black" style={{ width: '70px', height: '70px' }}></div>
+                    <div className='self-center'>ffg</div>
+                    <div className='self-center'>ffg</div>
+                    <div className='self-center'>ffg</div>
+                  </div>
+                </div>
+              </div>
+              {/* <div className='flex pl-1'>
                 <div className="relative flex self-end flex-col">
                   <div className="absolute">
                     <img src='/assets/flashsales.png' style={{ width: '60%' }} className='relative -top-24 z-10 -right-44' />
@@ -195,7 +201,6 @@ useEffect(()=>{
                         <p className='text-sm w-full' style={{ fontSize: '10px' }}>{4} still in stock</p>
 
                         <div class=" rounded-full w-full h-3 dark:bg-gray-700 border-black flex self-center" style={{ borderWidth: '0.1px' }}>
-                          {/* <div class="" style="width: 45%"></div> */}
                           <div className=' h-2.8 rounded-full' style={{ width: '25%', backgroundColor: '#702EB2' }}></div>
                         </div>
                       </div>
@@ -205,13 +210,10 @@ useEffect(()=>{
                         <h5 className='text-sm self-center'>Hurry up!, Get yours today</h5>
                         <p className='self-center' style={{ fontSize: '10px' }}>Limited edition </p>
                       </div>
-                      {/* <div className='rounded-full flex justify-center self-center p-2 text-white' style={{backgroundColor:'#702EB2',fontSize:'55%'}}>
-          Add to Cart
-        </div> */}
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
