@@ -1,5 +1,5 @@
 import React from 'react'
-import LoggedinNav from '../component/loggedinnav'
+import LoggedinBuyerNav from '../component/loggedinbuyernav'
 // import {Swiper, SwiperSlide} from 'swiper/react'
 
 // import 'swiper/css'
@@ -15,7 +15,7 @@ import Footers from '../lilcomponents/footers'
 export const Todaydeal = () => {
   return (
     <div className=''>
-    <LoggedinNav />
+    <LoggedinBuyerNav />
       <div className='pt-20'>
         <img src='/assets/nav.png' className='flex w-full' />
       {/* <Swiper>

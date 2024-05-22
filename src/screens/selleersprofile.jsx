@@ -1,7 +1,7 @@
 import React from 'react'
 import LoggedinNav from '../component/loggedinnav'
 
-export default function Selleersprofile() {
+export default function Sellersprofile() {
   return (
     <div>
      <LoggedinNav />

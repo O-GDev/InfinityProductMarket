@@ -8,6 +8,7 @@ import Signuppage from './signuppage';
 import LoggedinNav from '../component/loggedinnav';
 import PostsCards from '../lilcomponents/postsCards';
 import { motion } from 'framer-motion';
+import LoggedinBuyerNav from '../component/loggedinbuyernav';
 
 
 const sliderImage = [
@@ -55,9 +56,9 @@ useEffect(()=>{
   return (
     <>
     <div style={{paddingBottom:20,}}>
-    <LoggedinNav />
+      <LoggedinBuyerNav />
 
-    <div className='flex pt-20' style={{height:"",}}>
+    <div className='flex pt-10' style={{height:"",}}>
         <div ref={slideRef} className="select-none" style={{}}>
     <img src={sliderImage[currentIndex]} alt='slide' loading='lazy' style={{height:'70vh',width:'100vw',opacity:1}} />  
     </div>
@@ -219,19 +220,15 @@ useEffect(()=>{
         </div>
 
     
-        <div id='gradient' className='m-5 p-8 py-8 rounded-2xl'>
+      <div className="md:flex flex-row w-full">
+      <div id='' className='m-5 pl-8 py-8 w-8/12 rounded-2xl'>
+        <div className="flex flex-row justify-between">
           <div className='font-bold py-2'>CATEGORIES</div>
-          <div className="flex flex-row justify-between">
+          <div>View All</div>
+          </div>
+          <div className="flex flex-row gap-5 justify-between">
             <div>
               <img src="/assets/Frame 427319739.png" style={{}} alt="" />
-              <h5 className='text-center pt-2'>Phones and Tablets</h5>
-            </div>
-            <div>
-              <img src="/assets/Frame 427319741.png" style={{}} alt="" />
-              <h5 className='text-center pt-2'>Phones and Tablets</h5>
-            </div>
-            <div>
-              <img src="/assets/Frame 427319743.png" style={{}} alt="" />
               <h5 className='text-center pt-2'>Phones and Tablets</h5>
             </div>
             <div>
@@ -243,15 +240,7 @@ useEffect(()=>{
               <h5 className='text-center pt-2'>Phones and Tablets</h5>
             </div>
           </div>
-          <div className="flex flex-row justify-between pt-5">
-            <div>
-              <img src="/assets/Frame 427319749.png" style={{}} alt="" />
-              <h5 className='text-center pt-2'>Phones and Tablets</h5>
-            </div>
-            <div>
-              <img src="/assets/Frame 427319742.png" style={{}} alt="" />
-              <h5 className='text-center pt-2'>Phones and Tablets</h5>
-            </div>
+          <div className="flex flex-row gap-5 justify-between pt-5">
             <div>
               <img src="/assets/Frame 427319744.png" style={{}} alt="" />
               <h5 className='text-center pt-2'>Phones and Tablets</h5>
@@ -266,6 +255,12 @@ useEffect(()=>{
             </div>
           </div>
         </div>
+        
+        <div id='' className='my-5 mb-20 py-8 pr-8 w-full rounded-2xl'>
+          <div className='font-bold py-2 text-end'>DISCOVERY</div>
+          <div className='bg-black w-full h-full'></div>
+        </div>
+      </div>
 
 
 {/* <div className=''>
@@ -314,6 +309,49 @@ useEffect(()=>{
 
      
     </div>
+<div className='md:flex flex-row m-10 gap-5'>
+    <div className='flex flex-col w-full h-full bg-white rounded-2xl shadow-lg'>
+<div className="flex flex-row justify-between w-full">
+<div className='flex justify-between p-5 w-full'>
+            <div>
+              <h3 className='font-semibold uppercase' style={{}}>New Arrival </h3>
+            </div>
+            <div className='font-semibold '>View All</div>
+          </div>
+</div>
+
+<motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 1, delay: 0.23 }}
+                  className='md:columns-3 px-5 pb-5 gap-5'>
+                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                </motion.div>
+    </div>
+    <div className='flex w-full h-full bg-white rounded-2xl shadow-lg md:mt-0 mt-3'>
+    <div className="flex flex-col w-full">
+<div className='flex flex-row justify-between p-5 w-full'>
+            <div>
+              <h3 className='font-semibold uppercase' style={{}}>People's Chioce </h3>
+            </div>
+            <div className='font-semibold '>View All</div>
+          </div>
+
+          
+          <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 1, delay: 0.23 }}
+                  className='md:columns-3 px-5 pb-5 gap-5'>
+                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                </motion.div>
+</div>
+    </div>
+    </div>
     <div>            
   {/* <h3 className='font-semibold pl-10 pt-5'  style={{color:'#42255F'}}>Top Merchants </h3> */}
   {/* <div className='md:columns-4 m-10 relative'>
@@ -327,19 +365,89 @@ useEffect(()=>{
         <div className='m-10 rounded-2xl pb-5 drop-shadow-2xl' style={{ backgroundColor: `rgba(155, 109, 201, 0.6)` }}>
           <div className='flex flex-row justify-between p-5'>
             <div>
-              <h3 className='font-semibold text-white uppercase' style={{}}>People's Choice </h3>
+              <h3 className='font-semibold text-white uppercase' style={{}}>Curated Session </h3>
             </div>
             <div className='font-semibold text-white '>View All</div>
           </div>
           <div className='flex flex-row justify-evenly'>
-            <div className="bg-white rounded-3xl" style={{ height: '300px', width: '200px' }}></div>
-            <div className="bg-white rounded-3xl mt-12" style={{ height: '300px', width: '200px' }}></div>
-            <div className="bg-white rounded-3xl" style={{ height: '300px', width: '200px' }}></div>
-            <div className="bg-white rounded-3xl mt-12" style={{ height: '300px', width: '200px' }}></div>
-            <div className="bg-white rounded-3xl" style={{ height: '300px', width: '200px' }}></div>
+            <div className="bg-white rounded-3xl flex flex-col" style={{ height: '300px', width: '200px' }}>
+              <div className='p-4'>
+                <p className='text-sm text-center uppercase' style={{fontSize:'70%'}}>STYLE MATCH AND COLLECTION</p>
+              </div>
+              <div className='  h-full flex'>
+                <div className="flex self-end p-7">
+                  <div className="flex align-middle">
+                    <div className='flex self-center'>
+                      <img src="/assets/.." alt="..." />
+                    </div>
+                    <div><h6 className='self-center' style={{fontSize:'60%'}}>by Priscilla OJO </h6></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-3xl mt-12 flex flex-col" style={{ height: '300px', width: '200px' }}>
+            <div className='p-4'>
+                <p className='text-sm text-center uppercase' style={{fontSize:'70%'}}>INSIDE WORLD</p>
+              </div>
+              <div className='  h-full flex'>
+                <div className="flex self-end p-7">
+                  <div className="flex align-middle">
+                    <div className='flex self-center'>
+                      <img src="/assets/.." alt="..." />
+                    </div>
+                    <div><h6 className='self-center' style={{fontSize:'60%'}}>by Priscilla OJO </h6></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-3xl flex flex-col" style={{ height: '300px', width: '200px' }}>
+            <div className='p-4'>
+                <p className='text-sm text-center uppercase' style={{fontSize:'70%'}}>ng.engines</p>
+              </div>
+              <div className='  h-full flex'>
+                <div className="flex self-end p-7">
+                  <div className="flex align-middle">
+                    <div className='flex self-center'>
+                      <img src="/assets/.." alt="..." />
+                    </div>
+                    <div><h6 className='self-center' style={{fontSize:'60%'}}>by Priscilla OJO </h6></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-3xl mt-12 flex flex-col" style={{ height: '300px', width: '200px' }}>
+            <div className='p-4'>
+                <p className='text-sm text-center uppercase' style={{fontSize:'70%'}}>STYLE MATCH AND COLLECTION</p>
+              </div>
+              <div className='  h-full flex'>
+                <div className="flex self-end p-7">
+                  <div className="flex align-middle">
+                    <div className='flex self-center'>
+                      <img src="/assets/.." alt="..." />
+                    </div>
+                    <div><h6 className='self-center' style={{fontSize:'60%'}}>by Priscilla OJO </h6></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-3xl flex flex-col" style={{ height: '300px', width: '200px' }}>
+            <div className='p-4'>
+                <p className='text-sm text-center uppercase' style={{fontSize:'70%'}}>STYLE MATCH AND COLLECTION</p>
+              </div>
+              <div className='  h-full flex'>
+                <div className="flex self-end p-7">
+                  <div className="flex align-middle">
+                    <div className='flex self-center'>
+                      <img src="/assets/.." alt="..." />
+                    </div>
+                    <div><h6 className='self-center' style={{fontSize:'60%'}}>by Priscilla OJO </h6></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
   </div>
-        <div>
+        {/* <div>
           <div className='flex flex-row justify-between px-10'>
             <div>
               <h3 className='font-semibold uppercase' style={{}}>New Arrivals </h3>
@@ -372,13 +480,13 @@ useEffect(()=>{
               <div className='font-semibold '>View All</div>
             </div>
           </div>
-        </div>
+        </div> */}
           <div className='p-5'>
-            <h5 className='text-center'>INFINITY PRODUCT PLACE is a recognised as a product marketing community alongside infinity service place(ISP) a service centric community<br />The two individual communities comes together
+            <h5 className=''>INFINITY PRODUCT PLACE is a recognised as a product marketing community alongside infinity service place(ISP) a service centric community<br />The two individual communities comes together
             to form a marketing system called Infinity Market Place. Created by WAJISINFINITY LTD. all right reserved</h5>
-            <div className='flex flex-row self-center justify-center pt-10'>
-            <h4 className='text-center font-bold'>Put your skills services to good use and earn an income. <br />Create your portfolio today on infinity service place </h4>
-            <span className='p-2 rounded-xl absolute right-7 text-white font-bold' style={{backgroundColor:'#702EB2',position:'  '}}>Join ISP</span>
+            <div className='flex flex-row self-center '>
+            <h4 className=' font-bold'>Put your skills services to good use and earn an income. <br />Create your portfolio today on infinity service place </h4>
+            <span className='p-2 drop-shadow-xl absolute right-7 text-white font-bold bg-white' style={{color:'#DF1D1D'}}>Join ISP</span>
          
             </div>
              </div>

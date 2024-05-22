@@ -44,12 +44,12 @@ const Navmenu = ({index}) => {
     })
   }
   return (
-    <><div className='hidden md:inline'>
-      <nav>
-        <div className='flex px-10 py-3' style={{ justifyContent: 'space-between' }}>
+    <><div className='hidden md:inline bg-white '>
+      <nav className='bg-white text-black'>
+        <div className='flex px-10 py-1' style={{ justifyContent: 'space-between' }}>
           <div className='flex flex-row'>
-            <img src='/assets/logo.png' style={{ width: '30px', height: '30px' }} />
-            <h3 className="font-primary font-semibold flex flex-row self-center justify-center">INFINITY MARKET PLACE</h3>
+            <img src='/assets/ICON DEEP PURPLE 1.png' style={{ width: '30px', height: '30px' }} />
+            <h3 className="font-primary font-semibold flex flex-row self-center justify-center pl-3">INFINITY MARKET PLACE</h3>
           </div>
           {/* <div className=''> */}
             <ul id='navbar' className="flex justify-between self-center">
