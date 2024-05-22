@@ -1,15 +1,31 @@
 import React, { useState } from 'react'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import { useNavigate } from 'react-router-dom'
+import LoggedinBuyerNav from '../component/loggedinbuyernav'
+import ProfilePage from '../screens/profilepage'
+import History from '../screens/History'
+import Wallet from '../screens/Wallet'
+import Chats from '../screens/Chats'
+import Notification from '../screens/Notification'
+import Help from '../screens/Help'
+import Suggestion from '../screens/Suggestion'
+import Settings from '../screens/Settings'
 
 
 
 const Aside = () => {
     const[childIsOpen, setChildIsOpen] = useState(false)
+    const [currentUrl, setCurrentUrl] = useState('currenturl') 
     const navigate = useNavigate()
   return (
-    <div>
-        <div id="aside1" className='border-r'>
+    <div className='h-full'>
+        <div>
+            <LoggedinBuyerNav />
+        </div>
+        <div className="pt-10 h-full flex">
+         <div>
+               
+        <div id="aside1" className='border-r h-full'>
         <div className='pl-7 pt-7 pr-7' onMouseEnter={()=>setChildIsOpen(true)} onMouseLeave={()=>setChildIsOpen(false)}>
     <h6 className='text-center rounded-md p-2 text-white' style={{backgroundColor:'#702EB2',fontSize:'12px'}}>Switch Accounts</h6>
     {childIsOpen && <div id="dropdownAvatar" onMouseEnter={() => setChildIsOpen(true)} onMouseLeave={() => setChildIsOpen(false)} className=" absolute left-30 z-10 bg-white divide-y divide-gray-400 rounded-2xl shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
@@ -40,7 +56,7 @@ const Aside = () => {
   </div>
   <ul className="py-2 text-sm pl-7 text-gray-700 dark:text-gray-200 " aria-labelledby="dropdownUserAvatarButton">
             {/* <Link to='/myprofile'> */}
-      <li className='flex my-4 dark:hover:text-white cursor-pointer' onMouseDown={() => navigate('/myprofile')}>
+      <li className='flex my-4 dark:hover:text-white cursor-pointer' onMouseDown={() => navigate('/myprofile')} onClick={() =>setCurrentUrl('profile')}>
         <Icon icon="carbon:home" className='flex self-center' />
         <a  className="block px-4 py-2 ">Profile</a>
               </li>
@@ -48,22 +64,22 @@ const Aside = () => {
               <div className='mt-8'>
                 <span style={{fontSize:'10px'}}>TRANSACTION</span>
               </div>
-              <li className='flex dark:hover:text-white cursor-pointer'>
+              <li onClick={() =>setCurrentUrl("history")} className='flex dark:hover:text-white cursor-pointer'>
               <Icon icon="lets-icons:paper-light" className='flex self-center'/>
         <a href="#" className="block px-4 py-2">History</a>
       </li>
-      <li className='flex dark:hover:text-white cursor-pointer'>
+      <li onClick={() => setCurrentUrl("wallet")} className='flex dark:hover:text-white cursor-pointer'>
       <Icon icon="lets-icons:wallet-light" className='flex self-center'/>
         <a href="#" className="block px-4 py-2 ">Wallet</a>
       </li>
               <div className='mt-8'>
                 <span style={{fontSize:'10px'}}>INFO</span>
               </div>
-      <li className='flex dark:hover:text-white cursor-pointer'>
+      <li onClick={() => setCurrentUrl("chats")} className='flex dark:hover:text-white cursor-pointer'>
       <Icon icon="solar:chat-dots-outline" className='flex self-center'/>
         <a href="#" className="block px-4 py-2 ">Chats</a>
       </li>
-            <li className='flex dark:hover:text-white cursor-pointer'>
+            <li onClick={() => setCurrentUrl("notification")} className='flex dark:hover:text-white cursor-pointer'>
             <Icon icon="mage:notification-bell-pending" className='flex self-center' />
               <a href="#" className="block px-4 py-2 ">Notification</a>
              
@@ -78,15 +94,15 @@ const Aside = () => {
                 
               </div>
             </li> */}
-            <li className='flex cursor-pointer'>
+            <li onClick={() => setCurrentUrl("help")} className='flex cursor-pointer'>
             <Icon icon="tdesign:help-circle-filled" className='flex self-center' />
         <a href="#" className="block px-4 py-2 ">Help</a>
       </li>
-      <li className='flex dark:hover:text-white cursor-pointer'>
+      <li onClick={() => setCurrentUrl("suggestion")} className='flex dark:hover:text-white cursor-pointer'>
       <Icon icon="material-symbols-light:box" className='flex self-center' />
         <a href="#" className="block px-4 py-2 ">Suggestion Box</a>
       </li>
-            <li className='flex dark:hover:text-white mt-8 cursor-pointer'>
+            <li onClick={() => setCurrentUrl("settings")} className='flex dark:hover:text-white mt-8 cursor-pointer'>
             <Icon icon="quill:cog" className='flex self-center' />
               <a href="#" className="block px-4 py-2 ">Settings</a>
             </li>
@@ -95,6 +111,32 @@ const Aside = () => {
               <a href="#" className="block px-4 py-2 ">Log out</a>
             </li>
     </ul>
+        </div>
+         </div>
+        <div className="w-full">
+        {(() => {
+      switch (currentUrl) {
+        case 'profile':
+            return <ProfilePage   />
+            case 'history':
+                return <History   />
+                case 'wallet':
+                    return <Wallet />
+                    case 'chats':
+                        return <Chats />
+                        case 'notification':
+                            return <Notification />
+                            case 'help':
+                                return <Help />
+                                case 'suggestion':
+                                    return <Suggestion />
+                                    case 'settings':
+                                        return <Settings />
+                                        default:
+                                            return <ProfilePage   />
+      }
+    })()}
+        </div>
         </div>
     </div>
   )

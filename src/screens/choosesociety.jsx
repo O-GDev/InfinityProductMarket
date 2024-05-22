@@ -44,7 +44,7 @@ export default function Choosesociety() {
       <div className='md:columns-2 md:mx-16 mx-5 my-12'>
         <h3 className='flex justify-center self-center font-bold py-1 pb-5'>INFINITY PRODUCT PLACE</h3>
 
-        <div className='md:columns-2 rounded-xl' style={{ backgroundColor: '#D3D3D3' }}>
+        <div className='md:columns-2 flex rounded-xl h-full' style={{ backgroundColor: '#D3D3D3' }}>
           <motion.div
             variants={{
               hidden: { opacity: 0, x: -150 },
@@ -53,17 +53,19 @@ export default function Choosesociety() {
             initial="hidden"
             // whileInView="visible"
             whileInView="visible"
-            transition={{ duration: 1, }}>
-            <img src='/assets/IMG_9517.JPG' className='rounded-xl w-full' style={{}} />
+            transition={{ duration: 1, }}
+            className='flex w-full' style={{height:'600px'}}>
+            <img src='/assets/IMG_9517.JPG' className='rounded-xl w-full flex h-full' style={{}} />
           </motion.div>
-          <div className='flex flex-col justify-center self-center md:pt-16 pt-5'>
+          <div className='flex flex-col justify-center self-center md:pt-16 pt-5 w-full'>
             <motion.p
 
               initial={{ opacity: 0, x: -150 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
-              className='md:pt-16 sm:pt-1 px-3 text-center text-xl italic font-medium' style={{}}>
-              Check out our product showcase, where we bring you the latest and greatest products in a laid-back and informative way!</motion.p>
+              className='md:pt-16 sm:pt-1 px-3 text-center text-xl italic font-medium w-full ' style={{}}>
+              Check out our product showcase, where we bring you the latest and greatest products in a laid-back an
+              d informative way!</motion.p>
             <motion.div
               initial={{ opacity: 0, y: 150 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -82,7 +84,7 @@ export default function Choosesociety() {
           </div> */}
         </div>
         <h3 className='flex justify-center text-center font-bold py-1 md:pt-0 pt-10 pb-5'>INFINITY SERVICE PLACE</h3>
-        <div className='md:columns-2 rounded-xl' style={{ backgroundColor: '#D3D3D3' }}>
+        <div className='md:columns-2 flex rounded-xl h-full' style={{ backgroundColor: '#D3D3D3' }}>
           <motion.div
             variants={{
               hidden: { opacity: 0, x: 150 },
@@ -92,10 +94,10 @@ export default function Choosesociety() {
             // whileInView="visible"
             whileInView="visible"
             transition={{ duration: 1, }}
-            style={{}}>
-            <img src='/assets/medium-shot-woman-posing-studio.jpg' className='rounded-xl w-full' style={{}} />
+            style={{height:'600px'} } className='w-full flex'>
+            <img src='/assets/medium-shot-woman-posing-studio.jpg' className='rounded-xl flex h-full w-full' style={{}} />
           </motion.div>
-          <div className='flex flex-col justify-self-center self-center md:pt-20 pt-5'>
+          <div className='flex flex-col justify-self-center self-center md:pt-20 pt-5 w-full'>
             <motion.p
               initial={{ opacity: 0, x: 150 }}
               whileInView={{ opacity: 1, x: 0 }}

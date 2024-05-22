@@ -70,7 +70,7 @@ const LoggedinBuyerNav = () => {
           <h6 className='self-center pl-4 capitalize text-semibold'>Infinity Market Place</h6>
           </div> 
           <div>            
-          <div className='bg-white rounded-md flex flex-row justify-center self-center ml-3' style={{width:'450px'}}>
+          <div className='bg-white border rounded-md flex flex-row justify-center self-center ml-3' style={{width:'450px'}}>
           <img src='/assets/Search.png' className='w-4 h-4 my-2 ml-5 font-bold'  />
           <input placeholder='Search for brands or categories' className='text-sm outline-none pl-1 w-full font-sembold rounded-md' /></div>
           </div>

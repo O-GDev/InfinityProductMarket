@@ -124,7 +124,7 @@ export default function Navbars() {
                             <div style={{ opacity: content1Opacity}} className='relative justify-center content-center w-full h-full'>
                                 <div className='font-primary text-white font-semibold w-full flex flex-col justify-center self-center h-full'>
                                     <motion.div
-                                        initial={{ opacity: 0, y: 70,scale: 0.5 }}
+                                        initial={{ opacity: 0, y: 70,scale: 0.9 }}
                                         whileInView={{ opacity: 1, y: 0,scale: 1 }}
                                         transition={{duration:1}} className='flex flex-col self-center h-full justify-center'>
                                         <motion.h1

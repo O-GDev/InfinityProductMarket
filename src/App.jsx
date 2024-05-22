@@ -13,6 +13,7 @@ import Sellersprofile from './screens/selleersprofile';
 import SellerDashboard from './screens/sellerdashboard';
 import ProfilePage from './screens/profilepage';
 import BuyerBackground from './screens/buyerbackground';
+import Aside from './lilcomponents/aside';
 
 
 const App = () => {
@@ -28,7 +29,7 @@ const App = () => {
         <Route path='sellerdashboard' element={<SellerDashboard/> }/>
         <Route path='todaydeal' element={<Todaydeal />} />
         <Route path='discovery' element={<Discovery />} />
-        <Route path='myprofile' element={<ProfilePage />} />
+        <Route path='myprofile' element={<Aside />} />
         <Route path='marketing' element={<Marketing />} />
         <Route path='sellersprofile' element={<Sellersprofile />} />
         <Route path='signup' element={<Signuppage />} />

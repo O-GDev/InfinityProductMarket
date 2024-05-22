@@ -7,13 +7,7 @@ import LoggedinBuyerNav from "../component/loggedinbuyernav";
 export default function ProfilePage() {
     return(
         <div className="bg-white">
-        <div>
-            <LoggedinBuyerNav />
-        </div>
-        <div className="pt-10 flex">
-                <Aside />
-                {/* <div id="aside1">
-                </div> */}
+        <div className="pt-10 ">
            <div className="w-full ">
            <div>
             <div className="">
