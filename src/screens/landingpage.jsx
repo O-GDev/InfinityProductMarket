@@ -96,7 +96,7 @@ const landingpage = () => {
             <Uline color='#702EB2' />
           </motion.div>
         </motion.div>
-        <div className='md:columns-2 p-5 h-full'>
+        <div className='md:columns-2 gap-10 p-5 h-full'>
           <div className='h-full w-full'>
             <h3 className='flex justify-center self-center font-bold py-1 pb-1'>INFINITY PRODUCT PLACE</h3>
             <motion.div
@@ -109,7 +109,7 @@ const landingpage = () => {
               whileInView="visible"
               // viewport={{ once: false, amount: 1 }}
               transition={{ duration: 1, }}
-              className='lg:columns-2 md:flex rounded-xl my-5 md:mx-0 mx-12 md:my-0 p-5' style={{ backgroundColor: '#D3D3D3' }}>
+              className='lg:columns-2 md:flex rounded-xl my-5 md:my-0 p-5' style={{ backgroundColor: '#D3D3D3' }}>
               <motion.div
                 variants={{
                   hidden: { opacity: 0, },
@@ -121,7 +121,7 @@ const landingpage = () => {
                 className='w-full'
               >
 
-                <img src='/assets/IMG_9517.JPG' className='rounded-xl md:h-[400px] w-full h-[250px] ' style={{}} />
+                <img src='/assets/IMG_9517.JPG' className='rounded-xl md:h-[400px] w-full aspect-square ' style={{}} />
                 
               </motion.div>
              <div className='flex w-full flex-col self-center'>
@@ -145,7 +145,7 @@ className='flex flex-col justify-self-center self-center'>
           
 
           <div className='w-full h-full'>
-            <h3 className='justify-center text-center font-bold py-1 pt-2'>INFINITY SERVICE PLACE</h3>
+            <h3 className='justify-center text-center font-bold py-1 pt-2 md:pt-0'>INFINITY SERVICE PLACE</h3>
             <motion.div
               variants={{
                 hidden: { opacity: 0, x: 150 },
@@ -155,7 +155,7 @@ className='flex flex-col justify-self-center self-center'>
               // whileInView="visible"
               whileInView="visible"
               transition={{ duration: 1, }}
-              className='lg:columns-2 md:flex rounded-xl md:my-3 my-10 md:mx-0 mx-12 p-5' style={{ backgroundColor: '#D3D3D3' }}>
+              className='lg:columns-2 md:flex rounded-xl md:my-0 my-10 p-5' style={{ backgroundColor: '#D3D3D3' }}>
 
             <motion.div
                 variants={{
@@ -168,7 +168,7 @@ className='flex flex-col justify-self-center self-center'>
                 className='w-full'
               >
 
-              <img src='/assets/medium-shot-woman-posing-studio.jpg' className='rounded-xl  md:h-[400px] w-full h-[250px] ' style={{}} />
+              <img src='/assets/medium-shot-woman-posing-studio.jpg' className='rounded-xl md:h-[400px] w-full aspect-square' style={{}} />
               </motion.div>
 
 
