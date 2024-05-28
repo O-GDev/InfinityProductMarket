@@ -219,7 +219,7 @@ className='flex flex-col justify-self-center self-center'>
         </motion.div>
         <div>
           <div className='md:columns-2 md:flex justify-center my-12 '>
-            <div className='md:w-5/12 md:flex justify-center'>
+            <div className='md:w-5/12 w-full md:flex justify-center'>
               <motion.div
                 variants={{
                   hidden: { opacity: 0, x: -150 },
@@ -228,7 +228,7 @@ className='flex flex-col justify-self-center self-center'>
                 initial="hidden"
                 whileInView="visible"
                 transition={{ duration: 1,  }}
-                className='md:w-3/5 flex mx-28 md:mx-0  h-[250px] md:h-full'
+                className='md:w-3/5 flex mx-6 md:mx-0  h-[250px] md:h-full'
                 style={{
                   backgroundImage: "url('/assets/corporate-management-strategy-solution-branding-concept.jpg')",
                   backgroundSize: "cover",
