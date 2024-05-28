@@ -48,7 +48,7 @@ export default function Choosesociety() {
       <div className='md:columns-2 md:mx-16 mx-5 my-12'>
         <h3 className='flex justify-center self-center font-bold py-1 pb-5'>INFINITY PRODUCT PLACE</h3>
 
-        <div className='md:columns-2 flex rounded-xl h-full' style={{ backgroundColor: '#D3D3D3' }}>
+        <div className='md:columns-2 md:flex rounded-xl h-full' style={{ backgroundColor: '#D3D3D3' }}>
           <motion.div
             variants={{
               hidden: { opacity: 0, x: -150 },
@@ -59,7 +59,7 @@ export default function Choosesociety() {
             whileInView="visible"
             transition={{ duration: 1, }}
             className='flex w-full' >
-            <img src='/assets/IMG_9517.JPG' className='rounded-xl flex aspect-1/3' style={{}} />
+            <img src='/assets/IMG_9517.JPG' className='rounded-xl flex aspect-square md:aspect-1/3' style={{}} />
           </motion.div>
           <div className='flex flex-col justify-center self-center md:pt-16 pt-5 w-full'>
             <motion.p
@@ -88,7 +88,7 @@ export default function Choosesociety() {
           </div> */}
         </div>
         <h3 className='flex justify-center text-center font-bold py-1 md:pt-0 pt-10 pb-5'>INFINITY SERVICE PLACE</h3>
-        <div className='md:columns-2 flex rounded-xl h-full' style={{ backgroundColor: '#D3D3D3' }}>
+        <div className='md:columns-2 md:flex rounded-xl h-full' style={{ backgroundColor: '#D3D3D3' }}>
           <motion.div
             variants={{
               hidden: { opacity: 0, x: 150 },
@@ -99,7 +99,7 @@ export default function Choosesociety() {
             whileInView="visible"
             transition={{ duration: 1, }}
             style={{} } className='w-full flex'>
-            <img src='/assets/medium-shot-woman-posing-studio.jpg' className='rounded-xl flex' style={{}} />
+            <img src='/assets/medium-shot-woman-posing-studio.jpg' className='rounded-xl flex aspect-square' style={{}} />
           </motion.div>
           <div className='flex flex-col justify-self-center self-center md:pt-20 pt-5 w-full'>
             <motion.p
