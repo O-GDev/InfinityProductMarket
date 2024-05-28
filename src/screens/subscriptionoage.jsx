@@ -9,7 +9,7 @@ export default function Subscriptionoage(props) {
   return (
     <div className='fixed inset-0 h-full bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl ' style={{}}>
     <div className='h-full sm:py-10 p-5  md:p-10 ' style={{}}>
-      <div className='md:columns-2 flex gap-0 h-full rounded-2xl' style={{backgroundColor:'#F2F2F2'}}>
+      <div className='md:columns-2 columns-1 flex gap-0 h-full rounded-2xl' style={{backgroundColor:'#F2F2F2'}}>
          {/* <CustomScroll heightRelativeToParent="calc(100%)" > */}
          <div className='flex flex-col justify-center h-full w-full  overflow-auto '>
           <div className='pb-1'>
@@ -129,7 +129,7 @@ on <span style={{color:'#34A853'}}>ISP</span>  </h5>
 
           </div>
          {/* </CustomScroll> */}
-         <div className='h-full w-full flex opacity-0 md:opacity-100'>
+         <div className='h-full w-full md:flex hidden '>
           <Sidecarousel />
          </div>
       </div>

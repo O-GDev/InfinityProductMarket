@@ -86,7 +86,7 @@ export default function Subscriptionoage() {
               </div>
               </div>
           </div>
-         <div className='bg-red-900 h-full opacity-0 md:opacity-100'>
+         <div className='bg-red-900 h-full md:flex hidden'>
           <Sidecarousel />
          </div>
       </div>

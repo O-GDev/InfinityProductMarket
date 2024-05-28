@@ -96,7 +96,7 @@ function Signuppage(props) {
                             </div>
                         </div>
                     </div>
-                    <div className='h-full opacity-0 md:opacity-100'>
+                    <div className='h-full md:flex hidden'>
                         <Sidecarousel />
                     </div>
                 </div>

@@ -61,7 +61,7 @@ export default function Paymentdetails() {
 </div>
 </Link>
           </div>
-         <div className='h-full w-full opacity-0 md:opacity-100'>
+         <div className='h-full w-full md:flex hidden'>
           <Sidecarousel />
          </div>
       </div>
