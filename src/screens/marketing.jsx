@@ -6,7 +6,7 @@ import Cards1 from '../lilcomponents/card'
 export default function Marketing() {
   return (
     <div>
-    <LoggedinNav />
+    {/* <LoggedinNav /> */}
     <div className='pt-40'>
         <div className='flex flex-col justify-center'>
             <h4 className='text-center'>Vouchers, Promotions, Referral link all in one place.</h4>
@@ -26,13 +26,13 @@ export default function Marketing() {
 
         <div>
         <h3 className='text-start p-5 font-bold text-lg text-gray-500'>Promotion</h3>
-        <div className='md:columns-2 px-20'>
+        <div className='md:columns-2 flex px-20'>
         <div className='w-full p-5 h-full'>
-        <div className=' h-full w-full justify-center' style={{}}>
+        <div className='p-20 pb-20 h-full w-full justify-center' style={{}}>
         <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
         </div>
         </div>
-        <div className='w-full h-full'>
+        <div className='w-full h-full p-10'>
             <input className='w-full p-3 my-2' placeholder='Product Name' />
             <textarea className='w-full my-1 border-0' placeholder='Description' />
             <input className='w-full p-3 my-1' placeholder='URL' />

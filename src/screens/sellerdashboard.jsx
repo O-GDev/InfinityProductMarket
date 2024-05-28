@@ -76,7 +76,7 @@ export default function SellerDashboard() {
         <>
             <div style={{ paddingBottom: 20, }}>
                 <div>
-                    <LoggedinNav />
+                    {/* <LoggedinNav /> */}
 
                     <div className='flex pt-10' style={{ height: "", }}>
                         <div ref={slideRef} className="select-none" style={{}}>

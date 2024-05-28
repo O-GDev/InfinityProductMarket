@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Button, Uline } from '../lilcomponents/style.styles'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Icon } from '@iconify/react/dist/iconify.js'
 
@@ -9,9 +9,13 @@ export default function Choosesociety() {
   const rand = Math.floor(Math.random() * 200000000000 - 100)
   const randb = Math.floor(Math.random() * 200000000000 - 100)
   const [openModal, setOpenModal] = useState(false)
+  const navigate = useNavigate()
   return (
     <div className='absolute'>
       <div className='flex flex-col justify-center text-center px-4 '>
+                    <div className='pl-10 pt-10 cursor-pointer' onClick={() => navigate('/')}  >
+         <Icon icon="lets-icons:arrow-left-long-light" width='2rem' height='2rem' />
+         </div>
         <h2 className='py-2 font-bold text-lg'>IMP is a Societal Platform with two communities.</h2>
         <h4 className='text-lg'>Select the community you which to thrive in.</h4>
       </div>

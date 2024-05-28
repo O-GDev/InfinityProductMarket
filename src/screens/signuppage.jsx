@@ -2,21 +2,25 @@ import React from 'react'
 import { Icon } from '@iconify/react';
 import { Checkbox } from 'flowbite-react';
 import Sidecarousel from '../lilcomponents/sidecarousel';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 
 function Signuppage(props) {
+    const navigate = useNavigate()
     return (
         <motion.div
             //   initial={{ opacity: 0.3, scale: 0.5 }}
             //   whileInView={{ opacity: 1, scale: 1 }}
             //   transition={{duration:1}}
-            className='fixed inset-0 h-full bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl' style={{}}>
+            className='fixed inset-0 h-full bg-opacity-30 backdrop-blur-sm shadow-2xl bg-black' style={{}}>
             <div className='h-full sm:py-10 p-5 md:p-20 ' style={{}}>
-                <div className='md:columns-2 h-full justify-center ' style={{ backgroundColor: '#F2F2F2' }}>
-                    <div className='flex justify-center md:pt-10 self-center h-full '>
-                        <div className='w-full h-full py-3  md:py-5'>
+                <div className='md:columns-2 gap-0 h-full justify-center rounded-2xl' style={{ backgroundColor: '#F2F2F2' }}>
+                    <div className='flex justify-center md:pt-10 self-center h-full'>
+                        <div className='w-full h-full py-3  md:py-2'>
+                    <div className='pl-10 cursor-pointer' onClick={() => navigate('/choosesociety')} >
+         <Icon icon="lets-icons:arrow-left-long-light" width='2rem' height='2rem' />
+         </div>
                             <h3 className='font-md font-bold flex justify-center self-center '>Be A Seller!</h3>
                             <div className='flex justify-center self-center'>
                                 <div className='' style={{ height: 0.5, width: 80, backgroundColor: '#702EB2' }}></div>

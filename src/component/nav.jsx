@@ -67,7 +67,7 @@ export default function Navbars() {
                 </div>
 
                 <div className='absolute w-full text-white ' style={{height:'87vh'}}>
-                    <Navmenu />
+                    {/* <Navmenu /> */}
                     <div className='flex self-end pb-10 w-full ' style={{height:'87vh'}}>
                         {/* First Slide Text */}
                         {currentIndex == 1 &&

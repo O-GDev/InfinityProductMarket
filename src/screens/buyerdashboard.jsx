@@ -55,10 +55,10 @@ useEffect(()=>{
   }
   return (
     <>
-    <div style={{paddingBottom:20,}}>
-      <LoggedinBuyerNav />
+    <div>
+      {/* <LoggedinBuyerNav /> */}
 
-    <div className='flex pt-10' style={{height:"",}}>
+    <div className='flex' style={{height:"",}}>
         <div ref={slideRef} className="select-none" style={{}}>
     <img src={sliderImage[currentIndex]} alt='slide' loading='lazy' style={{height:'70vh',width:'100vw',opacity:1}} />  
     </div>
@@ -221,7 +221,7 @@ useEffect(()=>{
 
     
       <div className="md:flex flex-row w-full">
-      <div id='' className='m-5 pl-8 py-8 w-8/12 rounded-2xl'>
+      <div id='' className='m-5 pl-8 py-8 md:w-8/12 rounded-2xl'>
         <div className="flex flex-row justify-between">
           <div className='font-bold py-2'>CATEGORIES</div>
           <div>View All</div>
@@ -369,8 +369,8 @@ useEffect(()=>{
             </div>
             <div className='font-semibold text-white '>View All</div>
           </div>
-          <div className='flex flex-row justify-evenly'>
-            <div className="bg-white rounded-3xl flex flex-col" style={{ height: '300px', width: '200px' }}>
+          <div className='md:flex md:flex-row sm:flex-col sm:justify-center md:justify-evenly'>
+            <div className="bg-white rounded-3xl flex self-center flex-col" style={{ height: '300px', width: '200px' }}>
               <div className='p-4'>
                 <p className='text-sm text-center uppercase' style={{fontSize:'70%'}}>STYLE MATCH AND COLLECTION</p>
               </div>
@@ -385,7 +385,7 @@ useEffect(()=>{
                 </div>
               </div>
             </div>
-            <div className="bg-white rounded-3xl mt-12 flex flex-col" style={{ height: '300px', width: '200px' }}>
+            <div className="bg-white rounded-3xl mt-12 sm:self-center flex flex-col" style={{ height: '300px', width: '200px' }}>
             <div className='p-4'>
                 <p className='text-sm text-center uppercase' style={{fontSize:'70%'}}>INSIDE WORLD</p>
               </div>
@@ -400,7 +400,7 @@ useEffect(()=>{
                 </div>
               </div>
             </div>
-            <div className="bg-white rounded-3xl flex flex-col" style={{ height: '300px', width: '200px' }}>
+            <div className="bg-white rounded-3xl md:mt-0 sm:self-center sm:mt-12 flex flex-col" style={{ height: '300px', width: '200px' }}>
             <div className='p-4'>
                 <p className='text-sm text-center uppercase' style={{fontSize:'70%'}}>ng.engines</p>
               </div>
@@ -415,7 +415,7 @@ useEffect(()=>{
                 </div>
               </div>
             </div>
-            <div className="bg-white rounded-3xl mt-12 flex flex-col" style={{ height: '300px', width: '200px' }}>
+            <div className="bg-white rounded-3xl sm:self-center mt-12 flex flex-col" style={{ height: '300px', width: '200px' }}>
             <div className='p-4'>
                 <p className='text-sm text-center uppercase' style={{fontSize:'70%'}}>STYLE MATCH AND COLLECTION</p>
               </div>
@@ -430,7 +430,7 @@ useEffect(()=>{
                 </div>
               </div>
             </div>
-            <div className="bg-white rounded-3xl flex flex-col" style={{ height: '300px', width: '200px' }}>
+            <div className="bg-white rounded-3xl sm:self-center md:mt-0 sm:mt-12 flex flex-col" style={{ height: '300px', width: '200px' }}>
             <div className='p-4'>
                 <p className='text-sm text-center uppercase' style={{fontSize:'70%'}}>STYLE MATCH AND COLLECTION</p>
               </div>

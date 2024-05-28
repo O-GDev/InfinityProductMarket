@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon } from '@iconify/react';
+import { Icon } from '@iconify/react/dist/iconify.js';
 import { Checkbox } from 'flowbite-react';
 import Sidecarousel from '../lilcomponents/sidecarousel';
 import { Link } from 'react-router-dom';
@@ -9,16 +9,19 @@ export default function Subscriptionoage(props) {
   return (
     <div className='fixed inset-0 h-full bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl ' style={{}}>
     <div className='h-full sm:py-10 p-5  md:p-10 ' style={{}}>
-      <div className='md:columns-2 h-full ' style={{backgroundColor:'#F2F2F2'}}>
-         <CustomScroll heightRelativeToParent="calc(100%)" >
-         <div className='flex flex-col justify-center h-full '>
-          <div className='pt-20 pb-3'>
-          <h3 className='px-10 pt-12 text-xl font-semibold'>Choose a plan</h3> 
-          <p className='px-6'>choosing a plan for your business will help set your <br />
+      <div className='md:columns-2 flex gap-0 h-full rounded-2xl' style={{backgroundColor:'#F2F2F2'}}>
+         {/* <CustomScroll heightRelativeToParent="calc(100%)" > */}
+         <div className='flex flex-col justify-center h-full w-full  overflow-auto '>
+          <div className='pb-1'>
+            <div className='pl-10 cursor-pointer' onClick={() => [props.handleClick("signup")]} >
+         <Icon icon="lets-icons:arrow-left-long-light" width='2rem' height='2rem' />
+         </div>
+          <h3 className='px-10 pt-2 text-xl font-semibold'>Choose a plan</h3> 
+          <p className='px-6' style={{fontSize:'12px'}}>choosing a plan for your business will help set your <br />
 business on the right part</p>
           <h3 className='text-center font-bold pt-5'>SUBSCRIPTIONS</h3>
           </div>
-              <div className='md:columns-3 gap-1 px-5 pt-2' style={{}}>
+              <div className='md:columns-3 gap-1 px-5 pt-2 ' style={{height:''}}>
                 <Link to='' onClick={() => [props.handleClick("payment")]}>
                   <div id="zoom" className='py-2 ml-2 rounded-3xl shadow-2xl' style={{ backgroundColor: '#B4B4B4', }}>
                     <h5 className='text-center p-2'>No Plan</h5>
@@ -101,17 +104,17 @@ business on the right part</p>
               </div>
 
 
-          <div className='p-2 px-5 pt-10'>
-            <h5 className='text-sm text-start'>Infinity Product Place is the tool for you to be in charge of your business by creating a direct relationship with your customers.</h5>
+          <div className='p-2 px-5 pt-3'>
+            <h5 className='text-start' style={{fontSize:'12px'}}>Infinity Product Place is the tool for you to be in charge of your business by creating a direct relationship with your customers.</h5>
           </div>
 
-              <div className='flex flex-col pb-10 pr-5'
+              <div className='flex flex-col pr-5 '
                 // style={{ backgroundColor: '#CBCBCB' }}
               >
             <div className='flex self-center justify-center pt-2'>
-            <h5 className='text-center text-sm w-3/4 p-4'>INFINITY PRODUCT PLACE is a recognised as a product marketing community alongside infinity service place(ISP) created by WAJISINFINITY LTD. all right reserved</h5>
+            <h5 className='text-center text-sm w-3/4 px-4'>INFINITY PRODUCT PLACE is a recognised as a product marketing community alongside infinity service place(ISP) created by WAJISINFINITY LTD. all right reserved</h5>
            </div>
-             <div className=' flex justify-between self-center'>
+             <div className=' flex justify-between self-center py-3'>
             <div></div>
               <h5 className=' w-2/3 text-sm text-center pl-5'>Make a realistic income with your Skills, Knowledge, 
 Talents and other creative craft you possess
@@ -125,8 +128,8 @@ on <span style={{color:'#34A853'}}>ISP</span>  </h5>
              
 
           </div>
-         </CustomScroll>
-         <div className='h-full opacity-0 md:opacity-100'>
+         {/* </CustomScroll> */}
+         <div className='h-full w-full flex opacity-0 md:opacity-100'>
           <Sidecarousel />
          </div>
       </div>

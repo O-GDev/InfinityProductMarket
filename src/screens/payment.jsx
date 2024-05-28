@@ -1,6 +1,7 @@
 import React from 'react'
 import Sidecarousel from '../lilcomponents/sidecarousel'
 import { Link } from 'react-router-dom'
+import { Icon } from '@iconify/react/dist/iconify.js'
 
 export const Payment = (props) => {
 //   initial = {{ opacity: 0.3, scale: 0.5 }
@@ -10,8 +11,11 @@ export const Payment = (props) => {
   return (
     <div className='fixed inset-0 h-full bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl ' style={{}}>
     <div className='h-full sm:py-10 p-5  md:p-10 ' style={{}}>
-      <div className='md:columns-2 h-full ' style={{backgroundColor:'#F2F2F2'}}>
+      <div className='md:columns-2 h-full rounded-2xl' style={{backgroundColor:'#F2F2F2'}}>
       <div className='flex flex-col justify-center  h-full'>
+                    <div className='pl-10' onClick={() => [props.handleClick("subscribe")]} >
+         <Icon icon="lets-icons:arrow-left-long-light" width='2rem' height='2rem' />
+         </div>
       <div className='md:columns-3 gap-3 p-12 pt-28 justify-between w-full self-center'>
               <img src='/assets/Frame 427319632.png' className='flex self-center'  width='160px' height='160px' alt='' />
               <img src='/assets/Frame 427319633.png' className='flex self-center'  width='160px' height='160px' alt='' />

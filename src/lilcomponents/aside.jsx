@@ -19,9 +19,9 @@ const Aside = () => {
     const navigate = useNavigate()
   return (
     <div className='h-full'>
-        <div>
+        {/* <div>
             <LoggedinBuyerNav />
-        </div>
+        </div> */}
         <div className="pt-10 h-full flex">
          <div>
                

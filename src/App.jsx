@@ -14,11 +14,20 @@ import SellerDashboard from './screens/sellerdashboard';
 import ProfilePage from './screens/profilepage';
 import BuyerBackground from './screens/buyerbackground';
 import Aside from './lilcomponents/aside';
+import ShowNavBar from './lilcomponents/ShowNavBar';
+import LoggedinBuyerNav from './component/loggedinbuyernav';
+import LoggedinNav from './component/loggedinnav';
 
 
 const App = () => {
   return (
-      <BrowserRouter>
+   <div>
+       <BrowserRouter>
+       <ShowNavBar>        
+    <Navmenu />
+       </ShowNavBar>       
+      {/* <LoggedinBuyerNav />
+      <LoggedinNav /> */}
         <Routes>
           <Route path='/' element={<Landingpage />} />
         <Route path='nav' element={<Navmenu />} />
@@ -38,6 +47,7 @@ const App = () => {
       </Routes>
       </BrowserRouter>
     
+   </div>
   )
 }
 

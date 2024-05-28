@@ -52,9 +52,9 @@ const LoggedinNav = () => {
           <input placeholder='Search for brands or categories' className='text-sm outline-none pl-1 w-full font-sembold rounded-md' /></div>
           </div>
           <ul id='navbar' className="flex items-center justify-between">
-          <li className="relative pr-5 font-primary font-semibold " ><Link to='/' onClick={handleClick}>Store</Link> </li>
-          <li className="relative pr-5 font-primary font-semibold " > <Link to='/todaydeal' onClick={handleClick}>Analysis</Link> </li>
-          <li className="relative pr-5 font-primary font-semibold " onClick={handleClick}><Link to='/discovery'>Discovery</Link></li>
+          <li className="relative pr-5 font-primary font-semibold active"  onClick={handleClick}><Link to='/'>Store</Link> </li>
+          <li className="relative pr-5 font-primary font-semibold "  onClick={handleClick}> <Link to='/todaydeal'>Analysis</Link> </li>
+          <li className="relative pr-5 font-primary font-semibold "  onClick={handleClick}><Link to='/discovery'>Discovery</Link></li>
           {/* <li className="relative pr-5 font-primary font-semibold " onClick={handleClick}><Link to='/marketing'>Marketing</Link></li>
           <li className="relative pr-5 font-primary font-semibold " onClick={handleClick}><Link to=''>Store</Link></li>
           <li className="relative font-primary font-semibold " onClick={handleClick}><Link to=''>Cart</Link></li> */}

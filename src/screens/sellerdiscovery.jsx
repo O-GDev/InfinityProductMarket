@@ -5,7 +5,7 @@ import Footers from '../lilcomponents/footers'
 export default function SellerDiscovery() {
     return (
         <div>
-            <LoggedinNav />
+            {/* <LoggedinNav /> */}
             <div className='pt-20 '>...</div>
             <div className='p-5'>
                 <h5 className='text-center'>INFINITY PRODUCT PLACE is a recognised as a product marketing community alongside infinity service place(ISP) a service centric community<br />The two individual communities comes together

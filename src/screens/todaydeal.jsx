@@ -15,7 +15,7 @@ import Footers from '../lilcomponents/footers'
 export const Todaydeal = () => {
   return (
     <div className=''>
-    <LoggedinBuyerNav />
+    {/* <LoggedinBuyerNav /> */}
       <div className='pt-20'>
         <img src='/assets/nav.png' className='flex w-full' />
       {/* <Swiper>

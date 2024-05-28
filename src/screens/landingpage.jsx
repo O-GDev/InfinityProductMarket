@@ -5,11 +5,15 @@ import Cards from '../lilcomponents/cards'
 import PeoplesChoice from '../lilcomponents/peopleschoiceh'
 import Footers from '../lilcomponents/footers'
 import { motion, useAnimation, useInView } from 'framer-motion'
+import {BASE_URL} from '../component/url/url'
 
 const landingpage = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
   const mainControl = useAnimation();
+  useEffect(()=>{
+    fetch(`${BASE_URL}`),{}
+  },[])
   let topRatedData = [
     {
       "image": "/assets/Rectangle 61.png",
@@ -62,10 +66,10 @@ const landingpage = () => {
   }, [isInView]);
   return (
     <div ref={ref} className='relative' style={{ backgroundColor: '#F2F2F2' }}>
-      <div className=''>
+       <div className=''>
         <Navbars />
       </div>
-      
+       
       <div className=''>
         <motion.div
           variants={{
@@ -94,7 +98,7 @@ const landingpage = () => {
         </motion.div>
         <div className='md:columns-2 p-5 h-full'>
           <div className='h-full w-full'>
-            <h3 className='flex justify-center self-center font-bold py-1 pb-5'>INFINITY PRODUCT PLACE</h3>
+            <h3 className='flex justify-center self-center font-bold py-1 pb-1'>INFINITY PRODUCT PLACE</h3>
             <motion.div
               variants={{
                 hidden: { opacity: 0, x: -150 },
@@ -105,7 +109,7 @@ const landingpage = () => {
               whileInView="visible"
               // viewport={{ once: false, amount: 1 }}
               transition={{ duration: 1, }}
-              className='md:columns-2 rounded-xl my-10 md:mx-0 mx-12 md:my-0 p-5' style={{ backgroundColor: '#D3D3D3' }}>
+              className='lg:columns-2 md:flex rounded-xl my-5 md:mx-0 mx-12 md:my-0 p-5' style={{ backgroundColor: '#D3D3D3' }}>
               <motion.div
                 variants={{
                   hidden: { opacity: 0, },
@@ -114,25 +118,28 @@ const landingpage = () => {
                 initial="hidden"
                 whileInView="visible"
                 transition={{ duration: 1, }}
+                className='w-full'
               >
 
-                <img src='/assets/IMG_9517.JPG' className='rounded-xl' style={{ height: '400px', width: '100%' }} />
+                <img src='/assets/IMG_9517.JPG' className='rounded-xl md:h-[400px] w-full h-[250px] ' style={{}} />
                 
               </motion.div>
-              <motion.p
+             <div className='flex w-full flex-col self-center'>
+             <motion.p
 
-                initial={{ opacity: 0, x: -150 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1 }}
-                className='pt-16 px-16 text-center italic font-medium' style={{}}>
-                Check out our product showcase, where we bring you the latest and greatest products in a laid-back and informative way!</motion.p>
-              <motion.div
-                initial={{ opacity: 0, y: 150 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
-                className='flex flex-col justify-self-center self-center'>
-                <Button><span className='font-bold' style={{ backgroundColor: 'transparent', padding: '10px', borderColor: '#702EB2', borderWidth: 1, color: '#702EB2' }}>Let's Shop</span></Button>
-              </motion.div>
+initial={{ opacity: 0, x: -150 }}
+whileInView={{ opacity: 1, x: 0 }}
+transition={{ duration: 1 }}
+className='px-4 md:px-14 py-2 text-center italic font-medium' style={{fontSize:`clamp(15px, 8px, 30px)`}}>
+Check out our product showcase, where we bring you the latest and greatest products in a laid-back and informative way!</motion.p>
+<motion.div
+initial={{ opacity: 0, y: 150 }}
+whileInView={{ opacity: 1, y: 0 }}
+transition={{ duration: 1 }}
+className='flex flex-col justify-self-center self-center'>
+<Button><span className='font-bold' style={{ backgroundColor: 'transparent', padding: '10px', borderColor: '#702EB2', borderWidth: 1, color: '#702EB2' }}>Let's Shop</span></Button>
+</motion.div>
+             </div>
             </motion.div>
           </div>
           
@@ -148,17 +155,29 @@ const landingpage = () => {
               // whileInView="visible"
               whileInView="visible"
               transition={{ duration: 1, }}
-              className='md:columns-2 rounded-xl md:my-3 my-10 md:mx-0 mx-12 p-5' style={{ backgroundColor: '#D3D3D3' }}>
+              className='lg:columns-2 md:flex rounded-xl md:my-3 my-10 md:mx-0 mx-12 p-5' style={{ backgroundColor: '#D3D3D3' }}>
+
+            <motion.div
+                variants={{
+                  hidden: { opacity: 0, },
+                  visible: { opacity: 1, }
+                }}
+                initial="hidden"
+                whileInView="visible"
+                transition={{ duration: 1, }}
+                className='w-full'
+              >
+
+              <img src='/assets/medium-shot-woman-posing-studio.jpg' className='rounded-xl  md:h-[400px] w-full h-[250px] ' style={{}} />
+              </motion.div>
 
 
-              <img src='/assets/medium-shot-woman-posing-studio.jpg' className='rounded-xl' style={{ height: '400px', width: '100%' }} />
-
-
+              <div className='flex w-full flex-col self-center'>
               <motion.p
                 initial={{ opacity: 0, x: 150 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1 }}
-                className='pt-16 px-16 text-center italic font-medium '>Check out our top notch professionals in different fields  of creativity all across the world. </motion.p>
+                className='px-4 md:px-14 py-2 text-center italic font-medium' style={{fontSize:`clamp(15px, 8px, 30px)`}}>Check out our top notch professionals in different fields  of creativity all across the world. </motion.p>
               <motion.div
                 className='flex flex-col justify-self-center self-center'
                 initial={{ opacity: 0, y: 150 }}
@@ -168,6 +187,7 @@ const landingpage = () => {
                 <Button><span className='font-bold' style={{ backgroundColor: 'transparent', padding: '10px', borderColor: '#702EB2', borderWidth: 1, color: '#702EB2' }}>Let's Deal</span></Button>
               </motion.div>
 
+              </div>
             </motion.div>
           </div>
 
@@ -198,8 +218,8 @@ const landingpage = () => {
           </motion.div>
         </motion.div>
         <div>
-          <div className='md:columns-2 justify-center my-12 '>
-            <div className='w-full flex justify-center'>
+          <div className='md:columns-2 md:flex justify-center my-12 '>
+            <div className='md:w-5/12 md:flex justify-center'>
               <motion.div
                 variants={{
                   hidden: { opacity: 0, x: -150 },
@@ -208,20 +228,14 @@ const landingpage = () => {
                 initial="hidden"
                 whileInView="visible"
                 transition={{ duration: 1,  }}
-                className='back w-2/3'
+                className='md:w-3/5 flex mx-28 md:mx-0  h-[250px] md:h-full'
                 style={{
                   backgroundImage: "url('/assets/corporate-management-strategy-solution-branding-concept.jpg')",
                   backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat"
+                  backgroundRepeat: "no-repeat",
                 }}
               >
-                {/* <div
-           style={{backgroundImage:"url('/assets/corporate-management-strategy-solution-branding-concept.jpg')",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            height:'100%',backgroundPosition:'center'}}
-          ></div> */}
-                <img src='/assets/corporate-management-strategy-solution-branding-concept.jpg' id='' className='zoomImage' style={{ height: '400px', }} />
+                <img src='/assets/corporate-management-strategy-solution-branding-concept.jpg' id='' className='zoomImage hidden md:block' style={{ height: '400px', }} />
               </motion.div>
             </div>
             <div className=''>
@@ -243,7 +257,7 @@ const landingpage = () => {
                   initial="hidden"
                   whileInView="visible"
                   transition={{duration: 1,  }}
-                  className='md:px-16 text-center'>Check out our top notch professionals in different fields  of creativity all across the world. </motion.p>
+                  className='md:px-16 text-center w-4/6 self-center'>Check out our top notch professionals in different fields  of creativity all across the world. </motion.p>
                 <motion.div
                   variants={{
                     hidden: { opacity: 0, y: 50 },
@@ -313,7 +327,7 @@ const landingpage = () => {
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat"
                 }}>
-                <img src='/assets/drew-colins-LIEQsu5JuoM-unsplash 2.png' className='zoomImages' style={{ height: '400px' }} />
+                <img src='/assets/drew-colins-LIEQsu5JuoM-unsplash 2.png' className='zoomImages md:block hidden' style={{ height: '400px' }} />
               </motion.div>
             </div>
           </div>
@@ -337,7 +351,7 @@ const landingpage = () => {
                   backgroundRepeat: "no-repeat"
                 }}
               >
-                <img src='/assets/image6 2.png' className='zoomImage' style={{ height: '400px' }} />
+                <img src='/assets/image6 2.png' className='zoomImage md:block hidden' style={{ height: '400px' }} />
               </motion.div>
             </div>
             <div>
@@ -453,7 +467,7 @@ const landingpage = () => {
               transition={{ duration: 1, }}
               style={{ color: '#2E0853', borderWidth: 0.5, borderColor: '#2E0853', borderRadius: 20 }}><h4 className='font-semibold rounded-md p-1.5'>VIEW ALL</h4></motion.span>
           </div>
-          <div className='md:columns-4 sm:columns-1 gap-5 md:m-10 p-5 md:p-0 lg:p-0 mx-12'>
+          <div className='md:columns-4 justify-center columns-1 gap-5 md:m-10 p-5 md:p-0 lg:p-0 mx-12'>
             {professionalsData.map((professionals, index) => (
               <motion.div
                 // variants={}
@@ -461,6 +475,7 @@ const landingpage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.05 * index, duration: 0.5 * index }}
                 key={index}
+                className='flex justify-center'
               >
                 <Cards image={professionals.image} opa='0' padin={15} radius='full' width='250px' height='250px' />
                      
