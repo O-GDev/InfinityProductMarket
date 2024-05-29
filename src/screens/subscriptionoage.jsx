@@ -11,19 +11,23 @@ export default function Subscriptionoage(props) {
     <div className='h-full sm:py-10 p-5  md:p-10 ' style={{}}>
       <div className='md:columns-2 flex md:flex-row flex-col gap-0 h-full rounded-2xl overflow-auto md:overflow-hidden' style={{backgroundColor:'#F2F2F2'}}>
          {/* <CustomScroll heightRelativeToParent="calc(100%)" > */}
-        <div>
+        <div className=''>
         <div className='flex flex-col justify-center align-middle h-full w-full'>
           <div className='flex flex-col self-center justify-center w-full'>
-          <div className='pt-3'>
-            <div className='md:pl-10 pl-5 pt-10 cursor-pointer' onClick={() => [props.handleClick("signup")]} >
+          <div className='flex pr-10 overflow-hidden'>
+            <div className='flex w-fit'>
+              <div className='w-[87%] rounded-xl fixed flex z-10' style={{backgroundColor:'#F2F2F2'}} >
+              <div className='md:pl-10 pl-5 pt-10 cursor-pointer ' onClick={() => [props.handleClick("signup")]}>
          <Icon icon="lets-icons:arrow-left-long-light" className='md:w-[2rem] md:h-[2rem]' />
          </div>
-          <h3 className='px-10 pt-1 text-xl font-semibold'>Choose a plan</h3> 
+              </div>
+            </div>
+         <div className="h-full pt-20">
+         <h3 className='px-10 pt-1 text-xl font-semibold'>Choose a plan</h3> 
           <p className='px-6' style={{fontSize:'12px'}}>choosing a plan for your business will help set your <br />
 business on the right part</p>
           <h3 className='text-center font-bold pt-5'>SUBSCRIPTIONS</h3>
-          </div>
-              <div className='md:columns-3 md:flex flex-row w-full gap-1 px-5 pt-2  ' style={{height:''}}>
+          <div className='md:columns-3 md:flex flex-row w-full gap-1 px-5 pt-2  ' style={{height:''}}>
                 <Link to='' onClick={() => [props.handleClick("payment")]} className='w-full'>
                   <div id="zoom" className='py-2 ml-2 rounded-3xl shadow-2xl min-w-fit' style={{ backgroundColor: '#B4B4B4', }}>
                     <h5 className='text-center p-2'>No Plan</h5>
@@ -93,7 +97,6 @@ business on the right part</p>
                   </div>
                 </Link>
               </div>
-          </div>
 
 
           <div className='p-2 px-5 pt-3'>
@@ -114,8 +117,13 @@ on <span style={{color:'#34A853'}}>ISP</span>  </h5>
               <div className='flex self-center' >
                 <h4 className='p-2 px-3 rounded-xl text-white flex self-center' style={{backgroundColor:'#702EB2'}}>Join ISP</h4>
               </div>
+
+         </div>
              </div>
+          </div>
+             
             </div>
+          </div>
 
              
 
