@@ -12,7 +12,7 @@ export const Payment = (props) => {
     <div className='fixed inset-0 h-full bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl ' style={{}}>
     <div className='h-full sm:py-10 p-5  md:p-10 ' style={{}}>
       <div className='md:columns-2 h-full rounded-2xl' style={{backgroundColor:'#F2F2F2'}}>
-      <div className='flex flex-col justify-center  h-full'>
+      <div className='flex flex-col justify-center h-full'>
                     <div className='pl-10' onClick={() => [props.handleClick("subscribe")]} >
          <Icon icon="lets-icons:arrow-left-long-light" width='2rem' height='2rem' />
          </div>
