@@ -45,49 +45,52 @@ export default function Choosesociety() {
         </motion.div>
       </motion.div>
 
-      <div className='md:columns-2 md:mx-16 mx-5 my-12'>
-        <h3 className='flex justify-center self-center font-bold py-1 pb-5'>INFINITY PRODUCT PLACE</h3>
+      <div className='md:columns-2 gap-12 md:flex md:mx-16 mx-5 my-12'>
+       <div>
+       <h3 className='flex justify-center self-center font-bold py-1 pb-5'>INFINITY PRODUCT PLACE</h3>
 
-        <div className='md:columns-2 md:flex rounded-xl h-full' style={{ backgroundColor: '#D3D3D3' }}>
-          <motion.div
-            variants={{
-              hidden: { opacity: 0, x: -10 },
-              visible: { opacity: 1, x: 0 }
-            }}
-            initial="hidden"
-            // whileInView="visible"
-            whileInView="visible"
-            transition={{ duration: 1, }}
-            className='flex w-full' >
-            <img src='/assets/IMG_9517.JPG' className='rounded-xl flex aspect-square md:aspect-1/3' style={{}} />
-          </motion.div>
-          <div className='flex flex-col justify-center self-center md:pt-16 pt-5 w-full'>
-            <motion.p
+<div className='md:columns-2 md:flex rounded-xl h-full' style={{ backgroundColor: '#D3D3D3' }}>
+  <motion.div
+    variants={{
+      hidden: { opacity: 0, x: -10 },
+      visible: { opacity: 1, x: 0 }
+    }}
+    initial="hidden"
+    // whileInView="visible"
+    whileInView="visible"
+    transition={{ duration: 1, }}
+    className='flex w-full' >
+    <img src='/assets/IMG_9517.JPG' className='rounded-xl flex aspect-square md:aspect-1/3' style={{}} />
+  </motion.div>
+  <div className='flex flex-col justify-center self-center md:pt-16 pt-5 w-full'>
+    <motion.p
 
-              initial={{ opacity: 0, x: -10 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
-              className='px-4 md:px-14 py-2 text-center italic font-medium' style={{fontSize:`clamp(15px, 8px, 30px)`}}>
-              Check out our product showcase, where we bring you the latest and greatest products in a laid-back an
-              d informative way!</motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-              className='flex flex-col justify-self-center self-center'>
-              <div onClick={() => setOpenModal(true)} className='flex self-center justify-center'>
-                <Button><span className='font-bold' style={{ backgroundColor: 'transparent', padding: '10px', borderColor: '#702EB2', borderWidth: 1, color: '#702EB2' }}>Buy/Sell</span></Button>
-              </div>
-            </motion.div>
-          </div>
-          {/* <div className='flex flex-col justify-center self-center md:pt-16 pt-5'>
-            <p className='md:pt-16 sm:pt-1 px-3 text-center text-xl italic font-medium'>Check out our product showcase, where we bring you the latest and greatest products in a laid-back and informative way!</p>
-            <Link to={`/reg/${rand}`} className='flex self-center justify-center'>
-            <Button><span className='font-bold' style={{backgroundColor:'transparent',padding:'10px',borderColor:'#702EB2',borderWidth:1,color:'#702EB2'}}>Buy/Sell</span></Button>
-            </Link>
-          </div> */}
-        </div>
-        <h3 className='flex justify-center text-center font-bold py-1 md:pt-0 pt-10 pb-5'>INFINITY SERVICE PLACE</h3>
+      initial={{ opacity: 0, x: -10 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1 }}
+      className='px-4 md:px-14 py-2 text-center italic font-medium' style={{fontSize:`clamp(15px, 8px, 30px)`}}>
+      Check out our product showcase, where we bring you the latest and greatest products in a laid-back an
+      d informative way!</motion.p>
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className='flex flex-col justify-self-center self-center'>
+      <div onClick={() => setOpenModal(true)} className='flex self-center justify-center'>
+        <Button><span className='font-bold' style={{ backgroundColor: 'transparent', padding: '10px', borderColor: '#702EB2', borderWidth: 1, color: '#702EB2' }}>Buy/Sell</span></Button>
+      </div>
+    </motion.div>
+  </div>
+  {/* <div className='flex flex-col justify-center self-center md:pt-16 pt-5'>
+    <p className='md:pt-16 sm:pt-1 px-3 text-center text-xl italic font-medium'>Check out our product showcase, where we bring you the latest and greatest products in a laid-back and informative way!</p>
+    <Link to={`/reg/${rand}`} className='flex self-center justify-center'>
+    <Button><span className='font-bold' style={{backgroundColor:'transparent',padding:'10px',borderColor:'#702EB2',borderWidth:1,color:'#702EB2'}}>Buy/Sell</span></Button>
+    </Link>
+  </div> */}
+</div>
+       </div>
+       <div>
+       <h3 className='flex justify-center text-center font-bold py-1 md:pt-0 pt-10 pb-5'>INFINITY SERVICE PLACE</h3>
         <div className='md:columns-2 md:flex rounded-xl h-full' style={{ backgroundColor: '#D3D3D3' }}>
           <motion.div
             variants={{
@@ -124,8 +127,9 @@ export default function Choosesociety() {
           </div>
 
         </div>
+       </div>
       </div>
-      <div className='flex justify-center self-center mx-5 mb-10'>
+      <div className='flex justify-center self-center mx-5 my-10'>
         <h3 className='font-bold px-1'>NOTE: </h3>
         <h4> Switch between account at user settings.....</h4>
       </div>
