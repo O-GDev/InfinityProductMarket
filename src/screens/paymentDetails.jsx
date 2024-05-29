@@ -8,9 +8,9 @@ export default function Paymentdetails() {
   return (
     <div className='fixed inset-0 h-full bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl' style={{}}>
     <div className='h-full sm:py-10 p-5  md:p-20 ' style={{}}>
-        <div className='md:columns-2 flex h-full rounded-2xl' style={{ backgroundColor: '#F2F2F2' }}>
+        <div className='md:columns-2 flex h-full rounded-2xl max-h-fit' style={{ backgroundColor: '#F2F2F2' }}>
           <div className='flex flex-col justify-center self-center h-full w-full '>
-         <div className='pl-4'>
+         <div className='px-5'>
          <div>
                     <div className='pl-10 cursor-pointer' onClick={() => [props.handleClick("payment")]} >
          <Icon icon="lets-icons:arrow-left-long-light" width='2rem' height='2rem' />
@@ -42,13 +42,13 @@ export default function Paymentdetails() {
                               <input name='fName' className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full' style={{}}  />
                           </div>
   
-                          <div className='md:flex justify-between md:my-2 w-full '>
+                          <div className='flex gap-3 justify-between md:my-0 w-full '>
                           <div className='w-48 md:px-3 flex flex-col'>
                               <h5 className='font-semibold w-full'>Expiry&nbsp; Date<span style={{color:'#D69999'}}>*</span></h5>
                               <input name='fName' className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full ' style={{}}  />
                           </div>
          
-                        <div className='w-48 md:px-3  my-2 md:my-0'>
+                        <div className='w-48 md:px-3  md:my-0'>
                         <h5 className='font-semibold'>CVV<span style={{color:'#D69999'}}>*</span></h5>
                         <input name='fName' className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full ' style={{}}  />
                         </div>
