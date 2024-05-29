@@ -82,7 +82,7 @@ function Signuppage(props) {
                                     <h5 className='text-sm'>I agree to the Terms, Condition and Privacy Policy</h5>
                                 </div>
 
-                                <div className='py-4 px-40 '>
+                                <div className='py-4 mx:px-40 '>
                                     <Link to='' onClick={() => props.handleClick('subscribe')}>
                                         <div className='flex justify-center self-center rounded-2xl bg-transparent border' style={{ borderColor: '#702EB2' }}>
                                             <h4 className='m-1 font-semibold' style={{ color: '#702EB2' }}>Sign Up</h4>

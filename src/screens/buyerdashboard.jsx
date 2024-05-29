@@ -55,7 +55,7 @@ useEffect(()=>{
   }
   return (
     <>
-    <div>
+    <div className='absolute flex flex-col justify-center align-middle self-center'>
       {/* <LoggedinBuyerNav /> */}
 
     <div className='flex' style={{height:"",}}>

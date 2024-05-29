@@ -4,7 +4,7 @@ import { Icon } from '@iconify/react/dist/iconify.js'
 const Footers = () => {
  
   return (
-    <div  className="select-none relative py-4 sm:justify-center" style={{backgroundColor:'white'}}>
+    <div  className="select-none relative py-4 sm:justify-center flex flex-col" style={{backgroundColor:'white'}}>
     <div className='md:columns-4 md:p-0 sm:p-40 sm:pb-0'>
       <div className='md:p-16'>
       <h3 className=' text-lg mb-5 md:text-start text-center font-bold' style={{color:'#2E0853'}}>Get In Touch</h3>
@@ -45,7 +45,7 @@ const Footers = () => {
     <div className="md:flex justify-between px-10">
      <div className='flex flex-col justify-end self-center md:w-full'>
      <div className=' p-2'>Subscribe to Our Newsletter</div>
-    <div className='flex sm:justify-center flex-row'>
+    <div className='flex sm:justify-center md:flex-row flex-col'>
       <div className='flex justify-center self-center font-medium text-xl mx-3'>
         <input type="text" value="Enter your email" />
       </div>
