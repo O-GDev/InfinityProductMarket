@@ -66,7 +66,7 @@ export default function BuyerBackground() {
     }
     return (
         <>
-            <div className='flex flex-col justify-center self-center align-middle' style={{ paddingBottom: 20, }}>
+            <div className='flex flex-col w-full h-full justify-center self-center align-middle' style={{ paddingBottom: 20, }}>
                
                 <div className='flex pt-20' style={{ height: "", }}>
                     <div ref={slideRef} className="select-none" style={{}}>
