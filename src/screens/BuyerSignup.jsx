@@ -15,8 +15,8 @@ const BuyerSignup = ({props}) => {
               //   transition={{duration:1}}
               className='fixed inset-0 h-full bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl' style={{}}>
               <div className='h-full sm:py-10 p-5 md:p-20 flex justify-center align-middle ' style={{}}>
-                  <div className='md:columns-2 flex w-full h-full justify-center self-center align-middle rounded-2xl' style={{ backgroundColor: '#F2F2F2' }}>
-                      <div className=' flex flex-col justify-center md:pt-5 self-center h-full w-full '>
+                  <div className='md:columns-2 flex w-full h-fit justify-center self-center align-middle rounded-2xl' style={{ backgroundColor: '#F2F2F2' }}>
+                      <div className=' flex flex-col justify-center md:py-5 self-center h-fit w-full '>
                           <div className='w-full h-full py-1'>
                               <div className='flex flex-row justify-between '>
                                   <div className='pl-4 cursor-pointer' onClick={() => navigate('/choosesociety')}>
@@ -119,7 +119,7 @@ const BuyerSignup = ({props}) => {
                               </div>
                           </div>
                       </div>
-                      <div className='h-full w-full md:flex hidden'>
+                      <div className='w-full md:flex hidden'>
                           <Sidecarousel />
                       </div>
                   </div>

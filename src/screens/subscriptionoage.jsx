@@ -9,21 +9,21 @@ export default function Subscriptionoage(props) {
   return (
     <div className='fixed inset-0 h-full bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl flex justify-center align-middle self-center ' style={{}}>
     <div className='h-full sm:py-10 p-5  md:p-10 ' style={{}}>
-      <div className='md:columns-2 flex flex-col gap-0 h-full rounded-2xl overflow-auto' style={{backgroundColor:'#F2F2F2'}}>
+      <div className='md:columns-2 flex md:flex-row flex-col gap-0 h-full rounded-2xl overflow-auto md:overflow-hidden' style={{backgroundColor:'#F2F2F2'}}>
          {/* <CustomScroll heightRelativeToParent="calc(100%)" > */}
         <div>
         <div className='flex flex-col justify-center align-middle h-full w-full'>
-          <div className='flex flex-col self-center justify-center'>
-          <div className='pb-1'>
+          <div className='flex flex-col self-center justify-center w-full'>
+          <div className='pt-3'>
             <div className='md:pl-10 pl-5 pt-10 cursor-pointer' onClick={() => [props.handleClick("signup")]} >
          <Icon icon="lets-icons:arrow-left-long-light" className='md:w-[2rem] md:h-[2rem]' />
          </div>
-          <h3 className='px-10 pt-2 text-xl font-semibold'>Choose a plan</h3> 
+          <h3 className='px-10 pt-1 text-xl font-semibold'>Choose a plan</h3> 
           <p className='px-6' style={{fontSize:'12px'}}>choosing a plan for your business will help set your <br />
 business on the right part</p>
           <h3 className='text-center font-bold pt-5'>SUBSCRIPTIONS</h3>
           </div>
-              <div className='md:columns-3 md:flex flex-row w-full gap-1 px-5 pt-2 ' style={{height:''}}>
+              <div className='md:columns-3 md:flex flex-row w-full gap-1 px-5 pt-2  ' style={{height:''}}>
                 <Link to='' onClick={() => [props.handleClick("payment")]} className='w-full'>
                   <div id="zoom" className='py-2 ml-2 rounded-3xl shadow-2xl min-w-fit' style={{ backgroundColor: '#B4B4B4', }}>
                     <h5 className='text-center p-2'>No Plan</h5>
@@ -100,18 +100,18 @@ business on the right part</p>
             <h5 className='text-start' style={{fontSize:'12px'}}>Infinity Product Place is the tool for you to be in charge of your business by creating a direct relationship with your customers.</h5>
           </div>
 
-              <div className='flex flex-col pr-5 '
+              <div className='flex flex-col pr-5 pb-10'
                 // style={{ backgroundColor: '#CBCBCB' }}
               >
             <div className='flex self-center justify-center pt-2'>
             <h5 className='text-center text-sm w-3/4 px-4'>INFINITY PRODUCT PLACE is a recognised as a product marketing community alongside infinity service place(ISP) created by WAJISINFINITY LTD. all right reserved</h5>
            </div>
-             <div className=' flex md:flex-row flex-col justify-between self-center py-3'>
+             <div className=' flex md:flex-row flex-col justify-between align-middle self-center py-5'>
             <div></div>
               <h5 className=' md:w-2/3 text-sm text-center pl-5'>Make a realistic income with your Skills, Knowledge, 
 Talents and other creative craft you possess
 on <span style={{color:'#34A853'}}>ISP</span>  </h5>
-              <div className='flex self-center py-5' >
+              <div className='flex self-center' >
                 <h4 className='p-2 px-3 rounded-xl text-white flex self-center' style={{backgroundColor:'#702EB2'}}>Join ISP</h4>
               </div>
              </div>
