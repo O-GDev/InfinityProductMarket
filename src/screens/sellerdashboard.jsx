@@ -74,7 +74,7 @@ export default function SellerDashboard() {
     }
     return (
         <>
-            <div style={{ paddingBottom: 20, }}>
+            <div className='flex flex-col justify-center align-middle self-center' style={{ paddingBottom: 20, }}>
                 <div>
                     {/* <LoggedinNav /> */}
 
@@ -197,7 +197,7 @@ export default function SellerDashboard() {
                                 <div className="md:columns-4 gap-7 relative justify-center place-content-center px-6 pb-5 w-10/12" style={{ height: '600px' }}>
 
                                     <motion.div
-                                        initial={{ opacity: 0, y: 30 }}
+                                        initial={{ opacity: 0, y: 15 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 1, delay: 0.45 * 1 }}
                                         className='h-full flex '>
@@ -212,7 +212,7 @@ export default function SellerDashboard() {
 
                                     </motion.div>
                                     <motion.div
-                                        initial={{ opacity: 0, y: 30 }}
+                                        initial={{ opacity: 0, y: 15 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 1, delay: 0.45 * 2 }}
                                         className='h-full flex' >
@@ -226,7 +226,7 @@ export default function SellerDashboard() {
                                         </div>
                                     </motion.div>
                                     <motion.div
-                                        initial={{ opacity: 0, y: 30 }}
+                                        initial={{ opacity: 0, y: 15 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 1, delay: 0.15 * 3 }}
                                         className='h-full flex'>
@@ -301,7 +301,7 @@ export default function SellerDashboard() {
                                             <h3 className='font-md'>Products being Promoted</h3>
                                         </div>
                                         <motion.div
-                                            initial={{ opacity: 0, x: -150 }}
+                                            initial={{ opacity: 0, x: -10 }}
                                             whileInView={{ opacity: 1, x: 0 }}
                                             transition={{ duration: 1, delay: 0.34 }}
                                             className='pt-3'>
