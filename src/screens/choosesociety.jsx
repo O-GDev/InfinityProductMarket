@@ -51,7 +51,7 @@ export default function Choosesociety() {
         <div className='md:columns-2 md:flex rounded-xl h-full' style={{ backgroundColor: '#D3D3D3' }}>
           <motion.div
             variants={{
-              hidden: { opacity: 0, x: -150 },
+              hidden: { opacity: 0, x: -10 },
               visible: { opacity: 1, x: 0 }
             }}
             initial="hidden"
@@ -64,14 +64,14 @@ export default function Choosesociety() {
           <div className='flex flex-col justify-center self-center md:pt-16 pt-5 w-full'>
             <motion.p
 
-              initial={{ opacity: 0, x: -150 }}
+              initial={{ opacity: 0, x: -10 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
               className='px-4 md:px-14 py-2 text-center italic font-medium' style={{fontSize:`clamp(15px, 8px, 30px)`}}>
               Check out our product showcase, where we bring you the latest and greatest products in a laid-back an
               d informative way!</motion.p>
             <motion.div
-              initial={{ opacity: 0, y: 150 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
               className='flex flex-col justify-self-center self-center'>
@@ -91,7 +91,7 @@ export default function Choosesociety() {
         <div className='md:columns-2 md:flex rounded-xl h-full' style={{ backgroundColor: '#D3D3D3' }}>
           <motion.div
             variants={{
-              hidden: { opacity: 0, x: 150 },
+              hidden: { opacity: 0, x: 10 },
               visible: { opacity: 1, x: 0 }
             }}
             initial="hidden"
@@ -103,13 +103,13 @@ export default function Choosesociety() {
           </motion.div>
           <div className='flex flex-col justify-self-center self-center md:pt-20 pt-5 w-full'>
             <motion.p
-              initial={{ opacity: 0, x: 150 }}
+              initial={{ opacity: 0, x: 10 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
               className='px-4 md:px-14 py-2 text-center italic font-medium' style={{fontSize:`clamp(15px, 8px, 30px)`}}>Check out our top notch professionals in different fields  of creativity all across the world. </motion.p>
             <motion.div
               className='flex flex-col justify-self-center self-center'
-              initial={{ opacity: 0, y: 150 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
