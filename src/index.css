@@ -100,10 +100,12 @@ x
       
 }
 .initial{
-    transform: scale(1.09)
+    transform: scale(1.09);
+    z-index: 1;
 }
 #zoom:hover{
     transform: scale(1.1) translateY(-10px);
+    z-index: 5;
     /* translate: -10px; */
 
     /* translateY: (-10px); */
