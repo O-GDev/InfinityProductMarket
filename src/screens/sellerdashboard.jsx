@@ -74,11 +74,11 @@ export default function SellerDashboard() {
     }
     return (
         <>
-            <div className='flex flex-col justify-center align-middle self-center' style={{ paddingBottom: 20, }}>
+            <div className='flex flex-col justify-center align-middle self-center max-w-full' style={{ paddingBottom: 20, }}>
                 <div>
                     {/* <LoggedinNav /> */}
 
-                    <div className='flex pt-10' style={{ height: "", }}>
+                    <div className='flex pt-10 max-w-full' style={{ height: "", }}>
                         <div ref={slideRef} className="select-none" style={{}}>
                             <img src={sliderImage[currentIndex]} alt='slide' loading='lazy' style={{ height: '70vh', width: '100vw', opacity: 1 }} />
                         </div>
