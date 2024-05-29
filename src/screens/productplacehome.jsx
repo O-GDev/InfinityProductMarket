@@ -65,7 +65,7 @@ useEffect(()=>{
   }
   return (
     <>
-    <div style={{paddingBottom:20,}}>
+    <div className='flex flex-col w-full max-h-full' style={{paddingBottom:20,}}>
     <nav className='' style={{position:'fixed',backgroundColor:'#F2F2F2',width:'100%'}}>
       <div className='flex px-10 py-3' style={{ justifyContent: 'space-between' }}>
         <div className='flex flex-row'>

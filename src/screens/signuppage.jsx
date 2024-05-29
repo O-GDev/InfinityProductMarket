@@ -13,11 +13,11 @@ function Signuppage(props) {
             //   initial={{ opacity: 0.3, scale: 0.5 }}
             //   whileInView={{ opacity: 1, scale: 1 }}
             //   transition={{duration:1}}
-            className='fixed inset-0 h-full bg-opacity-30 backdrop-blur-sm shadow-2xl bg-black' style={{}}>
-            <div className='h-full sm:py-10 p-5 md:p-20 ' style={{}}>
-                <div className='md:columns-2 gap-0 h-full justify-center rounded-2xl' style={{ backgroundColor: '#F2F2F2' }}>
-                    <div className='flex justify-center md:pt-10 self-center h-full'>
-                        <div className='w-full h-full py-3  md:py-2'>
+            className='fixed inset-0 max-h-full bg-opacity-30 backdrop-blur-sm shadow-2xl bg-black' style={{}}>
+            <div className='full sm:py-10 p-5 md:p-20 ' style={{}}>
+                <div className='md:columns-2 flex gap-0 h-full justify-center rounded-2xl' style={{ backgroundColor: '#F2F2F2' }}>
+                    <div className='flex flex-col w-full justify-center md:pt-10 self-center max-h-full'>
+                        <div className='max-w-full max-h-full py-3  md:py-2'>
                     <div className='pl-10 cursor-pointer' onClick={() => navigate('/choosesociety')} >
          <Icon icon="lets-icons:arrow-left-long-light" width='2rem' height='2rem' />
          </div>
@@ -49,8 +49,8 @@ function Signuppage(props) {
                                 </div>
                             </div>
 
-                            <div className='md:px-0 px-5'>
-                                <div className='md:flex justify-between md:my-2 w-full'>
+                            <div className='md:px-10 px-5 '>
+                                <div className='md:flex justify-between md:my-2 max-w-full'>
                                     <div className='w-full md:px-3'>
                                         <h5 className='font-semibold'>First Name<span style={{ color: '#D69999' }}>*</span></h5>
                                         <input name='fName' className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full ' style={{}} />
@@ -66,7 +66,7 @@ function Signuppage(props) {
                                     <input name='fName' className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full' style={{}} />
                                 </div>
 
-                                <div className='md:flex justify-between my-2'>
+                                <div className='md:flex justify-between my-2 max-w-full'>
                                     <div className='w-full md:px-3'>
                                         <h5 className='font-semibold'>Password<span style={{ color: '#D69999' }}>*</span></h5>
                                         <input name='fName' className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full' style={{}} />
@@ -96,7 +96,7 @@ function Signuppage(props) {
                             </div>
                         </div>
                     </div>
-                    <div className='h-full md:flex hidden'>
+                    <div className='max-h-full w-full md:flex hidden'>
                         <Sidecarousel />
                     </div>
                 </div>

@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 
 export default function Subscriptionoage() {
   return (
-    <div className='fixed inset-0 h-full bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl' style={{}}>
+    <div className='fixed inset-0 flex h-dvh  bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl' style={{}}>
     <div className='h-full sm:py-10 p-5  md:p-20 ' style={{}}>
               <div className='md:columns-2 h-full ' style={{ backgroundColor: '#F2F2F2' }}>
-          <div className='flex justify-center self-center h-full '>
-          <div className='w-full h-full py-3  md:py-5'>
+          <div className='flex justify-center self-center w-full h-full '>
+          <div className='w-full h-full py-3 md:py-5'>
               <h3 className='font-md font-bold flex justify-center self-center '>Be A Seller!</h3>
               <div className='flex justify-center self-center'>
               <div className='' style={{height:0.5,width:80,backgroundColor:'#702EB2'}}></div>
@@ -56,7 +56,7 @@ export default function Subscriptionoage() {
                           <input name='fName' className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full' style={{}}  />
                       </div>
 
-                  <div className='md:flex justify-between my-2'>
+                  <div className='flex justify-between my-2'>
                       <div className='w-full md:px-3'>
                           <h5 className='font-semibold'>Password<span style={{color:'#D69999'}}>*</span></h5>
                           <input name='fName' className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full' style={{}}  />
