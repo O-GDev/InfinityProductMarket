@@ -16,13 +16,13 @@ export const Payment = (props) => {
                     <div className='pl-10' onClick={() => [props.handleClick("subscribe")]} >
          <Icon icon="lets-icons:arrow-left-long-light" width='2rem' height='2rem' />
          </div>
-      <div className='columns-3 gap-3 p-12 pt-28 justify-between w-full self-center'>
+      <div className='columns-3 flex gap-3 p-12 pt-28 justify-between w-full self-center'>
               <img src='/assets/Frame 427319632.png' className='flex self-center'  width='30%' height='30%' alt='' />
               <img src='/assets/Frame 427319633.png' className='flex self-center'  width='30%' height='30%' alt='' />
               <img src='/assets/Frame 427319634.png' className='flex self-center'  width='30%' height='30%' alt='' />
       </div>
 
-      <div className='columns-3 gap-3 p-12'>
+      <div className='columns-3 flex gap-3 p-12'>
               <img src='/assets/Frame 427319635.png' className='flex self-center'  width='30%' height='30%' alt='' />
               <img src='/assets/Frame 427319636.png' className='flex self-center'  width='30%' height='30%' alt='' />
               <img src='/assets/Frame 427319637.png' className='flex self-center'  width='30%' height='30%' alt='' />
