@@ -13,12 +13,12 @@ function Signuppage(props) {
             //   initial={{ opacity: 0.3, scale: 0.5 }}
             //   whileInView={{ opacity: 1, scale: 1 }}
             //   transition={{duration:1}}
-            className='fixed inset-0 h-full bg-opacity-30 backdrop-blur-sm shadow-2xl bg-black' style={{}}>
-            <div className='h-full sm:py-10 p-5  md:p-20' style={{}}>
-                <div className='md:columns-2 flex gap-0 h-full justify-center rounded-2xl' style={{ backgroundColor: '#F2F2F2' }}>
-                    <div className='flex flex-col w-full justify-center md:pt-10 self-center max-h-full'>
-                        <div className='flex flex-col max-w-full max-h-full py-3  md:py-2'>
-                    <div className='pl-10 cursor-pointer' onClick={() => navigate('/choosesociety')} >
+            className='fixed inset-0 h-full bg-opacity-30 backdrop-blur-sm shadow-2xl bg-black flex flex-col align-middle' style={{}}>
+            <div className='h-full sm:py-10 p-5  md:p-20 flex flex-col w-full align-middle justify-center ' style={{}}>
+                <div className='md:columns-2 flex gap-0 w-full max-h-fit justify-center self-center rounded-2xl md:h-full ' style={{ backgroundColor: '#F2F2F2' }}>
+                    <div className='flex flex-col w-full justify-center md:pt-10 self-center max-h-fit'>
+                        <div className='flex flex-col max-w-full max-h-full py-1  md:py-2'>
+                    <div className='pt-5 pl-5 cursor-pointer' onClick={() => navigate('/choosesociety')} >
          <Icon icon="lets-icons:arrow-left-long-light" width='2rem' height='2rem' />
          </div>
                             <h3 className='md:font-md font-sm font-bold flex justify-center self-center '>Be A Seller!</h3>
