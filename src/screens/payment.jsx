@@ -17,15 +17,15 @@ export const Payment = (props) => {
          <Icon icon="lets-icons:arrow-left-long-light" width='2rem' height='2rem' />
          </div>
       <div className='md:columns-3 gap-3 p-12 pt-28 justify-between w-full self-center'>
-              <img src='/assets/Frame 427319632.png' className='flex self-center'  width='160px' height='160px' alt='' />
-              <img src='/assets/Frame 427319633.png' className='flex self-center'  width='160px' height='160px' alt='' />
-              <img src='/assets/Frame 427319634.png' className='flex self-center'  width='160px' height='160px' alt='' />
+              <img src='/assets/Frame 427319632.png' className='flex self-center'  width='60%' height='60%' alt='' />
+              <img src='/assets/Frame 427319633.png' className='flex self-center'  width='60%' height='60%' alt='' />
+              <img src='/assets/Frame 427319634.png' className='flex self-center'  width='60%' height='60%' alt='' />
       </div>
 
       <div className='md:columns-3 gap-3 p-12'>
-              <img src='/assets/Frame 427319635.png' className='flex self-center'  width='160px' height='160px' alt='' />
-              <img src='/assets/Frame 427319636.png' className='flex self-center'  width='160px' height='160px' alt='' />
-              <img src='/assets/Frame 427319637.png' className='flex self-center'  width='160px' height='160px' alt='' />
+              <img src='/assets/Frame 427319635.png' className='flex self-center'  width='60%' height='60%' alt='' />
+              <img src='/assets/Frame 427319636.png' className='flex self-center'  width='60%' height='60%' alt='' />
+              <img src='/assets/Frame 427319637.png' className='flex self-center'  width='60%' height='60%' alt='' />
      </div>
 
       {/* <div className='p-12'>
