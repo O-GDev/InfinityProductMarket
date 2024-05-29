@@ -8,28 +8,32 @@ import { CustomScroll } from 'react-custom-scroll';
 export default function Subscriptionoage(props) {
   return (
     <div className='fixed inset-0 h-full bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl flex justify-center align-middle self-center ' style={{}}>
-    <div className='h-full sm:py-10 p-5  md:p-10 ' style={{}}>
-      <div className='md:columns-2 flex md:flex-row flex-col gap-0 h-full rounded-2xl overflow-auto md:overflow-hidden' style={{backgroundColor:'#F2F2F2'}}>
+    <div className='h-full p-10 md:p-5 ' style={{}}>
+      <div className='md:columns-2 flex md:flex-row flex-col gap-0 md:h-fit h-full rounded-2xl overflow-auto md:overflow-hidden' style={{backgroundColor:'#F2F2F2'}}>
          {/* <CustomScroll heightRelativeToParent="calc(100%)" > */}
          <div>
-        <div className='flex h-full'>
+        <div className='flex h-fit w-full'>
         <div className='flex flex-col justify-center align-middle h-full w-full'>
           <div className='flex flex-col self-center justify-center w-full'>
           <div className='flex flex-col '>
-            <div className=' w-[89%] rounded-xl fixed md:hidden'>
-            <div className='w-full rounded-t-2xl h-10 p-5 drop-shadow-0 z-50' style={{backgroundColor:'#F2F2F2'}} >
+            {/* <div className=' w-[78%] rounded-xl fixed flex md:hidden'> */}
+            {/* <div className='w-full flex  rounded-t-2xl h-10 p-5 drop-shadow-0 z-50' style={{backgroundColor:'#F2F2F2'}} >
               <div className='md:pl-10 pl-5 cursor-pointer ' onClick={() => [props.handleClick("signup")]}>
          <Icon icon="lets-icons:arrow-left-long-light" className='md:w-[2rem] md:h-[2rem]' />
          </div>
-              </div>
-            
-              {/* <div className='w-[87%] rounded-xl fixed flex z-10' style={{backgroundColor:'#F2F2F2'}} >
-              <div className='md:pl-10 pl-5 pt-10 cursor-pointer ' onClick={() => [props.handleClick("signup")]}>
+              </div> */}
+              <div className='w-[78%] rounded-t-xl hidden  md:flex z-10' style={{backgroundColor:'#F2F2F2'}} >
+              <div className='md:pl-10 pl-5 pt-5 cursor-pointer ' onClick={() => [props.handleClick("signup")]}>
          <Icon icon="lets-icons:arrow-left-long-light" className='md:w-[2rem] md:h-[2rem]' />
          </div>
-              </div> */}
-            </div>
-         <div className="pt-20 md:pt-10 flex flex-col justify-center w-full">
+              </div>
+              <div className='w-[78%] rounded-t-xl fixed flex md:hidden z-10' style={{backgroundColor:'#F2F2F2'}} >
+              <div className='md:pl-10 pl-5 py-5 cursor-pointer ' onClick={() => [props.handleClick("signup")]}>
+         <Icon icon="lets-icons:arrow-left-long-light" className='md:w-[2rem] md:h-[2rem]' />
+         </div>
+              </div>
+            {/* </div> */}
+         <div className="pt-20 md:pt-0 flex flex-col justify-center w-full">
          <h3 className='px-10 pt-1 text-xl font-semibold'>Choose a plan</h3> 
           <p className='px-6' style={{fontSize:'12px'}}>choosing a plan for your business will help set your <br />
 business on the right part</p>
@@ -110,7 +114,7 @@ business on the right part</p>
             <h5 className='text-start' style={{fontSize:'12px'}}>Infinity Product Place is the tool for you to be in charge of your business by creating a direct relationship with your customers.</h5>
           </div>
 
-              <div className='flex flex-col pr-5 pb-10'
+              <div className='flex flex-col pr-5 pb-2'
                 // style={{ backgroundColor: '#CBCBCB' }}
               >
             <div className='flex self-center justify-center pt-2'>
