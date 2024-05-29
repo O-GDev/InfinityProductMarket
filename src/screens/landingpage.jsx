@@ -65,7 +65,7 @@ const landingpage = () => {
     }
   }, [isInView]);
   return (
-    <div ref={ref} className='relative' style={{ backgroundColor: '#F2F2F2' }}>
+    <div ref={ref} className='relative flex flex-col justify-center align-middle self-center' style={{ backgroundColor: '#F2F2F2' }}>
        <div className=''>
         <Navbars />
       </div>

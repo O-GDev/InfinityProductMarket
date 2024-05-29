@@ -11,7 +11,7 @@ export default function Choosesociety() {
   const [openModal, setOpenModal] = useState(false)
   const navigate = useNavigate()
   return (
-    <div className='absolute md:p-28 md:pt-0'>
+    <div className='absolute md:p-28 md:pt-0 flex flex-col justify-center align-middle self-center'>
       <div className='flex flex-col justify-center text-center px-4 '>
                     <div className='pl-10 pt-10 cursor-pointer' onClick={() => navigate('/')}  >
          <Icon icon="lets-icons:arrow-left-long-light" width='2rem' height='2rem' />
@@ -130,7 +130,7 @@ export default function Choosesociety() {
         <h4> Switch between account at user settings.....</h4>
       </div>
       {openModal &&
-        <div className='inset-0 fixed h-full flex p-12 md:p-24 md:px-56  bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl' >
+        <div className='inset-0 fixed h-full flex justify-center self-center align-middle p-12 md:p-24 md:px-56  bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl' >
           <div className=" h-full flex flex-col justify-center rounded-3xl" style={{ backgroundColor: '#F2F2F2' }} >
             <div className='pl-7 pb-5 font-medium text-3xl cursor-pointer' onClick={() => setOpenModal(false)}>
               <Icon icon="iconoir:cancel" />
