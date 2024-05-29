@@ -7,9 +7,17 @@
     background-color: hsl(0, 0%, 95%);
     @apply font-[Montserrat];
     overflow-x: hidden;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-size: 84.5%;
+    /* font-family: "Open Sans", sans-serif; */
+    line-height: 2;
+}
   }
   
-}
+x
+
 /* .slide1text{
     opacity: 1;
 } */

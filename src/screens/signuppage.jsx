@@ -13,11 +13,11 @@ function Signuppage(props) {
             //   initial={{ opacity: 0.3, scale: 0.5 }}
             //   whileInView={{ opacity: 1, scale: 1 }}
             //   transition={{duration:1}}
-            className='fixed inset-0 max-h-full bg-opacity-30 backdrop-blur-sm shadow-2xl bg-black' style={{}}>
-            <div className='full sm:py-10 p-5 md:p-20 ' style={{}}>
+            className='fixed inset-0 h-full bg-opacity-30 backdrop-blur-sm shadow-2xl bg-black' style={{}}>
+            <div className='h-full ' style={{}}>
                 <div className='md:columns-2 flex gap-0 h-full justify-center rounded-2xl' style={{ backgroundColor: '#F2F2F2' }}>
                     <div className='flex flex-col w-full justify-center md:pt-10 self-center max-h-full'>
-                        <div className='max-w-full max-h-full py-3  md:py-2'>
+                        <div className='flex flex-col max-w-full max-h-full py-3  md:py-2'>
                     <div className='pl-10 cursor-pointer' onClick={() => navigate('/choosesociety')} >
          <Icon icon="lets-icons:arrow-left-long-light" width='2rem' height='2rem' />
          </div>
