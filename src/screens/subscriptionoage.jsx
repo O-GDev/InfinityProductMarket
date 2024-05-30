@@ -35,8 +35,7 @@ export default function Subscriptionoage(props) {
             {/* </div> */}
          <div className="pt-12 md:pt-0 flex flex-col justify-center w-full">
          <h3 className='px-10 pt-1 text-xl font-semibold'>Choose a plan</h3> 
-          <p className='px-6' style={{fontSize:'12px'}}>choosing a plan for your business will help set your <br />
-business on the right part</p>
+          <p className='px-6' style={{fontSize:'12px'}}>choosing a plan for your business will help set your  business on the right part</p>
           <h3 className='text-center font-bold pt-5'>SUBSCRIPTIONS</h3>
           <div className='md:columns-3 md:flex flex-row w-full gap-2 px-5 pt-2  ' style={{height:''}}>
                 <Link to='' onClick={() => [props.handleClick("payment")]} className='w-full'>

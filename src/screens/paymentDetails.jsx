@@ -4,15 +4,15 @@ import { Checkbox } from 'flowbite-react';
 import Sidecarousel from '../lilcomponents/sidecarousel';
 import { Link } from 'react-router-dom';
 
-export default function Paymentdetails() {
+export default function Paymentdetails(props) {
   return (
     <div className='fixed inset-0 h-full bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl' style={{}}>
-    <div className='h-full sm:py-10 p-5  md:p-20 ' style={{}}>
-        <div className='md:columns-2 flex h-full rounded-2xl w-full max-h-fit' style={{ backgroundColor: '#F2F2F2' }}>
-          <div className='flex flex-col justify-center self-center h-full w-full '>
+    <div className='h-full sm:py-10 p-5  md:p-20 flex justify-center  ' style={{}}>
+        <div className='md:columns-2 flex rounded-2xl w-full h-fit self-center ' style={{ backgroundColor: '#F2F2F2' }}>
+          <div className='flex flex-col justify-center self-center h-full w-full  py-5'>
          <div className='px-5'>
          <div>
-                    <div className='pl-10 cursor-pointer' onClick={() => [props.handleClick("payment")]} >
+                    <div className='md:pl-10 cursor-pointer' onClick={() => [props.handleClick("payment")]} >
          <Icon icon="lets-icons:arrow-left-long-light" width='2rem' height='2rem' />
          </div>            
             <h3 className='font-md font-bold flex justify-center self-center '>Be A Seller!</h3>
@@ -63,7 +63,7 @@ export default function Paymentdetails() {
 </div>
 </Link>
           </div>
-         <div className='h-full w-full md:flex hidden'>
+         <div className=' w-full md:flex hidden'>
           <Sidecarousel />
          </div>
       </div>
