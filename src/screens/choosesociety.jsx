@@ -134,13 +134,18 @@ export default function Choosesociety() {
         <h4> Switch between account at user settings.....</h4>
       </div>
       {openModal &&
-        <div className='inset-0 fixed h-full flex justify-center self-center align-middle p-12 md:p-24 md:px-56  bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl' >
-          <div className=" h-full flex flex-col justify-center rounded-3xl" style={{ backgroundColor: '#F2F2F2' }} >
-            <div className='pl-7 pb-5 font-medium text-3xl cursor-pointer' onClick={() => setOpenModal(false)}>
+        <div className='inset-0 fixed h-full flex flex-col justify-center self-center align-midde p-12 md:p-24 md:px-56  bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl' >
+          <div className=" h-full justify-center self-center align-middle">
+          <div className=" md:h-fit h-full flex flex-col justify-center rounded-3xl overflow-auto self-center align-middle" style={{ backgroundColor: '#F2F2F2' }} >
+                 <div className='flex h-full w-full'>
+           <div className="flex flex-col justify-center align-middle h-full w-full">
+            <div className='flex flex-col self-center justify-center w-full'>
+              <div className='flex flex-col h-full pt-60'>
+              <div className='pl-7 pb-5 font-medium text-3xl cursor-pointer' onClick={() => setOpenModal(false)}>
               <Icon icon="iconoir:cancel" />
             </div>
             <div className=" md:pl-36">
-              <div className="columns-2 flex h-full ">
+              <div className="md:columns-2 flex md:flex-row flex-col h-full ">
                 <Link to={`/reg/${randb}`}>
                   <div className='flex flex-col self-center justify-center p-5'>
                     <h4 className='font-bold text-lg'>Buyer</h4>
@@ -161,6 +166,11 @@ export default function Choosesociety() {
 
               </div>
             </div>
+              </div>
+            </div>
+            </div>
+           </div>
+          </div>
           </div>
         </div>}
     </div>

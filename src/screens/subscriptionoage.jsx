@@ -22,12 +22,12 @@ export default function Subscriptionoage(props) {
          <Icon icon="lets-icons:arrow-left-long-light" className='md:w-[2rem] md:h-[2rem]' />
          </div>
               </div> */}
-              <div className='w-[70%] rounded-t-xl hidden  md:flex z-10' style={{backgroundColor:'#F2F2F2'}} >
+              <div className='w-[78%] rounded-t-xl hidden  md:flex z-10' style={{backgroundColor:'#F2F2F2'}} >
               <div className='md:pl-10 pl-5 pt-5 cursor-pointer ' onClick={() => [props.handleClick("signup")]}>
          <Icon icon="lets-icons:arrow-left-long-light" className='md:w-[2rem] md:h-[2rem]' />
          </div>
               </div>
-              <div className='w-[86%] rounded-t-xl fixed flex md:hidden z-10' style={{backgroundColor:'#F2F2F2'}} >
+              <div className='w-[89%] rounded-t-xl fixed flex md:hidden z-10' style={{backgroundColor:'#F2F2F2'}} >
               <div className='md:pl-10 pl-5 py-5 cursor-pointer ' onClick={() => [props.handleClick("signup")]}>
          <Icon icon="lets-icons:arrow-left-long-light" className='md:w-[2rem] md:h-[2rem]' />
          </div>
@@ -35,7 +35,7 @@ export default function Subscriptionoage(props) {
             {/* </div> */}
          <div className="pt-12 md:pt-0 flex flex-col justify-center w-full">
          <h3 className='px-10 pt-1 text-xl font-semibold'>Choose a plan</h3> 
-          <p className='px-6' style={{fontSize:'12px'}}>choosing a plan for your business will help set your  business on the right part</p>
+          <p className='px-6' style={{fontSize:'12px'}}>choosing a plan for your business will help set your business on the right part</p>
           <h3 className='text-center font-bold pt-5'>SUBSCRIPTIONS</h3>
           <div className='md:columns-3 md:flex flex-row w-full gap-2 px-5 pt-2  ' style={{height:''}}>
                 <Link to='' onClick={() => [props.handleClick("payment")]} className='w-full'>
