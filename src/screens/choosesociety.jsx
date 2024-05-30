@@ -160,7 +160,7 @@ export default function Choosesociety() {
                     <img src="/assets/Frame 427319609.png" alt="" className='md:h-2/3 md:w-3/5 w-[200px] h-[150px] ' style={{}} />
                     <div className='md:w-2/3 w-full md:pr-3'>
                       <p className='w-full py-1 md:pr-5 text-end' style={{ fontSize:`clamp(2px, 9px, 20px)`}} >Create your business on INFINITY PRODUCT PLACE, optimising branding and business personality to facilitate business growth </p>
-                      <h4 className='font-bold text-lg text-end pr-6'>Seller</h4>
+                      <h4 className='font-bold text-lg text-end md:pr-6'>Seller</h4>
 
                     </div>
                   </div>
