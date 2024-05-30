@@ -21,7 +21,7 @@ export default function Paymentdetails(props) {
                   </div>
                   <h1 className='flex justify-center self-center'>Account Details</h1>
             </div>
-  <div className="md:px-10 px-5">
+  <div className="md:px-10 px-2">
   <div className='my-2 md:px-3 md:my-0 md:pt-9'>
                               <h5 className='font-md flex justify-start'>Account Number<span style={{color:'#D69999'}}>*</span></h5>
                               <input name='fName' className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full' style={{}}  />
