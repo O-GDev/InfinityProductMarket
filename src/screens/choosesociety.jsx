@@ -134,28 +134,30 @@ export default function Choosesociety() {
         <h4> Switch between account at user settings.....</h4>
       </div>
       {openModal &&
-        <div className='inset-0 fixed h-full flex flex-col justify-center self-center align-midde p-12 md:p-24 md:px-56  bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl' >
-          <div className=" h-full justify-center self-center align-middle">
-          <div className=" md:h-fit h-full flex flex-col justify-center rounded-3xl overflow-auto self-center align-middle" style={{ backgroundColor: '#F2F2F2' }} >
+        <div className='inset-0 fixed h-full flex flex-col justify-center self-center align-midde md:p-24 md:px-56  bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl' >
+          <div className=" h-full flex justify-center self-center align-middle p-5">
+          <div className=" h-fit flex flex-col justify-center rounded-3xl overflow-auto self-center align-middle" style={{ backgroundColor: '#F2F2F2' }} >
                  <div className='flex h-full w-full'>
            <div className="flex flex-col justify-center align-middle h-full w-full">
             <div className='flex flex-col self-center justify-center w-full'>
-              <div className='flex flex-col h-full pt-60'>
-              <div className='pl-7 pb-5 font-medium text-3xl cursor-pointer' onClick={() => setOpenModal(false)}>
+              <div className='flex flex-col h-full align-middle'>
+              <div className='pl-7 pb-2 font-medium md:text-3xl cursor-pointer' onClick={() => setOpenModal(false)}>
               <Icon icon="iconoir:cancel" />
             </div>
             <div className=" md:pl-36">
               <div className="md:columns-2 flex md:flex-row flex-col h-full ">
                 <Link to={`/reg/${randb}`}>
-                  <div className='flex flex-col self-center justify-center p-5'>
+                  <div className='flex md:flex-col flex-row items-center md:items-start self-center justify-center px-5 w-full'>
+                    <div>
                     <h4 className='font-bold text-lg'>Buyer</h4>
-                    <p className='md:w-2/3 py-1 mdpr-5' style={{ fontSize:`clamp(2px, 9px, 20px)`}} >Purchase quality products from INFINITY PRODUCT PLACE, prioritising commercial integrity and product quality</p>
-                    <img src="/assets/Frame 427319608.png" alt="" className='md:h-2/3 md:w-3/5 w-[400px] h-[300px]' />
+                    <p className='md:w-2/3 py-1 md:pr-5' style={{ fontSize:`clamp(2px, 9px, 20px)`}} >Purchase quality products from INFINITY PRODUCT PLACE, prioritising commercial integrity and product quality</p>
+                   </div> 
+                   <img src="/assets/Frame 427319608.png" alt="" className='md:h-2/3 md:w-3/5 w-[200px] h-[150px]' />
                   </div>
                 </Link>
                 <Link to={`/sreg/${rand}`}>
-                  <div className='p-5'>
-                    <img src="/assets/Frame 427319609.png" alt="" className='md:h-2/3 md:w-3/5 w-[400px] h-[300px] ' style={{}} />
+                  <div className='p-5 flex md:flex-col items-center md:items-end w-full h-full'>
+                    <img src="/assets/Frame 427319609.png" alt="" className='md:h-2/3 md:w-3/5 w-[200px] h-[150px] ' style={{}} />
                     <div className='md:w-2/3 w-full md:pr-3'>
                       <p className='w-full py-1 md:pr-5 text-end' style={{ fontSize:`clamp(2px, 9px, 20px)`}} >Create your business on INFINITY PRODUCT PLACE, optimising branding and business personality to facilitate business growth </p>
                       <h4 className='font-bold text-lg text-end pr-6'>Seller</h4>
