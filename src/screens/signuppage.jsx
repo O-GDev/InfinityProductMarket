@@ -1,15 +1,62 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Icon } from '@iconify/react';
 import { Checkbox } from 'flowbite-react';
 import Sidecarousel from '../lilcomponents/sidecarousel';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
+import {BASE_URL} from '../component/url/url'
+import Productplacehome from './productplacehome';
+
+
 
 function Signuppage(props) {
-    const navigate = useNavigate()
+    const navigate = useNavigate()    
+    const[first_name, setFirstName] = useState('')
+    const[last_name, setLastName] = useState("")
+    const[email, setEmail] = useState("")
+    const[password, setPassword] = useState("")
+    const[cpassword,setCPassword] = useState("")
+    const[error, setError] = useState(false)
+    const[message, setMessage] = useState(false)
+    const[data, setData] = useState("")
+
+
+    const handleSellerSignup = async(role)=>{
+        if (first_name == "" || last_name =="" || email =="" || password=="" || cpassword==""){
+             setError(true)
+        }else{ 
+            await fetch(`${BASE_URL}/registration`,{
+                method: 'POST',
+                body: JSON.stringify({
+                    "first_name":first_name,
+                    "last_name":last_name,
+                    "email":email,
+                    "password":password,
+                    "role":role
+                }),
+                headers:{
+                    "Content-Type":"application/json"
+                }
+            }).then(res => res.json())
+            .then(data => setData(data))
+            setError(false)
+            console.log(data)
+            if(data.status == 200 ){
+                navigate("/subscribe")
+                setMessage(data.message)
+            }else{
+            setMessage(data.message)
+        }
+       
+}
+        
+    }
+
     return (
-        <motion.div
+        <div x>
+            <Productplacehome />
+            <motion.div
             //   initial={{ opacity: 0.3, scale: 0.5 }}
             //   whileInView={{ opacity: 1, scale: 1 }}
             //   transition={{duration:1}}
@@ -49,31 +96,40 @@ function Signuppage(props) {
                                 </div>
                             </div>
 
+                            {error && 
+                                <div className='container'>                                     
+                                <div className='flex justify-center relative rounded-md'  style={{backgroundColor:'#F9F9E0'}}  ><h5 className='text-sm p-4 text-red-400'>All fields are required!</h5></div>
+                                </div> }
+                                {message && 
+                                <div className='container'>                                     
+                                <div className='flex justify-center relative rounded-md'  style={{backgroundColor:'#F9F9E0'}}  ><h5 className='text-sm p-4 text-red-400'>{message}</h5></div>
+                                </div> }
+
                             <div className='md:px-10 px-5 '>
                                 <div className='md:flex justify-between md:my-2 max-w-full'>
                                     <div className='w-full md:px-3'>
                                         <h5 className='font-md  text-medium'>First Name<span style={{ color: '#D69999' }}>*</span></h5>
-                                        <input name='fName' className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full ' style={{}} />
+                                        <input name='fName' onChange={(e) => setFirstName(e.target.value) } className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full ' style={{}} />
                                     </div>
                                     <div className='w-full md:px-3 my-2 md:my-0'>
                                         <h5 className='font-md  text-medium'>Surname<span style={{ color: '#D69999' }}>*</span></h5>
-                                        <input name='fName' className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full ' style={{}} />
+                                        <input name='fName' onChange={(e) => setLastName(e.target.value) } className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full ' style={{}} />
                                     </div>
                                 </div>
 
                                 <div className='my-2 md:px-3 md:my-0'>
                                     <h5 className='font-md  text-medium'>Email Address<span style={{ color: '#D69999' }}>*</span></h5>
-                                    <input name='fName' className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full' style={{}} />
+                                    <input name='fName' onChange={(e) => setEmail(e.target.value) } className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full' style={{}} />
                                 </div>
 
                                 <div className='md:flex justify-between my-2 max-w-full'>
                                     <div className='w-full md:px-3'>
                                         <h5 className='font-md  text-medium'>Password<span style={{ color: '#D69999' }}>*</span></h5>
-                                        <input name='fName' className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full' style={{}} />
+                                        <input name='fName' onChange={(e) => setPassword(e.target.value) } className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full' style={{}} />
                                     </div>
                                     <div className='w-full md:px-3 my-2 md:my-0'>
                                         <h5 className='font-md  text-medium'>Confirm Password<span style={{ color: '#D69999' }}>*</span></h5>
-                                        <input name='fName' className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full' style={{}} />
+                                        <input name='fName' onChange={(e) => setCPassword(e.target.value) } className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full' style={{}} />
                                     </div>
                                 </div>
 
@@ -83,8 +139,8 @@ function Signuppage(props) {
                                 </div>
 
                                 <div className='py-4 md:px-40 '>
-                                    <Link to='' onClick={() => props.handleClick('subscribe')}>
-                                        <div className='flex justify-center self-center rounded-2xl bg-transparent border' style={{ borderColor: '#702EB2' }}>
+                                    <Link>
+                                        <div onClick={() => handleSellerSignup("seller")} className='flex justify-center self-center rounded-2xl bg-transparent border' style={{ borderColor: '#702EB2' }}>
                                             <h4 className='m-1 font-semibold' style={{ color: '#702EB2' }}>Sign Up</h4>
                                         </div>
                                     </Link>
@@ -102,6 +158,7 @@ function Signuppage(props) {
                 </div>
             </div>
         </motion.div>
+        </div>
     )
 }
 

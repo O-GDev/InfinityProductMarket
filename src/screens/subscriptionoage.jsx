@@ -4,10 +4,13 @@ import { Checkbox } from 'flowbite-react';
 import Sidecarousel from '../lilcomponents/sidecarousel';
 import { Link } from 'react-router-dom';
 import { CustomScroll } from 'react-custom-scroll';
+import Productplacehome from './productplacehome';
 
 export default function Subscriptionoage(props) {
   return (
-    <div className='fixed inset-0 h-full bg-black bg-opacity-30 backdrop-blur-sm md:shadow-lg flex justify-center align-middle self-center ' style={{}}>
+    <div className='absolute flex flex-col w-full full'>
+      <Productplacehome />
+      <div className='fixed inset-0 h-full bg-black bg-opacity-30 backdrop-blur-sm md:shadow-lg flex justify-center align-middle self-center ' style={{}}>
     <div className='h-full p-5 md:p-5 ' style={{}}>
       <div className='md:columns-2 flex md:flex-row flex-col gap-0 md:h-fit h-full rounded-2xl overflow-auto md:overflow-hidden' style={{backgroundColor:'#F2F2F2'}}>
          {/* <CustomScroll heightRelativeToParent="calc(100%)" > */}
@@ -147,5 +150,6 @@ on <span style={{color:'#34A853'}}>ISP</span>  </h5>
       </div>
     </div>
   </div>
+    </div>
   )
 }

@@ -65,7 +65,7 @@ useEffect(()=>{
   }
   return (
     <>
-    <div className='absolute flex flex-col w-full full' style={{paddingBottom:20,}}>
+    <div  >
     {/*  */}
 
     <div className='flex pt-20' style={{height:"",}}>
@@ -274,7 +274,7 @@ the right decision </p>
             </div>
              </div>
     <Footers />
-    {(() => {
+    {/* {(() => {
       switch (currentUrl) {
         case 'signup':
         return <Signuppage handleClick={handleClick}  />
@@ -287,7 +287,7 @@ the right decision </p>
         default:
           return <Signuppage handleClick={handleClick}  />
       }
-    })()}
+    })()} */}
   </div>
   <Outlet />
   </>

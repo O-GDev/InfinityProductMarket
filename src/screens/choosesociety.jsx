@@ -141,25 +141,29 @@ export default function Choosesociety() {
            <div className="flex flex-col justify-center align-middle h-full w-full">
             <div className='flex flex-col self-center justify-center w-full'>
               <div className='flex flex-col h-full align-middle'>
-              <div className='pl-7 pb-2 font-medium md:text-3xl cursor-pointer' onClick={() => setOpenModal(false)}>
+              <div className='p-7 font-medium md:text-3xl cursor-pointer' onClick={() => setOpenModal(false)}>
               <Icon icon="iconoir:cancel" />
             </div>
-            <div className=" md:pl-36">
-              <div className="md:columns-2 flex md:flex-row flex-col h-full ">
+            <div className=" md:px-20 pb-4">
+              <div className="md:columns-2 flex md:flex-row flex-col h-full items-center w-full ">
                 <Link to={`/reg/${randb}`}>
-                  <div className='flex md:flex-col flex-row items-center md:items-start self-center justify-center px-5 w-full'>
-                    <div>
+                  <div className='flex md:flex-col md:hover:flex-col-reverse hover:scale-110 items-center md:items-start w-full h-full md:p-5 px-5'>
+                    <div className='w-full'>
                     <h4 className='font-bold text-lg'>Buyer</h4>
-                    <p className='md:w-2/3 py-1 md:pr-5' style={{ fontSize:`clamp(2px, 9px, 20px)`}} >Purchase quality products from INFINITY PRODUCT PLACE, prioritising commercial integrity and product quality</p>
+                    <p className='md:w-2/3 py-1 md:pr-5' style={{ fontSize:`clamp(2px, 10px, 60px)`}} >Purchase quality products from INFINITY PRODUCT PLACE, prioritising commercial integrity and product quality</p>
                    </div> 
-                   <img src="/assets/Frame 427319608.png" alt="" className='md:h-2/3 md:w-3/5 w-[200px] h-[150px]' />
+                   <div className='w-full flex justify-end md:justify-start'>
+                   <img src="/assets/Frame 427319608.png" alt="" className='md:h-full md:w-11/12 w-[200px] h-[full] self-end ' />
+                   </div>
                   </div>
                 </Link>
-                <Link to={`/sreg/${rand}`}>
-                  <div className='p-5 flex md:flex-col items-center md:items-end w-full h-full'>
-                    <img src="/assets/Frame 427319609.png" alt="" className='md:h-2/3 md:w-3/5 w-[200px] h-[150px] ' style={{}} />
+                <Link to="/signup">
+                  <div className='md:p-5 px-5 flex md:flex-col md:hover:flex-col-reverse hover:scale-110 items-center md:items-end w-full h-full'>
+                    <div className='w-full flex justify-start md:justify-end'>
+                    <img src="/assets/Frame 427319609.png" alt="" className='md:h-full md:w-5/6 w-[200px] h-full ' style={{}} />
+                    </div>
                     <div className='md:w-2/3 w-full md:pr-3'>
-                      <p className='w-full py-1 md:pr-5 text-end' style={{ fontSize:`clamp(2px, 9px, 20px)`}} >Create your business on INFINITY PRODUCT PLACE, optimising branding and business personality to facilitate business growth </p>
+                      <p className='w-full py-1 text-end' style={{ fontSize:`clamp(2px, 10px, 20px)`}} >Create your business on INFINITY PRODUCT PLACE, optimising branding and business personality to facilitate business growth </p>
                       <h4 className='font-bold text-lg text-end md:pr-6'>Seller</h4>
 
                     </div>

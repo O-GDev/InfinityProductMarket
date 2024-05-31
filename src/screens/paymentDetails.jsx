@@ -3,9 +3,12 @@ import { Icon } from '@iconify/react/dist/iconify.js';
 import { Checkbox } from 'flowbite-react';
 import Sidecarousel from '../lilcomponents/sidecarousel';
 import { Link } from 'react-router-dom';
+import Productplacehome from './productplacehome';
 
 export default function Paymentdetails(props) {
   return (
+    <div className='absolute flex flex-col w-full full'>
+      <Productplacehome />
     <div className='fixed inset-0 h-full bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl' style={{}}>
     <div className='h-full sm:py-10 p-5  md:p-20 flex justify-center  ' style={{}}>
         <div className='md:columns-2 flex rounded-2xl w-full h-fit self-center ' style={{ backgroundColor: '#F2F2F2' }}>
@@ -68,6 +71,7 @@ export default function Paymentdetails(props) {
          </div>
       </div>
     </div>
+  </div>
   </div>
   )
 }

@@ -39,6 +39,30 @@ const landingpage = () => {
       "pprice": "328,000",
       "rate": '4.6'
     },
+    {
+      "image": "/assets/photo-camera-balancing-with-yellow-background.jpg",
+      "pname": 'Camera',
+      "pprice": "328,000",
+      "rate": '4.6'
+    },
+    {
+      "image": "/assets/photo-camera-balancing-with-yellow-background.jpg",
+      "pname": 'Camera',
+      "pprice": "328,000",
+      "rate": '4.6'
+    },
+    {
+      "image": "/assets/photo-camera-balancing-with-yellow-background.jpg",
+      "pname": 'Camera',
+      "pprice": "328,000",
+      "rate": '4.6'
+    },
+    {
+      "image": "/assets/photo-camera-balancing-with-yellow-background.jpg",
+      "pname": 'Camera',
+      "pprice": "328,000",
+      "rate": '4.6'
+    },
   ]
   let professionalsData = [
     {
@@ -96,7 +120,7 @@ const landingpage = () => {
             <Uline color='#702EB2' />
           </motion.div>
         </motion.div>
-        <div className='md:columns-2 gap-10 p-5 h-full'>
+        <div className='md:columns-2 gap-16 h-full container '>
           <div className='h-full w-full'>
             <h3 className='flex justify-center self-center font-bold py-1 pb-1'>INFINITY PRODUCT PLACE</h3>
             <motion.div
@@ -217,7 +241,8 @@ className='flex flex-col justify-self-center self-center'>
             <Uline color='#702EB2' />
           </motion.div>
         </motion.div>
-        <div>
+       <div className='container'>
+       <div>
           <div className='md:columns-2 md:flex justify-center my-12 '>
             <div className='md:w-5/12 w-full md:flex justify-center'>
               <motion.div
@@ -228,9 +253,10 @@ className='flex flex-col justify-self-center self-center'>
                 initial="hidden"
                 whileInView="visible"
                 transition={{ duration: 1,  }}
-                className='md:w-3/5 flex mx-6 md:mx-0  h-[250px] md:h-full'
+                className='md:w-2/3 flex mx-6 md:mx-0  h-[250px] md:h-full'
                 style={{
                   backgroundImage: "url('/assets/corporate-management-strategy-solution-branding-concept.jpg')",
+                  backgroundColor:'red',
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                 }}
@@ -321,7 +347,7 @@ className='flex flex-col justify-self-center self-center'>
                 initial="hidden"
                 whileInView="visible"
                 transition={{ duration: 1,  }}
-                className='w-2/3 '
+                className='w-2/3 back'
                 style={{
                   backgroundImage: "url('/assets/drew-colins-LIEQsu5JuoM-unsplash 2.png')",
                   backgroundSize: "cover",
@@ -393,6 +419,7 @@ className='flex flex-col justify-self-center self-center'>
             </div>
           </div>
         </div>
+       </div>
         <div>
           <div className='relative flex-col h-full px-12' >
             <motion.h3
@@ -433,7 +460,8 @@ className='flex flex-col justify-self-center self-center'>
         </div>
       </div>
       <div>
-        <div className='md:columns-4 gap-14 md:m-10 p-5 md:p-0 lg:p-0 mx-12'>
+        <div className='px-16'>
+        <div className='md:columns-4 gap-7 md:m-10 p-5 md:p-0  mx-12 '>
           {topRatedData.map((topRated, index) => (
             <motion.div
               // variants={}
@@ -445,6 +473,7 @@ className='flex flex-col justify-self-center self-center'>
               <Cards image={topRated.image} pname={topRated.pname} pprice={topRated.pprice} rate={topRated.rate} radius='xl' width='100%' height='250px' />
             </motion.div>
           ))}
+        </div>
         </div>
         <div>
           <div className='flex w-full px-12' style={{ justifyContent: 'space-between' }}>
@@ -467,6 +496,7 @@ className='flex flex-col justify-self-center self-center'>
               transition={{ duration: 1, }}
               style={{ color: '#2E0853', borderWidth: 0.5, borderColor: '#2E0853', borderRadius: 20 }}><h4 className='font-semibold rounded-md p-1.5'>VIEW ALL</h4></motion.span>
           </div>
+          <div className="container">
           <div className='md:columns-4 justify-center columns-1 gap-5 md:m-10 p-5 md:p-0 lg:p-0 mx-12'>
             {professionalsData.map((professionals, index) => (
               <motion.div
@@ -483,6 +513,7 @@ className='flex flex-col justify-self-center self-center'>
               </motion.div>
             ))}
             </div>
+          </div>
         </div>
         <div>
           <div className='flex w-full px-12 pb-5' style={{ justifyContent: 'space-between' }}>

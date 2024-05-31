@@ -17,6 +17,9 @@ import Aside from './lilcomponents/aside';
 import ShowNavBar from './lilcomponents/ShowNavBar';
 import LoggedinBuyerNav from './component/loggedinbuyernav';
 import LoggedinNav from './component/loggedinnav';
+import Subscriptionoage from './screens/subscriptionoage';
+import { Payment } from './screens/payment';
+import Paymentdetails from './screens/paymentDetails';
 
 
 const App = () => {
@@ -42,7 +45,11 @@ const App = () => {
         <Route path='marketing' element={<Marketing />} />
         <Route path='sellersprofile' element={<Sellersprofile />} />
         <Route path='signup' element={<Signuppage />} />
-        {/* <Route path='buyerprofile' element={<} */}
+        <Route path='subscribe' element={<Subscriptionoage />} />
+        <Route path='signup' element={<Signuppage />} />
+        <Route path='signup' element={<Signuppage />} />
+        <Route path='payment' element={<Payment />} />
+        <Route path='paymentdetails' element={<Paymentdetails />} />
 
       </Routes>
       </BrowserRouter>

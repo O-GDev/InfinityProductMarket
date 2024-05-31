@@ -2,6 +2,7 @@ import React from 'react'
 import Sidecarousel from '../lilcomponents/sidecarousel'
 import { Link } from 'react-router-dom'
 import { Icon } from '@iconify/react/dist/iconify.js'
+import Productplacehome from './productplacehome'
 
 export const Payment = (props) => {
 //   initial = {{ opacity: 0.3, scale: 0.5 }
@@ -9,6 +10,8 @@ export const Payment = (props) => {
 // whileInView = {{ opacity: 1, scale: 1 }}
 // transition = {{ duration: 1 }}
   return (
+    <div className='absolute flex flex-col w-full full'>
+      <Productplacehome />
     <div className='fixed inset-0 h-full bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl ' style={{}}>
     <div className='h-full sm:py-10 p-5 md:p-10 flex flex-col justify-center self-center ' style={{}}>
       <div className='md:columns-2 flex w-full max-h-fit rounded-2xl self-center ' style={{backgroundColor:'#F2F2F2'}}>
@@ -46,6 +49,7 @@ export const Payment = (props) => {
          </div>
       </div>
     </div>
+  </div>
   </div>
   )
 }
