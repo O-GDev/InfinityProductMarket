@@ -62,8 +62,8 @@ function Signuppage(props) {
             //   transition={{duration:1}}
             className='fixed inset-0 h-dvh bg-opacity-30 backdrop-blur-sm shadow-2xl bg-black flex flex-col align-middle' style={{}}>
             <div className='h-full py-32 p-5  md:p-20 flex flex-col w-full align-middle justify-center ' style={{}}>
-                <div className='md:columns-2 flex gap-0 w-full h-ful justify-center self-center rounded-2xl ' style={{ backgroundColor: '#F2F2F2' }}>
-                    <div className='flex flex-col w-full justify-center self-center h-fit'>
+                <div className='md:columns-2 flex gap-0 w-full h-fit justify-center self-center rounded-2xl ' style={{ backgroundColor: '#F2F2F2' }}>
+                    <div className='flex flex-col w-full justify-center self-center h-full'>
                         <div className='flex flex-col max-w-full max-h-full py-1  md:py-2'>
                     <div className='pt-5 pl-5 cursor-pointer' onClick={() => navigate('/choosesociety')} >
          <Icon icon="lets-icons:arrow-left-long-light" className='md:w-[2rem] md:h-[2rem] ' />

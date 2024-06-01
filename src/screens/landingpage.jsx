@@ -39,30 +39,6 @@ const landingpage = () => {
       "pprice": "328,000",
       "rate": '4.6'
     },
-    {
-      "image": "/assets/photo-camera-balancing-with-yellow-background.jpg",
-      "pname": 'Camera',
-      "pprice": "328,000",
-      "rate": '4.6'
-    },
-    {
-      "image": "/assets/photo-camera-balancing-with-yellow-background.jpg",
-      "pname": 'Camera',
-      "pprice": "328,000",
-      "rate": '4.6'
-    },
-    {
-      "image": "/assets/photo-camera-balancing-with-yellow-background.jpg",
-      "pname": 'Camera',
-      "pprice": "328,000",
-      "rate": '4.6'
-    },
-    {
-      "image": "/assets/photo-camera-balancing-with-yellow-background.jpg",
-      "pname": 'Camera',
-      "pprice": "328,000",
-      "rate": '4.6'
-    },
   ]
   let professionalsData = [
     {
@@ -120,7 +96,7 @@ const landingpage = () => {
             <Uline color='#702EB2' />
           </motion.div>
         </motion.div>
-        <div className='md:columns-2 gap-16 h-full container '>
+        <div className='md:columns-2 flex flex-col md:flex-row gap-16 h-full container '>
           <div className='h-full w-full'>
             <h3 className='flex justify-center self-center font-bold py-1 pb-1'>INFINITY PRODUCT PLACE</h3>
             <motion.div
@@ -133,7 +109,7 @@ const landingpage = () => {
               whileInView="visible"
               // viewport={{ once: false, amount: 1 }}
               transition={{ duration: 1, }}
-              className='lg:columns-2 md:flex rounded-xl my-5 md:my-0 p-5' style={{ backgroundColor: '#D3D3D3' }}>
+              className='md:columns-2 md:flex flex-col md:flex-row rounded-xl my-5 md:my-0 p-5' style={{ backgroundColor: '#D3D3D3' }}>
               <motion.div
                 variants={{
                   hidden: { opacity: 0, },
@@ -145,23 +121,23 @@ const landingpage = () => {
                 className='w-full'
               >
 
-                <img src='/assets/IMG_9517.JPG' className='rounded-xl md:h-[400px] w-full aspect-square ' style={{}} />
+                <img src='/assets/IMG_9517.JPG' className='rounded-xl md:h-[full] w-full aspect-square ' style={{}} />
                 
               </motion.div>
              <div className='flex w-full flex-col self-center'>
              <motion.p
 
-initial={{ opacity: 0, x: -150 }}
+initial={{ opacity: 0, x: -10 }}
 whileInView={{ opacity: 1, x: 0 }}
 transition={{ duration: 1 }}
-className='px-4 md:px-14 py-2 text-center italic font-medium' style={{fontSize:`clamp(15px, 8px, 30px)`}}>
+className='px-[10%] py-2 text-center italic font-medium text-[90%]' style={{}}>
 Check out our product showcase, where we bring you the latest and greatest products in a laid-back and informative way!</motion.p>
 <motion.div
-initial={{ opacity: 0, y: 150 }}
+initial={{ opacity: 0, y: 10 }}
 whileInView={{ opacity: 1, y: 0 }}
 transition={{ duration: 1 }}
-className='flex flex-col justify-self-center self-center'>
-<Button><span className='font-bold' style={{ backgroundColor: 'transparent', padding: '10px', borderColor: '#702EB2', borderWidth: 1, color: '#702EB2' }}>Let's Shop</span></Button>
+className='flex w-full justify-center self-center'>
+<Button className='flex items-center justify-center'><div className='font-bold text-[90%] p-[3%]' style={{ backgroundColor: 'transparent', borderColor: '#702EB2', borderWidth: 1, color: '#702EB2' }}>Let's&nbsp; Shop</div></Button>
 </motion.div>
              </div>
             </motion.div>
@@ -192,7 +168,7 @@ className='flex flex-col justify-self-center self-center'>
                 className='w-full'
               >
 
-              <img src='/assets/medium-shot-woman-posing-studio.jpg' className='rounded-xl md:h-[400px] w-full aspect-square' style={{}} />
+              <img src='/assets/medium-shot-woman-posing-studio.jpg' className='rounded-xl md:h-[full] w-full aspect-square' style={{}} />
               </motion.div>
 
 
@@ -201,7 +177,7 @@ className='flex flex-col justify-self-center self-center'>
                 initial={{ opacity: 0, x: 150 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1 }}
-                className='px-4 md:px-14 py-2 text-center italic font-medium' style={{fontSize:`clamp(15px, 8px, 30px)`}}>Check out our top notch professionals in different fields  of creativity all across the world. </motion.p>
+                className='px-[10%] py-2 text-center italic font-medium text-[90%]' style={{}}>Check out our top notch professionals in different fields  of creativity all across the world. </motion.p>
               <motion.div
                 className='flex flex-col justify-self-center self-center'
                 initial={{ opacity: 0, y: 150 }}
