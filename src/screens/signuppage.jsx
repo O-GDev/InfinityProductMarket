@@ -61,8 +61,8 @@ function Signuppage(props) {
             //   whileInView={{ opacity: 1, scale: 1 }}
             //   transition={{duration:1}}
             className='fixed inset-0 h-dvh bg-opacity-30 backdrop-blur-sm shadow-2xl bg-black flex flex-col align-middle' style={{}}>
-            <div className='h-full sm:py-10 p-5  md:p-20 flex flex-col w-full align-middle justify-center ' style={{}}>
-                <div className='md:columns-2 flex gap-0 w-full max-h-fit justify-center self-center rounded-2xl ' style={{ backgroundColor: '#F2F2F2' }}>
+            <div className='h-dvh sm:py-10 p-5  md:p-20 flex flex-col w-full align-middle justify-center ' style={{}}>
+                <div className='md:columns-2 flex gap-0 w-full h-dvh justify-center self-center rounded-2xl ' style={{ backgroundColor: '#F2F2F2' }}>
                     <div className='flex flex-col w-full justify-center self-center max-h-fit'>
                         <div className='flex flex-col max-w-full max-h-full py-1  md:py-2'>
                     <div className='pt-5 pl-5 cursor-pointer' onClick={() => navigate('/choosesociety')} >
