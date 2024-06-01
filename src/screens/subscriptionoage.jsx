@@ -1,12 +1,23 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import { Icon } from '@iconify/react/dist/iconify.js';
 import { Checkbox } from 'flowbite-react';
 import Sidecarousel from '../lilcomponents/sidecarousel';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { CustomScroll } from 'react-custom-scroll';
 import Productplacehome from './productplacehome';
+import { useSelector, useDispatch } from 'react-redux';
+import {subscription} from '../reducers/subplan';
 
 export default function Subscriptionoage(props) {
+  const dispatch = useDispatch();
+  const navigate = useNavigate()
+
+  // const plan = useSelector((state) => state.subplan.value)
+  const handlePlan =(subs)=>{
+dispatch(subscription(subs));
+navigate("/payment")
+  }
+ 
   return (
     <div className='absolute flex flex-col w-full full'>
       <Productplacehome />
@@ -14,7 +25,7 @@ export default function Subscriptionoage(props) {
     <div className='h-full p-5 md:p-5 ' style={{}}>
       <div className='md:columns-2 flex md:flex-row flex-col gap-0 md:h-fit h-full rounded-2xl overflow-auto md:overflow-hidden' style={{backgroundColor:'#F2F2F2'}}>
          {/* <CustomScroll heightRelativeToParent="calc(100%)" > */}
-         <div>
+         <div className='flex w-full'>
         <div className='flex h-fit w-full'>
         <div className='flex flex-col justify-center align-middle h-full w-full'>
           <div className='flex flex-col self-center justify-center w-full'>
@@ -41,9 +52,10 @@ export default function Subscriptionoage(props) {
           <p className='px-6' style={{fontSize:'12px'}}>choosing a plan for your business will help set your business on the right part</p>
           <h3 className='text-center font-bold pt-5'>SUBSCRIPTIONS</h3>
           <div className='md:columns-3 md:flex flex-row w-full gap-2 px-5 pt-2  ' style={{height:''}}>
-                <Link to='' onClick={() => [props.handleClick("payment")]} className='w-full'>
+                <Link to='' onClick={handlePlan("1")} className='w-full'>
                   <div id="zoom" className='py-2 ml-2 rounded-3xl md:shadow-lg min-w-fit my-2 md:my-0' style={{ backgroundColor: '#B4B4B4', }}>
-                    <h5 className='text-center p-2'>No Plan</h5>
+                    <h5 
+                     className='text-center p-2'>No Plan</h5>
                     <h4 className='text-center pt-1 opacity-50' ><s>PAY</s></h4>
                     <h6 className='text-center pt-2' style={{ fontSize: '50%' }}>FOR START UPS AND SMALL SCALE BUSINESSES </h6>
                     <div className='py-1' style={{ backgroundColor: '#8D66B5' }}>
@@ -63,7 +75,7 @@ export default function Subscriptionoage(props) {
                   </div>
                 </Link>
 
-                <Link to='' onClick={() => props.handleClick('payment')} className='w-full'>
+                <Link to='' onClick={handlePlan("2")} className='w-full'>
                   <div id='zoom' className='py-2 ml-2 rounded-3xl md:shadow-lg min-w-fit my-2 md:my-0' style={{ backgroundColor: '#DEDEDE', }}>
                     <h5 className='text-center p-2'>A Plan</h5>
                     <h4 className='text-center z-10' style={{ lineHeight: 1 }} ><s className='opacity-50'>12 000</s><br /><h4 className='flex justify-center self-center '> 6500<h6 className='flex self-center ' style={{ fontSize: '60%', paddingLeft: 0.5 }}>Monthly</h6></h4></h4>
@@ -88,7 +100,7 @@ export default function Subscriptionoage(props) {
 
 
 
-                <Link to='' onClick={() => props.handleClick('payment')} className='w-full'>
+                <Link to='' onClick={handlePlan("3")} className='w-full'>
                   <div id='zoom' className='py-2 ml-2 rounded-3xl md:shadow-lg' style={{ backgroundColor: '#FFFEFC', }}>
                     <h5 className='text-center p-2 z-10'>Business Plan</h5>
                     <h4 className='text-center ' style={{ lineHeight: 1 }} ><s className='opacity-50'>30 000</s><br /><h4 className='flex justify-center self-center '> 12,000<h6 className='flex self-center ' style={{ fontSize: '60%', paddingLeft: 0.5 }}>Monthly</h6></h4></h4>
@@ -127,7 +139,7 @@ export default function Subscriptionoage(props) {
               <h5 className=' md:w-2/3 text-sm text-center pl-5'>Make a realistic income with your Skills, Knowledge, 
 Talents and other creative craft you possess
 on <span style={{color:'#34A853'}}>ISP</span>  </h5>
-              <div className='flex self-center' >
+              <div className='flex self-center' onClick={() =>{}}>
                 <h4 className='p-2 px-3 rounded-xl text-white flex self-center' style={{backgroundColor:'#702EB2'}}>Join ISP</h4>
               </div>
 

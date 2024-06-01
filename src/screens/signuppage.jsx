@@ -60,7 +60,7 @@ function Signuppage(props) {
             //   initial={{ opacity: 0.3, scale: 0.5 }}
             //   whileInView={{ opacity: 1, scale: 1 }}
             //   transition={{duration:1}}
-            className='fixed inset-0 h-full bg-opacity-30 backdrop-blur-sm shadow-2xl bg-black flex flex-col align-middle' style={{}}>
+            className='fixed inset-0 h-dvh bg-opacity-30 backdrop-blur-sm shadow-2xl bg-black flex flex-col align-middle' style={{}}>
             <div className='h-full sm:py-10 p-5  md:p-20 flex flex-col w-full align-middle justify-center ' style={{}}>
                 <div className='md:columns-2 flex gap-0 w-full max-h-fit justify-center self-center rounded-2xl ' style={{ backgroundColor: '#F2F2F2' }}>
                     <div className='flex flex-col w-full justify-center self-center max-h-fit'>

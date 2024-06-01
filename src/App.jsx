@@ -20,11 +20,13 @@ import LoggedinNav from './component/loggedinnav';
 import Subscriptionoage from './screens/subscriptionoage';
 import { Payment } from './screens/payment';
 import Paymentdetails from './screens/paymentDetails';
-
+import store from './store';
+import { Provider } from 'react-redux';
 
 const App = () => {
   return (
-   <div>
+   <Provider store={store}>
+    <div>
        <BrowserRouter>
        <ShowNavBar>        
     <Navmenu />
@@ -55,6 +57,7 @@ const App = () => {
       </BrowserRouter>
     
    </div>
+   </Provider>
   )
 }
 
