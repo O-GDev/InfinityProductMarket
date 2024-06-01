@@ -437,7 +437,7 @@ className='flex w-full justify-center self-center'>
       </div>
       <div>
         <div className='md:px-16'>
-        <div className='md:columns-4 gap-7 md:m-10 p-5 md:p-0  mx-12 '>
+        <div className='md:columns-4 gap-7 md:m-10 p-5 md:p-0 '>
           {topRatedData.map((topRated, index) => (
             <motion.div
               // variants={}
