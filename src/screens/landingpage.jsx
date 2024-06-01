@@ -406,7 +406,7 @@ className='flex w-full justify-center self-center'>
               initial="hidden"
               whileInView="visible"
               transition={{ duration: 1,  }}
-              className='font-primary font-bold text-center ' style={{ color: '#2E0853' }}>TOP-RATED
+              className='font-primary font-bold text-center text-[90%]' style={{ color: '#2E0853' }}>TOP-RATED
             </motion.h3>
           </div>
           <div className='flex w-full px-12' style={{ justifyContent: 'space-between' }}>
@@ -418,7 +418,7 @@ className='flex w-full justify-center self-center'>
               initial="hidden"
               whileInView="visible"
               transition={{ duration: 1,  }}
-              className='font-semibold ' style={{ color: '#2E0853' }}>PRODUCTS
+              className='font-semibold text-[90%]' style={{ color: '#2E0853' }}>PRODUCTS
             </motion.h4>
             <motion.span
               variants={{
@@ -429,14 +429,14 @@ className='flex w-full justify-center self-center'>
               whileInView="visible"
               transition={{ duration: 1,  }}
               style={{ color: '#2E0853', borderWidth: 0.5, borderColor: '#2E0853', borderRadius: 20 }}>
-              <h4 className='font-semibold rounded-md p-1.5'>VIEW ALL
+              <h4 className='font-semibold rounded-md p-1.5 text-[90%]'>VIEW ALL
               </h4>
             </motion.span>
           </div>
         </div>
       </div>
       <div>
-        <div className='px-16'>
+        <div className='md:px-16'>
         <div className='md:columns-4 gap-7 md:m-10 p-5 md:p-0  mx-12 '>
           {topRatedData.map((topRated, index) => (
             <motion.div
