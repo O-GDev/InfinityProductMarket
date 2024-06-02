@@ -51,7 +51,7 @@ const BuyerSignup = ({props}) => {
         
     }
   return (
-    <div>
+    <div className='text-[70%] md:text-[100%]'>
           <motion.div
               //   initial={{ opacity: 0.3, scale: 0.5 }}
               //   whileInView={{ opacity: 1, scale: 1 }}
