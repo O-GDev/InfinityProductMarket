@@ -44,91 +44,110 @@ export default function Choosesociety() {
           <Uline color='#702EB2' />
         </motion.div>
       </motion.div>
-
-      <div className='md:columns-2 gap-12 md:flex md:mx-16 mx-5 my-12'>
-       <div>
-       <h3 className='flex justify-center self-center font-bold py-1 pb-5'>INFINITY PRODUCT PLACE</h3>
-
-<div className='md:columns-2 md:flex rounded-xl h-full' style={{ backgroundColor: '#D3D3D3' }}>
-  <motion.div
-    variants={{
-      hidden: { opacity: 0, x: -10 },
-      visible: { opacity: 1, x: 0 }
-    }}
-    initial="hidden"
-    // whileInView="visible"
-    whileInView="visible"
-    transition={{ duration: 1, }}
-    className='flex w-full' >
-    <img src='/assets/IMG_9517.JPG' className='rounded-xl flex aspect-square md:aspect-1/3' style={{}} />
-  </motion.div>
-  <div className='flex flex-col justify-center self-center md:pt-16 pt-5 w-full'>
-    <motion.p
-
-      initial={{ opacity: 0, x: -10 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1 }}
-      className='px-4 md:px-14 py-2 text-center italic font-medium' style={{fontSize:`clamp(15px, 8px, 30px)`}}>
-      Check out our product showcase, where we bring you the latest and greatest products in a laid-back an
-      d informative way!</motion.p>
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-      className='flex flex-col justify-self-center self-center'>
-      <div onClick={() => setOpenModal(true)} className='flex self-center justify-center'>
-        <Button><span className='font-bold' style={{ backgroundColor: 'transparent', padding: '10px', borderColor: '#702EB2', borderWidth: 1, color: '#702EB2' }}>Buy/Sell</span></Button>
-      </div>
-    </motion.div>
-  </div>
-  {/* <div className='flex flex-col justify-center self-center md:pt-16 pt-5'>
-    <p className='md:pt-16 sm:pt-1 px-3 text-center text-xl italic font-medium'>Check out our product showcase, where we bring you the latest and greatest products in a laid-back and informative way!</p>
-    <Link to={`/reg/${rand}`} className='flex self-center justify-center'>
-    <Button><span className='font-bold' style={{backgroundColor:'transparent',padding:'10px',borderColor:'#702EB2',borderWidth:1,color:'#702EB2'}}>Buy/Sell</span></Button>
-    </Link>
-  </div> */}
-</div>
-       </div>
-       <div>
-       <h3 className='flex justify-center text-center font-bold py-1 md:pt-0 pt-10 pb-5'>INFINITY SERVICE PLACE</h3>
-        <div className='md:columns-2 md:flex rounded-xl h-full' style={{ backgroundColor: '#D3D3D3' }}>
-          <motion.div
-            variants={{
-              hidden: { opacity: 0, x: 10 },
-              visible: { opacity: 1, x: 0 }
-            }}
-            initial="hidden"
-            // whileInView="visible"
-            whileInView="visible"
-            transition={{ duration: 1, }}
-            style={{} } className='w-full flex'>
-            <img src='/assets/medium-shot-woman-posing-studio.jpg' className='rounded-xl flex aspect-square' style={{}} />
-          </motion.div>
-          <div className='flex flex-col justify-self-center self-center md:pt-20 pt-5 w-full'>
-            <motion.p
-              initial={{ opacity: 0, x: 10 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
-              className='px-4 md:px-14 py-2 text-center italic font-medium' style={{fontSize:`clamp(15px, 8px, 30px)`}}>Check out our top notch professionals in different fields  of creativity all across the world. </motion.p>
+      <div>
+          <div className='md:columns-2 flex flex-col md:flex-row h-fit gap-16 w-full justify-center px-[10%]'>
+          
+        <div className='w-full'>
+          <div className='flex flex-col justify-center items-center h-full w-full'>
+            <h3 className='flex justify-center self-center font-bold py-1 pb-1'>INFINITY PRODUCT PLACE</h3>
             <motion.div
-              className='flex flex-col justify-self-center self-center'
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-            >
-              <div onClick={() => setOpenModal(true)} className='flex justify-center self-center'>
-                <Button><span className='font-bold ' style={{ backgroundColor: 'transparent', padding: '10px', borderColor: '#702EB2', borderWidth: 1, color: '#702EB2' }}>Let's Deal</span></Button>
+              variants={{
+                hidden: { opacity: 0, x: -150 },
+                visible: { opacity: 1, x: 0 },
+              }}
+
+              initial="hidden"
+              whileInView="visible"
+              // viewport={{ once: false, amount: 1 }}
+              transition={{ duration: 1, }}
+              className='lg:columns-2 flex w-full flex-col lg:flex-row rounded-xl my-5 md:my-0 p-5 h-full' style={{ backgroundColor: '#D3D3D3' }}>
+             <div className='flex w-full'>
+             <motion.div
+                variants={{
+                  hidden: { opacity: 0, },
+                  visible: { opacity: 1, }
+                }}
+                initial="hidden"
+                whileInView="visible"
+                transition={{ duration: 1, }}
+                className='w-full flex'
+              >
+
+                <img src='/assets/IMG_9517.JPG' className='rounded-xl h-[300px] w-[400px] flex ' style={{}} />
+                
+              </motion.div>
+             </div>
+             <div className='flex w-full flex-col self-center '>
+             <motion.p
+
+initial={{ opacity: 0, x: -10 }}
+whileInView={{ opacity: 1, x: 0 }}
+transition={{ duration: 1 }}
+className='px-[10%] py-2 text-center italic font-medium text-[80%] md:text-[100%] w-full ' style={{}}>
+Check out our product showcase, where we bring you the latest and greatest products in a laid-back and informative way!</motion.p>
+<motion.div
+initial={{ opacity: 0, y: 10 }}
+whileInView={{ opacity: 1, y: 0 }}
+transition={{ duration: 1 }}
+className='flex w-full justify-center self-center'>
+<Button onClick={() => setOpenModal(true)}  className='flex items-center justify-center'><div className='font-bold id p-3' style={{ backgroundColor: 'transparent', borderColor: '#702EB2', borderWidth: 1, color: '#702EB2' }}>Buy/Sell</div></Button>
+</motion.div>
+             </div>
+            </motion.div>
+          </div>
+        </div>
+
+          <div className=' w-full'>
+            <div className='flex flex-col justify-center items-center h-full w-full' >
+            <h3 className='flex justify-center self-center font-bold py-1 pb-1'>INFINITY SERVICE PLACE</h3>
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, x: 10 },
+                visible: { opacity: 1, x: 0 }
+              }}
+              initial="hidden"
+              // whileInView="visible"
+              whileInView="visible"
+              transition={{ duration: 1, }}
+              className='lg:columns-2 flex flex-col lg:flex-row w-full rounded-xl md:my-0 my-10 p-5 h-full   ' style={{ backgroundColor: '#D3D3D3' }}>
+                <div className='flex w-full'>
+                  
+            <motion.div
+                variants={{
+                  hidden: { opacity: 0, },
+                  visible: { opacity: 1, }
+                }}
+                initial="hidden"
+                whileInView="visible"
+                transition={{ duration: 1, }}
+                className='w-full'
+              >
+                
+              <img src='/assets/medium-shot-woman-posing-studio.jpg' className='rounded-xl h-[300px] w-[400px] flex' style={{}} />
+              </motion.div>
+
+
+                </div>
+              <div className='flex w-full flex-col self-center'>
+              <motion.p
+                initial={{ opacity: 0, x: 10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1 }}
+                className='px-[10%] py-2 text-center italic font-medium text-[80%] md:text-[100%] ' style={{}}>Check out our top notch professionals in different fields  of creativity all across the world. </motion.p>
+             <motion.div
+initial={{ opacity: 0, y: 10 }}
+whileInView={{ opacity: 1, y: 0 }}
+transition={{ duration: 1 }}
+className='flex w-full justify-center self-center'>
+<Button onClick={() => setOpenModal(true)} className='flex items-center justify-center'><div className='font-bold id p-3' style={{ backgroundColor: 'transparent', borderColor: '#702EB2', borderWidth: 1, color: '#702EB2' }}>Let's&nbsp; Deal</div></Button>
+</motion.div>
               </div>
             </motion.div>
-            {/* <p className='md:pt-16 sm:pt-3 px-3 text-center text-xl italic font-medium'>Check out our top notch professionals in different fields  of creativity all across the world. </p>
-            <Link to={`/reg/${rand}`} className='flex justify-center self-center'>
-            <Button><span className='font-bold ' style={{backgroundColor:'transparent',padding:'10px',borderColor:'#702EB2',borderWidth:1,color:'#702EB2'}}>Let's Deal</span></Button>
-            </Link> */}
+          </div>
           </div>
 
         </div>
-       </div>
-      </div>
+        </div>
       <div className='flex justify-center self-center mx-5 my-10'>
         <h3 className='font-bold px-1'>NOTE: </h3>
         <h4> Switch between account at user settings.....</h4>
