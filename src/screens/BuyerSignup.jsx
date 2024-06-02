@@ -75,11 +75,11 @@ const BuyerSignup = ({props}) => {
                               <div className='md:px-16 md:py-2 px-5'>
                                 {error && 
                                 <div className='container'>                                     
-                                <div className='flex justify-center relative rounded-md'  style={{backgroundColor:'#F9F9E0'}}  ><h5 className='text-sm p-4 text-red-400'>All fields are required!</h5></div>
+                                <div className='flex justify-center relative rounded-md'  style={{backgroundColor:'#F9F9E0'}}  ><h5 className='text-sm p-4 text-red-400 text-[70%] md:text-[100%]'>All fields are required!</h5></div>
                                 </div> }
                                 {message && 
                                 <div className='container'>                                     
-                                <div className='flex justify-center relative rounded-md'  style={{backgroundColor:'#F9F9E0'}}  ><h5 className='text-sm p-4 text-red-400'>{message}</h5></div>
+                                <div className='flex justify-center relative rounded-md'  style={{backgroundColor:'#F9F9E0'}}  ><h5 className='text-sm p-4 text-red-400 text-[70%] md:text-[100%]'>{message}</h5></div>
                                 </div> }
                                   <div className='md:flex justify-between md:mb-2 w-full'>
                                       <div className='w-full md:px-3'>
