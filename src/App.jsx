@@ -26,7 +26,7 @@ import { Provider } from 'react-redux';
 const App = () => {
   return (
    <Provider store={store}>
-    <div className='text-[70%] md:text-[100%]'>
+    <div className='text-[100%] md:text-[100%]'>
        <BrowserRouter>
        <ShowNavBar>        
     <Navmenu />

@@ -152,7 +152,7 @@ function Signuppage(props) {
                             </div>
                         </div>
                     </div>
-                    <div className='max-h-full w-full md:flex hidden'>
+                    <div className='max-h-full w-full lg:flex hidden'>
                         <Sidecarousel />
                     </div>
                 </div>
