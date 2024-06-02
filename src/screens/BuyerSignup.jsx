@@ -60,7 +60,7 @@ const BuyerSignup = ({props}) => {
               className='fixed inset-0 h-dvh bg-black bg-opacity-30 backdrop-blur-sm shadow-2xl flex flex-col align-middle self-center justify-center' style={{}}>
               <div className='h-full w-full flex flex-col justify-center self-center align-middle px-5 md:px-10  md:py-10' style={{}}>
                   <div className='md:columns-2 flex w-full h-fit justify-center self-center align-middle rounded-2xl' style={{ backgroundColor: '#F2F2F2' }}>
-                      <div className='flex flex-col justify-center py-10 self-center h-full w-full '>
+                      <div className='flex flex-col justify-center py-4 md:py-10 self-center h-full w-full '>
                           <div className='w-full h-fit py-1 flex flex-col self-center justify-center'>
                               <div className='flex flex-row justify-between'>
                                   <div className='pl-4 cursor-pointer' onClick={() => navigate('/choosesociety')}>
