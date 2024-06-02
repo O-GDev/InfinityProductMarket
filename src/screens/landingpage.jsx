@@ -96,8 +96,11 @@ const landingpage = () => {
             <Uline color='#702EB2' />
           </motion.div>
         </motion.div>
-        <div className='md:columns-2 flex flex-col md:flex-row gap-16 h-full container '>
-          <div className='h-full w-full'>
+        <div>
+          <div className='md:columns-2 flex flex-col md:flex-row h-fit gap-16 w-full justify-center px-[10%]'>
+          
+        <div className='w-full'>
+          <div className='flex flex-col justify-center items-center h-full w-full'>
             <h3 className='flex justify-center self-center font-bold py-1 pb-1'>INFINITY PRODUCT PLACE</h3>
             <motion.div
               variants={{
@@ -109,8 +112,9 @@ const landingpage = () => {
               whileInView="visible"
               // viewport={{ once: false, amount: 1 }}
               transition={{ duration: 1, }}
-              className='md:columns-2 md:flex flex-col md:flex-row rounded-xl my-5 md:my-0 p-5' style={{ backgroundColor: '#D3D3D3' }}>
-              <motion.div
+              className='lg:columns-2 flex w-full flex-col lg:flex-row rounded-xl my-5 md:my-0 p-5 h-full' style={{ backgroundColor: '#D3D3D3' }}>
+             <div className='flex w-full'>
+             <motion.div
                 variants={{
                   hidden: { opacity: 0, },
                   visible: { opacity: 1, }
@@ -118,45 +122,48 @@ const landingpage = () => {
                 initial="hidden"
                 whileInView="visible"
                 transition={{ duration: 1, }}
-                className='w-full'
+                className='w-full flex'
               >
 
-                <img src='/assets/IMG_9517.JPG' className='rounded-xl md:h-[full] w-full aspect-square ' style={{}} />
+                <img src='/assets/IMG_9517.JPG' className='rounded-xl h-[300px] w-[400px] flex ' style={{}} />
                 
               </motion.div>
-             <div className='flex w-full flex-col self-center'>
+             </div>
+             <div className='flex w-full flex-col self-center '>
              <motion.p
 
 initial={{ opacity: 0, x: -10 }}
 whileInView={{ opacity: 1, x: 0 }}
 transition={{ duration: 1 }}
-className='px-[10%] py-2 text-center italic font-medium text-[90%]' style={{}}>
+className='px-[10%] py-2 text-center italic font-medium text-[80%] md:text-[100%] w-full ' style={{}}>
 Check out our product showcase, where we bring you the latest and greatest products in a laid-back and informative way!</motion.p>
 <motion.div
 initial={{ opacity: 0, y: 10 }}
 whileInView={{ opacity: 1, y: 0 }}
 transition={{ duration: 1 }}
 className='flex w-full justify-center self-center'>
-<Button className='flex items-center justify-center'><div className='font-bold text-[90%] p-[3%]' style={{ backgroundColor: 'transparent', borderColor: '#702EB2', borderWidth: 1, color: '#702EB2' }}>Let's&nbsp; Shop</div></Button>
+<Button className='flex items-center justify-center'><div className='font-bold id p-3' style={{ backgroundColor: 'transparent', borderColor: '#702EB2', borderWidth: 1, color: '#702EB2' }}>Let's&nbsp; Shop</div></Button>
 </motion.div>
              </div>
             </motion.div>
           </div>
-          
+        </div>
 
-          <div className='w-full h-full'>
-            <h3 className='justify-center text-center font-bold py-1 pt-2 md:pt-0'>INFINITY SERVICE PLACE</h3>
+          <div className=' w-full'>
+            <div className='flex flex-col justify-center items-center h-full w-full' >
+            <h3 className='flex justify-center self-center font-bold py-1 pb-1'>INFINITY SERVICE PLACE</h3>
             <motion.div
               variants={{
-                hidden: { opacity: 0, x: 150 },
+                hidden: { opacity: 0, x: 10 },
                 visible: { opacity: 1, x: 0 }
               }}
               initial="hidden"
               // whileInView="visible"
               whileInView="visible"
               transition={{ duration: 1, }}
-              className='lg:columns-2 md:flex rounded-xl md:my-0 my-10 p-5' style={{ backgroundColor: '#D3D3D3' }}>
-
+              className='lg:columns-2 flex flex-col lg:flex-row w-full rounded-xl md:my-0 my-10 p-5 h-full   ' style={{ backgroundColor: '#D3D3D3' }}>
+                <div className='flex w-full'>
+                  
             <motion.div
                 variants={{
                   hidden: { opacity: 0, },
@@ -167,30 +174,31 @@ className='flex w-full justify-center self-center'>
                 transition={{ duration: 1, }}
                 className='w-full'
               >
-
-              <img src='/assets/medium-shot-woman-posing-studio.jpg' className='rounded-xl md:h-[full] w-full aspect-square' style={{}} />
+                
+              <img src='/assets/medium-shot-woman-posing-studio.jpg' className='rounded-xl h-[300px] w-[400px] flex' style={{}} />
               </motion.div>
 
 
+                </div>
               <div className='flex w-full flex-col self-center'>
               <motion.p
-                initial={{ opacity: 0, x: 150 }}
+                initial={{ opacity: 0, x: 10 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1 }}
-                className='px-[10%] py-2 text-center italic font-medium text-[90%]' style={{}}>Check out our top notch professionals in different fields  of creativity all across the world. </motion.p>
-              <motion.div
-                className='flex flex-col justify-self-center self-center'
-                initial={{ opacity: 0, y: 150 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
-              >
-                <Button><span className='font-bold' style={{ backgroundColor: 'transparent', padding: '10px', borderColor: '#702EB2', borderWidth: 1, color: '#702EB2' }}>Let's Deal</span></Button>
-              </motion.div>
-
+                className='px-[10%] py-2 text-center italic font-medium text-[80%] md:text-[100%] ' style={{}}>Check out our top notch professionals in different fields  of creativity all across the world. </motion.p>
+             <motion.div
+initial={{ opacity: 0, y: 10 }}
+whileInView={{ opacity: 1, y: 0 }}
+transition={{ duration: 1 }}
+className='flex w-full justify-center self-center'>
+<Button className='flex items-center justify-center'><div className='font-bold id p-3' style={{ backgroundColor: 'transparent', borderColor: '#702EB2', borderWidth: 1, color: '#702EB2' }}>Let's&nbsp; Deal</div></Button>
+</motion.div>
               </div>
             </motion.div>
           </div>
+          </div>
 
+        </div>
         </div>
         <motion.div
           variants={{
@@ -406,7 +414,7 @@ className='flex w-full justify-center self-center'>
               initial="hidden"
               whileInView="visible"
               transition={{ duration: 1,  }}
-              className='font-primary font-bold text-center text-[90%]' style={{ color: '#2E0853' }}>TOP-RATED
+              className='font-primary font-bold text-center id' style={{ color: '#2E0853' }}>TOP-RATED
             </motion.h3>
           </div>
           <div className='flex w-full px-12' style={{ justifyContent: 'space-between' }}>
@@ -418,7 +426,7 @@ className='flex w-full justify-center self-center'>
               initial="hidden"
               whileInView="visible"
               transition={{ duration: 1,  }}
-              className='font-semibold text-[90%]' style={{ color: '#2E0853' }}>PRODUCTS
+              className='font-semibold id' style={{ color: '#2E0853' }}>PRODUCTS
             </motion.h4>
             <motion.span
               variants={{
@@ -429,7 +437,7 @@ className='flex w-full justify-center self-center'>
               whileInView="visible"
               transition={{ duration: 1,  }}
               style={{ color: '#2E0853', borderWidth: 0.5, borderColor: '#2E0853', borderRadius: 20 }}>
-              <h4 className='font-semibold rounded-md p-1.5 text-[90%]'>VIEW ALL
+              <h4 className='font-semibold rounded-md p-1.5 id'>VIEW ALL
               </h4>
             </motion.span>
           </div>
@@ -473,7 +481,7 @@ className='flex w-full justify-center self-center'>
               style={{ color: '#2E0853', borderWidth: 0.5, borderColor: '#2E0853', borderRadius: 20 }}><h4 className='font-semibold rounded-md p-1.5'>VIEW ALL</h4></motion.span>
           </div>
           <div className="container">
-          <div className='md:columns-4 justify-center columns-1 gap-5 md:m-10 p-5 md:p-0 lg:p-0 mx-12'>
+          <div className='md:columns-4 justify-center columns-1 gap-5 md:m-10 p-5 md:p-0 md:mx-12'>
             {professionalsData.map((professionals, index) => (
               <motion.div
                 // variants={}

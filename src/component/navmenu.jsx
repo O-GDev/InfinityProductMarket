@@ -56,7 +56,6 @@ const Navmenu = ({index}) => {
             <li onClick={handleClick} className='relative cursor-pointer pr-5 active'><Link to='/'>Home</Link> </li>
             <li onClick={handleClick} className='relative cursor-pointer pr-5 ' > <Link to='/services'>Services</Link> </li>
             <li onClick={handleClick} className='relative cursor-pointer pr-5 ' >About</li>
-            <li onClick={handleClick} className='relative cursor-pointer pr-5 ' >Login</li>
             <li onClick={handleClick} className='relative cursor-pointer pr-5 ' >Contact Us</li>
             <li onClick={handleClick} className='relative cursor-pointer pr-5 ' >Login/Signup</li>
             </ul>

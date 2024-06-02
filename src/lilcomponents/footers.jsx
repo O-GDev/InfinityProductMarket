@@ -4,60 +4,78 @@ import { Icon } from '@iconify/react/dist/iconify.js'
 const Footers = () => {
  
   return (
-    <div  className="select-none relative py-4 sm:justify-center flex flex-col" style={{backgroundColor:'white'}}>
-    <div className='md:columns-4 md:p-0 sm:p-40 sm:pb-0'>
-      <div className='md:p-16'>
-      <h3 className=' text-lg mb-5 md:text-start text-center font-bold' style={{color:'#2E0853'}}>Get In Touch</h3>
-      <p  className='md:text-start text-center font-medium py-2'>Contact Us Anytime, we are always available for you.</p>
-      <div className="flex flex-row justify-between px-3 py-1">
-      <Icon icon="skill-icons:instagram" width='1.5rem' height='1.5rem' className='self-center'/>
-      <Icon icon="devicon:twitter" width='1.5rem' height='1.5rem' className='self-center'/>
-      <Icon icon="logos:google-gmail" width='2rem' height='2rem' className='self-center'/>
-      <Icon icon="logos:facebook" width='2rem' height='2rem' className='self-center'/>
-      <Icon icon="logos:whatsapp-icon" width='2rem' height='2rem' className='self-center'/>
-      </div>
-      </div>
-      <div className='md:p-16 sm:p-10 sm:pb-2'>
-      <h3 className='font-bold text-lg mb-5 md:text-start text-center' style={{color:'#2E0853'}}>Company Info</h3>
+    <div  className="select-none relative py-4 justify-center flex flex-col" style={{backgroundColor:'white'}}>
+    <div className='md:columns-4 flex flex-col lg:flex-row justify-center w-full md:p-0 sm:p-40 sm:pb-0'>
+      <div className='lg:p-16 p-10 pb-2 w-full'>
+      <h3 className='font-bold text-lg mb-5 lg:text-start text-center' style={{color:'#2E0853'}}>Company Info</h3>
       <ul>
-      <li className='md:text-start font-medium py-2 text-center'>Blog</li>
-      <li className='md:text-start font-medium py-2 text-center'>About Us</li>
-      <li className='md:text-start font-medium py-2 text-center'>Services</li>
+      <li className='lg:text-start font-medium py-2 text-center'>Blog</li>
+      <li className='lg:text-start font-medium py-2 text-center'>About Us</li>
+      <li className='lg:text-start font-medium py-2 text-center'>Services</li>
       </ul>
       </div>
-      <div className='md:p-16 sm:p-10'>
-      <h3 className='font-bold text-lg mb-5 md:text-start text-center' style={{color:'#2E0853'}}>Features</h3>
+      <div className='lg:p-16 p-10 w-full'>
+      <h3 className='font-bold text-lg mb-5 lg:text-start text-center' style={{color:'#2E0853'}}>Features</h3>
       <ul>
-      <li className='md:text-start font-medium py-2 text-center'>Unlimited Support</li>
-      <li className='md:text-start font-medium py-2 text-center'>Chats and Calls</li>
-      <li className='md:text-start font-medium py-2 text-center'>Business Marketing</li>
+      <li className='lg:text-start font-medium py-2 text-center'>Unlimited Support</li>
+      <li className='lg:text-start font-medium py-2 text-center'>Chats and Calls</li>
+      <li className='lg:text-start font-medium py-2 text-center'>Business Marketing</li>
       </ul>
-      </div>
-      <div className='md:p-16 sm:p-10'>
-      <h3 className='font-bold text-lg mb-5 md:text-start text-center' style={{color:'#2E0853'}}>Legal</h3>
-      <ul>
-      <li className='md:text-start font-medium py-2 text-center'>Terms and Condition</li>
-      <li className='md:text-start font-medium py-2 text-center'>Privacy Policy</li>
-      <li className='font-bold text-xl md:text-start py-2 text-center' style={{color:'#2E0853'}}>SIGN UP/LOG IN</li>
-      </ul>
+      
+    <div className='hidden lg:flex w-full justify-start my-16 '>
+    <div className='flex justify-center self-center px-3' style={{backgroundColor:'#2E0853'}}>
+      <span className='text-md text-center flex self-center justify-center py-2 text-white'>SIGN UP/LOG IN</span>
       </div>
     </div>
-    <div className="md:flex justify-between px-10">
-     <div className='flex flex-col justify-end self-center md:w-full'>
-     <div className=' p-2'>Subscribe to Our Newsletter</div>
-    <div className='flex sm:justify-center md:flex-row flex-col'>
+      </div>
+      <div className='lg:p-16 p-10 w-full'>
+      <h3 className='font-bold text-lg mb-5 lg:text-start text-center' style={{color:'#2E0853'}}>Legal</h3>
+      <ul>
+      <li className='lg:text-start font-medium py-2 text-center'>Terms and Condition</li>
+      <li className='lg:text-start font-medium py-2 text-center'>Privacy Policy</li>
+      <li className='font-bold text-xl lg:text-start py-2 text-center' style={{color:'#2E0853'}}>SIGN UP/LOG IN</li>
+      </ul>
+      <div className='w-full hidden lg:flex justify-start my-12  '>
+      <img src="/assets/CIRCULAR LOGO DEEP PURPLE 1.png" alt="" style={{width:'100px',height:'100px'}} />
+    </div>
+      </div>
+      <div className='lg:p-16 p-10 w-full'>
+      <h3 className=' text-lg mb-5  lg:text-start text-center font-bold' style={{color:'#2E0853'}}>Get In Touch</h3>
+      <p  className='lg:text-start text-center font-medium py-2'>Contact Us Anytime, we are always available for you.</p>
+      <div className="flex flex-row justify-center lg:justify-start py-1">
+      <Icon icon="skill-icons:instagram" width='1.5rem' height='1.5rem' className='self-center mr-3'/>
+      <Icon icon="devicon:twitter" width='1.5rem' height='1.5rem' className='self-center mx-3'/>
+      <Icon icon="logos:google-gmail" width='2rem' height='2rem' className='self-center mx-3'/>
+      <Icon icon="logos:facebook" width='2rem' height='2rem' className='self-center mx-3'/>
+      <Icon icon="logos:whatsapp-icon" width='2rem' height='2rem' className='self-center mx-3'/>
+      </div>
+      <div className='hidden lg:flex flex-col justify-end self-center md:w-full my-16'>
+     <div className=' p-2 text-center lg:text-start '>Subscribe to Our Newsletter</div>
+    <div className='flex justify-center md:flex-row flex-col'>
       <div className='flex justify-center self-center font-medium text-xl mx-3'>
         <input type="text" value="Enter your email" />
       </div>
       <button className='flex justify-center self-center' style={{backgroundColor:'#c3c6c9',}}><h3 className='p-2 px-16 font-bold' style={{}}>Subscribe</h3></button>
     </div>
      </div>
-    <div className='flex mt-5 w-full pl-20 justify-end'>
+      </div>
+    </div>
+    <div className="justify-between px-10 lg:hidden">
+    <div className='flex flex-col justify-end self-center md:w-full'>
+     <div className=' p-2 text-center lg:text-start '>Subscribe to Our Newsletter</div>
+    <div className='flex justify-center md:flex-row flex-col'>
+      <div className='flex justify-center self-center font-medium text-xl mx-3'>
+        <input type="text" value="Enter your email" />
+      </div>
+      <button className='flex justify-center self-center my-5' style={{backgroundColor:'#c3c6c9',}}><h3 className='p-2 px-16 font-bold' style={{}}>Subscribe</h3></button>
+    </div>
+     </div>
+    <div className='flex mt-5 w-full justify-center lg:justify-end'>
     <div className='flex justify-center self-center px-3' style={{backgroundColor:'#2E0853'}}>
       <span className='text-md text-center flex self-center justify-center py-2 text-white'>SIGN UP/LOG IN</span>
       </div>
     </div>
-    <div className='w-full flex md:justify-center md:pl-20 sm:justify-center sm:pt-5 '>
+    <div className='w-full flex md:hidden justify-center pt-5 '>
       <img src="/assets/CIRCULAR LOGO DEEP PURPLE 1.png" alt="" style={{width:'100px',height:'100px'}} />
     </div>
     </div>
