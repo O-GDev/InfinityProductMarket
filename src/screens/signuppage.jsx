@@ -54,7 +54,7 @@ function Signuppage(props) {
     }
 
     return (
-        <div x>
+        <div className='text-[70%] md:text-[100%]'>
             <Productplacehome />
             <motion.div
             //   initial={{ opacity: 0.3, scale: 0.5 }}
