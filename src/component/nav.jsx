@@ -92,7 +92,7 @@ export default function Navbars() {
                                      opacity: 1
                                  }}
                                  transition={{ duration: 0.7, }}
-                                 className='font-primary font-bold text-center self-center w-2/3'>get paid by international companies
+                                 className='font-primary font-bold text-center self-center md:w-2/3'>get paid by international companies
                                  by rendering your skills an talents
                                  on INFINITY SERVICE PLACE </motion.p>
 
@@ -122,7 +122,7 @@ export default function Navbars() {
                                         <motion.h1
                                             className='text-4xl font-black text-center pt-16 self-center items-center' style={{  }}>
                                             SHOP LIKE A PRO, ALL IN ONE PLACE</motion.h1>
-                                        <p className='font-primary self-center text-center w-2/5'>Welcome to INFINITY MARKET PLACE, where you can
+                                        <p className='font-primary self-center text-center md:w-2/5'>Welcome to INFINITY MARKET PLACE, where you can
                                             effortlessly explore a wide range of services and products all in
                                             one convenient spot, revolutionizing your shopping journey.  </p>
                                     </motion.div>
@@ -133,7 +133,7 @@ export default function Navbars() {
                                         transition={{ duration: 1 }}
                                         className='flex flex-col justify-end h-full pl-4 mb-10 w-full'>
                                         <h1 className='text-2xl font-bold'>BECOME A SELLER</h1>
-                                        <h6 className=' w-2/6'>You can now sell your products at INFINITY PRODUCT PLACE,(IPP)
+                                        <h6 className=' md:w-2/6'>You can now sell your products at INFINITY PRODUCT PLACE,(IPP)
                                             also get paid for your Skills and Talents at INFINITY SERVICE PLACE, (ISP) </h6>
                                         
                                 
@@ -149,7 +149,7 @@ export default function Navbars() {
 
                         {/* Third Slide Text */}
                         {currentIndex == 2 &&
-                            <div style={{ opacity: content2Opacity }} className='relative self-end w-2/4 pl-4'>
+                            <div style={{ opacity: content2Opacity }} className='relative self-end md:w-2/4 pl-4'>
                                 <div className='font-primary text-white font-semibold '>
                                     <motion.h1
                                         initial={{ opacity: 0, x: -70 }}
