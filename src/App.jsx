@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Landingpage from './screens/landingpage';
 import {BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navmenu from './component/navmenu';
@@ -21,9 +21,13 @@ import Subscriptionoage from './screens/subscriptionoage';
 import { Payment } from './screens/payment';
 import Paymentdetails from './screens/paymentDetails';
 import store from './store';
-import { Provider } from 'react-redux';
+import { Provider, useDispatch } from 'react-redux';
+import BuyerSignin from './screens/BuyerSignin';
+import BuyerSignup from './screens/BuyerSignup';
+import Signinpage from './screens/signinpage';
 
 const App = () => {
+  
   return (
    <Provider store={store}>
     <div className='text-[100%] md:text-[100%]'>
@@ -49,9 +53,11 @@ const App = () => {
         <Route path='signup' element={<Signuppage />} />
         <Route path='subscribe' element={<Subscriptionoage />} />
         <Route path='signup' element={<Signuppage />} />
-        <Route path='signup' element={<Signuppage />} />
+        <Route path='signin' element={<Signinpage />} />
         <Route path='payment' element={<Payment />} />
         <Route path='paymentdetails' element={<Paymentdetails />} />
+        <Route path='buyersignin' element={<BuyerSignin />} />
+        <Route path='buyersignup' element={<BuyerSignup />} />
 
       </Routes>
       </BrowserRouter>

@@ -6,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import {BASE_URL} from '../component/url/url'
+import BuyerBackground from './buyerbackground';
 
 const BuyerSignup = ({props}) => {
     const navigate = useNavigate()
@@ -51,6 +52,8 @@ const BuyerSignup = ({props}) => {
         
     }
   return (
+    <div className='flex flex-col w-full h-full justify-center self-center align-middle'>
+        <BuyerBackground />
     <div className='text-[70%] md:text-[100%]'>
           <motion.div
               //   initial={{ opacity: 0.3, scale: 0.5 }}
@@ -66,7 +69,7 @@ const BuyerSignup = ({props}) => {
                                   <div className='pl-4 cursor-pointer' onClick={() => navigate('/choosesociety')}>
                                       <Icon icon="iconoir:cancel" width='1.2rem' height='1.2rem' />
                                   </div>
-                                  <div><span>Login</span> or <span className='underline'>Sign up</span></div>
+                                  <div><span className='cursor-pointer' onClick={()=>navigate('/buyersignin')}>Login</span> or <span className='underline cursor-pointer' onClick={()=>navigate('/buyersignup')}>Sign up</span></div>
                                   <div></div>
                               </div>
                               {/* <div className='w-full bg-black mb-4' style={{ height: '1px' }}
@@ -178,6 +181,7 @@ const BuyerSignup = ({props}) => {
               </div>
           </motion.div>
 
+    </div>
     </div>
   )
 }

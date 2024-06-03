@@ -248,7 +248,7 @@ className='flex w-full justify-center self-center'>
                 <img src='/assets/corporate-management-strategy-solution-branding-concept.jpg' id='' className='zoomImage' style={{ height: '400px', }} />
               </motion.div>
             </div>
-            <div className='w-full flex items-center'>
+            <div className='w-full flex justify-center items-center'>
               <div className='flex flex-col justify-center items-center self-center md:mx-0 mx-16'>
                 <motion.h2
                   variants={{
@@ -344,7 +344,7 @@ className='flex w-full justify-center self-center'>
         </div>
 
         <div>
-          <div className='lg:columns-2 flex flex-col lg:flex-row justify-center my-12 '>
+          <div className='lg:columns-2 flex flex-col lg:flex-row justify-center items-center my-12 '>
             <div className='md:w-full md:h-full flex justify-center scale-75 md:scale-100'>
               <motion.div
                 variants={{
@@ -365,7 +365,7 @@ className='flex w-full justify-center self-center'>
               </motion.div>
             </div>
             <div>
-              <div className='flex flex-col justify-self-center self-center md:mx-0 mx-16'>
+              <div className='flex flex-col justify-center items-center self-center md:mx-0 mx-16'>
                 <motion.h2
                   variants={{
                     hidden: { opacity: 0, y: 70 },
@@ -384,7 +384,7 @@ className='flex w-full justify-center self-center'>
                   initial="hidden"
                   whileInView="visible"
                   transition={{duration: 1,  }}
-                  className='md:px-16 text-center'>
+                  className='md:px-16 text-center self-center'>
                   Trust is the cornerstone of INFINITY MARKET PLACE. Rigorous verification protocols ensure the authenticity of creators and the security of every transaction.
                 </motion.p>
                 <motion.div
@@ -445,7 +445,7 @@ className='flex w-full justify-center self-center'>
       </div>
       <div>
         <div className='md:px-16'>
-        <div className='md:columns-4 gap-7 md:m-10 p-5 md:p-0 '>
+        <div className='md:columns-4 h-[70%] columns-2 md:gap-7 md:m-10 p-1 md:p-0 '>
           {topRatedData.map((topRated, index) => (
             <motion.div
               // variants={}
@@ -453,7 +453,7 @@ className='flex w-full justify-center self-center'>
               whileInView={{opacity : 1, y : 0}}
               transition={{ delay: 0.05 * index, duration : 0.5 * index }}
               key={index} 
-              className='py-3 lg:py-0 px-[10%] md:px-0'
+              className='py-3 lg:py-0 px-[2%] md:px-0'
               >
               <Cards image={topRated.image} pname={topRated.pname} pprice={topRated.pprice} rate={topRated.rate} radius='xl' width='100%' height='250px' />
             </motion.div>

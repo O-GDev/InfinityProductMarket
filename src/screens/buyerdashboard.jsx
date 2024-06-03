@@ -54,7 +54,7 @@ useEffect(()=>{
       slideRef.current.classList.add('fade-anim');
   }
   return (
-    <>
+    <div>
     <div className='absolute flex flex-col justify-center align-middle self-center'>
       {/* <LoggedinBuyerNav /> */}
 
@@ -493,7 +493,7 @@ useEffect(()=>{
     <Footers />
   </div>
   <Outlet />
-  </>
+  </div>
     )
 }
 

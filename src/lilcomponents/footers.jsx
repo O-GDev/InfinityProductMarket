@@ -15,11 +15,11 @@ const Footers = () => {
       </ul>
       <div className='hidden lg:flex flex-col justify-center self-center md:w-full h-48 '>
      <div className=' p-2 text-center lg:text-start '>Subscribe to Our Newsletter</div>
-    <div className='flex justify-start flex-col'>
-      <div className='flex justify-start self-start font-medium text-xl mb-2'>
-        <input type="text" value="Enter your email" />
+    <div className='flex w-10/12 justify-start flex-col'>
+      <div className='flex w-full justify-start self-start font-medium text-xl mb-2 bg-black'>
+        <input type="text" value="Enter your email" className='w-full flex' />
       </div>
-      <button className='flex justify-center self-start ' style={{backgroundColor:'#c3c6c9',}}><h3 className='p-2 px-20 font-bold' style={{}}>Subscribe</h3></button>
+      <button className='flex justify-center self-start w-full   ' style={{backgroundColor:'#c3c6c9',}}><h3 className='p-2 font-bold' style={{}}>Subscribe</h3></button>
     </div>
      </div>
       </div>

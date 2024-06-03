@@ -66,7 +66,7 @@ export default function BuyerBackground() {
     }
     return (
         <>
-            <div className='flex flex-col w-full h-full justify-center self-center align-middle' style={{ paddingBottom: 20, }}>
+            <div>
                
                 <div className='flex pt-20' style={{ height: "", }}>
                     <div ref={slideRef} className="select-none" style={{}}>
@@ -274,20 +274,7 @@ export default function BuyerBackground() {
                     </div>
                 </div>
                 <Footers />
-                {(() => {
-                    switch (currentUrl) {
-                        case 'signup':
-                            return <BuyerSignup handleClick={handleClick} />
-                        case 'subscribe':
-                            return <Subscriptionoage handleClick={handleClick} />
-                        case 'payment':
-                            return <Payment handleClick={handleClick} />
-                        case 'paymentdetails':
-                            return <Paymentdetails handleClick={handleClick} />
-                        default:
-                            return <BuyerSignup handleClick={handleClick} />
-                    }
-                })()}
+               
             </div>
             <Outlet />
         </>

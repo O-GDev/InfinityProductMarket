@@ -14,10 +14,10 @@ export default function Choosesociety() {
     <div className='absolute md:p-28 md:pt-0 flex flex-col justify-center align-middle self-center'>
       <div className='flex flex-col justify-center text-center px-4 '>
                     <div className='pl-10 pt-10 cursor-pointer' onClick={() => navigate('/')}  >
-         <Icon icon="lets-icons:arrow-left-long-light" width='2rem' height='2rem' />
+         <Icon icon="lets-icons:arrow-left-long-light" className='md:w-3 md: w-3' />
          </div>
-        <h2 className='py-2 font-bold text-lg'>IMP is a Societal Platform with two communities.</h2>
-        <h4 className='text-lg'>Select the community you which to thrive in.</h4>
+        <h2 className='py-2 font-bold md:text-lg'>IMP is a Societal Platform with two communities.</h2>
+        <h4 className='md:text-lg'>Select the community you which to thrive in.</h4>
       </div>
       <motion.div
         variants={{
@@ -165,7 +165,7 @@ className='flex w-full justify-center self-center'>
             </div>
             <div className=" md:px-20 pb-4">
               <div className="md:columns-2 flex md:flex-row flex-col h-full items-center w-full ">
-                <Link to={`/reg/${randb}`}>
+                <Link to="/buyersignup">
                   <div className='flex md:flex-col md:hover:flex-col-reverse hover:scale-110 items-center md:items-start w-full h-full md:p-5 px-5'>
                     <div className='w-full'>
                     <h4 className='font-bold text-lg'>Buyer</h4>
