@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link, Outlet } from 'react-router-dom'
-
+import { Icon } from '@iconify/react/dist/iconify.js'
 
 const Navmenu = ({index}) => {
   const [active, setActive] = useState(false) 
@@ -44,15 +44,18 @@ const Navmenu = ({index}) => {
     })
   }
   return (
-    <><div className='hidden md:inline bg-white '>
+    <><div className=' bg-white '>
       <nav className='bg-white text-black'>
-        <div className='flex px-10 py-1' style={{ justifyContent: 'space-between' }}>
-          <div className='flex flex-row'>
-            <img src='/assets/ICON DEEP PURPLE 1.png' style={{ width: '30px', height: '30px' }} />
-            <h3 className="font-primary font-semibold flex flex-row self-center justify-center pl-3">INFINITY MARKET PLACE</h3>
+        <div className='flex justify-between md:px-10 px-3 py-1' style={{ justifyContent: 'space-between' }}>
+          <div className='flex flex-row justify-center items-center'>
+            <img src='/assets/ICON DEEP PURPLE 1.png' className='w-3 h-3' style={{  }} />
+            <h3 className="font-primary font-semibold flex flex-row self-center justify-center pl-3 md:text-sm text-[60%]">INFINITY MARKET PLACE</h3>
+          </div>
+          <div>
+          <Icon icon="material-symbols-light:menu" />
           </div>
           {/* <div className=''> */}
-            <ul id='navbar' className="flex justify-between self-center">
+            <ul id='navbar' className="md:flex hidden justify-between self-center">
             <li onClick={handleClick} className='relative cursor-pointer pr-5 active'><Link to='/'>Home</Link> </li>
             <li onClick={handleClick} className='relative cursor-pointer pr-5 ' > <Link to='/services'>Services</Link> </li>
             <li onClick={handleClick} className='relative cursor-pointer pr-5 ' >About</li>

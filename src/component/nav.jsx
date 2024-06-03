@@ -64,7 +64,7 @@ export default function Navbars() {
                         {currentIndex == 1 &&
                          <div style={{ opacity: contentOpacity }} className=' flex flex-col self-center w-full justify-end right-0 '>
                          {/* <div className='font-primary text-white font-semibold text-right'> */}
-                         <div className="w-3/4 flex flex-col self-end">
+                         <div className="w-3/4 flex flex-col self-end px-4 md:px-0">
                              <motion.h1
                                  initial={{
                                      opacity: 0,
@@ -120,9 +120,9 @@ export default function Navbars() {
                                         whileInView={{ opacity: 1, y: 0,scale: 1 }}
                                         transition={{duration:1}} className='flex flex-col self-center h-full justify-center w-full'>
                                         <motion.h1
-                                            className='text-4xl font-black text-center pt-16 self-center items-center' style={{  }}>
+                                            className='md:text-[4xl] text-lg px-3  font-black text-center pt-16 self-center items-center' style={{  }}>
                                             SHOP LIKE A PRO, ALL IN ONE PLACE</motion.h1>
-                                        <p className='font-primary self-center text-center md:w-2/5'>Welcome to INFINITY MARKET PLACE, where you can
+                                        <p className='font-primary self-center text-center md:w-2/5 px-4 md:px-0'>Welcome to INFINITY MARKET PLACE, where you can
                                             effortlessly explore a wide range of services and products all in
                                             one convenient spot, revolutionizing your shopping journey.  </p>
                                     </motion.div>
@@ -149,7 +149,7 @@ export default function Navbars() {
 
                         {/* Third Slide Text */}
                         {currentIndex == 2 &&
-                            <div style={{ opacity: content2Opacity }} className='relative self-end md:w-2/4 pl-4'>
+                            <div style={{ opacity: content2Opacity }} className='relative self-end md:w-2/4 pl-4 px-4'>
                                 <div className='font-primary text-white font-semibold '>
                                     <motion.h1
                                         initial={{ opacity: 0, x: -70 }}
@@ -159,7 +159,7 @@ export default function Navbars() {
                                     <motion.p
                                         initial={{ opacity: 0, y:150 }}
                                         whileInView={{ opacity: 1, y: 0 }}
-                                        className='font-primary'>Infinity Product Place was created with the aim of creating quality,
+                                        className='font-primary '>Infinity Product Place was created with the aim of creating quality,
                                         trust and authenticity in today’s business world. What set us aside
                                         is our emphasis on quality over quantity, Business legitimacy and
                                         most importantly business branding. These values have been
