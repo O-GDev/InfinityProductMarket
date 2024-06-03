@@ -3,7 +3,7 @@ import React from 'react'
 export default function Cards({ image, opa, pname, pprice, rate, padin, radius,width, height }) {
   return (
     <div className='relative flex bg-transparent justify-center' >
-      <img src={image} style={{ height: height, width: width, padding: padin }} className={`rounded-${radius} lg:h-${height} lg:w-${width}, aspect-square`} />
+      <img src={image} style={{padding: padin }} className={`rounded-${radius} lg:h-${height} lg:w-${width} aspect-square`} />
 <div className='absolute p-1 w-full self-end'>
 <div className=' bg-white h-24 rounded-md px-2 flex flex-col justify-between' style={{opacity:opa}} >
   <div>    

@@ -53,16 +53,16 @@ export default function Navbars() {
 
     return (
         <div className='text-[70%] md:text-[100%] ' style={{  }}>
-               <div ref={slideRef} className='select-none w-full'>
-                <div  className=" w-full h-[70vh] flex justify-center items-center bg-cover bg-no-repeat bg-center" style={{backgroundImage:`url(${sliderImage[currentIndex]})`,
+               <div ref={slideRef} className='select-none w-full h-fit'>
+                <div  className=" w-full h-[700px] flex justify-center items-center bg-cover bg-no-repeat bg-center" style={{backgroundImage:` linear-gradient(180deg,rgba(252, 252, 250,0.4),rgba(0,0,0,0.8)),url(${sliderImage[currentIndex]})`,
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",}}>
-                <div className='absolute w-full text-white h-full' >
+                <div className=' w-full text-white h-full flex justify-center' >
                     {/* <Navmenu /> */}
-                    <div className='flex self-end pb-10 w-full h-full'>
+                    <div className='flex self-end w-full h-full'>
                         {/* First Slide Text */}
                         {currentIndex == 1 &&
-                         <div style={{ opacity: contentOpacity }} className='relative flex flex-col self-center w-full justify-end right-0 '>
+                         <div style={{ opacity: contentOpacity }} className=' flex flex-col self-center w-full justify-end right-0 '>
                          {/* <div className='font-primary text-white font-semibold text-right'> */}
                          <div className="w-3/4 flex flex-col self-end">
                              <motion.h1
@@ -113,16 +113,16 @@ export default function Navbars() {
 
                         {/* Second Slide Text */}
                         {currentIndex == 0 &&
-                            <div style={{ opacity: content1Opacity}} className='relative flex justify-center self-center w-full'>
-                                <div className='font-primary text-white font-semibold w-full flex flex-col justify-center self-center h-full'>
+                            <div style={{ opacity: content1Opacity}} className='relative flex justify-center self-center w-full h-full'>
+                                <div className='font-primary text-white font-semibold w-full flex flex-col items-center justify-center self-center h-full'>
                                     <motion.div
                                         initial={{ opacity: 0, y: 70,scale: 0.9 }}
                                         whileInView={{ opacity: 1, y: 0,scale: 1 }}
-                                        transition={{duration:1}} className='flex flex-col self-center h-full justify-center'>
+                                        transition={{duration:1}} className='flex flex-col self-center h-full justify-center w-full'>
                                         <motion.h1
-                                            className='text-4xl font-black text-center self-center' style={{ paddingTop: "10%" }}>
+                                            className='text-4xl font-black text-center pt-16 self-center items-center' style={{  }}>
                                             SHOP LIKE A PRO, ALL IN ONE PLACE</motion.h1>
-                                        <p className='font-primary self-center text-center mb-20 w-2/5'>Welcome to INFINITY MARKET PLACE, where you can
+                                        <p className='font-primary self-center text-center w-2/5'>Welcome to INFINITY MARKET PLACE, where you can
                                             effortlessly explore a wide range of services and products all in
                                             one convenient spot, revolutionizing your shopping journey.  </p>
                                     </motion.div>
@@ -131,7 +131,7 @@ export default function Navbars() {
                                         initial={{opacity:0, y: -70, scale: 0.5 }}
                                         whileInView={{ opacity: 1, y: 0, scale: 1 }}
                                         transition={{ duration: 1 }}
-                                        className='flex flex-col justify-end h-full pl-4 mb-10'>
+                                        className='flex flex-col justify-end h-full pl-4 mb-10 w-full'>
                                         <h1 className='text-2xl font-bold'>BECOME A SELLER</h1>
                                         <h6 className=' w-2/6'>You can now sell your products at INFINITY PRODUCT PLACE,(IPP)
                                             also get paid for your Skills and Talents at INFINITY SERVICE PLACE, (ISP) </h6>
@@ -149,7 +149,7 @@ export default function Navbars() {
 
                         {/* Third Slide Text */}
                         {currentIndex == 2 &&
-                            <div style={{ opacity: content2Opacity }} className='relative self-center w-2/4 pl-4'>
+                            <div style={{ opacity: content2Opacity }} className='relative self-end w-2/4 pl-4'>
                                 <div className='font-primary text-white font-semibold '>
                                     <motion.h1
                                         initial={{ opacity: 0, x: -70 }}

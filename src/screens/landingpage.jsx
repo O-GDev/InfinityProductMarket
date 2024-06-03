@@ -490,9 +490,9 @@ className='flex w-full justify-center self-center'>
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.05 * index, duration: 0.5 * index }}
                 key={index}
-                className='flex justify-center'
+                className='flex justify-center p-12'
               >
-                <Cards image={professionals.image} opa='0' padin={15} radius='full' width='250px' height='250px' />
+                <Cards image={professionals.image} opa='0' padin={15} radius='full' width='' height='' />
                      
 
               </motion.div>
