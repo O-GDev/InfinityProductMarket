@@ -54,7 +54,7 @@ export default function Navbars() {
     return (
         <div className='text-[70%] md:text-[100%] ' style={{  }}>
                <div ref={slideRef} className='select-none w-full h-fit'>
-                <div  className=" w-full h-[700px] flex justify-center items-center bg-cover bg-no-repeat bg-center" style={{backgroundImage:` linear-gradient(180deg,rgba(252, 252, 250,0.4),rgba(0,0,0,0.8)),url(${sliderImage[currentIndex]})`,
+                <div  className=" w-full h-[600px] flex justify-center items-center bg-cover bg-no-repeat bg-center" style={{backgroundImage:` linear-gradient(180deg,rgba(252, 252, 250,0.4),rgba(0,0,0,0.8)),url(${sliderImage[currentIndex]})`,
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",}}>
                 <div className=' w-full text-white h-full flex justify-center' >
@@ -120,7 +120,7 @@ export default function Navbars() {
                                         whileInView={{ opacity: 1, y: 0,scale: 1 }}
                                         transition={{duration:1}} className='flex flex-col self-center h-full justify-center w-full'>
                                         <motion.h1
-                                            className='md:text-[4xl] text-lg px-3  font-black text-center pt-16 self-center items-center' style={{  }}>
+                                            className='md:text-4xl text-lg px-3  font-black text-center pt-16 self-center items-center' style={{  }}>
                                             SHOP LIKE A PRO, ALL IN ONE PLACE</motion.h1>
                                         <p className='font-primary self-center text-center md:w-2/5 px-4 md:px-0'>Welcome to INFINITY MARKET PLACE, where you can
                                             effortlessly explore a wide range of services and products all in

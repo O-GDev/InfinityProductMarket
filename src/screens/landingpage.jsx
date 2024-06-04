@@ -227,7 +227,7 @@ className='flex w-full justify-center self-center'>
         </motion.div>
        <div className=''>
        <div>
-          <div className='lg:columns-2 flex flex-col lg:flex-row justify-center my-12 scale-85 md:scale-100'>
+          <div className='lg:columns-2 flex flex-col lg:flex-row justify-center my-12 text-[90%] '>
             <div className='md:w-full md:h-full  flex justify-center scale-75 md:scale-100'>
               <motion.div
                 variants={{
@@ -249,7 +249,7 @@ className='flex w-full justify-center self-center'>
               </motion.div>
             </div>
             <div className='w-full flex justify-center items-center'>
-              <div className='flex flex-col justify-center items-center self-center md:mx-0 mx-16'>
+              <div className='flex flex-col justify-center items-center self-center px-5 '>
                 <motion.h2
                   variants={{
                     hidden: { opacity: 0, y: 70 },
@@ -267,7 +267,7 @@ className='flex w-full justify-center self-center'>
                   initial="hidden"
                   whileInView="visible"
                   transition={{duration: 1,  }}
-                  className='md:px-16 text-center self-center'>Check out our top notch professionals in different fields  of creativity all across the world. </motion.p>
+                  className='md:px-16 px-4 text-center self-center'>Check out our top notch professionals in different fields  of creativity all across the world. </motion.p>
                 <motion.div
                   variants={{
                     hidden: { opacity: 0, y: 50 },
@@ -286,9 +286,9 @@ className='flex w-full justify-center self-center'>
           </div>
         </div>
         <div>
-          <div className='lg:columns-2 flex flex-col lg:flex-row justify-center my-12 '>
+          <div className='lg:columns-2 flex flex-col lg:flex-row justify-center my-12 text-[90%]  '>
             <div className='flex w-full items-center'>
-              <div className='flex flex-col justify-center self-center md:mx-0 mx-16'>
+              <div className='flex flex-col justify-center self-center '>
                 <motion.h2
                   variants={{
                     hidden: { opacity: 0, y: 70 },
@@ -306,7 +306,7 @@ className='flex w-full justify-center self-center'>
                   initial="hidden"
                   whileInView="visible"
                   transition={{duration: 1,  }}
-                  className='md:px-16 text-center'>More than an e-commerce platform, we are a thriving community. INFINITY MARKET PLACE serves as a meeting ground for creators, connoisseurs, and those who appreciate the finer things in life.</motion.p>
+                  className='md:px-16 px-9 text-center'>More than an e-commerce platform, we are a thriving community. INFINITY MARKET PLACE serves as a meeting ground for creators, connoisseurs, and those who appreciate the finer things in life.</motion.p>
                 <motion.div
                   variants={{
                     hidden: { opacity: 0, y: 50 },
@@ -344,7 +344,7 @@ className='flex w-full justify-center self-center'>
         </div>
 
         <div>
-          <div className='lg:columns-2 flex flex-col lg:flex-row justify-center items-center my-12 '>
+          <div className='lg:columns-2 flex flex-col lg:flex-row justify-center items-center my-12 text-[90%]  '>
             <div className='md:w-full md:h-full flex justify-center scale-75 md:scale-100'>
               <motion.div
                 variants={{
@@ -365,7 +365,7 @@ className='flex w-full justify-center self-center'>
               </motion.div>
             </div>
             <div>
-              <div className='flex flex-col justify-center items-center self-center md:mx-0 mx-16'>
+              <div className='flex flex-col justify-center items-center self-center'>
                 <motion.h2
                   variants={{
                     hidden: { opacity: 0, y: 70 },
@@ -384,7 +384,7 @@ className='flex w-full justify-center self-center'>
                   initial="hidden"
                   whileInView="visible"
                   transition={{duration: 1,  }}
-                  className='md:px-16 text-center self-center'>
+                  className='md:px-16 px-9 text-center self-center'>
                   Trust is the cornerstone of INFINITY MARKET PLACE. Rigorous verification protocols ensure the authenticity of creators and the security of every transaction.
                 </motion.p>
                 <motion.div
