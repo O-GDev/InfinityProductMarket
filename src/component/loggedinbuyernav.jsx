@@ -94,7 +94,7 @@ const LoggedinBuyerNav = () => {
 {/* <!-- Dropdown menu --> */}
 
 
-          <Link to=''> <li className='inline pl-5 pr-2 font-primary font-semibold'>  
+           <li className='inline pr-2 font-primary font-semibold'>  
              {/* {sellername} */}
              </li>
               <li ref={menuRef} className="inline" style={{}}> 
@@ -195,7 +195,6 @@ const LoggedinBuyerNav = () => {
 }
 
          </li>
-         </Link>
 
 
          </ul>

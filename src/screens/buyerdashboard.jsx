@@ -66,7 +66,7 @@ useEffect(()=>{
      
     </div>
         <div className='p-10'>
-          <div className='flex p-4 px-10 rounded-3xl bg-white shadow-lg'>
+          <div className='hidden md:flex p-4 px-10 rounded-3xl bg-white shadow-lg'>
             <div className='flex flex-row'>
               {/* <img src='/assets/store 1.png' style={{height:50,width:50}} /> */}
               <div>
@@ -131,43 +131,35 @@ useEffect(()=>{
       </div>
     </div> */}
 
-        <div >
+        <div className=''>
           <div className=''>
-            <div className='md:columns-2 md:flex gap-8 w-full h-full p-5'>
-              <div className='w-full bg-white rounded-2xl shadow-md p-5'>
+            <div className='md:columns-2 md:flex w-full h-full'>
+              <div className='w-full bg-white rounded-2xl shadow-md p-5 m-5'>
                 <div className='flex flex-row justify-between px-0'>
                   <h3 className='font-semibold'>TOP RATED</h3>
                   <h3 >View All</h3>
                 </div>
+                <div className='md:flex flex-col'>
+                  
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 1, delay: 0.23 }}
-                  className='md:columns-3 pt-2'>
+                  className='md:columns-3 md:block'>
+                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
                   <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
                   <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
                   <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
                 </motion.div>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 1, delay: 0.23 }}
-                  className='md:columns-3 pt-2'>
-                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 1, delay: 0.23 }}
-                  className='md:columns-3 pt-2'>
-                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                  <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                </motion.div>
+                </div>
+           
               </div>
-              <div className='w-full bg-white rounded-2xl shadow-md p-5 md:mt-0 mt-5 '>
+              <div className='w-full bg-white rounded-2xl shadow-md p-5 m-5 '>
                 <div className='flex justify-center mx-6' style={{ backgroundColor: `rgba(130, 72, 187,0.8)` }}>
                   <h5 className='text-white p-3' style={{}}>Top Brands and Merchants</h5>
                 </div>
@@ -293,18 +285,18 @@ useEffect(()=>{
 </div> */}
 
 <div className='flex flex-row h-20 justify-between bg-white'>
-      <div className='flex rounded-br-3xl' style={{backgroundColor:'#ab5ae0'}}>
+      <div className='flex rounded-br-3xl w-full' style={{backgroundColor:'#ab5ae0'}}>
       <div className='flex justify-center self-center' >
-        <span className='text-white text-center p-2'>connect with <br /> foreign manufacturers</span>
+        <span className='text-white text-center p-2 text-[70%] md:text-sm'>connect with <br /> foreign manufacturers</span>
       </div>
       </div>
-      <div className='flex flex-col justify-center self-center'>
-        <h3 className='font-extrabold text-center' style={{color:'#33363F'}}>THIS FEATURE IS COMING SOON</h3>
-        <h6 className='font-bold text-center text-sm'>Africa is the continent with highest demand on commodity</h6>
-        <h5 className='font-bold' style={{color:'#33363F'}}>Contend, cooperate or partner with the world giant here on IPP </h5>
+      <div className='flex flex-col justify-center self-center w-full pl-3'>
+        <h3 className='font-extrabold text-center text-[60%] md:text-sm' style={{color:'#33363F'}}>THIS FEATURE IS COMING SOON</h3>
+        <h6 className='font-bold text-center text-[45%] md:text-sm'>Africa is the continent with highest demand on commodity</h6>
+        <h5 className='font-bold text-[45%] md:text-sm' style={{color:'#33363F'}}>Contend, cooperate or partner with the world giant here on IPP </h5>
       </div>
-      <div className='flex justify-center self-center pr-20'>
-        <h5 className='font-semibold' style={{color:'#ab5ae0'}}>Become a supplier</h5>
+      <div className='flex justify-center self-center md:pr-20 w-full'>
+        <h5 className='font-semibold text-[70%] md:text-sm' style={{color:'#ab5ae0'}}>Become a supplier</h5>
       </div>
 
      

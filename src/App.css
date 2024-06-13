@@ -12,7 +12,12 @@
       13, 0.4));
     /* opacity: 0.3; */
   }
-  
+.selected{
+  border-width: 2px;
+  border-color: #702EB2;
+  border-radius: 15px;
+  padding: 2px;
+}
 .container{
   padding-left: 5%;
   padding-right: 5%;

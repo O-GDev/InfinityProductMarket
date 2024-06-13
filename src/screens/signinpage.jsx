@@ -17,14 +17,16 @@ function Signinpage(props) {
     const[error, setError] = useState(false)
     const[message, setMessage] = useState(false)
     const[data, setData] = useState("")
+    
+  const token = JSON.parse(localStorage.getItem("token"))
 
 
     const handleSellerSignin = async(role)=>{
         if (email =="" || password==""){
-            //  setError(true)
-             navigate('/sellerdashboard')
+             setError(true)
+            //  navigate('/sellerdashboard')
         }else{ 
-            await fetch(`${BASE_URL}/registration`,{
+            await fetch(`${BASE_URL}/logInUsers`,{
                 method: 'POST',
                 body: JSON.stringify({
                     "email":email,
@@ -37,32 +39,20 @@ function Signinpage(props) {
             }).then(res => res.json())
             .then(data => setData(data))
             setError(false)
-            console.log(data)
-            if(data.status == 200 ){
-                await fetch(`${BASE_URL}/logInUsers`,{
-                    method: 'POST',
-                    body: JSON.stringify({
-                        "email": email,
-                        "password":password
-                    }),
-                    headers:{
-                        "Content-Type":"application/json"
-                    }
-                }).then(res => res.json()
-            .then(logData =>{
-                if(logData.status == 200){
-                    setAccsess
+            // console.log(data)
+            
+                if(data.status == 200){
                     navigate('/sellerdashboard')
-                }
-            }
-            ))
-            }else{
-            setMessage(data.message)
-        }
+                    console.log(data.token.access_token)
+                    localStorage.setItem("token", JSON.stringify(data.token.access_token))
+                    setError(false)
+                }else{
+                    setMessage(data.message)
+                
+            }}
        
 }
         
-    }
 
     return (
         <div className='text-[70%] md:text-[100%]'>
@@ -132,7 +122,7 @@ function Signinpage(props) {
                                     </div>
 
                                 <div className='py-4 md:px-40 '>
-                                        <div onClick={() => handleSellerSignin("seller")} className='flex justify-center self-center rounded-2xl bg-transparent border' style={{ borderColor: '#702EB2' }}>
+                                        <div onClick={() => handleSellerSignin("seller")} className='flex justify-center self-center rounded-2xl bg-transparent border cursor-pointer' style={{ borderColor: '#702EB2' }}>
                                             <h4 className='m-1 font-semibold' style={{ color: '#702EB2' }}>Sign In</h4>
                                         </div>
                                 </div>

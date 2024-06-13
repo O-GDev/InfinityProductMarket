@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Landingpage from './screens/landingpage';
 import {BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navmenu from './component/navmenu';
@@ -25,40 +25,58 @@ import { Provider, useDispatch } from 'react-redux';
 import BuyerSignin from './screens/BuyerSignin';
 import BuyerSignup from './screens/BuyerSignup';
 import Signinpage from './screens/signinpage';
+import BuyersAside from './lilcomponents/dicaside';
 
 const App = () => {
+  const [token, setToken] = useState("")
+  useEffect(() =>{    
+  setToken(JSON.parse(localStorage.getItem("token")))
+  })
   
   return (
    <Provider store={store}>
     <div className='text-[100%] md:text-[100%]'>
        <BrowserRouter>
-       <ShowNavBar>        
+       {token ?     
+      <><LoggedinBuyerNav />
+      {/* <LoggedinNav /> */}
+      </>:
+      <>
+      <ShowNavBar>        
     <Navmenu />
-       </ShowNavBar>       
-      {/* <LoggedinBuyerNav />
-      <LoggedinNav /> */}
+       </ShowNavBar> 
+       </> 
+       
+       } 
         <Routes>
-          <Route path='/' element={<Landingpage />} />
-        <Route path='nav' element={<Navmenu />} />
-        <Route path='choosesociety' element={<Choosesociety />} />
-        <Route path='reg/:id' element={<BuyerBackground />} />        
-        <Route path='sreg/:id' element={<Productplacehome/>} />
-        <Route path='buyerdashboard' element={<BuyerDashboard />} />
-        <Route path='sellerdashboard' element={<SellerDashboard/> }/>
-        <Route path='todaydeal' element={<Todaydeal />} />
-        <Route path='discovery' element={<Discovery />} />
-        <Route path='myprofile' element={<Aside />} />
-        <Route path='marketing' element={<Marketing />} />
-        <Route path='sellersprofile' element={<Sellersprofile />} />
-        <Route path='signup' element={<Signuppage />} />
-        <Route path='subscribe' element={<Subscriptionoage />} />
-        <Route path='signup' element={<Signuppage />} />
-        <Route path='signin' element={<Signinpage />} />
-        <Route path='payment' element={<Payment />} />
-        <Route path='paymentdetails' element={<Paymentdetails />} />
-        <Route path='buyersignin' element={<BuyerSignin />} />
-        <Route path='buyersignup' element={<BuyerSignup />} />
-
+          {token ? 
+          <>
+          <Route path='sellerdashboard' element={<SellerDashboard/> }/>
+          <Route path='todaydeal' element={<Todaydeal />} />
+          <Route path='discovery' element={<Discovery />} />
+          <Route path='myprofile' element={<Aside />} />
+          <Route path='buyerprofile' element={<BuyersAside />} />
+          <Route path='marketing' element={<Marketing />} />
+          <Route path='sellersprofile' element={<Sellersprofile />} />
+          <Route path='buyerdashboard' element={<BuyerDashboard />} />
+          </>
+      :
+      <>
+    <Route path='choosesociety' element={<Choosesociety />} />
+      <Route path='/' element={<Landingpage />} />
+    <Route path='nav' element={<Navmenu />} />
+    <Route path='reg/:id' element={<BuyerBackground />} />        
+    <Route path='sreg/:id' element={<Productplacehome/>} />
+      <Route path='signup' element={<Signuppage />} />
+      <Route path='subscribe' element={<Subscriptionoage />} />
+      <Route path='signup' element={<Signuppage />} />
+      <Route path='signin' element={<Signinpage />} />
+      <Route path='payment' element={<Payment />} />
+      <Route path='paymentdetails' element={<Paymentdetails />} />
+      <Route path='buyersignin' element={<BuyerSignin />} />
+      <Route path='buyersignup' element={<BuyerSignup />} />
+      </>
+}
       </Routes>
       </BrowserRouter>
     

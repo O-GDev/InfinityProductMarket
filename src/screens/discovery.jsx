@@ -1,12 +1,14 @@
 import React from 'react'
 import LoggedinNav from '../component/loggedinnav'
 import Footers from '../lilcomponents/footers'
+import BuyersAside from '../lilcomponents/dicaside'
 
 export default function Discovery() {
   return (
     <div>
+      <BuyersAside />
       {/* <LoggedinNav /> */}
-      <div className='pt-20 '>
+      {/* <div className='pt-20 '>
         <img src='/assets/nav.png' className='flex w-full' />
       </div>
       <div className='flex justify-center items-center'>
@@ -37,9 +39,9 @@ export default function Discovery() {
             <span className='p-2 rounded-xl absolute right-7 text-white font-bold' style={{backgroundColor:'#702EB2',position:'  '}}>Join ISP</span>
          
             </div>
-      </div>
+      </div> */}
      
-    <Footers />
+    {/* <Footers /> */}
     </div>
   )
 }

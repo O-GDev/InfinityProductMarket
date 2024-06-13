@@ -19,6 +19,7 @@
     "react": "^18.2.0",
     "react-custom-scroll": "^7.0.0",
     "react-dom": "^18.2.0",
+    "react-loading-indicator": "^1.0.2",
     "react-redux": "^9.1.2",
     "react-responsive": "^10.0.0",
     "react-responsive-carousel": "^3.2.23",

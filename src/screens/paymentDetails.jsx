@@ -1,11 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Icon } from '@iconify/react/dist/iconify.js';
 import { Checkbox } from 'flowbite-react';
 import Sidecarousel from '../lilcomponents/sidecarousel';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Productplacehome from './productplacehome';
 
 export default function Paymentdetails(props) {
+  const [accNumber, setAccNumber] = useState()
+  const [accName, setAccName] = useState()
+  const [bankName, setBankName] = useState()
+  const [cardNumber, setCardNumber] = useState()
+  const [cvv, setCvv] = useState()
+  const [expDate, setExpDate] = useState()
+  const [error, setError] = useState(false)
+  const navigate = useNavigate()
+
+  const handleClick = () =>{
+    if(accName ==""||accNumber ==""||bankName ==""||cardNumber==""||cvv==""||expDate==""){
+      setError(true)
+    }else{
+      setError(false)
+      navigate("/sellerdashboard")
+    }
+  } 
   return (
     <div className='absolute flex flex-col w-full full'>
       <Productplacehome />
@@ -27,44 +44,42 @@ export default function Paymentdetails(props) {
   <div className="md:px-10">
   <div className='my-2 md:px-3 md:my-0 md:pt-9'>
                               <h5 className='font-md flex justify-start'>Account Number<span style={{color:'#D69999'}}>*</span></h5>
-                              <input name='fName' className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full' style={{}}  />
+                              <input name='accNumber' onClick={(e) => setAccNumber(e.target.value)} className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full' style={{}}  />
                           </div>
   
                           <div className='my-2 md:px-3 md:my-0'>
                               <h5 className='font-md flex justify-start'>Account Name<span style={{color:'#D69999'}}>*</span></h5>
-                              <input name='fName' className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full' style={{}}  />
+                              <input name='accName' onClick={(e) => setAccName(e.target.value)} className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full' style={{}}  />
                           </div>
   
                           <div className='my-2 md:px-3 md:my-0'>
                               <h5 className='font-md flex justify-start'>Bank Name<span style={{color:'#D69999'}}>*</span></h5>
-                              <input name='fName' className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full' style={{}}  />
+                              <input name='bankName' onClick={(e) => setBankName(e.target.value)} className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full' style={{}}  />
                           </div>
   
                           <div className='my-2 md:px-3 md:my-0'>
                               <h5 className='font-md flex justify-start'>Card Number<span style={{color:'#D69999'}}>*</span></h5>
-                              <input name='fName' className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full' style={{}}  />
+                              <input name='cardNumber' onClick={(e) => setCardNumber(e.target.value)} className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full' style={{}}  />
                           </div>
   
                           <div className='flex gap-3 justify-between md:my-0 w-full '>
                           <div className='w-48 md:px-3 flex flex-col'>
                               <h5 className='font-md w-full'>Expiry&nbsp; Date<span style={{color:'#D69999'}}>*</span></h5>
-                              <input name='fName' className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full ' style={{}}  />
+                              <input name='expDate' onClick={(e) => setExpDate(e.target.value)} className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full ' style={{}}  />
                           </div>
          
                         <div className='w-48 md:px-3  md:my-0'>
                         <h5 className='font-md'>CVV<span style={{color:'#D69999'}}>*</span></h5>
-                        <input name='fName' className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full ' style={{}}  />
+                        <input name='cvv' onClick={(e) => setCvv(e.target.value)} className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full ' style={{}}  />
                         </div>
                     </div>
   </div>
       
                     </div>
 
-<Link to='/sellerdashboard' >
-<div className='flex justify-center self-center mt-8'>
+<div className='flex justify-center self-center mt-8 cursor-pointer' onClick={handleClick}>
 <div className='p-3'style={{marginTop:0.5, color:'#702EB2',borderWidth:0.5,borderColor:'#702EB2'}}>CONTINUE</div>
 </div>
-</Link>
           </div>
          <div className=' w-full md:flex hidden'>
           <Sidecarousel />

@@ -35,6 +35,10 @@ const LoggedinNav = () => {
       })
     })
   }
+  const logout = () =>{
+    localStorage.removeItem("token")
+    navigate('/')
+  }
 
 // const open = event.target.classList.add('hidden');
    
@@ -52,9 +56,9 @@ const LoggedinNav = () => {
           <input placeholder='Search for brands or categories' className='text-sm outline-none pl-1 w-full font-sembold rounded-md' /></div>
           </div>
           <ul id='navbar' className="flex items-center justify-between">
-          <li className="relative pr-5 font-primary font-semibold active"  onClick={handleClick}><Link to='/'>Store</Link> </li>
-          <li className="relative pr-5 font-primary font-semibold "  onClick={handleClick}> <Link to='/todaydeal'>Analysis</Link> </li>
-          <li className="relative pr-5 font-primary font-semibold "  onClick={handleClick}><Link to='/discovery'>Discovery</Link></li>
+          <li className="relative pr-5 font-primary font-semibold active"  onClick={handleClick}><Link to='/sellerdashboard'>Store</Link> </li>
+          {/* <li className="relative pr-5 font-primary font-semibold "  onClick={handleClick}> <Link to='/todaydeal'>Analysis</Link> </li> */}
+          {/* <li className="relative pr-5 font-primary font-semibold "  onClick={handleClick}><Link to='/discovery'>Discovery</Link></li> */}
           {/* <li className="relative pr-5 font-primary font-semibold " onClick={handleClick}><Link to='/marketing'>Marketing</Link></li>
           <li className="relative pr-5 font-primary font-semibold " onClick={handleClick}><Link to=''>Store</Link></li>
           <li className="relative font-primary font-semibold " onClick={handleClick}><Link to=''>Cart</Link></li> */}
@@ -70,7 +74,7 @@ const LoggedinNav = () => {
 {/* <!-- Dropdown menu --> */}
 
 
-          <Link to=''> <li className='inline pl-5 pr-2 font-primary font-semibold'>  
+           <li className='inline pr-2 font-primary font-semibold'>  
              {/* {sellername} */}
              </li>
               <li ref={menuRef} className="inline" style={{}}> 
@@ -127,7 +131,7 @@ const LoggedinNav = () => {
                 
               </div>
             </li>
-            <li className='py-2'>
+            <li className='py-2' onMouseDown={() => logout()}>
               <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Log out</a>
             </li>
     </ul>
@@ -135,7 +139,6 @@ const LoggedinNav = () => {
 }
 
          </li>
-         </Link>
 
 
          </ul>

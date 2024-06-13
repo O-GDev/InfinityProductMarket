@@ -25,7 +25,7 @@ const BuyerSignin = ({props}) => {
         if ( email =="" || password=="" ){
              setError(true)
         }else{ 
-            await fetch(`${BASE_URL}/registration`,{
+            await fetch(`${BASE_URL}/logInUsers`,{
                 method: 'POST',
                 body: JSON.stringify({
                     "email":email,
@@ -40,6 +40,7 @@ const BuyerSignin = ({props}) => {
             setError(false)
             console.log(data)
             if(data.status == 200 ){
+                localStorage.setItem("token", JSON.stringify(data.token.access_token))
                 navigate("/buyerdashboard") 
                 setMessage(data.message)
             }else{

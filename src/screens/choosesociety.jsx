@@ -73,7 +73,7 @@ export default function Choosesociety() {
                 className='w-full flex'
               >
 
-                <img src='/assets/IMG_9517.JPG' className='rounded-xl h-[300px] w-[400px] flex ' style={{}} />
+                <img src='/assets/IMG_9517.JPG' className='rounded-xl h-[300px] md:h-full w-[400px] flex ' style={{}} />
                 
               </motion.div>
              </div>
@@ -123,7 +123,7 @@ className='flex w-full justify-center self-center'>
                 className='w-full'
               >
                 
-              <img src='/assets/medium-shot-woman-posing-studio.jpg' className='rounded-xl h-[300px] w-[400px] flex' style={{}} />
+              <img src='/assets/medium-shot-woman-posing-studio.jpg' className='rounded-xl h-[300px] md:h-full w-[400px] flex' style={{}} />
               </motion.div>
 
 

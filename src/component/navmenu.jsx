@@ -4,6 +4,7 @@ import { Icon } from '@iconify/react/dist/iconify.js'
 
 const Navmenu = ({index}) => {
   const [active, setActive] = useState(false) 
+  const [isOpen, setIsOpen] = useState(false)
 
   let nqv = [
     {
@@ -48,12 +49,23 @@ const Navmenu = ({index}) => {
       <nav className='bg-white text-black'>
         <div className='flex justify-between md:px-10 px-3 py-1' style={{ justifyContent: 'space-between' }}>
           <div className='flex flex-row justify-center items-center'>
-            <img src='/assets/ICON DEEP PURPLE 1.png' className='w-3 h-3' style={{  }} />
-            <h3 className="font-primary font-semibold flex flex-row self-center justify-center pl-3 md:text-sm text-[60%]">INFINITY MARKET PLACE</h3>
+            <img src='/assets/ICON DEEP PURPLE 1.png' className='w-5 h-5' style={{  }} />
+            <h3 className="font-primary font-semibold flex flex-row self-center justify-center pl-3 md:text-sm text-[100%]">INFINITY MARKET PLACE</h3>
           </div>
-          <div>
+          <div className='flex justify-center self-center md:hidden cursor-pointer' onClick={() => setIsOpen(!isOpen) }>
           <Icon icon="material-symbols-light:menu" />
           </div>
+         {isOpen &&
+          <div className=' absolute right-5 bg-white rounded-md shadow-sm z-50 top-5 p-2 px-3'>
+          <ul id='navbar' className="flex flex-col relative md:hidden justify-between self-center top-0 right-0">
+            <li onClick={handleClick} className='relative p-5 cursor-pointer pr-10'><Link to='/'>Home</Link> </li>
+            <li onClick={handleClick} className='relative p-5 cursor-pointer pr-10 ' > <Link to='/services'>Services</Link> </li>
+            <li onClick={handleClick} className='relative p-5 cursor-pointer pr-10 ' >About</li>
+            <li onClick={handleClick} className='relative p-5 cursor-pointer pr-10 ' >Contact Us</li>
+            <li onClick={handleClick} className='relative p-5 cursor-pointer pr-10 ' >Login/Signup</li>
+            </ul>
+          </div>
+          }
           {/* <div className=''> */}
             <ul id='navbar' className="md:flex hidden justify-between self-center">
             <li onClick={handleClick} className='relative cursor-pointer pr-5 active'><Link to='/'>Home</Link> </li>

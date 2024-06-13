@@ -125,7 +125,7 @@ const landingpage = () => {
                 className='w-full flex justify-center'
               >
 
-                <img src='/assets/IMG_9517.JPG' className='rounded-xl h-[300px] w-[400px] flex self-center' style={{}} />
+                <img src='/assets/IMG_9517.JPG' className='rounded-xl h-[300px] md:h-full w-[400px] flex self-center' style={{}} />
                 
               </motion.div>
              </div>
@@ -175,7 +175,7 @@ className='flex w-full justify-center self-center'>
                 className='w-full flex justify-center'
               >
                 
-              <img src='/assets/medium-shot-woman-posing-studio.jpg' className='rounded-xl h-[300px] w-[400px] flex' style={{}} />
+              <img src='/assets/medium-shot-woman-posing-studio.jpg' className='rounded-xl h-[300px] md:h-full w-[400px] flex' style={{}} />
               </motion.div>
 
 
@@ -361,7 +361,7 @@ className='flex w-full justify-center self-center'>
                   backgroundRepeat: "no-repeat"
                 }}
               >
-                <img src='/assets/image6 2.png' className='zoomImage' style={{ height: '400px' }} />
+                <img src='/assets/image6 2.png' className='zoomImage aspect-square' style={{ height: '400px' }} />
               </motion.div>
             </div>
             <div>
@@ -481,8 +481,8 @@ className='flex w-full justify-center self-center'>
               transition={{ duration: 1, }}
               style={{ color: '#2E0853' }}><h4 className='font-semibold rounded-md p-1.5'>VIEW ALL</h4></motion.span>
           </div>
-          <div className="container">
-          <div className='md:columns-4 justify-center columns-1 gap-5 md:m-10 p-5 md:p-0 md:mx-12'>
+          <div className="w-full flex flex-col justify-center">
+          <div className='md:columns-4 justify-between md:m-1 p-5 px-10 '>
             {professionalsData.map((professionals, index) => (
               <motion.div
                 // variants={}
@@ -492,7 +492,7 @@ className='flex w-full justify-center self-center'>
                 key={index}
                 className='flex justify-center p-12'
               >
-                <Cards image={professionals.image} opa='0' padin={15} radius='full' width='' height='' />
+                <Cards image={professionals.image} opa='0' padin={0} radius='full' width='' height='' />
                      
 
               </motion.div>
