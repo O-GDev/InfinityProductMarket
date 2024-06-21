@@ -14,7 +14,8 @@ export default function Choosesociety() {
     <div className='absolute md:p-28 md:pt-0 flex flex-col justify-center align-middle self-center'>
       <div className='flex flex-col justify-center text-center px-4 '>
                     <div className='pl-10 pt-10 cursor-pointer' onClick={() => navigate('/')}  >
-         <Icon icon="lets-icons:arrow-left-long-light" className='md:w-3 md: w-3' />
+         <Icon icon ="lets-icons:arrow-left-long-light" width="2rem" height="2rem" className='md:w-20 md: w-20' />
+         {/* <Icon icon="lets-icons:arrow-left-long" /> */  }
          </div>
         <h2 className='py-2 font-bold md:text-lg'>IMP is a Societal Platform with two communities.</h2>
         <h4 className='md:text-lg'>Select the community you which to thrive in.</h4>
@@ -166,20 +167,20 @@ className='flex w-full justify-center self-center'>
             <div className=" md:px-20 pb-4">
               <div className="md:columns-2 flex md:flex-row flex-col h-full items-center w-full ">
                 <Link to="/buyersignup">
-                  <div className='flex md:flex-col md:hover:flex-col-reverse hover:scale-110 items-center md:items-start w-full h-full md:p-5 px-5'>
+                  <div className='flex flex-col md:hover:flex-col-reverse hover:scale-110 items-center md:items-start w-full h-full p-5 px-5'>
                     <div className='w-full'>
                     <h4 className='font-bold text-lg'>Buyer</h4>
                     <p className='md:w-2/3 py-1 md:pr-5' style={{ fontSize:`clamp(2px, 10px, 60px)`}} >Purchase quality products from INFINITY PRODUCT PLACE, prioritising commercial integrity and product quality</p>
                    </div> 
-                   <div className='w-full flex justify-end md:justify-start'>
-                   <img src="/assets/Frame 427319608.png" alt="" className='md:h-full md:w-11/12 w-[200px] h-[full] self-end ' />
+                   <div className='w-full flex justify-center md:justify-start'>
+                   <img src="/assets/Frame 427319608.png" alt="" className='md:h-full md:w-11/12 md:aspect-auto aspect-square w-[200px] h-[200px] self-end ' />
                    </div>
                   </div>
                 </Link>
                 <Link to="/signup">
-                  <div className='md:p-5 px-5 flex md:flex-col md:hover:flex-col-reverse hover:scale-110 items-center md:items-end w-full h-full'>
-                    <div className='w-full flex justify-start md:justify-end'>
-                    <img src="/assets/Frame 427319609.png" alt="" className='md:h-full md:w-5/6 w-[200px] h-full ' style={{}} />
+                  <div className='p-5 px-5 flex flex-col md:hover:flex-col-reverse hover:scale-110 items-center md:items-end w-full h-full'>
+                    <div className='w-full flex justify-center md:justify-end'>
+                    <img src="/assets/Frame 427319609.png" alt="" className='md:h-full md:w-5/6 md:aspect-auto aspect-square w-[200px] h-[200px]' style={{}} />
                     </div>
                     <div className='md:w-2/3 w-full md:pr-3'>
                       <p className='w-full py-1 text-end' style={{ fontSize:`clamp(2px, 10px, 20px)`}} >Create your business on INFINITY PRODUCT PLACE, optimising branding and business personality to facilitate business growth </p>

@@ -57,28 +57,12 @@ const LoggedinNav = () => {
           </div>
           <ul id='navbar' className="flex items-center justify-between">
           <li className="relative pr-5 font-primary font-semibold active"  onClick={handleClick}><Link to='/sellerdashboard'>Store</Link> </li>
-          {/* <li className="relative pr-5 font-primary font-semibold "  onClick={handleClick}> <Link to='/todaydeal'>Analysis</Link> </li> */}
-          {/* <li className="relative pr-5 font-primary font-semibold "  onClick={handleClick}><Link to='/discovery'>Discovery</Link></li> */}
-          {/* <li className="relative pr-5 font-primary font-semibold " onClick={handleClick}><Link to='/marketing'>Marketing</Link></li>
-          <li className="relative pr-5 font-primary font-semibold " onClick={handleClick}><Link to=''>Store</Link></li>
-          <li className="relative font-primary font-semibold " onClick={handleClick}><Link to=''>Cart</Link></li> */}
-          {/* <li className='inline px-5 font-primary font-semibold'><Link to=''>
-          <button id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar" className="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" type="button">
-<span className="sr-only">Open user menu</span>
-<img className="w-8 h-8 rounded-full" src="" alt="user photo" />
- </button>
- </Link>
-          
-</li> */}
-
-{/* <!-- Dropdown menu --> */}
-
-
+         
            <li className='inline pr-2 font-primary font-semibold'>  
              {/* {sellername} */}
              </li>
-              <li ref={menuRef} className="inline" style={{}}> 
-          <button onClick={()=>{setIsOpen(!isOpen)}} id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar" className="border-0 rounded-full md:me-0 font-semibold text-black text center justify-center" type="button">
+              {/* <li ref={menuRef} className="inline" style={{}}>  */}
+          <button ref={menuRef} onClick={()=>{setIsOpen(!isOpen)}} id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar" className="border-0 rounded-full md:me-0 font-semibold text-black text center justify-center" type="button">
 <span className="sr-only">Open user menu</span>         
            Adebola Makinde
 <img className="inline w-8 h-8 ml-2" src="/assets/Union.png" style={{}} alt="..." />
@@ -138,7 +122,7 @@ const LoggedinNav = () => {
 </div>
 }
 
-         </li>
+         {/* </li> */}
 
 
          </ul>

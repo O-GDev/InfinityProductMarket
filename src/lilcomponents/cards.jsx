@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Cards({ image, opa, pname, pprice, rate, padin, radius,width, height }) {
   return (
-    <div className="p-10">
+    <div className="p-2 lg:p-10">
       <div className='relative flex bg-transparent justify-center' >
       <img src={image} style={{padding: padin }} className={`rounded-${radius} lg:h-${height} lg:w-${width} aspect-square`} />
 <div className='absolute p-1 w-full self-end'>

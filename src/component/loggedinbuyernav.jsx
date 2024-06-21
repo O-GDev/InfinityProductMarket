@@ -3,12 +3,14 @@ import { Link, Outlet } from 'react-router-dom'
 import { Button } from 'flowbite-react'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import { useNavigate } from 'react-router-dom'
+import { profilepic } from './profilepic'
 
 const LoggedinBuyerNav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [childIsOpen, setChildIsOpen] = useState(false);
   const [active, setActive] = useState(0) ;
   const navigate = useNavigate()
+
 
 
   let menuRef = useRef()
@@ -58,6 +60,10 @@ const LoggedinBuyerNav = () => {
       })
     })
   }
+  const logout = () =>{
+    localStorage.removeItem("token")
+    navigate('/')
+  }
 
 // const open = event.target.classList.add('hidden');
    
@@ -74,40 +80,44 @@ const LoggedinBuyerNav = () => {
           <img src='/assets/Search.png' className='w-4 h-4 my-2 ml-5 font-bold'  />
           <input placeholder='Search for brands or categories' className='text-sm outline-none pl-1 w-full font-sembold rounded-md' /></div>
           </div>
-          <ul id='navbar' className="flex items-center justify-between">{nav.map((nav, index) => (
+          <ul id='navbar' className="flex items-center justify-between">
+            {/* {nav.map((nav, index) => (
           <li className={active ? "relative pr-5 font-primary font-semibold active" : "relative pr-5 font-primary font-semibold"} ><Link to={nav.link} onClick={() => setActive(index) }>{nav.label}</Link> </li>
-          ))}
-          {/* <li className="relative pr-5 font-primary font-semibold " > <Link to='/todaydeal' onClick={handleClick}>Today's Deal</Link> </li>
+          ))} */}
+          <li className="relative pr-5 font-primary font-semibold " > <Link to='/todaydeal' onClick={handleClick}>Today's Deal</Link> </li>
           <li className="relative pr-5 font-primary font-semibold " onClick={handleClick}><Link to='/discovery'>Discovery</Link></li>
-          <li className="relative pr-5 font-primary font-semibold " onClick={handleClick}><Link to='/marketing'>Marketing</Link></li> */}
-          {/* <li className="relative pr-5 font-primary font-semibold " onClick={handleClick}><Link to=''>Store</Link></li>
-          <li className="relative font-primary font-semibold " onClick={handleClick}><Link to=''>Cart</Link></li> */}
-          {/* <li className='inline px-5 font-primary font-semibold'><Link to=''>
-          <button id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar" className="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" type="button">
+          <li className="relative pr-5 font-primary font-semibold " onClick={handleClick}><Link to='/marketing'>Marketing</Link></li>
+          {/* <li className="relative pr-5 font-primary font-semibold " onClick={handleClick}><Link to=''>Store</Link></li> */}
+          {/* <li className="relative pr-5 font-primary font-semibold " onClick={handleClick}><Link to=''>Cart</Link></li> */}
+          {/* <li className='inline px-5 font-primary font-semibold'><Link to=''> */}
+          {/* <button id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar" className="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" type="button">
 <span className="sr-only">Open user menu</span>
 <img className="w-8 h-8 rounded-full" src="" alt="user photo" />
- </button>
- </Link>
+ </button> */}
+ {/* </Link> */}
           
-</li> */}
+{/* </li> */}
 
 {/* <!-- Dropdown menu --> */}
 
 
-           <li className='inline pr-2 font-primary font-semibold'>  
+           {/* <li className='inline pr-2 font-primary font-semibold'>   */}
              {/* {sellername} */}
-             </li>
-              <li ref={menuRef} className="inline" style={{}}> 
+             {/* </li> */}
+              {/* <li ref={menuRef} className="inline" style={{}}>  */}
           <button onClick={()=>{setIsOpen(!isOpen)}} id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar" className="border-0 rounded-full md:me-0 font-semibold text-black text center justify-center" type="button">
 <span className="sr-only">Open user menu</span>         
            Adebola Makinde
-<img className="inline w-8 h-8 ml-2" src="/assets/Union.png" style={{}} alt="..." />
+<img className="inline w-8 h-8 ml-2 rounded-full" src={profilepic} style={{}} alt="..." />
+
  </button>
- {isOpen && <div id="dropdownAvatar" className=" rounded-md absolute right-16 top-10 z-10  bg-white divide-y divide-gray-100 shadow w-60 dark:bg-gray-700 dark:divide-gray-600">
+ {isOpen && 
+ <div id="dropdownAvatar" className=" rounded-md absolute right-16 top-10 z-10  bg-white divide-y divide-gray-100 shadow w-60 dark:bg-gray-700 dark:divide-gray-600">
  <div className="">
  <div className='pl-7 pt-7 pr-7' onMouseEnter={()=>setChildIsOpen(true)} onMouseLeave={()=>setChildIsOpen(false)}>
     <h6 className='text-center rounded-md p-2 text-white' style={{backgroundColor:'#702EB2',fontSize:'12px'}}>Switch Accounts</h6>
-    {childIsOpen && <div id="dropdownAvatar" onMouseEnter={() => setChildIsOpen(true)} onMouseLeave={() => setChildIsOpen(false)} className=" absolute right-60 z-10 bg-white divide-y divide-gray-400 rounded-2xl shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+    {childIsOpen && 
+    <div id="dropdownAvatar" onMouseEnter={() => setChildIsOpen(true)} onMouseLeave={() => setChildIsOpen(false)} className=" absolute right-60 z-10 bg-white divide-y divide-gray-400 rounded-2xl shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
                 style={{ width: '250px' }}>
                 <div className="py-3 text-sm text-gray-900 dark:text-white">
                   <div className="px-4">
@@ -185,7 +195,7 @@ const LoggedinBuyerNav = () => {
             <Icon icon="quill:cog" className='flex self-center' />
               <a href="#" className="block px-4 py-2 ">Settings</a>
             </li>
-            <li className='flex dark:hover:text-white'>
+            <li onMouseDown={()=>logout()} className='flex dark:hover:text-white'>
             <Icon icon="solar:logout-2-outline" className='flex self-center'/>
               <a href="#" className="block px-4 py-2 ">Log out</a>
             </li>
@@ -194,7 +204,7 @@ const LoggedinBuyerNav = () => {
 </div>
 }
 
-         </li>
+         {/* </li> */}
 
 
          </ul>

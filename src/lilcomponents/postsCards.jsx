@@ -16,11 +16,11 @@ export default function PostsCards({ image, opa, pname, pprice, jobtype, padin, 
                             <div>
                                 <img src={ppic} style={{ width: '20px', height: '20px' }} className='flex justify-center self-center rounded-full' />
                             </div>
-                            <p className='self-center text-[50%] md:text-[100%]' style={{ padding: 2 }}>{name} </p>
+                            <p className='self-center text-[50%] md:text-[80%]' style={{ padding: 2 }}>{name} </p>
                         </div>
                         <div className='flex flex-row pl-2'>
                             <img src='/assets/Shop.png' style={{ width: '20px', height: '20px', }} className='flex justify-center self-center' />
-                            <div className='self-center text-[50%] md:text-[70%]' style={{}}>Shop.{jobtype} </div>
+                            <div className='self-center text-[50%] md:text-[80%]' style={{}}>Shop.{jobtype} </div>
                         </div>
                     </div>
                     {/* <div className='flex justify-center self-center text-sm p-2 rounded-xl' style={{ backgroundColor: '#D9D9D9', color: "#284797" }}>

@@ -24,11 +24,11 @@ const Aside = () => {
         </div> */}
         <div className="pt-10 h-full flex">
          <div>
-               
-        <div id="aside1" className='border-r h-full'>
-        <div className='pl-7 pt-7 pr-7' onMouseEnter={()=>setChildIsOpen(true)} onMouseLeave={()=>setChildIsOpen(false)}>
+         <div id='aside2' className="border-r h-full hidden md:block left-0 top-0"></div>
+        <div id="aside1" className='border-r h-full hidden md:block left-0 top-0 mt-20'>
+        <div className='pl-7 pt-7 pr-7 cursor-pointer' onMouseDown={()=>setChildIsOpen(!childIsOpenM)}>
     <h6 className='text-center rounded-md p-2 text-white' style={{backgroundColor:'#702EB2',fontSize:'12px'}}>Switch Accounts</h6>
-    {childIsOpen && <div id="dropdownAvatar" onMouseEnter={() => setChildIsOpen(true)} onMouseLeave={() => setChildIsOpen(false)} className=" absolute left-30 z-10 bg-white divide-y divide-gray-400 rounded-2xl shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+    {childIsOpen && <div id="dropdownAvatar" onMouseDown={() => !setChildIsOpen} className=" absolute left-30 z-10 bg-white divide-y divide-gray-400 rounded-2xl shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
                 style={{ width: '250px' }}>
                 <div className="py-3 text-sm text-gray-900 dark:text-white">
                   <div className="px-4">

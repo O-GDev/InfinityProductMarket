@@ -11,6 +11,7 @@ import Help from '../screens/Help'
 import Suggestion from '../screens/Suggestion'
 import Settings from '../screens/Settings'
 import Discover from './discover'
+import Saved from '../screens/Saved'
 
 
 
@@ -25,48 +26,67 @@ const BuyersAside = () => {
         </div> */}
         <div className="pt-10 h-full flex">
          <div>
-               
-        <div id="aside1" className='border-r h-full'>
+               <div id='aside2' className="border-r h-full hidden md:block left-0 top-0"></div>
+        <div id="aside1" className='border-r h-full hidden md:block left-0 top-0 mt-20'>
       
   <ul className="py-2 text-sm pl-7 text-gray-700 dark:text-gray-200 " aria-labelledby="dropdownUserAvatarButton">
             {/* <Link to='/myprofile'> */}
-      <li className='flex my-4 dark:hover:text-white cursor-pointer' onMouseDown={() => navigate('/myprofile')} onClick={() =>setCurrentUrl('profile')}>
+      <li className='flex my-4 dark:hover:text-white cursor-pointer' onMouseDown={() => navigate('/discovery')} onClick={() =>setCurrentUrl('profile')}>
         <Icon icon="carbon:home" className='flex self-center' />
         <a  className="block px-4 py-2 ">Discover</a>
               </li>
               <div className='pl-7 pt-7 pr-7' onMouseEnter={()=>setChildIsOpen(true)} onMouseLeave={()=>setChildIsOpen(false)}>
     <h6 className='text-center rounded-md p-2 text-white' style={{backgroundColor:'#702EB2',fontSize:'12px'}}>Upload</h6>
-    {childIsOpen && <div id="dropdownAvatar" onMouseEnter={() => setChildIsOpen(true)} onMouseLeave={() => setChildIsOpen(false)} className=" absolute left-30 z-10 bg-white divide-y divide-gray-400 rounded-2xl shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
-                style={{ width: '250px' }}>
-                <div className="py-3 text-sm text-gray-900 dark:text-white">
-                  <div className="px-4">
-                    <div>Switch Accounts</div>
-                    <div className="" style={{ fontSize: 10 }}>All accounts in one place</div>
-                  </div>
-                  <div className='text-align text-center w-full font-semibold ' style={{ fontSize: 13 }}>Infinity Product Place</div>
-                  <li className='py-1 px-4' style={{ fontSize: 12 }}>
-                    {/* <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"> */}
-                    Selling.thrifts@imp.com
-                    {/* </a> */}
-                  </li>
+    {childIsOpen && 
+    <div id=" " className="absolute right-16 z-10 pb-2 px-2 rounded-3xl bg-white divide-y divide-gray-100 shadow w-52 dark:bg-gray-700 dark:divide-gray-600">
+    {/* <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUserAvatarButton"> */}
+    <div onMouseDown={() => setPostIsOpen(true)} className='relative cursor-pointer' >
+        <a className="block py-5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            <div className='flex flex-row justify-center py-2'>
+                <div className="w-2 h-2 rounded-full self-center" style={{ backgroundColor: '#8248BB' }}></div>
+                <div>
+                    <h5 className='px-2' style={{ fontSize: '15px' }}>Post</h5>
+                    <p className='px-2' style={{ fontSize: '8px' }}>Upload high Quality pixels of Products only</p>
                 </div>
-                <ul className="py-2 text-sm text-gray-900 dark:text-gray-200" aria-labelledby="dropdownUserAvatarButton">
-                  <div className='text-align text-center w-full font-semibold ' style={{ fontSize: 13 }}>Infinity Service Place</div>
-                  <li className='py-1' style={{ fontSize: 12 }}>
-                    <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Adeolaui.uxisp@imp.com</a>
-                  </li>
-                  <li className='py-1' style={{ fontSize: 12 }}>
-                    <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">wajisbusinessisp@imp.com</a>
-                  </li>
-                </ul>
-              </div>
+            </div>
+        </a>
+    </div>
+
+    <div onMouseDown={() => setReelsIsOpen(true)} className='relative cursor-none' >
+        <a href="#" className="block py-5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            <div className='flex flex-row justify-center py-2'>
+                <div className="w-2 h-2 rounded-full self-center" style={{ backgroundColor: '#8248BB' }}></div>
+                <div>
+                    <h5 className='px-2' style={{ fontSize: '15px' }}>Reel</h5>
+                    <p className='px-2' style={{ fontSize: '7.3px' }}>Upload high Quality pixels of Products and contents only</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div onMouseDown={() => setLiveIsOpen(true)} className='relative cursor-pointer' >
+        <a href="#" className="block py-5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            <div className='flex flex-row justify-center py-2'>
+                <div className="w-2 h-2 rounded-full self-center" style={{ backgroundColor: '#8248BB' }}></div>
+                <div>
+                    <h5 className='px-2' style={{ fontSize: '15px' }}>Live</h5>
+                    <p className='px-2' style={{ fontSize: '8px' }}>Connect with your customers in real-time</p>
+                </div>
+
+            </div>
+        </a>
+    </div>
+
+    {/* </ul> */}
+
+</div>
               } 
   </div>
               {/* </Link> */}
               {/* <div className='mt-8'>
                 <span style={{fontSize:'10px'}}>TRANSACTION</span>
               </div> */}
-              <li onClick={() =>setCurrentUrl("history")} className='flex dark:hover:text-white cursor-pointer pt-10'>
+              <li onClick={() =>setCurrentUrl("saved")} className='flex dark:hover:text-white cursor-pointer pt-10'>
               <Icon icon="lets-icons:paper-light" className='flex self-center'/>
         <a href="#" className="block px-4 py-2">Saved</a>
       </li>
@@ -120,22 +140,12 @@ const BuyersAside = () => {
       switch (currentUrl) {
         case 'discover':
             return <Discover   />
-            case 'history':
-                return <History   />
-                case 'wallet':
-                    return <Wallet />
-                    case 'chats':
-                        return <Chats />
-                        case 'notification':
-                            return <Notification />
-                            case 'help':
-                                return <Help />
-                                case 'suggestion':
-                                    return <Suggestion />
-                                    case 'settings':
-                                        return <Settings />
-                                        default:
-                                            return <Discover   />
+            case 'saved':
+                return <Saved   />
+                case 'settings':
+                    return <Settings />
+                    default:
+                        return <Discover   />
       }
     })()}
         </div>

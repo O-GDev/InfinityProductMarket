@@ -38,7 +38,8 @@ const App = () => {
     <div className='text-[100%] md:text-[100%]'>
        <BrowserRouter>
        {token ?     
-      <><LoggedinBuyerNav />
+      <>
+      {/* <LoggedinBuyerNav /> */}
       {/* <LoggedinNav /> */}
       </>:
       <>
@@ -63,7 +64,7 @@ const App = () => {
       :
       <>
     <Route path='choosesociety' element={<Choosesociety />} />
-      <Route path='/' element={<Landingpage />} />
+      <Route path='' element={<Landingpage />} />
     <Route path='nav' element={<Navmenu />} />
     <Route path='reg/:id' element={<BuyerBackground />} />        
     <Route path='sreg/:id' element={<Productplacehome/>} />

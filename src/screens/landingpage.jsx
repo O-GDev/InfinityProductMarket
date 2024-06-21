@@ -104,7 +104,7 @@ const landingpage = () => {
             <h3 className='flex justify-center self-center font-bold py-1 pb-1'>INFINITY PRODUCT PLACE</h3>
             <motion.div
               variants={{
-                hidden: { opacity: 0, x: -150 },
+                hidden: { opacity: 0, x: -10 },
                 visible: { opacity: 1, x: 0 },
               }}
 
@@ -231,13 +231,13 @@ className='flex w-full justify-center self-center'>
             <div className='md:w-full md:h-full  flex justify-center scale-75 md:scale-100'>
               <motion.div
                 variants={{
-                  hidden: { opacity: 0, x: -150 },
+                  hidden: { opacity: 0, x: -10 },
                   visible: { opacity: 1, x: 0 }
                 }}
                 initial="hidden"
                 whileInView="visible"
                 transition={{ duration: 1,  }}
-                className='w-[400px]  flex mx-6 md:mx-0 self-center md:h-full'
+                className='w-[400px] flex aspect-square mx-6 md:mx-0 self-center md:h-full'
                 style={{
                   backgroundImage: "url('/assets/corporate-management-strategy-solution-branding-concept.jpg')",
                   backgroundColor:'red',
@@ -245,7 +245,7 @@ className='flex w-full justify-center self-center'>
                   backgroundRepeat: "no-repeat",
                 }}
               >
-                <img src='/assets/corporate-management-strategy-solution-branding-concept.jpg' id='' className='zoomImage' style={{ height: '400px', }} />
+                <img src='/assets/corporate-management-strategy-solution-branding-concept.jpg' id='' className='zoomImage hidden md:block' style={{ height: '400px', }} />
               </motion.div>
             </div>
             <div className='w-full flex justify-center items-center'>
@@ -325,19 +325,19 @@ className='flex w-full justify-center self-center'>
 
               <motion.div
                 variants={{
-                  hidden: { opacity: 0, x: 150 },
+                  hidden: { opacity: 0, x: 10 },
                   visible: { opacity: 1, x: 0 }
                 }}
                 initial="hidden"
                 whileInView="visible"
                 transition={{ duration: 1,  }}
-                className='w-[400px] flex mx-6 md:mx-0 self-center md:h-full'
+                className='w-[400px] aspect-square flex md:mx-0 self-center md:h-full'
                 style={{
                   backgroundImage: "url('/assets/drew-colins-LIEQsu5JuoM-unsplash 2.png')",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat"
                 }}>
-                <img src='/assets/drew-colins-LIEQsu5JuoM-unsplash 2.png' className='zoomImages' style={{ height: '400px' }} />
+                <img src='/assets/drew-colins-LIEQsu5JuoM-unsplash 2.png' className='zoomImages hidden md:block' style={{ height: '400px' }} />
               </motion.div>
             </div>
           </div>
@@ -348,20 +348,20 @@ className='flex w-full justify-center self-center'>
             <div className='md:w-full md:h-full flex justify-center scale-75 md:scale-100'>
               <motion.div
                 variants={{
-                  hidden: { opacity: 0, x: -150 },
+                  hidden: { opacity: 0, x: -10 },
                   visible: { opacity: 1, x: 0 }
                 }}
                 initial="hidden"
                 whileInView="visible"
                 transition={{ duration: 1,  }}
-                className='w-[400px] flex mx-6 md:mx-0 self-center md:h-full'
+                className='w-[400px] flex aspect-square mx-6 md:mx-0 self-center md:h-full'
                 style={{
                   backgroundImage: "url('/assets/image6 2.png')",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat"
                 }}
               >
-                <img src='/assets/image6 2.png' className='zoomImage aspect-square' style={{ height: '400px' }} />
+                <img src='/assets/image6 2.png' className='zoomImage aspect-square hidden md:block' style={{ height: '400px' }} />
               </motion.div>
             </div>
             <div>
@@ -420,7 +420,7 @@ className='flex w-full justify-center self-center'>
           <div className='flex w-full px-12' style={{ justifyContent: 'space-between' }}>
             <motion.h4
               variants={{
-                hidden: { opacity: 0, x: 70 },
+                hidden: { opacity: 0, x: 10 },
                 visible: { opacity: 1, x: 0 }
               }}
               initial="hidden"
@@ -430,7 +430,7 @@ className='flex w-full justify-center self-center'>
             </motion.h4>
             <motion.span
               variants={{
-                hidden: { opacity: 0, x: -70 },
+                hidden: { opacity: 0, x: -10 },
                 visible: { opacity: 1, x: 0 }
               }}
               initial="hidden"
@@ -444,8 +444,8 @@ className='flex w-full justify-center self-center'>
         </div>
       </div>
       <div>
-        <div className='md:px-16'>
-        <div className='md:columns-4 h-[70%] columns-2 md:gap-7 md:m-10 p-1 md:p-0 '>
+        <div className='lg:px-16'>
+        <div className='md:columns-4 h-[70%] columns-2 md:gap-3 md:m-10 p-1 md:p-0 '>
           {topRatedData.map((topRated, index) => (
             <motion.div
               // variants={}
@@ -453,7 +453,7 @@ className='flex w-full justify-center self-center'>
               whileInView={{opacity : 1, y : 0}}
               transition={{ delay: 0.05 * index, duration : 0.5 * index }}
               key={index} 
-              className='py-3 lg:py-0 px-[2%] md:px-0'
+              className='py-3 lg:py-0 px-[0.2%] md:px-0'
               >
               <Cards image={topRated.image} pname={topRated.pname} pprice={topRated.pprice} rate={topRated.rate} radius='xl' width='100%' height='250px' />
             </motion.div>
@@ -464,7 +464,7 @@ className='flex w-full justify-center self-center'>
           <div className='flex w-full px-12' style={{ justifyContent: 'space-between' }}>
             <motion.h4
               variants={{
-                hidden: { opacity: 0, x: -70 },
+                hidden: { opacity: 0, x: -10 },
                 visible: { opacity: 1, x: 0 }
               }}
               initial="hidden"
@@ -473,7 +473,7 @@ className='flex w-full justify-center self-center'>
               className='font-semibold p-1.5' style={{ color: '#2E0853' }}>PROFESSIONALS</motion.h4>
             <motion.span
               variants={{
-                hidden: { opacity: 0, x: 70 },
+                hidden: { opacity: 0, x: 10 },
                 visible: { opacity: 1, x: 0 }
               }}
               initial="hidden"
@@ -490,7 +490,7 @@ className='flex w-full justify-center self-center'>
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.05 * index, duration: 0.5 * index }}
                 key={index}
-                className='flex justify-center p-12'
+                className='flex justify-center p-12 md:px-0'
               >
                 <Cards image={professionals.image} opa='0' padin={0} radius='full' width='' height='' />
                      

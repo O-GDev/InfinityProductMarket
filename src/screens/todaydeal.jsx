@@ -16,7 +16,7 @@ export const Todaydeal = () => {
   return (
     <div className=''>
     {/* <LoggedinBuyerNav /> */}
-      <div className='pt-20'>
+      <div className=''>
         <img src='/assets/nav.png' className='flex w-full' />
       {/* <Swiper>
         <SwiperSlide>
@@ -38,7 +38,7 @@ export const Todaydeal = () => {
     <div>
       <h3 className='font-bold pl-10'>HOT DEALS</h3>
       
-    <div className='md:columns-7 px-4 pt-3' >        
+    <div className='lg:columns-7 px-4 pt-3' >        
       <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
       <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
       <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
@@ -95,7 +95,7 @@ Ensuring that customers enjoy freshly produce Agricultural harvest they desire.<
 
           <div className=' md:flex md:columns-2 h-full'>
           <div className='h-full w-3/4'>
-          <div className='md:columns-5 px-4 pt-3' >        
+          <div className='lg:columns-5 px-4 pt-3' >        
       <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
       <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>
       <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6'/>

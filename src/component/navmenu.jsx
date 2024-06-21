@@ -50,10 +50,10 @@ const Navmenu = ({index}) => {
         <div className='flex justify-between md:px-10 px-3 py-1' style={{ justifyContent: 'space-between' }}>
           <div className='flex flex-row justify-center items-center'>
             <img src='/assets/ICON DEEP PURPLE 1.png' className='w-5 h-5' style={{  }} />
-            <h3 className="font-primary font-semibold flex flex-row self-center justify-center pl-3 md:text-sm text-[100%]">INFINITY MARKET PLACE</h3>
+            <h3 className="font-primary font-semibold flex flex-row self-center justify-center pl-3 md:text-sm text-sm">INFINITY MARKET PLACE</h3>
           </div>
           <div className='flex justify-center self-center md:hidden cursor-pointer' onClick={() => setIsOpen(!isOpen) }>
-          <Icon icon="material-symbols-light:menu" />
+          <Icon icon="material-symbols-light:menu" style={{}} className='w-16 h-10' />
           </div>
          {isOpen &&
           <div className=' absolute right-5 bg-white rounded-md shadow-sm z-50 top-5 p-2 px-3'>

@@ -2,6 +2,7 @@ import React from "react";
 import SubPlan from "../lilcomponents/subPlan";
 import Aside from "../lilcomponents/aside";
 import LoggedinBuyerNav from "../component/loggedinbuyernav";
+import { profilepic } from "../component/profilepic";
 
 
 export default function ProfilePage() {
@@ -14,7 +15,10 @@ export default function ProfilePage() {
                 <h6 className="p-8">Edit your profile</h6>
                 <div className="flex flex-col justify-center self-center w-full">
                     <div className="flex flex-col self-center">
-                    <div className="rounded-full bg-black justify-center self-center" style={{width:'70px',height:'70px'}}></div>
+                    <div className="rounded-full bg-black justify-center self-center" style={{width:'70px',height:'70px'}}>
+                        
+<img className="inline w-full h-full rounded-full" src={profilepic} style={{}} alt="..." />
+                    </div>
                     <h6 className="my-2">Edit your Picture</h6>
                     </div>
                 </div>
