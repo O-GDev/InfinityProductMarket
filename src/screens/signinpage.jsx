@@ -45,6 +45,7 @@ function Signinpage(props) {
                     navigate('/sellerdashboard')
                     console.log(data.token.access_token)
                     localStorage.setItem("token", JSON.stringify(data.token.access_token))
+                    localStorage.setItem("role", JSON.stringify(data.role))                    
                     setError(false)
                 }else{
                     setMessage(data.message)

@@ -89,7 +89,7 @@ export default function SellerDashboard() {
                         </div>
                     </div>
 
-                    <div className="flex flex-row justify-between px-5 mb-5 h-full bg-white">
+                    <div className="flex flex-row justify-between px-5 mt-10 md:mt-0 mb-5 h-full bg-white">
                         <div className='h-full'>
                             <div className='columns-2 h-full' style={{ width: '70%' }}>
                                 <div className='h-full w-3/4 py-2'>

@@ -29,25 +29,42 @@ import BuyersAside from './lilcomponents/dicaside';
 
 const App = () => {
   const [token, setToken] = useState("")
+  const [role, setRole] = useState("")
   useEffect(() =>{    
-  setToken(JSON.parse(localStorage.getItem("token")))
+    setToken(JSON.parse(localStorage.getItem("token")))
+    setRole(JSON.parse(localStorage.getItem("role")))
+    console.log(role)
+
   })
-  
+  let nav;
+  // if(role === "seller"){
+  //   nav = <LoggedinNav />
+  // }else if(role === "buyer"){
+  //   nav = <LoggedinBuyerNav />
+  // }0
   return (
    <Provider store={store}>
     <div className='text-[100%] md:text-[100%]'>
        <BrowserRouter>
-       {token ?     
-      <>
-      {/* <LoggedinBuyerNav /> */}
-      {/* <LoggedinNav /> */}
-      </>:
+       {token ?
+       role == "seller" ?
+       <LoggedinNav />
+      // <div>cfvbnm/</div>
+     :
+     role == "buyer" ?
+     <LoggedinBuyerNav />
+     :
       <>
       <ShowNavBar>        
     <Navmenu />
        </ShowNavBar> 
        </> 
-       
+       :
+       <>
+      <ShowNavBar>        
+    <Navmenu />
+       </ShowNavBar> 
+       </> 
        } 
         <Routes>
           {token ? 

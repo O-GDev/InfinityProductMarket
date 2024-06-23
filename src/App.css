@@ -110,7 +110,7 @@
   height: 100dvh;
   background-color: white;
   box-shadow: inset;
-  z-index: 50;
+  z-index: 30;
 }
 
 #aside2{
@@ -119,6 +119,6 @@
   top: 0;
   width: 300px;
   height: 100dvh;
-  background-color: white;
+  background-color: transparent;
   box-shadow: inset;
 }

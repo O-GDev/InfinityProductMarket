@@ -44,14 +44,14 @@ const LoggedinNav = () => {
    
   return (
     <><div>
-      <nav className='w-full z-50' style={{position:'fixed',backgroundColor:'#F2F2F2'}}>
+      <nav className='w-full z-50 bg-white shadow' style={{position:'fixed'}}>
       <div className='flex px-10 py-2 ' style={{ justifyContent: 'space-between' }}>
         <div className='flex flex-row justify-center'>
           <img src='/assets/ICON DEEP PURPLE 1.png' className='self-center' style={{ width: '30px', height: '30px' }} />
-          <h6 className='self-center pl-4 capitalize text-semibold'>Infinity Market Place</h6>
+          <h6 className='hidden md:block self-center pl-4 capitalize text-semibold'>Infinity Market Place</h6>
           </div> 
           <div>            
-          <div className='bg-white rounded-md flex flex-row justify-center self-center ml-3' style={{width:'450px'}}>
+          <div className='bg-white rounded-md hidden lg:flex flex-row justify-center self-center ml-3' style={{width:'450px'}}>
           <img src='/assets/Search.png' className='w-4 h-4 my-2 ml-5 font-bold'  />
           <input placeholder='Search for brands or categories' className='text-sm outline-none pl-1 w-full font-sembold rounded-md' /></div>
           </div>
@@ -152,26 +152,7 @@ const LoggedinNav = () => {
           </div>
         </div>
         }    */}
-      <div className='absolute w-full text-white'>
-    {/* <Navmenu />   */}
-      <div className='' style={{fillOpacity:1,opacity:1}}>
-      <div className='flex flex-row justify-center opacity-65 p-3 mx-36 shadow-outline' style={{backgroundColor:'#F2F2F2'}}>
-      <h3 className='text-black font-semibold px-2'>Top Tags:</h3>
-      <h3 className='text-black font-semibold px-2'>Gadgets</h3>
-      <h3 className='text-black font-semibold px-2'>Clothing/Wears</h3>
-      <h3 className='text-black font-semibold px-2'>Appliances</h3>
-      <h3 className='text-black font-semibold px-2'>Cars</h3>
-      <h3 className='text-black font-semibold px-2'>Electronics</h3>
-      <h3 className='text-black font-semibold px-2'>Face Products</h3>
-      <h3 className='text-black font-semibold px-2'>Funiture</h3>
-      <h3 className='text-black font-semibold px-2'>Automobile</h3>
-      <h3 className='text-black font-semibold px-2'>Cosmetics</h3>
-      <h3 className='text-black font-semibold px-2'>Others:</h3>
-
-    </div>
-      </div>
-    
-    </div>  
+     
       {/* <hr style={{height:0.0001}} ></hr> */}
     </nav>
     </div>

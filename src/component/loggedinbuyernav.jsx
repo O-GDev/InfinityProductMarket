@@ -62,7 +62,7 @@ const LoggedinBuyerNav = () => {
   }
   const logout = () =>{
     localStorage.removeItem("token")
-    navigate('/')
+    navigate('')
   }
 
 // const open = event.target.classList.add('hidden');
@@ -73,7 +73,7 @@ const LoggedinBuyerNav = () => {
       <div className='flex px-10 py-2 ' style={{ justifyContent: 'space-between' }}>
         <div className='flex flex-row justify-center'>
           <img src='/assets/ICON DEEP PURPLE 1.png' className='self-center' style={{ width: '30px', height: '30px' }} />
-          <h6 className='self-center pl-4 capitalize text-semibold'>Infinity Market Place</h6>
+          <h6 className='hidden md:block self-center pl-4 capitalize text-semibold'>Infinity Market Place</h6>
           </div> 
           <div>            
           <div className='bg-white border rounded-md flex flex-row justify-center self-center ml-3' style={{width:'450px'}}>

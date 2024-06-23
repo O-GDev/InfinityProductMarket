@@ -42,6 +42,7 @@ const BuyerSignin = ({props}) => {
             if(data.status == 200 ){
                 localStorage.setItem("token", JSON.stringify(data.token.access_token))
                 navigate("/buyerdashboard") 
+                localStorage.setItem("role", JSON.stringify(data.role)) 
                 setMessage(data.message)
             }else{
             setMessage(data.message)
