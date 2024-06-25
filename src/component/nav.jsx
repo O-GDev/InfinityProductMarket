@@ -58,9 +58,7 @@ export default function Navbars() {
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",}}>
                 <div className=' w-full text-white h-full flex justify-center' >
-                    {/* <Navmenu /> */}
                     <div className='flex self-end w-full h-full'>
-                        {/* First Slide Text */}
                         {currentIndex == 1 &&
                          <div style={{ opacity: contentOpacity }} className=' flex flex-col self-center w-full justify-end right-0 '>
                          {/* <div className='font-primary text-white font-semibold text-right'> */}

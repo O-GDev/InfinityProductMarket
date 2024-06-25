@@ -1,9 +1,10 @@
 import React, {useState, useEffect, useRef} from 'react'
-import { Link, Outlet } from 'react-router-dom'
+// import { Link, Outlet } from 'react-router-dom'
 import { Button } from 'flowbite-react'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import { useNavigate } from 'react-router-dom'
 import { profilepic } from './profilepic'
+import Link from 'react-scroll'
 
 const LoggedinBuyerNav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,9 +35,9 @@ const LoggedinBuyerNav = () => {
     }
   ]
   
-          {/* <li className="relative pr-5 font-primary font-semibold " > <Link to='/todaydeal' onClick={handleClick}>Today's Deal</Link> </li>
-          <li className="relative pr-5 font-primary font-semibold " onClick={handleClick}><Link to='/discovery'>Discovery</Link></li>
-          <li className="relative pr-5 font-primary font-semibold " onClick={handleClick}><Link to='/marketing'>Marketing</Link></li> */}
+          {/* <li className="relative pr-5 font-primary font-semibold " > <Link to='/todaydeal' >Today's Deal</Link> </li>
+          <li className="relative pr-5 font-primary font-semibold " ><Link to='/discovery'>Discovery</Link></li>
+          <li className="relative pr-5 font-primary font-semibold " ><Link to='/marketing'>Marketing</Link></li> */}
   useEffect(()=>{
     let handler = (e) =>{
       if (e.target){
@@ -50,16 +51,16 @@ const LoggedinBuyerNav = () => {
     setIsOpen((isOpen) => !isOpen);
   }
 
-  const handleClick = (e) => {
-    const activeNav = document.querySelectorAll("li");
+  // const handleClick = (e) => {
+  //   const activeNav = document.querySelectorAll("li");
 
-    activeNav.forEach(activenav => {
-      activenav.addEventListener("click", () => {
-        document.querySelector('.active')?.classList.remove('active');
-        activenav.classList.add('active')
-      })
-    })
-  }
+  //   activeNav.forEach(activenav => {
+  //     activenav.addEventListener("click", () => {
+  //       document.querySelector('.active')?.classList.remove('active');
+  //       activenav.classList.add('active')
+  //     })
+  //   })
+  // }
   const logout = () =>{
     localStorage.removeItem("token")
     navigate('')
@@ -81,20 +82,21 @@ const LoggedinBuyerNav = () => {
           <input placeholder='Search for brands or categories' className='text-sm outline-none pl-1 w-full font-sembold rounded-md' /></div>
           </div>
           <ul id='navbar' className="flex items-center justify-between">
-            {/* {nav.map((nav, index) => (
-          <li className={active ? "relative pr-5 font-primary font-semibold active" : "relative pr-5 font-primary font-semibold"} ><Link to={nav.link} onClick={() => setActive(index) }>{nav.label}</Link> </li>
-          ))} */}
-          <li className="relative pr-5 font-primary font-semibold " > <Link to='/todaydeal' onClick={handleClick}>Today's Deal</Link> </li>
-          <li className="relative pr-5 font-primary font-semibold " onClick={handleClick}><Link to='/discovery'>Discovery</Link></li>
-          <li className="relative pr-5 font-primary font-semibold " onClick={handleClick}><Link to='/marketing'>Marketing</Link></li>
-          {/* <li className="relative pr-5 font-primary font-semibold " onClick={handleClick}><Link to=''>Store</Link></li> */}
-          {/* <li className="relative pr-5 font-primary font-semibold " onClick={handleClick}><Link to=''>Cart</Link></li> */}
-          {/* <li className='inline px-5 font-primary font-semibold'><Link to=''> */}
-          {/* <button id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar" className="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" type="button">
-<span className="sr-only">Open user menu</span>
-<img className="w-8 h-8 rounded-full" src="" alt="user photo" />
- </button> */}
- {/* </Link> */}
+          <Link to='/todaydeal'
+          
+      smooth={true}
+      activeClass='active'
+      spy={true} ><li className="relative pr-5 font-primary font-semibold " > Today's Deal </li></Link>
+          <Link to='/discovery'
+          
+      smooth={true}
+      activeClass='active'
+      spy={true} ><li className="relative pr-5 font-primary font-semibold " >Discovery</li></Link>
+          <Link to='/marketing'
+          
+      smooth={true}
+      activeClass='active'
+      spy={true} ><li className="relative pr-5 font-primary font-semibold " >Marketing</li></Link>
           
 {/* </li> */}
 
