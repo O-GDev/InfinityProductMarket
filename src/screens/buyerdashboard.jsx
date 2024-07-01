@@ -133,19 +133,19 @@ useEffect(()=>{
 
         <div className=''>
           <div className=''>
-            <div className='md:columns-2 md:flex w-full h-full'>
-              <div className='w-full bg-white rounded-2xl shadow-md p-5 m-5'>
+            <div className='md:columns-2 md:flex w-full h-full p-10'>
+              <div className='w-full bg-white rounded-2xl shadow-md p-5 md:m-5'>
                 <div className='flex flex-row justify-between px-0'>
                   <h3 className='font-semibold'>TOP RATED</h3>
                   <h3 >View All</h3>
                 </div>
-                <div className='md:flex flex-col'>
+                <div className='flex justify-center'>
                   
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 1, delay: 0.23 }}
-                  className='md:columns-3 md:block'>
+                  className='md:columns-3 mt-4'>
                   <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
                   <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
                   <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
@@ -159,8 +159,8 @@ useEffect(()=>{
                 </div>
            
               </div>
-              <div className='w-full bg-white rounded-2xl shadow-md p-5 m-5 '>
-                <div className='flex justify-center mx-6' style={{ backgroundColor: `rgba(130, 72, 187,0.8)` }}>
+              <div className='w-full bg-white rounded-2xl shadow-md p-5 md:m-5 mt-3 '>
+                <div className='flex justify-center md:mx-6' style={{ backgroundColor: `rgba(130, 72, 187,0.8)` }}>
                   <h5 className='text-white p-3' style={{}}>Top Brands and Merchants</h5>
                 </div>
                 <div className='flex justify-end mx-6' style={{}}>
@@ -212,8 +212,8 @@ useEffect(()=>{
         </div>
 
     
-      <div className="md:flex flex-row w-full">
-      <div id='' className='m-5 pl-8 py-8 md:w-8/12 rounded-2xl'>
+      <div className="md:flex flex-row w-full p-10">
+      <div id='' className='md:m-5 md:pl-8 py-8 md:w-8/12 rounded-2xl'>
         <div className="flex flex-row justify-between">
           <div className='font-bold py-2'>CATEGORIES</div>
           <div>View All</div>
@@ -311,6 +311,7 @@ useEffect(()=>{
             <div className='font-semibold '>View All</div>
           </div>
 </div>
+<div className="flex justify-center">
 
 <motion.div
                   initial={{ opacity: 0 }}
@@ -321,6 +322,7 @@ useEffect(()=>{
                   <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
                   <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
                 </motion.div>
+                </div>
     </div>
     <div className='flex w-full h-full bg-white rounded-2xl shadow-lg md:mt-0 mt-3'>
     <div className="flex flex-col w-full">
@@ -330,7 +332,7 @@ useEffect(()=>{
             </div>
             <div className='font-semibold '>View All</div>
           </div>
-
+<div className="flex justify-center">
           
           <motion.div
                   initial={{ opacity: 0 }}
@@ -341,6 +343,7 @@ useEffect(()=>{
                   <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
                   <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
                 </motion.div>
+                </div>
 </div>
     </div>
     </div>
@@ -361,7 +364,7 @@ useEffect(()=>{
             </div>
             <div className='font-semibold text-white '>View All</div>
           </div>
-          <div className='md:flex md:flex-row sm:flex-col sm:justify-center md:justify-evenly'>
+          <div className='flex md:flex-row flex-col justify-center md:justify-evenly'>
             <div className="bg-white rounded-3xl flex self-center flex-col" style={{ height: '300px', width: '200px' }}>
               <div className='p-4'>
                 <p className='text-sm text-center uppercase' style={{fontSize:'70%'}}>STYLE MATCH AND COLLECTION</p>
@@ -377,7 +380,7 @@ useEffect(()=>{
                 </div>
               </div>
             </div>
-            <div className="bg-white rounded-3xl mt-12 sm:self-center flex flex-col" style={{ height: '300px', width: '200px' }}>
+            <div className="bg-white rounded-3xl mt-12 self-center flex flex-col" style={{ height: '300px', width: '200px' }}>
             <div className='p-4'>
                 <p className='text-sm text-center uppercase' style={{fontSize:'70%'}}>INSIDE WORLD</p>
               </div>
@@ -392,7 +395,7 @@ useEffect(()=>{
                 </div>
               </div>
             </div>
-            <div className="bg-white rounded-3xl md:mt-0 sm:self-center sm:mt-12 flex flex-col" style={{ height: '300px', width: '200px' }}>
+            <div className="bg-white rounded-3xl md:mt-0 self-center mt-12 flex flex-col" style={{ height: '300px', width: '200px' }}>
             <div className='p-4'>
                 <p className='text-sm text-center uppercase' style={{fontSize:'70%'}}>ng.engines</p>
               </div>
@@ -407,7 +410,7 @@ useEffect(()=>{
                 </div>
               </div>
             </div>
-            <div className="bg-white rounded-3xl sm:self-center mt-12 flex flex-col" style={{ height: '300px', width: '200px' }}>
+            <div className="bg-white rounded-3xl self-center mt-12 flex flex-col" style={{ height: '300px', width: '200px' }}>
             <div className='p-4'>
                 <p className='text-sm text-center uppercase' style={{fontSize:'70%'}}>STYLE MATCH AND COLLECTION</p>
               </div>
@@ -422,7 +425,7 @@ useEffect(()=>{
                 </div>
               </div>
             </div>
-            <div className="bg-white rounded-3xl sm:self-center md:mt-0 sm:mt-12 flex flex-col" style={{ height: '300px', width: '200px' }}>
+            <div className="bg-white rounded-3xl self-center md:mt-0 mt-12 flex flex-col" style={{ height: '300px', width: '200px' }}>
             <div className='p-4'>
                 <p className='text-sm text-center uppercase' style={{fontSize:'70%'}}>STYLE MATCH AND COLLECTION</p>
               </div>

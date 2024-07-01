@@ -3,8 +3,8 @@ import { Button, Uline } from '../lilcomponents/style.styles'
 
 export default function PostsCards({ image, opa, pname, pprice, jobtype, padin, name, ppic }) {
     return (
-        <div className='p-1'>
-        <div className='flex flex-col mt-5 md:mt-0 gap-3 md:h-full bg-transparent border rounded-xl shadow-md' >
+        <div className='w-fit '>
+        <div className='flex flex-col mt-5 md:mt-0 gap-3 md:h-full bg-transparent border rounded-xl shadow-md w-fit bg-black' >
             <img src={image} style={{ width: '100%', padding: padin }} className='' />
             <div className='flex-col self-end px-2 py-2 w-full h-full flex rounded-lg' style={{ opacity: opa, }} >
                 <div className='font-semibold text-sm flex flex-row justify-between'>
@@ -16,11 +16,11 @@ export default function PostsCards({ image, opa, pname, pprice, jobtype, padin, 
                             <div>
                                 <img src={ppic} style={{ width: '20px', height: '20px' }} className='flex justify-center self-center rounded-full' />
                             </div>
-                            <p className='self-center text-[50%] md:text-[80%]' style={{ padding: 2 }}>{name} </p>
+                            <p className='self-center text-[50%] md:text-[9px]'>{name} </p>
                         </div>
                         <div className='flex flex-row pl-2'>
                             <img src='/assets/Shop.png' style={{ width: '20px', height: '20px', }} className='flex justify-center self-center' />
-                            <div className='self-center text-[50%] md:text-[80%]' style={{}}>Shop.{jobtype} </div>
+                            <div className='self-center text-[50%] md:text-[9px]]' style={{}}>Shop.{jobtype} </div>
                         </div>
                     </div>
                     {/* <div className='flex justify-center self-center text-sm p-2 rounded-xl' style={{ backgroundColor: '#D9D9D9', color: "#284797" }}>

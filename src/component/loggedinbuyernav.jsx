@@ -1,10 +1,9 @@
 import React, {useState, useEffect, useRef} from 'react'
-// import { Link, Outlet } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 import { Button } from 'flowbite-react'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import { useNavigate } from 'react-router-dom'
 import { profilepic } from './profilepic'
-import Link from 'react-scroll'
 
 const LoggedinBuyerNav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,7 +62,7 @@ const LoggedinBuyerNav = () => {
   // }
   const logout = () =>{
     localStorage.removeItem("token")
-    navigate('')
+    navigate('/')
   }
 
 // const open = event.target.classList.add('hidden');
@@ -71,17 +70,21 @@ const LoggedinBuyerNav = () => {
   return (
     <><div>
       <nav className='w-full z-50 bg-white border-b' style={{position:'fixed',}}>
-      <div className='flex px-10 py-2 ' style={{ justifyContent: 'space-between' }}>
+      <div className='flex px-3 lg:px-10 py-2 ' style={{ justifyContent: 'space-between' }}>
         <div className='flex flex-row justify-center'>
           <img src='/assets/ICON DEEP PURPLE 1.png' className='self-center' style={{ width: '30px', height: '30px' }} />
-          <h6 className='hidden md:block self-center pl-4 capitalize text-semibold'>Infinity Market Place</h6>
+          <h6 className='self-center pl-4 capitalize text-semibold text-[15px]'>Infinity Market Place</h6>
           </div> 
           <div>            
-          <div className='bg-white border rounded-md flex flex-row justify-center self-center ml-3' style={{width:'450px'}}>
+          <div className='bg-white border rounded-md md:flex flex-row justify-center self-center ml-3 hidden ' style={{width:'450px'}}>
           <img src='/assets/Search.png' className='w-4 h-4 my-2 ml-5 font-bold'  />
           <input placeholder='Search for brands or categories' className='text-sm outline-none pl-1 w-full font-sembold rounded-md' /></div>
           </div>
-          <ul id='navbar' className="flex items-center justify-between">
+          
+          <div className='flex justify-center self-center lg:hidden cursor-pointer' onClick={() => setIsOpen(!isOpen) }>
+          <Icon icon="material-symbols-light:menu" style={{}} className='w-16 h-10' />
+          </div>
+          <ul id='navbar' className="hidden lg:flex items-center justify-between">
           <Link to='/todaydeal'
           
       smooth={true}

@@ -11,6 +11,7 @@ import PostsCards from '../lilcomponents/postsCards';
 import Reels from '../lilcomponents/reels';
 import { motion } from 'framer-motion';
 import Collection from '../lilcomponents/collection';
+import {BASE_URL} from '../component/url/url'
 
 const sliderImage = [
     "assets/arrangement-different-traveling-elements 1.png"
@@ -34,8 +35,13 @@ export default function SellerDashboard() {
     const [names, setNames] = useState('')
     const [reelsIsOpen, setReelsIsOpen] = useState(false)
     const [liveIsOpen, setLiveIsOpen] = useState(false)
+    const [userpost, setUserpost] = useState()
+    const [bestselling, setBestselling] = useState()
+    const [collections, setCollections] = useState()
+    const [reels, setReels] = useState()
 
     let index = [0, 1, 2, 3]
+
 
 
     const slideRef = useRef()
@@ -52,6 +58,10 @@ export default function SellerDashboard() {
             }
         };
         document.addEventListener("mousedown", handler);
+        setUserpost([{},{},{},{},{},{},{},{}])
+        setBestselling([{},{},{},{},{},{},{},{}])
+        setCollections([{},{},{},{},{},{},{},{}])
+        setReels([{},{},{},{},{},{},{},{}])
         // startSlider();
         // textSlider();
         // con();
@@ -72,6 +82,19 @@ export default function SellerDashboard() {
         count = (count + 1) % sliderImage.length;
         setCurrentIndex(count);
         slideRef.current.classList.add('fade-anim');
+    }
+    const handlePost = async() =>{
+       response = fetch(`${BASE_URL}`,{
+            method: "POST",
+            body: JSON.stringify(), 
+            headers: {
+                'Content-Type': 'application/json'
+              }
+        });
+        const result = await response.json();
+        console.log(result);
+        
+        
     }
     return (
         <>
@@ -196,11 +219,11 @@ export default function SellerDashboard() {
                     <div>
                         <h3 className='text-center font-semibold'>Collections & Editions</h3>
                         <div>
-                            <div className='md:columns-4 gap-10 px-20'>
+                            <div className='flex flex-wrap gap-10 px-20'>
+                                {collections ?
                                 <Collection image="/assets/Frame 427319955.png" pname='Collections' />
-                                <Collection image="/assets/Frame 427319955.png" pname='Collections' />
-                                <Collection image="/assets/Frame 427319955.png" pname='Collections' />
-                                <Collection image="/assets/Frame 427319955.png" pname='Collections' />
+                            :
+                            <div>You do not have any collections </div>}
                             </div>
                         </div>
                     </div>
@@ -281,41 +304,44 @@ export default function SellerDashboard() {
                             <h5>New Product Posts</h5>
                             <h5>View All</h5>
                             </div>
+                           <div className='flex'>
+                           <div className='flex flex-wrap'>
+                           {userpost ?
+                           userpost.slice(0,3).map((post,index) =>( 
                             <motion.div
-                                initial={{ opacity: 0 }}
-                                whileInView={{ opacity: 1 }}
-                                transition={{ duration: 1, delay: 0.23 }}
-                                className='md:columns-4 columns-2 pt-2'>
-                                <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                                <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                                <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                                <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                                <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                                <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                                <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                                <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                             </motion.div>
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ duration: 1, delay: 0.23 }}
+                            className='m-2'>
+                            <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                          </motion.div>)
+                        ) :
+                        <div className='flex justify-center rows-span-6'>You do not have a product to display</div>
+                        }
+                           </div>
 
+                           </div>
                         </div>
                     </div>
 
-                    <div className="bg-white rounded-2xl m-4">
+                    <div className="bg-white h-fit rounded-2xl m-4">
                         <div>
                             
                         <div className='pl-10 pt-5 '>
                                 <div className='md:flex md:flex-row '>                                    
                                     <div className='w-full'>
+                                    {bestselling && 
+                                    <div className=''>
                                         <h3 className='font-md'>Best Selling Products</h3>
-                                       <div className=''>
-                                       <div className='md:columns-4 columns-2 gap-4 gap-y-10 px-4' >
-                                            <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                                            <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                                            <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-                                            <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
-
-                                        </div>
-                                       </div>
-                                        <div className='flex justify-center place-content-center bg-white mx-4 my-2 shadow h-2/5'>
+                                    <div className='flex flex-wrap gap-4 gap-y-3' >
+                                    {bestselling.slice(0, 6).map((bestsell, index) => (
+                                        
+                                        <Cards1 image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
+                                    
+                                    ))}
+                                    </div>
+                                    </div>}
+                                        <div className='flex justify-center place-content-center bg-white mx-4 my-2 shadow '>
                                             <h1 className='text-3xl text-center self-center'>Ads</h1>
                                         </div>
                                     </div>
@@ -357,15 +383,15 @@ export default function SellerDashboard() {
                         </div>
                     </div>
 
+                   {reels &&
                     <div className='p-5'>
-                        <h4 className='font-semibold pb-3'>Reels</h4>
-                        <div className="md:columns-4">
-                            <Reels image="/assets/istockphoto-1475370822-612x612.jpg" ppic='/assets/Union.png' name='James Akinmowa' jobtype='leather work' opa='1' pname='BEACH FLIP FLOP' pprice='38,000' hashtags='Red stripe beach flip flop #flipflop #beachflipflop #wears' padin={2} radius='2xl' width='100%' height='450px' />
-                            <Reels image="/assets/istockphoto-1475370822-612x612.jpg" ppic='/assets/Union.png' name='James Akinmowa' jobtype='leather work' opa='1' pname='BEACH FLIP FLOP' pprice='38,000' hashtags='Red stripe beach flip flop #flipflop #beachflipflop #wears' padin={2} radius='2xl' width='100%' height='450px' />
-                            <Reels image="/assets/istockphoto-1475370822-612x612.jpg" ppic='/assets/Union.png' name='James Akinmowa' jobtype='leather work' opa='1' pname='BEACH FLIP FLOP' pprice='38,000' hashtags='Red stripe beach flip flop #flipflop #beachflipflop #wears' padin={2} radius='2xl' width='100%' height='450px' />
-                            <Reels image="/assets/istockphoto-1475370822-612x612.jpg" ppic='/assets/Union.png' name='James Akinmowa' jobtype='leather work' opa='1' pname='BEACH FLIP FLOP' pprice='38,000' hashtags='Red stripe beach flip flop #flipflop #beachflipflop #wears' padin={2} radius='2xl' width='100%' height='450px' />
-                        </div>
-                    </div>
+                    <h4 className='font-semibold pb-3'>Reels</h4>
+                    <div className="md:columns-4">
+                       { reels.slice(0,4).map((reel, index) => (
+                             <Reels image="/assets/istockphoto-1475370822-612x612.jpg" ppic='/assets/Union.png' name='James Akinmowa' jobtype='leather work' opa='1' pname='BEACH FLIP FLOP' pprice='38,000' hashtags='Red stripe beach flip flop #flipflop #beachflipflop #wears' padin={2} radius='2xl' width='100%' height='450px' />
+                        ))}
+                       </div>
+                </div>}
 
                     <div className='p-5'>
                         <div className='justify-center self-center mb-3'>
@@ -387,8 +413,8 @@ export default function SellerDashboard() {
                                 <div className='md:columns-2 flex flex-col md:flex-row justify-center md:px-7'>
                                     <div className='h-full w-full relative hidden md:flex flex-col justify-center '>
                                         <div className='text-center'>Preview</div>
-                                        <div className='relative flex flex-col bg-transparent mb-5 w-full' >
-                                            <div className='p-4 mx-[5%]'>
+                                        <div className='relative flex flex-col bg-transparent h-full w-full' >
+                                            <div className='p-4'>
                                                 <div className='w-full h-full shadow-lg rounded-md'>
                                                     <div className='' style={{
                                                         backgroundImage: "url('/assets/shoe.png')",
@@ -406,7 +432,7 @@ export default function SellerDashboard() {
                                                                     <div className=''>
                                                                         <div className='font-semibold uppercase w-40 truncate whitespace-pre-wrap'>{productName}</div>
                                                                     </div>
-                                                                    <div className='text-red-600 font-medium w-20 truncate overflow-clip pr-2' >{productPrice}</div>
+                                                                    <div className='text-red-600 font-medium w-20 truncate overflow-clip pr-2' >{productPrice && "N"}{productPrice}</div>
                                                                 </div>
                                                                 <div className='pt-1'>
                                                                     <div style={{fontSize:'12px'}}>{pCaption}</div>
@@ -434,16 +460,16 @@ export default function SellerDashboard() {
                                          </div>
                                         </div>
                                     </div>
-                                    <div className='h-full relative flex flex-col ' >
+                                    <div className='h-full w-full relative flex flex-col ' >
                                         <div className='place-content-center md:p-10'>
                                             <h4 className='text-center font-semibold py-2'>Upload Product Picture or Video</h4>
                                             <form>
-                                                <input type='text' title='pName' name='productName' onChange={(e) => setProductName(e.target.value)} placeholder='Product Name' className='w-full rounded-xl border my-2 ' style={{ backgroundColor: "white" }} />
-                                                <input type='text' title='pCaption' placeholder='Product Caption' onChange={(e) => setPCaption(e.target.value)} className='w-full rounded-xl border my-2 ' style={{ backgroundColor: "white" }} />
-                                                <input type='text' title='pPrice' placeholder='Price' onChange={(e) => setProductPrice(e.target.value)} className='w-full rounded-xl border my-2 ' style={{ backgroundColor: "white" }} />
-                                                <input type='text' title='location' placeholder='Location' onChange={(e) => setLocation(e.target.value)} className='w-full rounded-xl border my-2 ' style={{ backgroundColor: "white" }} />
-                                                <input type='text' title='tags' placeholder='#tags' onChange={(e) => setTags(e.target.value)} className='w-full rounded-xl border my-2 ' style={{ backgroundColor: "white" }} />
-                                                <input type='text' title='names' placeholder='Name' onChange={(e) => setNames(e.target.value)} className='w-full rounded-xl border my-2 ' style={{ backgroundColor: "white" }} />
+                                                <input type='text' title='pName' name='productName' onChange={(e) => setProductName(e.target.value)} placeholder='Product Name' className='w-full rounded-xl border md:my-0 md:mt-1 my-2 lg:my-2 ' style={{ backgroundColor: "white" }} />
+                                                <input type='text' title='pCaption' placeholder='Product Caption' onChange={(e) => setPCaption(e.target.value)} className='w-full rounded-xl border md:my-0 md:mt-1 my-2 lg:my-2 ' style={{ backgroundColor: "white" }} />
+                                                <input type='text' title='pPrice' placeholder='Price' onChange={(e) => setProductPrice(e.target.value)} className='w-full rounded-xl border md:my-0 md:mt-1 my-2 lg:my-2 ' style={{ backgroundColor: "white" }} />
+                                                <input type='text' title='location' placeholder='Location' onChange={(e) => setLocation(e.target.value)} className='w-full rounded-xl border md:my-0 md:mt-1 my-2 lg:my-2 ' style={{ backgroundColor: "white" }} />
+                                                <input type='text' title='tags' placeholder='#tags' onChange={(e) => setTags(e.target.value)} className='w-full rounded-xl border md:my-0 md:mt-1 my-2 lg:my-2 ' style={{ backgroundColor: "white" }} />
+                                                <input type='text' title='names' placeholder='Name' onChange={(e) => setNames(e.target.value)} className='w-full rounded-xl border md:my-0 md:mt-1 my-2 lg:my-2 ' style={{ backgroundColor: "white" }} />
                                             </form>
                                         </div>
                                     </div>

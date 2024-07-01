@@ -1,11 +1,60 @@
-import React from "react";
+import React, {useState} from "react";
 import SubPlan from "../lilcomponents/subPlan";
 import Aside from "../lilcomponents/aside";
 import LoggedinBuyerNav from "../component/loggedinbuyernav";
 import { profilepic } from "../component/profilepic";
+// import {Image} from 'cloudinary'
 
 
-export default function ProfilePage() {
+const ProfilePage = () => {
+    const [image, setImage] = useState(null);
+    const [url, setUrl] = useState("");
+    const [loading, setLoading] = useState(false);
+    const [preview, setPreview] = useState(null);
+    const uploadImage = async () => {
+        setLoading(true);
+        console.log(url)
+        const data = new FormData();
+        data.append("file", image);
+        data.append(
+          "upload_preset","cupcht6r");
+        // data.append("cloud_name", process.env.REACT_APP_CLOUDINARY_CLOUD_NAME);
+        // data.append("folder", "Infinityproduct");
+    
+        try {
+          const response = await fetch(
+            `https://api.cloudinary.com/v1_1/dugbwsqul/image/upload`,
+            {
+              method: "POST",
+              body: data,
+            }
+          );
+          const res = await response.json();
+          setUrl(res.url);
+        //   console.log(res)
+          setLoading(false);
+        } catch (error) {
+          setLoading(false);
+        }
+      };
+    
+      const handleImageChange = (event) => {
+        const file = event.target.files[0];
+        setImage(file);
+    
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+    
+        reader.onload = () => {
+          setPreview(reader.result);
+        };
+      };
+    
+      const handleResetClick = () => {
+        setPreview(null);
+        setImage(null);
+      };
+    
     return(
         <div className="bg-white">
         <div className="pt-10 ">
@@ -16,8 +65,20 @@ export default function ProfilePage() {
                 <div className="flex flex-col justify-center self-center w-full">
                     <div className="flex flex-col self-center">
                     <div className="rounded-full bg-black justify-center self-center" style={{width:'70px',height:'70px'}}>
-                        
-<img className="inline w-full h-full rounded-full" src={profilepic} style={{}} alt="..." />
+                 
+{preview ? 
+    <div className="w-full h-full rounded-full bg-red-500 flex relative">
+    <input type="file" className="w-full h-full rounded-full opacity-0 absolute flex z-20" onChange={handleImageChange} style={{}}/>
+    <img className="w-full h-full rounded-full bg-red-900 absolute flex z-10" src={preview} style={{}} alt="" />
+     </div>
+:  <div className="w-full h-full rounded-full bg-red-500 flex relative">
+<input type="file" className="w-full h-full rounded-full opacity-0 absolute flex z-20" onChange={handleImageChange} style={{}}/>
+{url?
+<img className="w-full h-full rounded-full bg-red-900 absolute flex z-10" src={url} style={{}} alt="" />
+    :
+<></>}
+ </div>
+ }
                     </div>
                     <h6 className="my-2">Edit your Picture</h6>
                     </div>
@@ -83,3 +144,4 @@ be performed willingly</h6>
     </div>
     )
 }
+export default ProfilePage

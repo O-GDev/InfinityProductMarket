@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, Outlet } from 'react-router-dom'
+import { Outlet, NavLink } from 'react-router-dom'
 import { Icon } from '@iconify/react/dist/iconify.js'
 
 const Navmenu = ({index}) => {
@@ -68,8 +68,8 @@ const Navmenu = ({index}) => {
           }
           {/* <div className=''> */}
             <ul id='navbar' className="md:flex hidden justify-between self-center">
-            <li onClick={handleClick} className='relative cursor-pointer pr-5 active'><Link to='/'>Home</Link> </li>
-            <li onClick={handleClick} className='relative cursor-pointer pr-5 ' > <Link to='/services'>Services</Link> </li>
+            <li onClick={handleClick} className='relative cursor-pointer pr-5 active'><NavLink exact to='/' activeStyle={{}}>Home</NavLink> </li>
+            <li onClick={handleClick} className='relative cursor-pointer pr-5 ' > <NavLink activeClassName="bg-red-900" to='/services'>Services</NavLink> </li>
             <li onClick={handleClick} className='relative cursor-pointer pr-5 ' >About</li>
             <li onClick={handleClick} className='relative cursor-pointer pr-5 ' >Contact Us</li>
             <li onClick={handleClick} className='relative cursor-pointer pr-5 ' >Login/Signup</li>
