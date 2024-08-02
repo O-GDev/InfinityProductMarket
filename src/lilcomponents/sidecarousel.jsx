@@ -41,7 +41,7 @@ useEffect(()=>{
     const nextSlide = () =>{
         count = (count + 1) % sliderImage.length;
         setCurrentIndex(count);
-        slideRef.current.classList.add('fade-anim');
+        // slideRef.current.classList.add('fade-anim');
     }
   return (
       <div className='relative h-full w-full hidden lg:flex  rounded-xl' style={{ backgroundColor: '#F2F2F2' }}>

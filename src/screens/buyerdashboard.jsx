@@ -51,7 +51,7 @@ useEffect(()=>{
   const nextSlide = () =>{
       count = (count + 1) % sliderImage.length;
       setCurrentIndex(count);
-      slideRef.current.classList.add('fade-anim');
+      // slideRef.current.classList.add('fade-anim');
   }
   return (
     <div>
@@ -70,32 +70,32 @@ useEffect(()=>{
             <div className='flex flex-row'>
               {/* <img src='/assets/store 1.png' style={{height:50,width:50}} /> */}
               <div>
-                <h5 className="font-bold text-sm px-2">FREE STORE</h5>
-                <p className='px-2 text-sm'>Create your business with us
+                <h5 className="font-bold text-lg px-2">FREE STORE</h5>
+                <p className='px-2 text-md'>Create your business with us
                   using our free template  </p>
               </div>
             </div>
             <div className='flex flex-row'>
               {/* <img src='/assets/partners 1.png' style={{height:50,width:50}} /> */}
               <div>
-                <h5 className="font-bold text-sm px-2 ">COMMUNITY</h5>
-                <p className='px-2 text-sm'>Connect with other business
+                <h5 className="font-bold text-lg px-2 ">COMMUNITY</h5>
+                <p className='px-2 text-md'>Connect with other business
                   through affiliation and partnership</p>
               </div>
             </div>
             <div className='flex flex-row'>
               {/* <img src='/assets/key 1.png' style={{height:50,width:50}} /> */}
               <div className=''>
-                <h5 className="font-bold text-sm px-2">OWNERSHIP</h5>
-                <p className='px-2 text-sm'>Take charge of your business
+                <h5 className="font-bold text-lg px-2">OWNERSHIP</h5>
+                <p className='px-2 text-md'>Take charge of your business
                   and grow at your pace </p>
               </div>
             </div>
             <div className='flex flex-row'>
               {/* <img src='/assets/money-bag 1.png' style={{height:50,width:50}} /> */}
               <div>
-                <h5 className="font-bold text-sm px-2">GROWTH</h5>
-                <p className='px-2 text-sm'>Grow your income, make
+                <h5 className="font-bold text-lg px-2">GROWTH</h5>
+                <p className='px-2 text-md'>Grow your income, make
                   the right decision </p>
               </div>
             </div>
@@ -133,8 +133,8 @@ useEffect(()=>{
 
         <div className=''>
           <div className=''>
-            <div className='md:columns-2 md:flex w-full h-full p-10'>
-              <div className='w-full bg-white rounded-2xl shadow-md p-5 md:m-5'>
+            <div className='md:columns-2 md:flex w-full h-full'>
+              <div className='w-full flex flex-col bg-white rounded-2xl shadow-md p-5 md:my-5'>
                 <div className='flex flex-row justify-between px-0'>
                   <h3 className='font-semibold'>TOP RATED</h3>
                   <h3 >View All</h3>
@@ -159,7 +159,7 @@ useEffect(()=>{
                 </div>
            
               </div>
-              <div className='w-full bg-white rounded-2xl shadow-md p-5 md:m-5 mt-3 '>
+              <div className='w-full flex flex-col bg-white rounded-2xl shadow-md p-5 md:m-5 mt-3 '>
                 <div className='flex justify-center md:mx-6' style={{ backgroundColor: `rgba(130, 72, 187,0.8)` }}>
                   <h5 className='text-white p-3' style={{}}>Top Brands and Merchants</h5>
                 </div>
@@ -168,7 +168,7 @@ useEffect(()=>{
                 </div>
                 <div>
                   <h6>Manufacturers</h6>
-                  <div className="columns-4 flex justify-between gap-2 align-middle p-2">
+                  <div className="columns-4 flex w-full justify-between gap-2 align-middle p-2">
                     <div className="rounded-full bg-black" style={{ width: '70px', height: '70px' }}></div>
                     <div className='self-center'>ffg</div>
                     <div className='self-center'>ffg</div>
@@ -287,16 +287,16 @@ useEffect(()=>{
 <div className='flex flex-row h-20 justify-between bg-white'>
       <div className='flex rounded-br-3xl w-full' style={{backgroundColor:'#ab5ae0'}}>
       <div className='flex justify-center self-center' >
-        <span className='text-white text-center p-2 text-[70%] md:text-sm'>connect with <br /> foreign manufacturers</span>
+        <span className='text-white text-center p-2 text-[70%] md:text-md'>connect with <br /> foreign manufacturers</span>
       </div>
       </div>
       <div className='flex flex-col justify-center self-center w-full pl-3'>
-        <h3 className='font-extrabold text-center text-[60%] md:text-sm' style={{color:'#33363F'}}>THIS FEATURE IS COMING SOON</h3>
-        <h6 className='font-bold text-center text-[45%] md:text-sm'>Africa is the continent with highest demand on commodity</h6>
-        <h5 className='font-bold text-[45%] md:text-sm' style={{color:'#33363F'}}>Contend, cooperate or partner with the world giant here on IPP </h5>
+        <h3 className='font-extrabold text-center text-[60%] lg:text-md' style={{color:'#33363F'}}>THIS FEATURE IS COMING SOON</h3>
+        <h6 className='font-bold text-center text-[45%] lg:text-sm'>Africa is the continent with highest demand on commodity</h6>
+        <h5 className='font-bold text-[45%] lg:text-sm text-center' style={{color:'#33363F'}}>Contend, cooperate or partner with the world giant here on IPP </h5>
       </div>
       <div className='flex justify-center self-center md:pr-20 w-full'>
-        <h5 className='font-semibold text-[70%] md:text-sm' style={{color:'#ab5ae0'}}>Become a supplier</h5>
+        <h5 className='font-semibold text-[70%] md:text-md' style={{color:'#ab5ae0'}}>Become a supplier</h5>
       </div>
 
      
@@ -317,7 +317,7 @@ useEffect(()=>{
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 1, delay: 0.23 }}
-                  className='md:columns-3 px-5 pb-5 gap-5'>
+                  className='md:columns-3 px-5 pb-5 gap-1'>
                   <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
                   <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
                   <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
@@ -338,7 +338,7 @@ useEffect(()=>{
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 1, delay: 0.23 }}
-                  className='md:columns-3 px-5 pb-5 gap-5'>
+                  className='md:columns-3 px-5 pb-5 gap-1'>
                   <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
                   <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />
                   <PostsCards image="/assets/shoe.png" ppic='/assets/Union.png' pname='BROWN LEATHER BROGUES ' jobtype='leather work' name='James Akunmowa' pprice="8000" rate='4.6' />

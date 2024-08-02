@@ -54,7 +54,7 @@ const Aside = () => {
               </div>
               } 
   </div>
-  <ul className="py-2 text-sm pl-7 text-gray-700 dark:text-gray-200 " aria-labelledby="dropdownUserAvatarButton">
+  <ul className="py-2 text-md pl-7 text-gray-700 dark:text-gray-200 " aria-labelledby="dropdownUserAvatarButton">
             {/* <Link to='/myprofile'> */}
       <li className='flex my-4 dark:hover:text-white cursor-pointer' onMouseDown={() => navigate('/myprofile')} onClick={() =>setCurrentUrl('profile')}>
         <Icon icon="carbon:home" className='flex self-center' />

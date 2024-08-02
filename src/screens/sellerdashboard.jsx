@@ -81,7 +81,7 @@ export default function SellerDashboard() {
     const nextSlide = () => {
         count = (count + 1) % sliderImage.length;
         setCurrentIndex(count);
-        slideRef.current.classList.add('fade-anim');
+        // slideRef.current.classList.add('fade-anim');
     }
     const handlePost = async() =>{
        response = fetch(`${BASE_URL}`,{

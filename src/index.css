@@ -129,8 +129,8 @@
 #navbar li.active::after {
   content: "";
   background: #976FBE;
-  height: 3px;
-  width: 75%;
+  height: 2px;
+  /* width: 100%; */
   position: absolute;
   bottom: 0px;
   left: 0px;

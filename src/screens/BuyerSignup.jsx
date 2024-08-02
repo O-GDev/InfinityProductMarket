@@ -87,27 +87,27 @@ const BuyerSignup = ({props}) => {
                                   <div className='md:flex justify-between md:mb-2 w-full'>
                                       <div className='w-full md:px-3'>
                                           <h5 className='font-md text-medium'>First Name<span style={{ color: '#D69999' }}>*</span></h5>
-                                          <input type='text' name='fName' onChange={(e) => setFirstName(e.target.value) } className='rounded-xl bg-white outline-none border-gray-300 px-2 py-1 md:py-2 w-full' style={{backgroundColor:''}} />
+                                          <input value='' type='text' name='fName' onChange={(e) => setFirstName(e.target.value) } className='rounded-xl bg-white outline-none border-gray-300 px-2 py-1 md:py-2 w-full' style={{backgroundColor:''}} />
                                       </div>
                                       <div className='w-full md:px-3  md:my-0'>
                                           <h5 className='font-md text-medium'>Surname<span style={{ color: '#D69999' }}>*</span></h5>
-                                          <input type='text' name='SName' onChange={(e) => setLastName(e.target.value) } className='rounded-xl bg-white drop-shadow-sm outline-none border-gray-300 px-2 py-1 md:py-2 w-full' style={{}} />
+                                          <input value='' type='text' name='SName' onChange={(e) => setLastName(e.target.value) } className='rounded-xl bg-white drop-shadow-sm outline-none border-gray-300 px-2 py-1 md:py-2 w-full' style={{}} />
                                       </div>
                                   </div>
 
                                   <div className=' md:px-3 md:my-0'>
                                       <h5 className='font-md text-medium'>Email Address<span style={{ color: '#D69999' }}>*</span></h5>
-                                      <input type='email' name='email' onChange={(e) => setEmail(e.target.value) } className='rounded-xl bg-white drop-shadow-sm outline-none border-gray-300 px-2 py-1 md:py-2 w-full' style={{}} />
+                                      <input value='' type='email' name='email' onChange={(e) => setEmail(e.target.value) } className='rounded-xl bg-white drop-shadow-sm outline-none border-gray-300 px-2 py-1 md:py-2 w-full' style={{}} />
                                   </div>
 
                                   <div className='md:flex justify-between'>
                                       <div className='w-full md:px-3'>
                                           <h5 className='font-md text-medium'>Password<span style={{ color: '#D69999' }}>*</span></h5>
-                                          <input type='password' name='password' onChange={(e) => setPassword(e.target.value) } className='rounded-xl bg-white drop-shadow-sm outline-none border-gray-300 px-2 py-1 md:py-2 w-full' style={{}} />
+                                          <input value='' type='password' name='password' onChange={(e) => setPassword(e.target.value) } className='rounded-xl bg-white drop-shadow-sm outline-none border-gray-300 px-2 py-1 md:py-2 w-full' style={{}} />
                                       </div>
                                       <div className='w-full md:px-3 md:my-0'>
                                           <h5 className='font-md text-medium'>Confirm Password<span style={{ color: '#D69999' }}>*</span></h5>
-                                          <input type='password' name='conpassword' onChange={(e) => setCPassword(e.target.value) } className='rounded-xl bg-white drop-shadow-sm outline-none border-gray-300 px-2 py-1 md:py-2 w-full' style={{}} />
+                                          <input value='' type='password' name='conpassword' onChange={(e) => setCPassword(e.target.value) } className='rounded-xl bg-white drop-shadow-sm outline-none border-gray-300 px-2 py-1 md:py-2 w-full' style={{}} />
                                       </div>
                                   </div>
 

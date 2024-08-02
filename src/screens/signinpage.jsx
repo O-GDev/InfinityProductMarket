@@ -5,55 +5,45 @@ import Sidecarousel from '../lilcomponents/sidecarousel';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
+
 import {BASE_URL} from '../component/url/url'
 import Productplacehome from './productplacehome';
+import { useAuth } from '../utils/AuthProvider';
 
 
 
 function Signinpage(props) {
     const navigate = useNavigate()    
-    const[email, setEmail] = useState("")
-    const[password, setPassword] = useState("")
     const[error, setError] = useState(false)
     const[message, setMessage] = useState(false)
     const[data, setData] = useState("")
+
+const [input, setInput] = useState({
+    email: "",
+    password : "",
+    role: "buyer"
+})
+const handleInput = (e) => {
+    const { name, value } = e.target;
+    setInput((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+const auth = useAuth()
+
+
+const handleSellerSignin = async(e)=>{
+    if ( input.email =="" || input.password=="" ){
+         setError(true);
+         return;
+    }else{ 
+    auth.sellerlogin(input);
+    return;
+    }
     
-  const token = JSON.parse(localStorage.getItem("token"))
-
-
-    const handleSellerSignin = async(role)=>{
-        if (email =="" || password==""){
-             setError(true)
-            //  navigate('/sellerdashboard')
-        }else{ 
-            await fetch(`${BASE_URL}/logInUsers`,{
-                method: 'POST',
-                body: JSON.stringify({
-                    "email":email,
-                    "password":password,
-                    "role":role
-                }),
-                headers:{
-                    "Content-Type":"application/json"
-                }
-            }).then(res => res.json())
-            .then(data => setData(data))
-            setError(false)
-            // console.log(data)
-            
-                if(data.status == 200){
-                    navigate('/sellerdashboard')
-                    console.log(data.token.access_token)
-                    localStorage.setItem("token", JSON.stringify(data.token.access_token))
-                    localStorage.setItem("role", JSON.stringify(data.role))                    
-                    setError(false)
-                }else{
-                    setMessage(data.message)
-                
-            }}
-       
 }
-        
 
     return (
         <div className='text-[70%] md:text-[100%]'>
@@ -114,16 +104,16 @@ function Signinpage(props) {
 
                                 <div className='my-2 md:px-3 md:my-0'>
                                     <h5 className='font-md  text-medium'>Email Address<span style={{ color: '#D69999' }}>*</span></h5>
-                                    <input name='fName' onChange={(e) => setEmail(e.target.value) } className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full' style={{}} />
+                                    <input  type='email' name='email' id='email' placeholder='Email' onChange={handleInput} className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full' style={{}} />
                                 </div>
 
                                     <div className='w-full md:px-3'>
                                         <h5 className='font-md  text-medium'>Password<span style={{ color: '#D69999' }}>*</span></h5>
-                                        <input name='fName' onChange={(e) => setPassword(e.target.value) } className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full' style={{}} />
+                                        <input type='password' name='password' id='password' placeholder='Password' onChange={handleInput} className='rounded-2xl bg-white drop-shadow-lg border-gray-300 border-2 px-2 py-1 w-full' style={{}} />
                                     </div>
 
                                 <div className='py-4 md:px-40 '>
-                                        <div onClick={() => handleSellerSignin("seller")} className='flex justify-center self-center rounded-2xl bg-transparent border cursor-pointer' style={{ borderColor: '#702EB2' }}>
+                                        <div onClick={handleSellerSignin} className='flex justify-center self-center rounded-2xl bg-transparent border cursor-pointer' style={{ borderColor: '#702EB2' }}>
                                             <h4 className='m-1 font-semibold' style={{ color: '#702EB2' }}>Sign In</h4>
                                         </div>
                                 </div>

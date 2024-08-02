@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom'
 function ShowNavBar({children}) {
 
     const location = useLocation()
-    const [showNavBar, setShowNavBar] = useState(true)
+    const [showNavBar, setShowNavBar] = useState(false)
 
     useEffect(() =>{
         console.log("this is location:",location )

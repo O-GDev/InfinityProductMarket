@@ -6,6 +6,11 @@ export default {
     'node_modules/flowbite-react/lib/esm/**/*.jsx'
   ],
   theme: {
+    fontSize: {
+      sm: '8px',
+      md: '15px',
+      t: '11px'
+    },
     extend: {
       fontfamily:{
         primary:["Montserrat", "sans-serif"]

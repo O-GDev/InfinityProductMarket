@@ -58,7 +58,7 @@ export default function BuyerBackground() {
     const nextSlide = () => {
         count = (count + 1) % sliderImage.length;
         setCurrentIndex(count);
-        slideRef.current.classList.add('fade-anim');
+        // slideRef.current.classList.add('fade-anim');
     }
 
     const handleClick = (urlState) => {

@@ -10,8 +10,8 @@ export default function Discovery() {
       {/* <LoggedinNav /> */}
       {/* <div className='pt-20 '>
         <img src='/assets/nav.png' className='flex w-full' />
-      </div>
-      <div className='flex justify-center items-center'>
+      </div> */}
+      {/* <div className='flex justify-center items-center'>
         <div className='w-3/4 h'> 
           <div className="w-full h-full px-5">        
         <div className=' w-full h-full grid md:grid-cols-3 gap-3 ' style={{}}>
@@ -30,8 +30,8 @@ export default function Discovery() {
         </div> 
       </div>
       </div>
-      </div>
-      <div className='p-5'>
+      </div> */}
+      {/* <div className='p-5'>
             <h5 className='text-center'>INFINITY PRODUCT PLACE is a recognised as a product marketing community alongside infinity service place(ISP) a service centric community<br />The two individual communities comes together
             to form a marketing system called Infinity Market Place. Created by WAJISINFINITY LTD. all right reserved</h5>
             <div className='flex flex-row self-center justify-center pt-10'>

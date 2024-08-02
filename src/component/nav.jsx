@@ -79,7 +79,7 @@ export default function Navbars() {
                                  // stiffness: 260,
                                  // damping: 20,
                                  // }}
-                                 className='md:text-2xl text-sm font-bold text-center mb-1'>GET TO KNOW INFINITY MARKET PLACE ISP</motion.h1>
+                                 className='md:text-2xl text-md font-bold text-center mb-1'>GET TO KNOW INFINITY MARKET PLACE ISP</motion.h1>
                              <motion.p
                                  initial={{
                                      y: -70,

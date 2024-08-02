@@ -18,9 +18,10 @@
     "@reduxjs/toolkit": "^2.2.5",
     "cloudinary": "^2.2.0",
     "cloudinary-react": "^1.8.1",
+    "clsx": "^2.1.1",
     "flowbite": "^2.3.0",
     "flowbite-react": "^0.7.2",
-    "framer-motion": "^11.1.7",
+    "framer-motion": "^11.3.17",
     "react": "^18.2.0",
     "react-custom-scroll": "^7.0.0",
     "react-dom": "^18.2.0",
@@ -31,7 +32,9 @@
     "react-router-dom": "^6.23.0",
     "react-scroll": "^1.9.0",
     "redux": "^5.0.1",
-    "styled-components": "^6.1.8"
+    "styled-components": "^6.1.8",
+    "tailwind-merge": "^2.4.0",
+    "tw-elements": "^2.0.0"
   },
   "devDependencies": {
     "@iconify/react": "^4.1.1",

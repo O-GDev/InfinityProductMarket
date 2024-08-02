@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { Icon } from '@iconify/react/dist/iconify.js'
 
 
-export default function Choosesociety() {
+  export default function Choosesociety() {
   const rand = Math.floor(Math.random() * 200000000000 - 100)
   const randb = Math.floor(Math.random() * 200000000000 - 100)
   const [openModal, setOpenModal] = useState(false)
@@ -74,7 +74,7 @@ export default function Choosesociety() {
                 className='w-full flex'
               >
 
-                <img src='/assets/IMG_9517.JPG' className='rounded-xl h-[300px] md:h-full w-[400px] flex ' style={{}} />
+                <img src='/assets/IMG_9517.JPG' className='rounded-xl h-[300px] md:h-full w-full flex ' style={{}} />
                 
               </motion.div>
              </div>
@@ -124,7 +124,7 @@ className='flex w-full justify-center self-center'>
                 className='w-full'
               >
                 
-              <img src='/assets/medium-shot-woman-posing-studio.jpg' className='rounded-xl h-[300px] md:h-full w-[400px] flex' style={{}} />
+              <img src='/assets/medium-shot-woman-posing-studio.jpg' className='rounded-xl h-[300px] md:h-full w-full flex' style={{}} />
               </motion.div>
 
 
@@ -170,20 +170,20 @@ className='flex w-full justify-center self-center'>
                   <div className='flex flex-col md:hover:flex-col-reverse hover:scale-110 items-center md:items-start w-full h-full p-5 px-5'>
                     <div className='w-full'>
                     <h4 className='font-bold text-lg'>Buyer</h4>
-                    <p className='md:w-2/3 py-1 md:pr-5' style={{ fontSize:`clamp(2px, 10px, 60px)`}} >Purchase quality products from INFINITY PRODUCT PLACE, prioritising commercial integrity and product quality</p>
+                    <p className='md:w-2/3 py-1 md:pr-5 text-sm'  >Purchase quality products from INFINITY PRODUCT PLACE, prioritising commercial integrity and product quality</p>
                    </div> 
-                   <div className='w-full flex justify-center md:justify-start'>
-                   <img src="/assets/Frame 427319608.png" alt="" className='md:h-full md:w-11/12 md:aspect-auto aspect-square w-[200px] h-[200px] self-end ' />
+                   <div className=' flex justify-center md:justify-start'>
+                   <img src="/assets/Frame 427319608.png" alt="" className='md:h-full md:w-5/6 md:aspect-auto aspect-square w-full h-[200px] self-end ' />
                    </div>
                   </div>
                 </Link>
                 <Link to="/signup">
                   <div className='p-5 px-5 flex flex-col md:hover:flex-col-reverse hover:scale-110 items-center md:items-end w-full h-full'>
-                    <div className='w-full flex justify-center md:justify-end'>
-                    <img src="/assets/Frame 427319609.png" alt="" className='md:h-full md:w-5/6 md:aspect-auto aspect-square w-[200px] h-[200px]' style={{}} />
+                    <div className='flex justify-center md:justify-end'>
+                    <img src="/assets/Frame 427319609.png" alt="" className='md:h-full md:w-5/6 md:aspect-auto aspect-square w-full h-[200px]' style={{}} />
                     </div>
                     <div className='md:w-2/3 w-full md:pr-3'>
-                      <p className='w-full py-1 text-end' style={{ fontSize:`clamp(2px, 10px, 20px)`}} >Create your business on INFINITY PRODUCT PLACE, optimising branding and business personality to facilitate business growth </p>
+                      <p className='w-full py-1 text-end text-sm' >Create your business on INFINITY PRODUCT PLACE, optimising branding and business personality to facilitate business growth </p>
                       <h4 className='font-bold text-lg text-end md:pr-6'>Seller</h4>
 
                     </div>

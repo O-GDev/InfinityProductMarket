@@ -1,54 +1,42 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Icon } from '@iconify/react';
 import { Checkbox } from 'flowbite-react';
 import Sidecarousel from '../lilcomponents/sidecarousel';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, redirect, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Uline } from '../lilcomponents/style.styles';
 import {BASE_URL} from '../component/url/url'
 import BuyerBackground from './buyerbackground';
+import { useAuth } from '../utils/AuthProvider';
 
 const BuyerSignin = ({props}) => {
     const navigate = useNavigate()
-    const[first_name, setFirstName] = useState('')
-    const[last_name, setLastName] = useState("")
-    const[email, setEmail] = useState("")
-    const[password, setPassword] = useState("")
-    const[cpassword,setCPassword] = useState("")
+    const [input, setInput] = useState({
+        email: "",
+        password : "",
+        role: "buyer"
+    })
+    const handleInput = (e) => {
+        const { name, value } = e.target;
+        setInput((prev) => ({
+          ...prev,
+          [name]: value,
+        }));
+      };
     const[error, setError] = useState(false)
     const[message, setMessage] = useState(false)
-    const[data, setData] = useState("")
+
+    const auth = useAuth()
 
 
-
-    const handleBuyerSignin = async(role)=>{
-        if ( email =="" || password=="" ){
-             setError(true)
+    const handleBuyerSignin = async(e)=>{
+        if ( input.email =="" || input.password=="" ){
+             setError(true);
+             return;
         }else{ 
-            await fetch(`${BASE_URL}/logInUsers`,{
-                method: 'POST',
-                body: JSON.stringify({
-                    "email":email,
-                    "password":password,
-                    "role":role
-                }),
-                headers:{
-                    "Content-Type":"application/json"
-                }
-            }).then(res => res.json())
-            .then(data => setData(data))
-            setError(false)
-            console.log(data)
-            if(data.status == 200 ){
-                localStorage.setItem("token", JSON.stringify(data.token.access_token))
-                navigate("/buyerdashboard") 
-                localStorage.setItem("role", JSON.stringify(data.role)) 
-                setMessage(data.message)
-            }else{
-            setMessage(data.message)
+        auth.login(input);
+        return;
         }
-       
-}
         
     }
     return (
@@ -103,26 +91,28 @@ const BuyerSignin = ({props}) => {
                                     <div className='container'>                                     
                                     <div className='flex justify-center relative rounded-md'  style={{backgroundColor:'#F9F9E0'}}  ><h5 className='text-sm p-4 text-red-400 text-[70%] md:text-[100%]'>{message}</h5></div>
                                     </div> }
-                                    <div className=' md:px-3 w-full my-7'>
+                                   <form>
+                                   <div className=' md:px-3 w-full my-7'>
                                           {/* <h5 className='font-md text-medium'>Email Address<span style={{ color: '#D69999' }}>*</span></h5> */}
-                                          <input type='email' name='email' placeholder='Email' onChange={(e) => setEmail(e.target.value) } className='rounded-xl bg-white drop-shadow-sm outline-none border-gray-300 px-2 py-1 md:py-2 w-full' style={{}} />
+                                          <input type='email' name='email' id='email' placeholder='Email' onChange={handleInput} className='rounded-xl bg-white drop-shadow-sm outline-none border-gray-300 px-2 py-1 md:py-2 w-full' style={{}} />
                                       </div>
     
                                           <div className='w-full my-7 md:px-3'>
                                               {/* <h5 className='font-md text-medium'>Password<span style={{ color: '#D69999' }}>*</span></h5> */}
-                                              <input type='password' name='password' placeholder='Password' onChange={(e) => setPassword(e.target.value) } className='rounded-xl bg-white drop-shadow-sm outline-none border-gray-300 px-2 py-1 md:py-2 w-full' style={{}} />
+                                              <input type='password' name='password' id='password' placeholder='Password' onChange={handleInput} className='rounded-xl bg-white drop-shadow-sm outline-none border-gray-300 px-2 py-1 md:py-2 w-full' style={{}} />
                                               <p>Forgot Password?</p>
                                           </div>
     
-                        
+        
     
                                       <div className='flex justify-center pt-3' >
                                           {/* <Link to='/buyerdashboard'> */}
-                                              <div onClick={() => handleBuyerSignin("buyer")} className='flex justify-center self-center rounded-xl border cursor-pointer ' style={{ borderColor: '#702EB2',backgroundColor:'#702EB2' }}>
+                                              <div onClick={() =>handleBuyerSignin()} className='flex justify-center self-center rounded-xl border cursor-pointer ' style={{ borderColor: '#702EB2',backgroundColor:'#702EB2' }}>
                                                   <h4 className='m-1 font-semibold text-white md:mx-28 mx-8' style={{ }}>CONTINUE</h4>
                                               </div>
                                           {/* </Link> */}
-                                      </div>    
+                                      </div> 
+                                      </form>   
                                       <div className=''>
                                       <div className='flex justify-center'>
                                           <div className='flex justify-center self-center px-2 w-[40%]'>

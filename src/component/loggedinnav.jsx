@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react'
 import { Link, Outlet, useNavigate } from 'react-router-dom'
 import { Button } from 'flowbite-react'
+import { useAuth } from '../utils/AuthProvider';
 
 const LoggedinNav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,7 +9,7 @@ const LoggedinNav = () => {
   const [active, setActive] = useState(1) 
 
   const navigate = useNavigate()
-
+  const auth = useAuth()
 
   let menuRef = useRef()
 
@@ -115,7 +116,7 @@ const LoggedinNav = () => {
                 
               </div>
             </li>
-            <li className='py-2' onMouseDown={() => logout()}>
+            <li className='py-2' onMouseDown={() => auth.logout()}>
               <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Log out</a>
             </li>
     </ul>

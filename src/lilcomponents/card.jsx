@@ -14,14 +14,14 @@ export default function Cards1({image, opa, pname, pprice, jobtype, padin, name,
     <div>
         <img src={ppic} style={{width:'20px',height:'20px'}} className='flex justify-center self-center rounded-full' />        
     </div>
-    <p className='text-[50%] md:text-[60%]' style={{padding:2}}>{name} </p>
+    <p className='text-sm' style={{padding:2}}>{name} </p>
 </div>
 <div className='flex flex-row'>
  <img src='/assets/Shop.png' style={{width:'20px',height:'20px',}} className='flex justify-center self-center' />   
-<div className='text-[50%] md:text-[60%]' style={{}}>Shop.{jobtype} </div>
+<div className='text-sm' style={{}}>Shop.{jobtype} </div>
 </div>
     </div>
-    <div className='flex justify-center self-center text-sm p-1 rounded-xl text-[50%] md:text-[100%]' style={{backgroundColor:'#D9D9D9', color:"#284797"}}>
+    <div className='flex justify-center self-center text-sm p-1 rounded-xl' style={{backgroundColor:'#D9D9D9', color:"#284797"}}>
        N {pprice}
     </div>
 </div>

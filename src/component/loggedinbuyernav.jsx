@@ -1,15 +1,17 @@
 import React, {useState, useEffect, useRef} from 'react'
-import { Link, Outlet } from 'react-router-dom'
+import {NavLink, Link, Outlet, redirect } from 'react-router-dom'
 import { Button } from 'flowbite-react'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import { useNavigate } from 'react-router-dom'
 import { profilepic } from './profilepic'
+import { useAuth } from '../utils/AuthProvider'
 
 const LoggedinBuyerNav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [childIsOpen, setChildIsOpen] = useState(false);
   const [active, setActive] = useState(0) ;
   const navigate = useNavigate()
+  const auth = useAuth()
 
 
 
@@ -41,14 +43,12 @@ const LoggedinBuyerNav = () => {
     let handler = (e) =>{
       if (e.target){
         setIsOpen(false)
+        setChildIsOpen(false)
       }
     };
     document.addEventListener("mousedown", handler);
 }
   )
-  function toggle() {
-    setIsOpen((isOpen) => !isOpen);
-  }
 
   // const handleClick = (e) => {
   //   const activeNav = document.querySelectorAll("li");
@@ -60,10 +60,7 @@ const LoggedinBuyerNav = () => {
   //     })
   //   })
   // }
-  const logout = () =>{
-    localStorage.removeItem("token")
-    navigate('/')
-  }
+ 
 
 // const open = event.target.classList.add('hidden');
    
@@ -73,10 +70,10 @@ const LoggedinBuyerNav = () => {
       <div className='flex px-3 lg:px-10 py-2 ' style={{ justifyContent: 'space-between' }}>
         <div className='flex flex-row justify-center'>
           <img src='/assets/ICON DEEP PURPLE 1.png' className='self-center' style={{ width: '30px', height: '30px' }} />
-          <h6 className='self-center pl-4 capitalize text-semibold text-[15px]'>Infinity Market Place</h6>
+          <h6 className='self-center pl-4 capitalize text-semibold text-[80%] md:text-[min(1.5vw,1rem)]'>Infinity Market Place</h6>
           </div> 
           <div>            
-          <div className='bg-white border rounded-md md:flex flex-row justify-center self-center ml-3 hidden ' style={{width:'450px'}}>
+          <div className='bg-white border rounded-md md:flex flex-row justify-center self-center ml-3 hidden w-[400px] lg:w-[25vw]' style={{}}>
           <img src='/assets/Search.png' className='w-4 h-4 my-2 ml-5 font-bold'  />
           <input placeholder='Search for brands or categories' className='text-sm outline-none pl-1 w-full font-sembold rounded-md' /></div>
           </div>
@@ -85,21 +82,34 @@ const LoggedinBuyerNav = () => {
           <Icon icon="material-symbols-light:menu" style={{}} className='w-16 h-10' />
           </div>
           <ul id='navbar' className="hidden lg:flex items-center justify-between">
-          <Link to='/todaydeal'
-          
-      smooth={true}
-      activeClass='active'
-      spy={true} ><li className="relative pr-5 font-primary font-semibold " > Today's Deal </li></Link>
-          <Link to='/discovery'
-          
-      smooth={true}
-      activeClass='active'
-      spy={true} ><li className="relative pr-5 font-primary font-semibold " >Discovery</li></Link>
-          <Link to='/marketing'
-          
-      smooth={true}
-      activeClass='active'
-      spy={true} ><li className="relative pr-5 font-primary font-semibold " >Marketing</li></Link>
+          <NavLink to='/buyerdashboard'
+          className={({isActive, isPending}) =>{
+            return isActive ? "border-[#976FBE] border-b-[3px] mr-5" : "mr-5"
+          }}><li className="relative font-primary font-semibold text-[min(1vw,1rem)] " > Home </li></NavLink>
+
+          <NavLink to='/todaydeal'
+          className={({isActive, isPending}) =>{
+            return isActive ? "border-[#976FBE] border-b-[3px] mr-5" : "mr-5"
+          }}><li className="relative font-primary font-semibold text-[min(1vw,1rem)] " > Today's Deal </li></NavLink>
+         
+          {/* <NavLink to='/marketing'
+          className={({isActive, isPending}) =>{
+            return isActive ? "border-[#976FBE] border-b-[3px] mr-5" : "mr-5"
+          }}><li className="relative font-primary font-semibold text-[min(1vw,1rem)] " >Marketing</li></NavLink>
+         */}
+          <NavLink to='/discovery'
+           className={({isActive, isPending}) =>{
+             return isActive ? "border-[#976FBE] border-b-[3px] mr-5" : "mr-5"
+           }}
+           // className="active"
+           ><li className="relative font-primary font-semibold text-[min(1vw,1rem)]" >Discovery</li></NavLink>
+        
+           <NavLink to='/cart'
+            className={({isActive, isPending}) =>{
+              return isActive ? "border-[#976FBE] border-b-[3px] mr-5" : "mr-5"
+            }}
+            // className="active"
+            ><li className="relative font-primary font-semibold text-[min(1vw,1rem)]" >Cart</li></NavLink>
           
 {/* </li> */}
 
@@ -110,7 +120,7 @@ const LoggedinBuyerNav = () => {
              {/* {sellername} */}
              {/* </li> */}
               {/* <li ref={menuRef} className="inline" style={{}}>  */}
-          <button onClick={()=>{setIsOpen(!isOpen)}} id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar" className="border-0 rounded-full md:me-0 font-semibold text-black text center justify-center" type="button">
+          <button onClick={()=>{setIsOpen(!isOpen)}} id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar" className="border-0 rounded-full md:me-0 font-semibold text-black text center justify-center text-[min(1vw,1rem)]" type="button">
 <span className="sr-only">Open user menu</span>         
            Adebola Makinde
 <img className="inline w-8 h-8 ml-2 rounded-full" src={profilepic} style={{}} alt="..." />
@@ -124,7 +134,7 @@ const LoggedinBuyerNav = () => {
     {childIsOpen && 
     <div id="dropdownAvatar" onMouseEnter={() => setChildIsOpen(true)} onMouseLeave={() => setChildIsOpen(false)} className=" absolute right-60 z-10 bg-white divide-y divide-gray-400 rounded-2xl shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
                 style={{ width: '250px' }}>
-                <div className="py-3 text-sm text-gray-900 dark:text-white">
+                <div className="py-3 text-md text-gray-900 dark:text-white">
                   <div className="px-4">
                     <div>Switch Accounts</div>
                     <div className="" style={{ fontSize: 10 }}>All accounts in one place</div>
@@ -148,7 +158,7 @@ const LoggedinBuyerNav = () => {
               </div>
               } 
   </div>
-          <ul className="py-2 text-sm pl-7 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUserAvatarButton">
+          <ul className="py-2 text-md pl-7 text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUserAvatarButton">
             {/* <Link to='/myprofile'> */}
       <li className='flex dark:hover:text-white' onMouseDown={() => navigate('/myprofile')}>
         <Icon icon="carbon:home" className='flex self-center' />
@@ -200,7 +210,7 @@ const LoggedinBuyerNav = () => {
             <Icon icon="quill:cog" className='flex self-center' />
               <a href="#" className="block px-4 py-2 ">Settings</a>
             </li>
-            <li onMouseDown={()=>logout()} className='flex dark:hover:text-white'>
+            <li onMouseDown={() => auth.logout()} className='flex dark:hover:text-white'>
             <Icon icon="solar:logout-2-outline" className='flex self-center'/>
               <a href="#" className="block px-4 py-2 ">Log out</a>
             </li>
